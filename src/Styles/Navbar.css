@@ -1,0 +1,30 @@
+.header {
+  background-color: #fff;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  top: 2%;
+  gap: 85px;
+  width: 100%;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: row;
+  z-index: 90;
+}
+
+.logo {
+  padding-top: 7px;
+}
+
+.menu-btn {
+  padding-top: 5px;
+}
+
+.user {
+  padding-top: 5px;
+}
+
+
+.search-bar {
+  margin-top: 20%;
+}

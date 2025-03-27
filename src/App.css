@@ -1,0 +1,9 @@
+.App {
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0%;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+}
