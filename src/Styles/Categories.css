@@ -1,0 +1,15 @@
+.cat {
+  color: #000;
+  display: flex;
+  gap: 12px;
+  white-space: nowrap;
+  padding: 18px 15px;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: 0.5px solid #000;
+  transition: 0.4s ease;
+}
+
+.cat span {
+  font-size: 18px;
+}
