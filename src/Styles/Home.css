@@ -1,6 +1,10 @@
 .home {
-  padding-top: 25px;
+  margin-top: 18vh;
   font-family: 'DM Sans', sans-serif;
+}
+
+.home .image {
+  margin-top: 5vh;
 }
 
 .home a {
@@ -43,3 +47,4 @@
   position: relative;
   top: 3px;
 }
+

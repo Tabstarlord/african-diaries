@@ -4,11 +4,16 @@ import '../Styles/Navbar.css'
 import Logo from '../Assets/logo.png'
 import user from '../Assets/profile.png'
 import hamburger from '../Assets/hamburger.png'
-import Search  from '../Pages/Search'
+import searchbar from '../Assets/search.png'
 import Menu from './Menu'
+import Search from '../Pages/Search'
 
 
 function Navbar() {
+
+  const [open, setOpen] = useState (false);
+
+  const [search, openSearch] = useState (false);
 
   const [ showMenu, setShowMenu] = useState(false)
   return (
@@ -25,18 +30,30 @@ function Navbar() {
         <Link to='/'><img src={Logo} alt='/' /></Link>
       </div>
 
-     {/* <div className='search'>
-        <img src={search} alt='search' />
-      </div> */} 
+     <div className='search-bar' onClick={() => openSearch(open => !open)}>
+        <img src={searchbar} alt='search' />
+      </div> 
+      
 
-      <div className='user'>
+      <div className='user' onClick={() => setOpen(open => !open)}>
         <Link to='/'><img src={user} alt='user' /></Link>
       </div>
     </div>
 
-  <div className='search-bar'>
-    <Search />
-  </div>
+    {search && (
+        <Search />
+      )
+      }
+
+      { open && (
+    <div className='account'>
+          <Link className='log' to='Login'>Login</Link>
+          <Link to='Register'>Register</Link>
+        </div>
+        )
+        }
+
+  
     </>
   )
 }

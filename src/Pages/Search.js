@@ -24,8 +24,11 @@ class Search extends React.Component {
 
   getData = () => {
     fetch(`http://localhost:3000`)
-    .then(response => response.json())
+    .then(response => { if (!response.ok) {} 
+        return response.json()
+      })
     .then(data => {
+      console.log("Data before filter:", data);
       const { query } = this.state;
       const filteredData = data.filter(element => {
         return element.name.toLowerCase().includes(query.toLowerCase());
@@ -37,7 +40,7 @@ class Search extends React.Component {
     });
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.getData();
   }
 

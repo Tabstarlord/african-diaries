@@ -4,7 +4,7 @@
   overflow: hidden;
   position: fixed;
   top: 2%;
-  gap: 85px;
+  gap: 13vw;
   width: 100%;
   transition: 0.4s;
   display: flex;
@@ -24,7 +24,28 @@
   padding-top: 5px;
 }
 
-
 .search-bar {
-  margin-top: 20%;
+  margin-top: 5px;
 }
+
+.account {
+  display: grid;
+  position: absolute;
+  background-color: #F4F4F4;
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 70vw;
+  margin-top: 2px
+}
+
+.account a {
+  padding: 4px;
+  color: #008000;
+}
+
+.account .log {
+  border-bottom: 0.5px solid;
+  color: #000;
+}
+
+

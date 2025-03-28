@@ -1,0 +1,61 @@
+
+
+.liked {
+  padding-top: 25px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.liked a {
+  text-decoration: none;
+  color: #000;
+}
+
+.liked .image a span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  margin-right: 150px;
+}
+
+.liked .image a p {
+  font-size: 13px;
+  margin-right: 240px;
+  position: relative;
+  bottom: 10px;
+}
+
+.liked .image a p .eye {
+  position: relative;
+  top: 3px;
+}
+
+.liked-1 .filter {
+  gap: 6px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 4px;
+}
+
+.liked-1 .filter button {
+  width: 110px;
+  height: 23px;
+  padding: 5px 10px;
+  gap: 10px;
+  background-color: #808080;
+  border-radius: 4px;
+}
+
+.liked-1 {
+  text-align: start;
+}
+
+.liked-1 span {
+  width: 96px;
+  height: 21px;
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 4px;
+}

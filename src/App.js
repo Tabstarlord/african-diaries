@@ -7,6 +7,13 @@ import Navbar from './Components/Navbar'
 import LikedVideos from './Pages/LikedVideos'
 import WatchHistory from './Pages/WatchHistory'
 import BestVideos from './Pages/BestVideos';
+import Login from './Pages/Login';
+import Register from './Pages/Register'
+
+
+
+
+
 function App() {
   return (
 
@@ -21,6 +28,11 @@ function App() {
           <Route path='/LikedVideos' element={ <LikedVideos /> } />
           <Route path='/WatchHistory' element={ <WatchHistory /> } />
           <Route path='/BestVideos' element={ <BestVideos /> } />
+          <Route path='/Login' element={ <Login /> } />
+          <Route path='/Register' element={ <Register /> } />
+
+
+
         </Routes>
       
       

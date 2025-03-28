@@ -14,6 +14,7 @@ function Home() {
   return (
     <>
     <div className='home'>
+    
       <div className='image'>
         <Link to='ViewVideos'><img src={frame1} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>

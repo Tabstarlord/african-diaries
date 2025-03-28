@@ -45,7 +45,7 @@ function Menu() {
         {/*Primary Top Nav*/}
         <ul className='nav-list primary-nav'>
           <li className='nav-item'>
-            <Link to='/' className='nav-link'>
+            <Link to='BestVideos' className='nav-link'>
             <img src={video} alt='video' />
             <span className='nav-label'>Best Videos</span>
             </Link>

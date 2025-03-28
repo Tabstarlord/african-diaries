@@ -1,0 +1,101 @@
+.login {
+  background: url('../Assets/Frame16.png');
+  background-color: black;
+  background-attachment: fixed;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.2s;
+  width: 100%;
+  margin: auto;
+  font-family: 'DM sans', sans-serif;
+  color: #FEFEFE;
+}
+
+.login-2 {
+  background-color: rgba(0, 0, 0, 0.788);
+  background-attachment: fixed;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  padding-top: 25vh;
+  color: #fff;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  font-size: 16px;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.log-1 {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 22px;
+  padding: 8px 2px;
+  background: none;
+  box-sizing: border-box;
+  border: 1px solid #FEFEFE;
+  font-size: 16px;
+  position: relative;
+  right: 1vh;
+}
+
+.btn-3 {
+  padding: 15px 36vw;
+  border-radius: 4px;
+  color: #FEFEFE;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  right: 1vh;
+}
+
+.btn-2 {
+  margin-top: 5vh;
+}
+.btn-2 a{
+  text-decoration: underline 1px #008000;
+  color: #008000;
+}
+
+.orlog {
+  padding-top: 14vh;
+  font-size: 16px;
+}
+
+.orlog h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.login-social {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: -8vh;
+}
+
+.orlog img {
+  position: relative;
+  bottom: 6px;
+}
+
+.back {
+  position: fixed;
+  top: 15vh;
+  right: 6vw;
+}
