@@ -1,0 +1,166 @@
+.clip {
+  font-family: 'DM Sans', sans-serif;
+}
+.clip1 {
+  display: flex;
+}
+.clip1 h2 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 34vw;
+}
+.clip1 .cancel {
+  width: 24px;
+  height: 24px;
+  margin-top: 1.3vh;
+  margin-left: 1vw;
+}
+
+.clip2 {
+  display: block;
+  justify-items: left;
+  margin-top: -4vh;
+}
+.clip2 .user {
+  font-size: 20px;
+}
+.clip2 .dp {
+  margin-left: 3vw;
+  margin-top: -2vh;
+}
+
+.clip3 {
+  display: block;
+  margin-top: -16vh;
+  margin-left: 13vh;
+}
+.clip3 .details {
+  text-align: left;
+}
+.clip3 .details li {
+  list-style: none;
+  font-weight: 500;
+  font-size: 10px;
+  margin-bottom: 10px;
+
+}
+.clip4 {
+  display: block;
+  margin-top: -15vh;
+  margin-left: 25vh;
+}
+.clip4 .details1 {
+  text-align: left;
+}
+.clip4 .details1 li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.clip5 {
+  align-items: center;
+  margin-left: -15vw;
+}
+.clip5 .topic .tag {
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0px 12px 0px 15px;
+  border-bottom: 0.1px solid #000;
+}
+.clip5 .topic .tag1 {
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0px 12px 0px 15px;
+  border-bottom: 0.1px solid #000;
+  color: #008000;
+}
+
+
+/*.not {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.dot {
+  display: flex;
+  flex-flow: row;
+  width: 351px;
+  height: 50px;
+  padding: 0 12px;
+}
+.dot .dot1 {
+  width: 6px;
+  height: 6px;
+  
+}
+.dot .dot2 {
+  width: 32px;
+  height: 32px;
+ 
+}
+.dot .dot3 {
+  font-weight: 500;
+  font-size: 13px;
+ 
+}
+.dot .dot4 {
+  width: 60px;
+  height: 50px;
+  border-radius: 4px;
+  padding-left: 3px;
+  margin-top: -1vh;
+}
+.not .dot5 {
+  font-size: 10px;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 15vw;
+  margin-top: -5vh;
+}*/
+
+.not {
+  width: 351px;
+  height: 50px;
+  margin-top: 4vh;
+}
+.not .dot {
+  display: flex;
+  flex-flow: row;
+  padding: 9px 5px;
+}
+.not .dot li {
+  list-style: none;
+}
+.not .dot .dot1 {
+  padding-left: 1px;
+}
+.not .dot .dot2 {
+  padding: 0 3px 0 2px;
+}
+.not .dot .dot3 {
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: -2px;
+  margin-right: 5px;
+}
+.not .dot .dot4 {
+  padding: 0 6px;
+  margin-top: -9px;
+  padding-right: 5px;
+}
+.not .dot .dot6 {
+  padding: 0 6px;
+  margin-top: -9px;
+  padding-right: 5px;
+  position: relative;
+  right: -19px;
+}
+.not .dot5 {
+  font-weight: 500;
+  font-size: 10px;
+  text-align: left;
+  margin: 0 55px;
+  margin-top: -44px;
+}

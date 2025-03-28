@@ -10,6 +10,7 @@
   margin: auto;
   font-family: 'DM sans', sans-serif;
   color: #FEFEFE;
+  overflow: hidden;
 }
 
 .login-2 {
@@ -18,6 +19,7 @@
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 h1 {
@@ -62,10 +64,11 @@ label {
   font-size: 16px;
   position: relative;
   right: 1vh;
+  top: -4vh;
 }
 
 .btn-2 {
-  margin-top: 5vh;
+  margin-top: 10vh;
 }
 .btn-2 a{
   text-decoration: underline 1px #008000;
@@ -73,7 +76,7 @@ label {
 }
 
 .orlog {
-  padding-top: 14vh;
+  padding-top: 18vh;
   font-size: 16px;
 }
 
@@ -98,4 +101,23 @@ label {
   position: fixed;
   top: 15vh;
   right: 6vw;
+}
+
+.remfor {
+  display: flex;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 13px;
+}
+
+.remember {
+  margin-bottom: 40px;
+}
+
+
+
+.forget {
+    margin-left: 23px;
+    margin-top: 0px;
+    color: #FEFEFE;
+   
 }

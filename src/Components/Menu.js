@@ -52,7 +52,7 @@ function Menu() {
           </li>
 
           <li className='nav-item'>
-            <Link to='/' className='nav-link'>
+            <Link to='NewestVideos' className='nav-link'>
             <img src={newest} alt='video' />
             <span className='nav-label'>Newest Videos</span>
             </Link>

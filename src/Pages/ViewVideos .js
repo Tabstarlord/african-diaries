@@ -16,11 +16,13 @@ import frame2 from '../Assets/Frame2.png'
 import frame3 from '../Assets/Frame3.png'
 import frame4 from '../Assets/Frame4.png'
 import Foot from '../Components/Foot'
+import Navbar from '../Components/Navbar'
 
 
 function ViewVideos () {
   return (
     <>
+    <Navbar />
     <div className='view'>
       <div className='view-1' >
       <span>Banging Oga Soldier Wife&nbsp;<h5>-&nbsp;12mins</h5></span>

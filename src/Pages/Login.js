@@ -1,22 +1,26 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import  { Link } from 'react-router-dom'
 import fb from '../Assets/fb.png'
 import x from '../Assets/x.png'
 import google from '../Assets/google.png'
 import divider from '../Assets/Divider.png'
+import cancel from '../Assets/close.png'
 import '../Styles/Login.css'
 
 
 
 function Login() {
+
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [checkBox, setCheckBox] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(
       userName,
-      password
+      password,
+      checkBox
     );
   };
 
@@ -25,7 +29,7 @@ function Login() {
     <>
     <div className='login'>
       <div className='login-2'>
-        <img className='back' src={divider} alt='back' />
+       <Link to={'..'}><img className='back' src={cancel} alt='back' /></Link>
       <h1>Log In</h1>
       <fieldset>
         <form action='#' method='get'>
@@ -48,6 +52,22 @@ function Login() {
            type='password' placeholder='Enter Password'
            id='password' 
            name='password' />
+
+          <div className='remfor'>
+          <input 
+           className='remember'
+           type='radio'
+           id='remember'
+           name='remember'
+           value='remember'
+           checked={checkBox === "remember"}
+           onChange={(e) =>
+            setCheckBox(e.target.value)
+           }
+           /> Remember Me
+           <Link to=''><p className='forget'>Forget your password?</p></Link>
+          </div>
+           
            <button className='btn-3'
            type='submit'
            value='Submit'

@@ -9,11 +9,13 @@ import eye from '../Assets/eye.png'
 import arrow from '../Assets/arrow-right.png'
 import Footer from '../Components/Footer'
 import Foot from '../Components/Foot'
+import Navbar from '../Components/Navbar'
 
 function Home() {
   return (
     <>
     <div className='home'>
+      <Navbar />
     
       <div className='image'>
         <Link to='ViewVideos'><img src={frame1} alt='Bang' />

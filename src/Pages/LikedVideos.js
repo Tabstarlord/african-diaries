@@ -4,10 +4,12 @@ import frame1 from '../Assets/Frame1.png'
 import eye from '../Assets/eye.png'
 import '../Styles/LikedVideos.css'
 import Foot from '../Components/Foot'
+import Navbar from '../Components/Navbar'
 
 function LikedVideos() {
   return (
     <>
+    <Navbar />
     <div className='liked'>
       <div className='liked-1'>
         <span>Liked Videos</span>

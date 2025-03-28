@@ -1,0 +1,78 @@
+.clip {
+  font-family: 'DM Sans', sans-serif;
+}
+.clip1 {
+  display: flex;
+}
+.clip1 h2 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 34vw;
+}
+.clip1 .cancel {
+  width: 24px;
+  height: 24px;
+  margin-top: 1.3vh;
+  margin-left: 1vw;
+}
+
+.clip2 {
+  display: block;
+  justify-items: left;
+  margin-top: -4vh;
+}
+.clip2 .user {
+  font-size: 20px;
+}
+.clip2 .dp {
+  margin-left: 3vw;
+  margin-top: -2vh;
+}
+
+.clip3 {
+  display: block;
+  margin-top: -16vh;
+  margin-left: 13vh;
+}
+.clip3 .details {
+  text-align: left;
+}
+.clip3 .details li {
+  list-style: none;
+  font-weight: 500;
+  font-size: 10px;
+  margin-bottom: 10px;
+
+}
+.clip4 {
+  display: block;
+  margin-top: -15vh;
+  margin-left: 25vh;
+}
+.clip4 .details1 {
+  text-align: left;
+}
+.clip4 .details1 li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.clip5 {
+  align-items: center;
+  margin-left: -15vw;
+}
+.clip5 .topic .tag {
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0px 12px 0px 15px;
+  border-bottom: 0.1px solid #000;
+}
+.clip5 .topic .tag1 {
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0px 12px 0px 15px;
+  border-bottom: 0.1px solid #000;
+  color: #008000;
+}

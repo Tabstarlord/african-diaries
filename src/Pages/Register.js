@@ -26,7 +26,7 @@ function Register() {
     <>
     <div className='register'>
       <div className='reg'>
-      <img className='back' src={cancel} alt='back' />
+      <Link to='/Home'><img className='back' src={cancel} alt='back' /></Link>
       <h1>Create an account</h1>
       <fieldset>
         <form action='#' method='get'>

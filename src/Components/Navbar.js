@@ -13,8 +13,6 @@ function Navbar() {
 
   const [open, setOpen] = useState (false);
 
-  const [search, openSearch] = useState (false);
-
   const [ showMenu, setShowMenu] = useState(false)
   return (
     <>
@@ -30,9 +28,13 @@ function Navbar() {
         <Link to='/'><img src={Logo} alt='/' /></Link>
       </div>
 
-     <div className='search-bar' onClick={() => openSearch(open => !open)}>
+      <div className='search-bar'>
         <img src={searchbar} alt='search' />
       </div> 
+
+     {/* <div className='search-bar' onClick={() => openSearch(open => !open)}>
+        <img src={searchbar} alt='search' />
+      </div> */}
       
 
       <div className='user' onClick={() => setOpen(open => !open)}>
@@ -40,10 +42,8 @@ function Navbar() {
       </div>
     </div>
 
-    {search && (
+    
         <Search />
-      )
-      }
 
       { open && (
     <div className='account'>
