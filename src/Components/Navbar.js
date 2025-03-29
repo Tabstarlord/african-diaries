@@ -38,7 +38,7 @@ function Navbar() {
       
 
       <div className='user' onClick={() => setOpen(open => !open)}>
-        <Link to='/'><img src={user} alt='user' /></Link>
+        <img src={user} alt='user' />
       </div>
     </div>
 
@@ -47,8 +47,8 @@ function Navbar() {
 
       { open && (
     <div className='account'>
-          <Link className='log' to='Login'>Login</Link>
-          <Link to='Register'>Register</Link>
+          <Link className='log' to='/Login'>Login</Link>
+          <Link to='/Register'>Register</Link>
         </div>
         )
         }

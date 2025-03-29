@@ -12,6 +12,7 @@ import NewestVideos from './Pages/NewestVideos'
 import Warning from './Pages/Warning'
 import LikedClips from './Pages/LikedClips';
 import Notification from './Pages/Notification'
+import NoVideos from './Pages/NoVideos';
 
 
 
@@ -39,6 +40,8 @@ function App() {
           element={ <LikedClips /> } />
           <Route path='/Notification' 
           element={ <Notification /> } />
+          <Route path='/Novideos' 
+          element={ <NoVideos /> } />
           
 
 

@@ -11,7 +11,7 @@ function LikedClips() {
     <>
     <div className='clip'>
       <div className='clip1'>
-      <img className='cancel' src={back} alt='jpg' />
+      <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
       <h2>Profile</h2>
       </div>
 
@@ -39,27 +39,27 @@ function LikedClips() {
 
       <div className='clip5'>
         <ul className='topic'>
-          <Link className='tag1'>Liked Videos</Link>
-          <Link className='tag'>Notifications</Link>
-          <Link className='tag'>Account Settings</Link>
+          <Link className='tag1' to='/LikedClips'>Liked Videos</Link>
+          <Link className='tag' to='/Notification'>Notifications</Link>
+          <Link className='tag' to='/Settings'>Account Settings</Link>
         </ul>
       </div>
 
       <div className='clip6'>
       <div className='image'>
-              <Link to='ViewVideos'><img src={frame1} alt='Bang' />
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
               <span>Banging Oga Soldier Wife</span>
               <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
               </Link>
             </div>
             <div className='image'>
-              <Link to='ViewVideos'><img src={frame1} alt='Bang' />
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
               <span>Banging Oga Soldier Wife</span>
               <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
               </Link>
             </div>
             <div className='image'>
-              <Link to='ViewVideos'><img src={frame1} alt='Bang' />
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
               <span>Banging Oga Soldier Wife</span>
               <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
               </Link>

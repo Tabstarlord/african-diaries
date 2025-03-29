@@ -53,7 +53,7 @@ label {
   padding: 8px 2px;
   background: none;
   box-sizing: border-box;
-  border: 1px solid #FEFEFE;
+  border: 0.5px solid #FEFEFE;
   font-size: 16px;
   position: relative;
   right: 2vh;

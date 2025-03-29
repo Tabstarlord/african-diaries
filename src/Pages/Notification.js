@@ -12,7 +12,7 @@ function Notification() {
     <>
     <div className='clip'>
     <div className='clip1'>
-      <img className='cancel' src={back} alt='jpg' />
+      <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
       <h2>Profile</h2>
       </div>
 
@@ -40,9 +40,9 @@ function Notification() {
 
       <div className='clip5'>
         <ul className='topic'>
-          <Link className='tag'>Liked Videos</Link>
-          <Link className='tag1'>Notifications</Link>
-          <Link className='tag'>Account Settings</Link>
+          <Link className='tag' to='/LikedClips'>Liked Videos</Link>
+          <Link className='tag1' to='/Notification'>Notifications</Link>
+          <Link className='tag' to='/Settings'>Account Settings</Link>
         </ul>
       </div>
 
@@ -79,46 +79,7 @@ function Notification() {
         </ul>
         <p className='dot5'>3 days ago</p>
       </div>
-
-      {/*<div className='not'>
-        <div className='dot'>
-          <img className='dot1' src={red} alt='jpg' />
-          <img className='dot2' src={frame3} alt='jpg' />
-          <span className='dot3'>Jaybougie replied to your comment</span>
-          <img className='dot4' src={frame16} alt='jpg' />
-        </div>
-        <p className='dot5'>Just Now</p>
       </div>
-      <div className='not'>
-        <div className='dot'>
-          <img className='dot1' src={red} alt='jpg' />
-          <img className='dot2' src={frame3} alt='jpg' />
-          <span className='dot3'>Busty Princess liked your comment</span>
-          <img className='dot4' src={frame16} alt='jpg' />
-        </div>
-        <p className='dot5'>12 mins ago</p>
-      </div>
-      <div className='not'>
-        <div className='dot'>
-          <img className='dot1' src={red} alt='jpg' />
-          <img className='dot2' src={frame3} alt='jpg' />
-          <span className='dot3'>Jamial Red replied to your comment</span>
-          <img className='dot4' src={frame16} alt='jpg' />
-        </div>
-        <p className='dot5'>2 days ago</p>
-      </div>
-      <div className='not'>
-        <div className='dot'>
-          <img className='dot1' src={red} alt='jpg' />
-          <img className='dot2' src={frame3} alt='jpg' />
-          <span className='dot3'>Jaybougie replied to your comment</span>
-          <img className='dot4' src={frame16} alt='jpg' />
-        </div>
-        <p className='dot5'>Just Now</p>
-      </div>*/}
-      
-      
-    </div>
     </>
   )
 }

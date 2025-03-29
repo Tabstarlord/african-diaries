@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../Styles/Register.css'
-import Fb from '../Assets/fb.png'
 import x from '../Assets/x.png'
 import google from '../Assets/google.png'
 import divider from '../Assets/Divider.png'
@@ -74,14 +73,13 @@ function Register() {
         <h1><img src={divider} alt='line' />&nbsp; OR&nbsp; <img src={divider} alt='line' /> </h1>
       </div>
       <div className='register-social'>
-        <img src={Fb} alt='facebook' />
         <img src={x} alt='twitter' />
         <img src={google} alt='google' />
       </div>
       </div>
 
 
-      <p className='btn-1'>Already have an account? <Link to='Login'>Login Now</Link> </p>
+      <p className='btn-1'>Already have an account? <Link to='/Login'>Login Now</Link> </p>
 
       </div>
     </div>

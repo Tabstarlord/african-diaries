@@ -45,14 +45,14 @@ function Menu() {
         {/*Primary Top Nav*/}
         <ul className='nav-list primary-nav'>
           <li className='nav-item'>
-            <Link to='BestVideos' className='nav-link'>
+            <Link to='/BestVideos' className='nav-link'>
             <img src={video} alt='video' />
             <span className='nav-label'>Best Videos</span>
             </Link>
           </li>
 
           <li className='nav-item'>
-            <Link to='NewestVideos' className='nav-link'>
+            <Link to='/NewestVideos' className='nav-link'>
             <img src={newest} alt='video' />
             <span className='nav-label'>Newest Videos</span>
             </Link>
@@ -66,10 +66,10 @@ function Menu() {
             </li>
             
         <li className='nav-item'>
-          <Link to='LikedVideos' className='nav-link'><img src={like} alt='like' /> <span className='nav-label'>Liked Videos</span> </Link>
+          <Link to='/LikedVideos' className='nav-link'><img src={like} alt='like' /> <span className='nav-label'>Liked Videos</span> </Link>
         </li>
         <li className='nav-item'>
-          <Link to='WatchHistory' className='nav-link'><img src={watch} alt='like' /> <span className='nav-label'>Watch History</span> </Link>
+          <Link to='/WatchHistory' className='nav-link'><img src={watch} alt='like' /> <span className='nav-label'>Watch History</span> </Link>
         </li>
 
         <li className='nav-item'>

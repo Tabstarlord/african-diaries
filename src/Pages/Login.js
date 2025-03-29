@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import  { Link } from 'react-router-dom'
-import fb from '../Assets/fb.png'
 import x from '../Assets/x.png'
 import google from '../Assets/google.png'
 import divider from '../Assets/Divider.png'
@@ -29,7 +28,7 @@ function Login() {
     <>
     <div className='login'>
       <div className='login-2'>
-       <Link to={'..'}><img className='back' src={cancel} alt='back' /></Link>
+       <Link to='/Home'><img className='back' src={cancel} alt='back' /></Link>
       <h1>Log In</h1>
       <fieldset>
         <form action='#' method='get'>
@@ -80,7 +79,6 @@ function Login() {
         <h1><img src={divider} alt='line' />&nbsp; OR&nbsp; <img src={divider} alt='line' /> </h1>
       </div>
       <div className='login-social'>
-        <img src={fb} alt='facebook' />
         <img src={x} alt='twitter' />
         <img src={google} alt='google' />
       </div>

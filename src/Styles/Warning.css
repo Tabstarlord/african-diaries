@@ -1,0 +1,93 @@
+.warn {
+  background: url('../Assets/frame.png');
+  background-attachment: fixed;
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  font-family: 'DM Sans', sans-serif;
+}
+.warn1 {
+  background-color: rgba(0, 0, 0, 0.815);
+  background-attachment: fixed;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+
+
+.warn3 h1 {
+  margin-top: -10px;
+font-weight: 600;
+font-size: 20px;
+color: #008000;
+
+}
+
+.warn3 .go2 {
+font-weight: 600;
+font-size: 20px;
+text-align: center;
+margin-top: -50px;
+color: #fff;
+}
+
+.warn4 {
+  width: auto;
+  height: 340px;
+  justify-content: space-between;
+  margin: -2vh 0px 0px;
+  padding-right: 15px;
+}
+.warn4 .go3 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  padding-left: 20px;
+  padding-top: 20px;
+  text-align: left;
+}
+.warn4 .go4 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+
+.warn5 {
+  color: #fff;
+  text-align: left;
+  margin-top: -147px;
+}
+.warn5 p {
+  padding-right: 20px;
+}
+
+.warn6 {
+  width: auto;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 40vh;
+  padding-bottom: 10vh;
+}
+
+.warn6 .go5 {
+  color: #fff;
+  padding: 20px 26vw;
+  font-weight: 500;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.warn6 .go6 {
+  background-color: #808080;
+  color: #fff;
+  padding: 20px 29vw;
+  font-weight: 500;
+  font-size: 13px;
+  border-radius: 4px;
+}

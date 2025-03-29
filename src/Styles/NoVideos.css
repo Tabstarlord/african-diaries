@@ -1,6 +1,8 @@
 .clip {
   font-family: 'DM Sans', sans-serif;
   margin: 0 2vw;
+  width: 350px;
+  height: 114px;
 }
 .clip1 {
   display: flex;
@@ -21,6 +23,7 @@
   display: block;
   justify-items: left;
   margin-top: -4vh;
+  margin-left: -3vw;
 }
 .clip2 .user {
   font-size: 20px;
@@ -33,7 +36,7 @@
 .clip3 {
   display: block;
   margin-top: -16vh;
-  margin-left: 13vh;
+  margin-left: 10vh;
 }
 .clip3 .details {
   text-align: left;
@@ -47,8 +50,10 @@
 }
 .clip4 {
   display: block;
-  margin-top: -15vh;
-  margin-left: 25vh;
+  margin-top: -10vh;
+  margin-left: 22vh;
+  position: relative;
+  bottom: 12px;
 }
 .clip4 .details1 {
   text-align: left;
@@ -77,47 +82,17 @@
   color: #008000;
 }
 
-.not {
-  width: 351px;
-  height: 50px;
-  margin-top: 4vh;
+.clip7 {
+  width: 350px;
+  height: 43px;
 }
-.not .dot {
-  display: flex;
-  flex-flow: row;
-  padding: 9px 5px;
-}
-.not .dot li {
-  list-style: none;
-}
-.not .dot .dot1 {
-  padding-left: 1px;
-}
-.not .dot .dot2 {
-  padding: 0 3px 0 2px;
-}
-.not .dot .dot3 {
+.clip7 .tag3 {
   font-weight: 500;
-  font-size: 13px;
-  margin-top: -2px;
-  margin-right: 5px;
+  font-size: 20px;
+  text-align: center;
 }
-.not .dot .dot4 {
-  padding: 0 6px;
-  margin-top: -9px;
-  padding-right: 5px;
-}
-.not .dot .dot6 {
-  padding: 0 6px;
-  margin-top: -9px;
-  padding-right: 5px;
-  position: relative;
-  right: -19px;
-}
-.not .dot5 {
-  font-weight: 500;
+.clip7 .tag4 {
+  font-weight: 400;
   font-size: 10px;
-  text-align: left;
-  margin: 0 55px;
-  margin-top: -44px;
+  text-align: center;
 }

@@ -1,12 +1,10 @@
 .login {
   background: url('../Assets/Frame16.png');
-  background-color: black;
   background-attachment: fixed;
-  height: 100vh;
+  height: auto;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform 0.2s;
-  width: 100%;
+  width: auto;
   margin: auto;
   font-family: 'DM sans', sans-serif;
   color: #FEFEFE;
@@ -16,7 +14,7 @@
 .login-2 {
   background-color: rgba(0, 0, 0, 0.788);
   background-attachment: fixed;
-  height: 100vh;
+  height: auto;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -49,7 +47,7 @@ label {
   padding: 8px 2px;
   background: none;
   box-sizing: border-box;
-  border: 1px solid #FEFEFE;
+  border: 0.5px solid #FEFEFE;
   font-size: 16px;
   position: relative;
   right: 1vh;
@@ -68,11 +66,15 @@ label {
 }
 
 .btn-2 {
-  margin-top: 10vh;
+  margin-top: 4vh;
 }
 .btn-2 a{
   text-decoration: underline 1px #008000;
   color: #008000;
+}
+
+.or-log {
+  padding-top: 30px;
 }
 
 .orlog {
