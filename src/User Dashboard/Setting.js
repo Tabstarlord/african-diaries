@@ -22,40 +22,41 @@ function Setting() {
   return (
     <>
     <div className='acc'>
-    <div className='set1'>
-      <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
-      <h2>Profile</h2>
-      </div>
-
-      <div className='set2'>
-        <h2 className='user'>Jaybouggie</h2>
-        <img className='dp' src={dp} alt='User' />
-      </div>
-
-      <div className='set3'>
-        <ul className='details'>
-          <li>Joined:</li>
-          <li>Profile views:</li>
-          <li>From:</li>
-          <li>Last Activity:</li>
-        </ul>
-      </div>
-      <div className='set4'>
-        <ul className='details1'>
-          <li>23 days on African Diaries</li>
-          <li>113 times</li>
-          <li>Earth</li>
-          <li>Online</li>
-        </ul>
-      </div>
-
-      <div className='set5'>
-        <ul className='topic'>
-          <Link className='tag' to='/LikedClips'>Liked Videos</Link>
-          <Link className='tag' to='/Notification'>Notifications</Link>
-          <Link className='tag1' to='/Settings'>Account Settings</Link>
-        </ul>
-      </div>
+   <div className='set1'>
+         <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
+         <h2>Profile</h2>
+         </div>
+   
+         <div className='set2'>
+         <div className='set3'>
+           <h2 className='user'>Jaybouggie</h2>
+           <img className='dp' src={dp} alt='User' />
+         </div>
+   
+         <div className='set4'>
+           <ul className='det'>
+             <li>Joined:</li>
+             <li>Profile views:</li>
+             <li>From:</li>
+             <li>Last Activity:</li>
+           </ul>
+           <ul className='det1'>
+             <li>23 days on African Diaries</li>
+             <li>113 times</li>
+             <li>Earth</li>
+             <li>Online</li>
+           </ul>
+         </div>
+         </div>
+         
+   
+         <div className='set6'>
+           <ul className='top'>
+             <Link className='tag' to='/LikedClips'>Liked Videos</Link>
+             <Link className='tag' to='/Notification'>Notifications</Link>
+             <Link className='tag1' to='/Settings'>Account Settings</Link>
+           </ul>
+         </div>
 
 
       <div className='acc2'>
@@ -98,7 +99,7 @@ function Setting() {
 <button className='get2'
            type='submit'
            value='Submit'
-           onClick={(e) => handleSubmit(e)}>Register</button>
+           onClick={(e) => handleSubmit(e)}>Save Changes</button>
           </form>
         </fieldset>
       </div>

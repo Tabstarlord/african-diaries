@@ -1,50 +1,118 @@
-.home {
-  margin-top: 18vh;
-  font-family: 'DM Sans', sans-serif;
-}
+  .home {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    padding-top: 25px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .home .image {
+    margin-top: 5vh;
+  }
+  
+  .home a {
+    text-decoration: none;
+    color: #000;
+  }
+  .home .image img {
+    width: 100%;
+  }
+  .home .image a span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    float: left;
+  }
+  
+  .home .image a p {
+    font-size: 13px;
+    float: left;
+    position: relative;
+    bottom: 10px;
+  }
+  
+  .home .image a p .eye {
+    width: 15%;
+    position: relative;
+    top: 3px;
+  }
+  
+  .home .pages {
+    width: 100%;
+    justify-items: center;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .home .pages li {
+    list-style: none;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .home .pages li img {
+    position: relative;
+    top: 3px;
+  }
 
-.home .image {
-  margin-top: 5vh;
-}
 
-.home a {
-  text-decoration: none;
-  color: #000;
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+  .home {
+    margin: auto;
+    width: 100%;
+    margin-top: 1vh;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .home .image {
+    margin-top: 5vh;
+    width: 100%;
+    align-content: center;
+  }
+  .home .image img {
+    width: 100%;
+  }
+  
+  .home a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .home .image a span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    float: left;
+  }
+  
+  .home .image a p {
+    font-size: 15px;
+    position: relative;
+    bottom: 10px;
+    float: left;
+  }
+  
+  .home .image a p .eye {
+    position: relative;
+    top: 3px;
+    width: 13%;
+  }
+  
+  .home .pages {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .home .pages li {
+    list-style: none;
+    text-align: center;
+  }
+  
+  .home .pages li img {
+    position: relative;
+    top: 3px;
+  }
 }
-
-.home .image a span {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 100%;
-  margin-right: 150px;
-}
-
-.home .image a p {
-  font-size: 13px;
-  margin-right: 240px;
-  position: relative;
-  bottom: 10px;
-}
-
-.home .image a p .eye {
-  position: relative;
-  top: 3px;
-}
-
-.home .pages {
-  display: flex;
-  gap: 12px;
-  padding-left: 25px;
-}
-
-.home .pages li {
-  list-style: none;
-  text-align: center;
-  gap: 10px;
-}
-
-.home .pages li img {
-  position: relative;
-  top: 3px;
-}
-

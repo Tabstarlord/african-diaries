@@ -1,51 +1,105 @@
-.header {
-  background-color: #fff;
-  justify-content: center;
-  overflow: hidden;
-  position: fixed;
-  top: 2%;
-  gap: 13vw;
-  width: 100%;
-  transition: 0.4s;
-  display: flex;
-  flex-direction: row;
-  z-index: 90;
+
+  .header {
+    top: 1%;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    gap: 13vw;
+    z-index: 90;
+  }
+  .header .logo {
+    position: relative;
+    top: 5px;
+    left: 10px;
+  }
+  .header .menu-btn {
+    position: relative;
+    top: 3px;
+  }
+  .header .user {
+    position: relative;
+    top: 2px;
+  }
+  .header .search-bar {
+    position: relative;
+    top: 2px;
+    left: 9px;
+  }
+
+  .account {
+    display: grid;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: #F4F4F4;
+    border-radius: 4px;
+    padding: 15px;
+  }
+  .account a {
+    padding: 5px;
+    color: #008000;
+    text-decoration: none;
+  }
+  .account .log {
+    border-bottom: 0.5px solid;
+    color: #000;
+  }
+
+
+
+
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+  .header {
+    top: 1%;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    gap: 17%;
+    z-index: 90;
+  }
+  .header .logo {
+    position: relative;
+    top: 5px;
+    left: 10px;
+  }
+  .header .menu-btn {
+    position: relative;
+    top: 3px;
+  }
+  .header .user {
+    position: relative;
+    top: 2px;
+  }
+  .header .search-bar {
+    position: relative;
+    top: 2px;
+    left: 12px;
+  }
+
+  .account {
+    display: grid;
+    position: absolute;
+    right: 0;
+    margin-top: 2px;
+    margin-right: 20px;
+    background-color: #F4F4F4;
+    border-radius: 4px;
+    padding: 15px;
+  }
+  .account a {
+    padding: 5px;
+    color: #008000;
+    text-decoration: none;
+  }
+  .account .log {
+    border-bottom: 0.5px solid;
+    color: #000;
+  }
 }
-
-.logo {
-  padding-top: 7px;
-}
-
-.menu-btn {
-  padding-top: 5px;
-}
-
-.user {
-  padding-top: 5px;
-}
-
-.search-bar {
-  margin-top: 5px;
-}
-
-.account {
-  display: grid;
-  position: absolute;
-  background-color: #F4F4F4;
-  border-radius: 4px;
-  padding: 10px;
-  margin-left: 70vw;
-  margin-top: 2px
-}
-
-.account a {
-  padding: 4px;
-  color: #008000;
-}
-
-.account .log {
-  border-bottom: 0.5px solid;
-  color: #000;
-}
-
-

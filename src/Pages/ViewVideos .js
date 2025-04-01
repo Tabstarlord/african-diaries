@@ -174,8 +174,8 @@ function ViewVideos () {
               </div>
       </div>
     </div>
-    <div className='back'>
-      <Link to='/'>Back To Home</Link>
+    <div className='back-1'>
+      <Link to='/Home'>Back To Home</Link>
     </div>
     <Foot />
     </>

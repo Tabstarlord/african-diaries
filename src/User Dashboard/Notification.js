@@ -10,43 +10,46 @@ import '../Styles/Notification.css'
 function Notification() {
   return (
     <>
-    <div className='clip'>
-    <div className='clip1'>
-      <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
-      <h2>Profile</h2>
-      </div>
+    <div className='not'>
+     <div className='not1'>
+                 <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
+                 <h2>Profile</h2>
+                 </div>
+           
+                 <div className='not2'>
+                 <div className='not3'>
+                   <h2 className='user'>Jaybouggie</h2>
+                   <img className='dp' src={dp} alt='User' />
+                 </div>
+           
+                 <div className='not4'>
+                   <ul className='deta'>
+                     <li>Joined:</li>
+                     <li>Profile views:</li>
+                     <li>From:</li>
+                     <li>Last Activity:</li>
+                   </ul>
+                   <ul className='deta1'>
+                     <li>23 days on African Diaries</li>
+                     <li>113 times</li>
+                     <li>Earth</li>
+                     <li>Online</li>
+                   </ul>
+                 </div>
+                 </div>
+                 
+           
+                 <div className='not6'>
+                   <ul className='topics1'>
+                     <Link className='tag' to='/LikedClips'>Liked Videos</Link>
+                     <Link className='tag1' to='/Notification'>Notifications</Link>
+                     <Link className='tag' to='/Settings'>Account Settings</Link>
+                   </ul>
+                 </div>
 
-      <div className='clip2'>
-        <h2 className='user'>Jaybouggie</h2>
-        <img className='dp' src={dp} alt='User' />
-      </div>
 
-      <div className='clip3'>
-        <ul className='details'>
-          <li>Joined:</li>
-          <li>Profile views:</li>
-          <li>From:</li>
-          <li>Last Activity:</li>
-        </ul>
-      </div>
-      <div className='clip4'>
-        <ul className='details1'>
-          <li>23 days on African Diaries</li>
-          <li>113 times</li>
-          <li>Earth</li>
-          <li>Online</li>
-        </ul>
-      </div>
 
-      <div className='clip5'>
-        <ul className='topic'>
-          <Link className='tag' to='/LikedClips'>Liked Videos</Link>
-          <Link className='tag1' to='/Notification'>Notifications</Link>
-          <Link className='tag' to='/Settings'>Account Settings</Link>
-        </ul>
-      </div>
-
-      <div className='not'>
+      <div className='dot-1'>
         <ul className='dot'>
           <li className='dot1'><img src={red} alt='jpg' /></li>
           <li className='dot2'><img className='dot2' src={frame3} alt='jpg' /></li>
@@ -70,14 +73,6 @@ function Notification() {
           <li className='dot4'><img src={frame16} alt='jpg' /></li>
         </ul>
         <p className='dot5'>2 day ago</p>
-
-        <ul className='dot'>
-          <li className='dot1'><img src={red} alt='jpg' /></li>
-          <li className='dot2'><img className='dot2' src={frame3} alt='jpg' /></li>
-          <li className='dot3'><span>Jamial replied to your comment</span></li>
-          <li className='dot6'><img src={frame16} alt='jpg' /></li>
-        </ul>
-        <p className='dot5'>3 days ago</p>
       </div>
       </div>
     </>

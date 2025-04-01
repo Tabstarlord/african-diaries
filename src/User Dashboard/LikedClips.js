@@ -16,19 +16,18 @@ function LikedClips() {
       </div>
 
       <div className='clip2'>
+      <div className='clip3'>
         <h2 className='user'>Jaybouggie</h2>
         <img className='dp' src={dp} alt='User' />
       </div>
 
-      <div className='clip3'>
+      <div className='clip4'>
         <ul className='details'>
           <li>Joined:</li>
           <li>Profile views:</li>
           <li>From:</li>
           <li>Last Activity:</li>
         </ul>
-      </div>
-      <div className='clip4'>
         <ul className='details1'>
           <li>23 days on African Diaries</li>
           <li>113 times</li>
@@ -36,8 +35,10 @@ function LikedClips() {
           <li>Online</li>
         </ul>
       </div>
+      </div>
+      
 
-      <div className='clip5'>
+      <div className='clip6'>
         <ul className='topic'>
           <Link className='tag1' to='/LikedClips'>Liked Videos</Link>
           <Link className='tag' to='/Notification'>Notifications</Link>
@@ -45,7 +46,9 @@ function LikedClips() {
         </ul>
       </div>
 
-      <div className='clip6'>
+      
+
+      <div className='clip7'>
       <div className='image'>
               <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
               <span>Banging Oga Soldier Wife</span>

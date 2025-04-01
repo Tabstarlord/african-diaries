@@ -1,6 +1,91 @@
 .liked {
-  margin-top: 18vh;
+  margin: auto;
+  width: 100%;
+  padding-top: 100px;
+  position: relative;
   font-family: 'DM Sans', sans-serif;
+}
+.liked-1 {
+  display: flex;
+  position: relative;
+}
+.liked-1 span {
+  float: left;
+  font-weight: 500;
+  font-size: 16px;
+}
+.liked-1 p {
+  font-weight: 500;
+  font-size: 10px;
+  position: relative;
+  top: 20px;
+  right: 96px;
+}
+.liked .liked-2 .image {
+  margin-top: 9vh;
+}
+
+.liked a {
+  text-decoration: none;
+  color: #000;
+}
+.liked-2 .image img {
+  width: 100%;
+}
+.liked-2 .image a span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  float: left;
+}
+
+.liked .image a p {
+  font-size: 13px;
+  float: left;
+  position: relative;
+  bottom: 10px;
+}
+
+.liked .image a p .eye {
+  width: 15%;
+  position: relative;
+  top: 3px;
+}
+
+.liked .pages {
+  width: 100%;
+  justify-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.liked .pages li {
+  list-style: none;
+  text-align: center;
+  gap: 10px;
+}
+
+.liked .pages li img {
+  position: relative;
+  top: 3px;
+}
+
+
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+.liked {
+  margin: auto;
+  width: 100%;
+  margin-top: 1vh;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.liked .image {
+  margin-top: 5vh;
+  width: 100%;
+  align-content: center;
+}
+.liked .image img {
+  width: 100%;
 }
 
 .liked a {
@@ -10,35 +95,39 @@
 
 .liked .image a span {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 100%;
-  margin-right: 150px;
+  float: left;
 }
 
 .liked .image a p {
-  font-size: 13px;
-  margin-right: 240px;
+  font-size: 15px;
   position: relative;
   bottom: 10px;
+  float: left;
 }
 
 .liked .image a p .eye {
   position: relative;
   top: 3px;
+  width: 13%;
 }
 
-.liked-1 {
-  text-align: start;
+.liked .pages {
+  margin: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
 
-.liked-1 span {
-  width: 96px;
-  height: 21px;
-  font-weight: 500;
-  font-size: 16px;
+.liked .pages li {
+  list-style: none;
+  text-align: center;
 }
 
-.liked-1 p {
-  font-weight: 500;
-  font-size: 10px;
+.liked .pages li img {
+  position: relative;
+  top: 3px;
+}
 }

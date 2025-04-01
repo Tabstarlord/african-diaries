@@ -1,125 +1,257 @@
-.login {
-  background: url('../Assets/Frame16.png');
-  background-attachment: fixed;
-  height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: auto;
-  margin: auto;
-  font-family: 'DM sans', sans-serif;
-  color: #FEFEFE;
-  overflow: hidden;
-}
 
-.login-2 {
-  background-color: rgba(0, 0, 0, 0.788);
-  background-attachment: fixed;
-  height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
-h1 {
-  padding-top: 25vh;
-  color: #fff;
-  text-align: center;
-}
-
-fieldset {
-  border: none;
-}
-
-label {
-  font-size: 16px;
-  display: block;
-  margin-top: 8px;
-  margin-bottom: 5px;
-  text-align: left;
-  font-weight: 500;
-}
-
-.log-1 {
-  display: block;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 22px;
-  padding: 8px 2px;
-  background: none;
-  box-sizing: border-box;
-  border: 0.5px solid #FEFEFE;
-  font-size: 16px;
-  position: relative;
-  right: 1vh;
-}
-
-.btn-3 {
-  padding: 15px 36vw;
-  border-radius: 4px;
-  color: #FEFEFE;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  position: relative;
-  right: 1vh;
-  top: -4vh;
-}
-
-.btn-2 {
-  margin-top: 4vh;
-}
-.btn-2 a{
-  text-decoration: underline 1px #008000;
-  color: #008000;
-}
-
-.or-log {
-  padding-top: 30px;
-}
-
-.orlog {
-  padding-top: 18vh;
-  font-size: 16px;
-}
-
-.orlog h1 {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.login-social {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  margin-top: -8vh;
-}
-
-.orlog img {
-  position: relative;
-  bottom: 6px;
-}
-
-.back {
-  position: fixed;
-  top: 15vh;
-  right: 6vw;
-}
-
-.remfor {
-  display: flex;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 13px;
-}
-
-.remember {
-  margin-bottom: 40px;
-}
-
-
-
-.forget {
-    margin-left: 23px;
-    margin-top: 0px;
+  .login {
+    background: url('../Assets/Frame16.png');
+    background-attachment: fixed;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    margin: auto;
+    font-family: 'DM sans', sans-serif;
     color: #FEFEFE;
-   
-}
+    overflow: hidden;
+  }
+  
+  .login-2 {
+    background-color: rgba(0, 0, 0, 0.788);
+    background-attachment: fixed;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding-top: -5px;
+  }
+  
+  .login-2 h1 {
+    padding-top: 70px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-2 fieldset {
+    border: none;
+  }
+  
+  .login-2 label {
+    font-size: 16px;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  .login-2 .log-1 {
+    display: block;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px 2px;
+    background: none;
+    box-sizing: border-box;
+    border: 0.5px solid #fefefe56;
+    font-size: 16px;
+    position: relative;
+    right: 1vh;
+  }
+  
+  .login-2 .btn-3 {
+    padding: 15px 36vw;
+    border-radius: 4px;
+    background-color: #008000;
+    color: #FEFEFE;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    right: 1vh;
+    top: -4vh;
+  }
+  
+  .login-2 .btn-2 {
+    margin-top: 4vh;
+  }
+  .login-2 .btn-2 a{
+    text-decoration: underline 1px #008000;
+    color: #008000;
+  }
+  
+  .login-2 .orlog {
+    padding-top: 1px;
+    font-size: 16px;
+  }
+  
+  .orlog h1 {
+    margin: auto;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    bottom: 60px;
+  }
+  
+  .login-2 .login-social {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: -40px;
+  }
+  
+  .login-2 .orlog img {
+    position: relative;
+    bottom: 6px;
+  }
+  .login-2 a .back-3 {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+  }
+  
+  .remfor {
+    display: flex;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 13px;
+  }
+  
+  .remember {
+    margin-bottom: 40px;
+  }
+  
+  
+  
+  .forget {
+      margin-left: 23px;
+      margin-top: 0px;
+      color: #FEFEFE;
+     
+  }
+
+
+
+/*@media only screen and (min-width: 425px) and (max-width: 767px) {
+  .login {
+    background: url('../Assets/Frame16.png');
+    background-attachment: fixed;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    margin: auto;
+    font-family: 'DM sans', sans-serif;
+    color: #FEFEFE;
+    overflow: hidden;
+  }
+  
+  .login-2 {
+    background-color: rgba(0, 0, 0, 0.788);
+    background-attachment: fixed;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  h1 {
+    padding-top: 25vh;
+    color: #fff;
+    text-align: center;
+  }
+  
+  fieldset {
+    border: none;
+  }
+  
+  label {
+    font-size: 16px;
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  .log-1 {
+    display: block;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 22px;
+    padding: 8px 2px;
+    background: none;
+    box-sizing: border-box;
+    border: 0.5px solid #FEFEFE;
+    font-size: 16px;
+    position: relative;
+    right: 1vh;
+  }
+  
+  .btn-3 {
+    padding: 15px 36vw;
+    border-radius: 4px;
+    color: #FEFEFE;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    right: 1vh;
+    top: -4vh;
+  }
+  
+  .btn-2 {
+    margin-top: 4vh;
+  }
+  .btn-2 a{
+    text-decoration: underline 1px #008000;
+    color: #008000;
+  }
+  
+  .or-log {
+    padding-top: 30px;
+  }
+  
+  .orlog {
+    padding-top: 18vh;
+    font-size: 16px;
+  }
+  
+  .orlog h1 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .login-social {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: -8vh;
+  }
+  
+  .orlog img {
+    position: relative;
+    bottom: 6px;
+  }
+  
+  .back {
+    position: fixed;
+    top: 15vh;
+    right: 6vw;
+  }
+  
+  .remfor {
+    display: flex;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 13px;
+  }
+  
+  .remember {
+    margin-bottom: 40px;
+  }
+  
+  
+  
+  .forget {
+      margin-left: 23px;
+      margin-top: 0px;
+      color: #FEFEFE;
+     
+  }
+}*/

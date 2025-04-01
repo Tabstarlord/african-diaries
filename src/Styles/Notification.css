@@ -1,123 +1,129 @@
-.clip {
+.not {
+  margin: auto;
+  width: auto;
   font-family: 'DM Sans', sans-serif;
-  margin: 0 2vw;
 }
-.clip1 {
-  display: flex;
+.not .not1 .cancel {
+  float: left;
 }
-.clip1 h2 {
+.not .not1 h2 {
   font-weight: 600;
   font-size: 16px;
-  margin-left: 34vw;
-}
-.clip1 .cancel {
-  width: 24px;
-  height: 24px;
-  margin-top: 1.3vh;
-  margin-left: 1vw;
+  margin-top: 1px;
 }
 
-.clip2 {
-  display: block;
-  justify-items: left;
-  margin-top: -4vh;
+.not2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
-.clip2 .user {
+.not2 .not3 .user {
+  font-weight: 500;
   font-size: 20px;
 }
-.clip2 .dp {
-  margin-left: 3vw;
-  margin-top: -2vh;
+.not2 .not3 .dp {
+  position: relative;
+  bottom: 10px;
 }
-
-.clip3 {
+.not2 .not4 {
   display: block;
-  margin-top: -16vh;
-  margin-left: 13vh;
-}
-.clip3 .details {
   text-align: left;
+  position: relative;
+  top: 21px;
 }
-.clip3 .details li {
+.not2 .not4 .deta {
+  padding: 5px 15px;
+}
+.not2 .not4 .deta li {
   list-style: none;
   font-weight: 500;
   font-size: 10px;
-  margin-bottom: 10px;
-
+  padding-bottom: 10px;
 }
-.clip4 {
-  display: block;
-  margin-top: -15vh;
-  margin-left: 25vh;
+.not2 .not4 .deta1 {
+ position: relative;
+ bottom: 113px;
+ left: 60px;
 }
-.clip4 .details1 {
-  text-align: left;
-}
-.clip4 .details1 li {
+.not2 .not4 .deta1 li {
   list-style: none;
   font-weight: 600;
-  font-size: 11px;
-  margin-bottom: 10px;
+  font-size: 10px;
+  padding-bottom: 10px;
 }
 
-.clip5 {
-  align-items: center;
+.not6 {
+  margin-top: -100px;
+  width: 100%;
 }
-.clip5 .topic .tag {
+.not6 .topics1 {
+  display: flex;
+  gap: 18px;
+  border-bottom: 0.3px solid #000;
+}
+.not6 .topics1 a {
   font-weight: 500;
   font-size: 13px;
-  padding: 0px 12px 0px 15px;
-  border-bottom: 0.1px solid #000;
 }
-.clip5 .topic .tag1 {
-  font-weight: 500;
-  font-size: 13px;
-  padding: 0px 12px 0px 15px;
-  border-bottom: 0.1px solid #000;
+.not6 .topics1 .tag1 {
   color: #008000;
 }
 
-.not {
-  width: 351px;
-  height: 50px;
-  margin-top: 4vh;
+
+
+.dot-1 {
+  margin: auto;
+  width: 100%;
 }
-.not .dot {
+.dot-1 .dot {
   display: flex;
-  flex-flow: row;
-  padding: 9px 5px;
+  flex-direction: row;
 }
-.not .dot li {
+.dot-1 .dot li{
   list-style: none;
-}
-.not .dot .dot1 {
-  padding-left: 1px;
-}
-.not .dot .dot2 {
-  padding: 0 3px 0 2px;
-}
-.not .dot .dot3 {
   font-weight: 500;
-  font-size: 13px;
-  margin-top: -2px;
-  margin-right: 5px;
+  font-size: 13px
 }
-.not .dot .dot4 {
-  padding: 0 6px;
-  margin-top: -9px;
-  padding-right: 5px;
+.dot-1 .dot .dot1 {
+  margin-left: -40px;
 }
-.not .dot .dot6 {
-  padding: 0 6px;
-  margin-top: -9px;
-  padding-right: 5px;
+.dot-1 .dot .dot2 {
   position: relative;
-  right: -19px;
+  left: 6px;
 }
-.not .dot5 {
+.dot-1 .dot .dot3 {
+  position: relative;
+  left: 30px;
+}
+.dot-1 .dot .dot4 {
+  position: relative;
+  left: 45px;
+  bottom: 5px;
+}
+.dot-1 .dot5 {
   font-weight: 500;
   font-size: 10px;
-  text-align: left;
-  margin: 0 55px;
-  margin-top: -44px;
+  position: relative;
+  bottom: 50px;
+  right: 85px;
+}
+
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+  .not6 .topics1{
+    gap: 35px;
+  }
+  .dot-1 .dot {
+    margin: auto;
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .dot-1 .dot {
+    margin: auto;
+    width: 100%;
+  }
+  .dot-1 .dot5 {
+    margin-right: 380px;
+  }
 }

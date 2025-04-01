@@ -10,9 +10,11 @@ import Login from './Pages/Login';
 import Register from './Pages/Register'
 import NewestVideos from './Pages/NewestVideos'
 import Warning from './Pages/Warning'
-import LikedClips from './Pages/LikedClips';
-import Notification from './Pages/Notification'
-import NoVideos from './Pages/NoVideos';
+import LikedClips from './User Dashboard/LikedClips';
+import Notification from './User Dashboard/Notification';
+import NoVideos from './User Dashboard/NoVideos';
+import Setting from './User Dashboard/Setting';
+import NoNotification from './User Dashboard/NoNotification';
 
 
 
@@ -42,6 +44,11 @@ function App() {
           element={ <Notification /> } />
           <Route path='/Novideos' 
           element={ <NoVideos /> } />
+          <Route path='/Setting' 
+          element={ <Setting /> } />
+          <Route path='/NoNotification' 
+          element={ <NoNotification /> } />
+          
           
 
 

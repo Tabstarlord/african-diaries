@@ -1,167 +1,371 @@
-.view {
-  padding-top: 25px;
-}
-.view-1{
-  font-family: 'DM sans', sans-serif;
-}
 
-.view-1 span {
-  display: flex;
-  font-weight: 500;
-  font-size: 16px;
-  margin-left: 5px;
-}
+  .view {
+    padding-top: 90px;
+  }
+  .view-1{
+    font-family: 'DM sans', sans-serif;
+  }
+  
+  .view-1 span {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  
+  .view-1 span h5 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-top: 2px;
+  }
+  
+  .view-1 .links {
+    margin-right:  45px;
+    position: relative;
+    bottom: 10px;
+  }
+  .view-1 .links a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 5px;
+    font-size: 13px;
+  }
+  
+  .view-1 .react {
+    display: flex;
+  }
+  
+  .react a {
+    text-decoration: none;
+    color: #000;
+    padding-right: 45px;
+  }
+  
+  .react a p{
+    position: relative;
+    bottom: 40px;
+    left: 25px;
+  }
+  
+  .view-1 .view-2 {
+   margin-left: 250px;
+   position: relative;
+   bottom: 70px;
+  }
+  
+  .view-1 .view-2 p {
+    margin-left: 50px;
+    position: relative;
+    bottom: 40px;;
+  }
+  
+  .comment {
+    display: flex;
+    width: 350px;
+    height: 17px;
+    gap: 5px;
+    margin-top: -100px;
+  }
+  
+  .comment p {
+    margin-top: -1px;
+  }
+  
+  .comment-1 .com {
+    display: flex;
+    width: 114px;
+    height: 30px;
+    margin-top: 30px;
+    gap: 10px;
+  }
+  
+  .com span {
+    width: 45px;
+    height: 17px;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  
+  .com p {
+    font-weight: 400;
+    font-size: 13px;
+    margin-left: 14vw;
+    margin-top: 9px;
+  }
+  
+  .com-1 {
+    display: flex;
+  }
+  
+  .com-1 p {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  .com-2 {
+    display: flex;
+    width: 146px;
+    height: 18px;
+    gap: 15px;
+    margin-left: 45vw;
+    margin-top: -3vw;
+  }
+  
+  .com-2 p {
+    margin-top: 1px;
+  }
+  
+  .write {
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+  }
+  
+  .write input {
+    width: 276px;
+    height: 33px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  
+  .write button {
+    width: 64px;
+    color: #fff;
+    background-color: #008000;
+    border: none;
+    padding: 5px 8px;
+  }
+  
+  .related span {
+  
+    margin-right: 63vw;
+  }
+  
+   a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .image a span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    margin-right: 150px;
+  }
+  
+  .image a p {
+    font-size: 13px;
+    margin-right: 240px;
+    position: relative;
+    bottom: 10px;
+  }
+  
+  .image a p .eye {
+    position: relative;
+    top: 3px;
+  }
+  
+  .back-1 a {
+    font-weight: 500;
+    font-size: 10px;
+    color: #008000;
+  }
 
-.view-1 span h5 {
-  font-size: 13px;
-  font-weight: 500;
-  margin-left: 8px;
-  margin-top: 2px;
-}
 
-.view-1 .links {
-  margin-right:  45px;
-  position: relative;
-  bottom: 10px;
-}
-.view-1 .links a {
-  text-decoration: none;
-  color: #000;
-  padding: 0 5px;
-  font-size: 13px;
-}
 
-.view-1 .react {
-  display: flex;
-}
-
-.react a {
-  text-decoration: none;
-  color: #000;
-  padding-right: 45px;
-}
-
-.react a p{
-  position: relative;
-  bottom: 40px;
-  left: 25px;
-}
-
-.view-1 .view-2 {
- margin-left: 250px;
- position: relative;
- bottom: 70px;
-}
-
-.view-1 .view-2 p {
-  margin-left: 50px;
-  position: relative;
-  bottom: 40px;;
-}
-
-.comment {
-  display: flex;
-  width: 350px;
-  height: 17px;
-  gap: 5px;
-  margin-top: -100px;
-}
-
-.comment p {
-  margin-top: -1px;
-}
-
-.comment-1 .com {
-  display: flex;
-  width: 114px;
-  height: 30px;
-  margin-top: 30px;
-  gap: 10px;
-}
-
-.com span {
-  width: 45px;
-  height: 17px;
-  font-weight: 500;
-  font-size: 13px;
-  margin-top: 8px;
-}
-
-.com p {
-  font-weight: 400;
-  font-size: 13px;
-  margin-left: 14vw;
-  margin-top: 9px;
-}
-
-.com-1 {
-  display: flex;
-}
-
-.com-1 p {
-  font-weight: 400;
-  font-size: 12px;
-}
-
-.com-2 {
-  display: flex;
-  width: 146px;
-  height: 18px;
-  gap: 15px;
-  margin-left: 45vw;
-  margin-top: -3vw;
-}
-
-.com-2 p {
-  margin-top: 1px;
-}
-
-.write {
-  margin-top: 5vw;
-  margin-bottom: 10vw;
-}
-
-.write input {
-  width: 276px;
-  height: 33px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-.write button {
-  width: 64px;
-  color: #fff;
-}
-
-.related span {
-
-  margin-right: 63vw;
-}
-
- a {
-  text-decoration: none;
-  color: #000;
-}
-
-.image a span {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 100%;
-  margin-right: 150px;
-}
-
-.image a p {
-  font-size: 13px;
-  margin-right: 240px;
-  position: relative;
-  bottom: 10px;
-}
-
-.image a p .eye {
-  position: relative;
-  top: 3px;
-}
-
-.back a {
-  color: #008000;
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+  .view {
+    padding-top: 85px;
+    padding-bottom: 80px;
+  }
+  .view-1{
+    font-family: 'DM sans', sans-serif;
+  }
+  
+  .view-1 span {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .view-1 span h5 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-top: 2px;
+  }
+  
+  .view-1 .links {
+    margin-right:  45px;
+    position: relative;
+    bottom: 10px;
+    float: left;
+  }
+  .view-1 .links a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 5px;
+    font-size: 13px;
+  }
+  .view-1 .play {
+    width: 100%;
+  }
+  
+  .view-1 .react {
+    display: flex;
+  }
+  
+  .react a {
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 65px;
+  }
+  
+  .react a p{
+    position: relative;
+    bottom: 40px;
+    left: 25px;
+  }
+  
+  .view-1 .view-2 {
+   margin-left: 250px;
+   position: relative;
+   bottom: 87px;
+   left: 100px;
+  }
+  
+  .view-1 .view-2 p {
+    margin-left: 50px;
+    position: relative;
+    bottom: 40px;
+  }
+  .comments {
+    margin: auto;
+    width: 75%;
+  }
+  .comment {
+    display: flex;
+    width: 350px;
+    height: 17px;
+    gap: 10px;
+    margin-top: -100px;
+  }
+  
+  .comment p {
+    margin-top: -1px;
+  }
+  
+  .comment-1 .com {
+    display: flex;
+    width: 114px;
+    height: 30px;
+    margin-top: 30px;
+    gap: 15px;
+  }
+  
+  .com span {
+    width: 45px;
+    height: 17px;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  
+  .com p {
+    font-weight: 400;
+    font-size: 13px;
+    margin-left: 14vw;
+    margin-top: 9px;
+  }
+  
+  .com-1 {
+    display: flex;
+  }
+  
+  .com-1 p {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  .com-2 {
+    display: flex;
+    width: 146px;
+    height: 18px;
+    gap: 15px;
+    margin-left: 45vw;
+    margin-top: -3vw;
+  }
+  
+  .com-2 p {
+    margin-top: 1px;
+  }
+  
+  .write {
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+  }
+  
+  .write input {
+    width: 276px;
+    height: 33px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  
+  .write button {
+    width: 64px;
+    color: #fff;
+  }
+  
+  .related span {
+    float: left;
+    font-weight: 500;
+  }
+  
+   a {
+    text-decoration: none;
+    color: #000;
+  }
+  .related .image {
+    width: 100%;
+  }
+  .related .image img {
+    width: 100%;
+  }
+  
+  .image a span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    margin-right: 150px;
+  }
+  
+  .image a p {
+    font-size: 13px;
+    float: left;
+    margin-right: 250px;
+    position: relative;
+    bottom: 10px;
+  }
+  
+  .image a p .eye {
+    width: 15px;
+    position: relative;
+    top: 3px;
+  }
+  
+  .back-1 {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-right: 10px;
+  }
+  .back-1 a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #008000;
+  }
 }

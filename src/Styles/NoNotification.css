@@ -1,86 +1,86 @@
-.nov {
+.no {
   margin: auto;
   width: auto;
   font-family: 'DM Sans', sans-serif;
 }
-.nov .nov1 .cancel {
+.no .no1 .cancel {
   float: left;
 }
-.nov .nov1 h2 {
+.no .no1 h2 {
   font-weight: 600;
   font-size: 16px;
   margin-top: 1px;
 }
 
-.nov2 {
+.no2 {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-.nov2 .nov3 .user {
+.no2 .no3 .user {
   font-weight: 500;
   font-size: 20px;
 }
-.nov2 .nov3 .dp {
+.no2 .no3 .dp {
   position: relative;
   bottom: 10px;
 }
-.nov2 .nov4 {
+.no2 .no4 {
   display: block;
   text-align: left;
   position: relative;
   top: 21px;
 }
-.nov2 .nov4 .detail {
+.no2 .no4 .de {
   padding: 5px 15px;
 }
-.nov2 .nov4 .detail li {
+.no2 .no4 .de li {
   list-style: none;
   font-weight: 500;
   font-size: 10px;
   padding-bottom: 10px;
 }
-.nov2 .nov4 .detail1 {
+.no2 .no4 .de1 {
  position: relative;
  bottom: 113px;
  left: 60px;
 }
-.nov2 .nov4 .detail1 li {
+.no2 .no4 .de1 li {
   list-style: none;
   font-weight: 600;
   font-size: 10px;
   padding-bottom: 10px;
 }
 
-.nov6 {
+.no6 {
   margin-top: -100px;
   width: 100%;
 }
-.nov6 .topics {
+.no6 .to {
   display: flex;
   gap: 18px;
   border-bottom: 0.3px solid #000;
 }
-.nov6 .topics a {
+.no6 .to a {
   font-weight: 500;
   font-size: 13px;
 }
-.nov6 .topics .tag1 {
+.no6 .to .tag1 {
   color: #008000;
 }
 
 
 
-.nov7 {
+.no7 {
   margin: auto;
   width: 100%;
 }
-.nov7 .tag3 {
+.no7 .tag33 {
   font-weight: 500;
   font-size: 20px;
   margin-top: -30px;
 }
-.nov7 .tag4 {
+.no7 .tag44 {
   font-weight: 400;
   font-size: 10px;
 }

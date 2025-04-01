@@ -14,27 +14,27 @@ function Navbar() {
   const [open, setOpen] = useState (false);
 
   const [ showMenu, setShowMenu] = useState(false)
+
+  const [search, setSearch] = useState(false);
   return (
     <>
     {showMenu && (
       <Menu />
-    )
+    )}
 
-    }
-    <div className='header'>
+    {search && (
+          <Search />
+        )}
+    <div  className='header'>
       <div className='menu-btn' onClick={() => setShowMenu(showMenu => !showMenu)}><img src={hamburger} alt='hamburger' /></div>
 
       <div className='logo'>
         <Link to='/'><img src={Logo} alt='/' /></Link>
       </div>
 
-      <div className='search-bar'>
+        <div className='search-bar' onClick={() => setSearch(search => !search)}>
         <img src={searchbar} alt='search' />
-      </div> 
-
-     {/* <div className='search-bar' onClick={() => openSearch(open => !open)}>
-        <img src={searchbar} alt='search' />
-      </div> */}
+        </div> 
       
 
       <div className='user' onClick={() => setOpen(open => !open)}>
@@ -43,7 +43,7 @@ function Navbar() {
     </div>
 
     
-        <Search />
+        
 
       { open && (
     <div className='account'>

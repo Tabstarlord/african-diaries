@@ -7,6 +7,8 @@ import frame2 from '../Assets/Frame2.png'
 import frame4 from '../Assets/Frame4.png'
 import eye from '../Assets/eye.png'
 import arrow from '../Assets/arrow-right.png'
+import google from '../Assets/google.png'
+import x from '../Assets/x.png'
 import Footer from '../Components/Footer'
 import Foot from '../Components/Foot'
 import Navbar from '../Components/Navbar'
@@ -14,9 +16,10 @@ import Navbar from '../Components/Navbar'
 function Home() {
   return (
     <>
+     
     <div className='home'>
       <Navbar />
-    
+      
       <div className='image'>
         <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
@@ -164,9 +167,17 @@ function Home() {
           <Link to='/'>Next<img src={arrow} alt='next' /> </Link>
         </li>
       </ul>
+
+      <Footer />
+      <div className='social'>
+        <Link to=''><img className='g' src={google} alt='google' /></Link>
+        <Link to=''><img className='g' src={google} alt='google' /></Link>
+        <Link to=''><img className='g' src={google} alt='google' /></Link>
+        <Link to=''><img className='t' src={x} alt='Twitter' /></Link>
+      </div>
+      <Foot />
     </div>
-    <Footer />
-    <Foot />
+   
 
     </>
     

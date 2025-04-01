@@ -1,18 +1,48 @@
-form {
-  position: absolute;
-  margin-top: -9vh;
-  margin-left: 2vh;
-  
-}
 
-button {
-  background-color: #008000;
-  border: #008000;
-  padding: 12px 16px;
-  border-radius: 0 8px 8px 0px;
-}
-.searchForm input {
-  padding-top: 3.5vw;
-  padding-bottom: 3vw;
-  padding-right: 30vw;
-}
+  .searchForm {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .searchForm form {
+    position: relative;
+    top: 15px;
+  }
+  .searchForm input {
+    padding: 10px 43px;
+    position: relative;
+    bottom: 2px;
+  }
+  .searchForm form button {
+    background-color: #008000;
+    border: #008000;
+    padding: 10px 15px;
+    border-radius: 0px 8px 8px 0px;
+  }
+
+
+
+
+/*@media only screen and (min-width: 425px) and (max-width: 767px) {
+  .searchForm {
+    margin: auto;
+    width: 80%;
+    padding-top: 10px;
+  }
+  .searchForm form {
+    position: relative;
+    top: 17px;
+  }
+  .searchForm input {
+    padding: 10px 25px;
+    position: relative;
+    bottom: 2px;
+  }
+  .searchForm form button {
+    background-color: #008000;
+    border: #008000;
+    padding: 10px 15px;
+    border-radius: 0px 8px 8px 0px;
+  }
+}*/

@@ -28,16 +28,7 @@ function Menu() {
   };
 
   return (
-    <>
-    {/*<button className='sidebar-menu-button'>
-      <img src={Hamburger} alt='menu-btn' />
-    </button>*/}
-
-    {/*<header className='sidebar-header'>
-        <button className='sidebar-toggler'>
-          <img src={Hamburger} alt='menu-btn' />
-        </button>
-      </header> */}
+    <>  
     <aside className='sidebar'>
       {/* Sidebar Header*/}
 
