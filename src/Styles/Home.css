@@ -1,3 +1,6 @@
+.desk-menu {
+  display: none;
+}
   .home {
     margin: auto;
     width: 100%;
@@ -37,26 +40,30 @@
     top: 3px;
   }
   
-  .home .pages {
+  .page .pages {
     width: 100%;
     justify-items: center;
     display: flex;
     gap: 12px;
   }
   
-  .home .pages li {
+  .page .pages li {
     list-style: none;
     text-align: center;
     gap: 10px;
   }
   
-  .home .pages li img {
+  .page .pages li img {
     position: relative;
     top: 3px;
   }
 
 
-@media only screen and (min-width: 425px) and (max-width: 767px) {
+@media only screen and (min-width: 425px) {
+  .desk-menu {
+    display: none;
+  }
+ 
   .home {
     margin: auto;
     width: 100%;
@@ -98,7 +105,7 @@
     width: 13%;
   }
   
-  .home .pages {
+  .page .pages {
     margin: auto;
     width: 100%;
     display: flex;
@@ -106,12 +113,61 @@
     gap: 15px;
   }
   
-  .home .pages li {
+  .page .pages li {
     list-style: none;
     text-align: center;
   }
   
-  .home .pages li img {
+  .page .pages li img {
+    position: relative;
+    top: 3px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  
+  .home {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .home .image {
+    width: 200px;
+    padding: 0px 16px;
+    position: relative;
+    left: 19%;
+    
+  }
+  .home .image a span {
+    width: 220px;
+    font-size: 13px;
+    margin-left: -32px;
+  }
+  .home .image a p {
+    width: 220px;
+    font-size: 10px;
+    margin-left: -70px;
+  }
+  .home .image a p .eye {
+    width: 12px;
+  }
+  
+  .page .pages {
+    margin: auto;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .page .pages li {
+    list-style: none;
+    text-align: center;
+  }
+  
+  .page .pages li img {
     position: relative;
     top: 3px;
   }

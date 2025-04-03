@@ -26,6 +26,9 @@ function Register() {
     <div className='register'>
       <div className='reg'>
       <Link to='/Home'><img className='back-4' src={cancel} alt='back' /></Link>
+        <div className='reg-1'>
+          <div className='reg-2'>
+      
       <h1>Create an account</h1>
       <fieldset>
         <form action='#' method='get'>
@@ -80,6 +83,8 @@ function Register() {
 
 
       <p className='btn-1'>Already have an account? <Link to='/Login'>Login Now</Link> </p>
+      </div>
+        </div>
 
       </div>
     </div>

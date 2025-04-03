@@ -21,28 +21,16 @@
     border-radius: 0px 8px 8px 0px;
   }
 
-
-
-
-/*@media only screen and (min-width: 425px) and (max-width: 767px) {
-  .searchForm {
-    margin: auto;
-    width: 80%;
-    padding-top: 10px;
+  @media only screen and (min-width: 1440px) {
+    .mobile-search {
+      display: none;
+    }
+    .searchForm input{
+     width: 460px; 
+     height: 35px;
+    }
+    .searchForm form button {
+      height: 55px;
+      width: 70px;
+    }
   }
-  .searchForm form {
-    position: relative;
-    top: 17px;
-  }
-  .searchForm input {
-    padding: 10px 25px;
-    position: relative;
-    bottom: 2px;
-  }
-  .searchForm form button {
-    background-color: #008000;
-    border: #008000;
-    padding: 10px 15px;
-    border-radius: 0px 8px 8px 0px;
-  }
-}*/

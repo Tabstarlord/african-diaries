@@ -185,3 +185,48 @@
     top: 3px;
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .liked {
+    display: flex;
+    flex-direction: column;
+  }
+  .liked span {
+    position: relative;
+    right: 370px;
+    font-size: 20px;
+  }
+  .liked .filter {
+    position: relative;
+    left: 290px;
+    top: 40px;
+  }
+  .liked .filter button {
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  .best {
+    display: flex;
+    margin: auto;
+    width: 100%;
+  }
+  .best .image {
+    width: 200px;
+    padding: 0px 16px;
+    position: relative;
+    left: 19%;
+  }
+  .best .image a span {
+    width: 220px;
+    font-size: 13px;
+    margin-left: -32px;
+  }
+  .best .image a p {
+    width: 220px;
+    font-size: 10px;
+    margin-left: -70px;
+  }
+  .best .image a p .eye {
+    width: 12px;
+  }
+}

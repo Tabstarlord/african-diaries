@@ -9,4 +9,9 @@
     font-family: 'DM Sans', sans-serif;
     overflow: hidden;
   }
-
+@media only screen and (min-width: 1024px) {
+  .App {
+    margin: auto;
+    width: 100%;
+  }
+}

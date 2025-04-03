@@ -71,7 +71,7 @@
 }
 
 
-@media only screen and (min-width: 425px) and (max-width: 767px) {
+@media only screen and (min-width: 425px) {
 .liked {
   margin: auto;
   width: 100%;
@@ -130,4 +130,47 @@
   position: relative;
   top: 3px;
 }
+}
+
+@media only screen and (min-width: 1440px) {
+  .liked-1 {
+    margin: auto;
+    width: 100%;
+  }
+  .liked-1 span {
+    margin-left: 660px;
+    font-size: 20px;
+  }
+  .liked-1 p {
+    position: relative;
+    right: 490px;
+    top: 50px;
+    font-size: 13px;
+  }
+  .liked-2 {
+    display: flex;
+    margin: auto;
+    width: 100%;
+  }
+  .liked-2 .image {
+    width: 200px;
+    padding: 0px 16px;
+    position: relative;
+    left: 19%;
+  }
+  .liked-2 .image a span {
+    width: 220px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+    margin-left: 340px;
+  }
+  .liked-2 .image a p {
+    width: 220px;
+    font-size: 10px;
+    margin-left: -70px;
+  }
+  .liked-2 .image a p .eye {
+    width: 12px;
+  }
 }

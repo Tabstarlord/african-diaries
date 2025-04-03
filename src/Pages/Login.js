@@ -28,6 +28,10 @@ function Login() {
     <>
     <div className='login'>
       <div className='login-2'>
+        <div className='login-3'>
+          <div className='login-4'>
+
+          
        <Link to='/Home'><img className='back-3' src={cancel} alt='back' /></Link>
       <h1>Log In</h1>
       <fieldset>
@@ -84,7 +88,8 @@ function Login() {
       </div>
       </div>
       <p className='btn-2'>Don't have an account? <Link to='/Register'>Sign Up</Link> </p>
-
+      </div>
+      </div>
       </div>
     </div>
     </>

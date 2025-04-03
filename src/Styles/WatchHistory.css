@@ -132,3 +132,39 @@
   top: 3px;
 }
 }
+
+@media only screen and (min-width: 1440px) {
+  .his-1 span {
+    margin-left: 225px;
+    font-size: 20px;
+  }
+  .his-1 p {
+    position: relative;
+    top: 50px;
+    right: 125px;
+  }
+  .his-2 {
+    display: flex;
+    margin: auto;
+    width: 100%;
+  }
+  .his-2 .image {
+    width: 220px;
+    padding: 0px 16px;
+    position: relative;
+    left: 15%;
+  }
+  .his-2 .image a span {
+    width: 220px;
+    font-size: 13px;
+    margin-left: -32px;
+  }
+  .his-2 .image a p {
+    width: 220px;
+    font-size: 10px;
+    margin-left: -70px;
+  }
+  .his-2 .image a p .eye {
+    width: 12px;
+  }
+}

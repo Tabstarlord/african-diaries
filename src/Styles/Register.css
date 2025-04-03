@@ -106,114 +106,46 @@
     right: 6vw;
   }
   
+@media only screen and (min-width: 1440px) {
+  .reg-1 {
+    margin-top: 11%;
+    margin-bottom: 12%;
+  }
+  .reg-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px solid #fff;
+  }
+  .reg-2 .put {
+    padding: 15px;
+    width: 85%;
+    margin-left: 50px;
+    position: relative;
+    bottom: 40px;
+  }
+  .reg .back-4 {
+    border: 1px solid #008000;
+    background-color: #008000;
+    padding: 12px;
+    position: sticky;
+    left: 75%;
+    top: 14%;
 
-
-/*@media only screen and (min-width: 425px) and (max-width: 767px) {
-  .register {
-    background: url('../Assets/Frame16.png');
-    background-color: black;
-    background-attachment: fixed;
-    height: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: transform 0.2s;
-    width: 100%;
-    margin: auto;
-    font-family: 'DM sans', sans-serif;
-    color: #FEFEFE;
-    overflow: hidden;
-    
   }
-  
-  .reg {
-    background-color: rgba(0, 0, 0, 0.788);
-    background-attachment: fixed;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-  }
-  
-  h1 {
-    padding-top: 20vh;
-    color: #fff;
-    text-align: center;
+  .reg-2 label {
+    margin-left: 50px;
     position: relative;
-    bottom: 9vh;
+    bottom: 45px;
   }
-  
-  fieldset {
-    border: none;
-  }
-  
-  label {
-    font-size: 16px;
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 5px;
-    text-align: left;
-    font-weight: 500;
-  }
-  
-  .put {
-    display: block;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 22px;
-    padding: 8px 2px;
-    background: none;
-    box-sizing: border-box;
-    border: 0.5px solid #FEFEFE;
-    font-size: 16px;
+  .reg-2 .btn {
+    padding: 15px 18vw;
     position: relative;
-    right: 2vh;
+    bottom: 20px;
   }
-  
-  .btn {
-    padding: 15px 36vw;
-    border-radius: 4px;
-    color: #FEFEFE;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+  .reg-2 h1 {
+    padding-top: 150px;
     position: relative;
-    right: 2vh;
+    bottom: 60px;
   }
-  
-  .btn-1 {
-    margin-top: 5vh;
-  }
-  .btn-1 a{
-    text-decoration: underline 1px #008000;
-    color: #008000;
-  }
-  
-  .or {
-    padding-top: 28vh;
-  }
-  
-  .or h1 {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  .or img {
-    position: relative;
-    bottom: 6px;
-  }
-  
-  .register-social {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    margin-top: -10vh;
-  }
-  
-  .back {
-    position: fixed;
-    top: 6vh;
-    right: 6vw;
-  }
-  
-}*/
+}

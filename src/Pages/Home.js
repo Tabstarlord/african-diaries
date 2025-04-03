@@ -12,21 +12,82 @@ import x from '../Assets/x.png'
 import Footer from '../Components/Footer'
 import Foot from '../Components/Foot'
 import Navbar from '../Components/Navbar'
+import Menu from '../Components/Menu'
 
 function Home() {
   return (
     <>
-     
+      
     <div className='home'>
-      <Navbar />
-      
+    <Navbar />
+
+    <div className='desk-menu'>
+      <div className='desktop-side'>
+      <Menu />
+      </div>
+    </div>
+        
       <div className='image'>
+        <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame2} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame2} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
         <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
         </Link>
       </div>
       <div className='image'>
+        <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame4} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame4} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+      </div>
+      <div className='image'>
+        <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame4} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
         <Link to='/ViewVideos'><img src={frame2} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
@@ -37,26 +98,18 @@ function Home() {
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
         </Link>
-      </div>
-      <div className='image'>
         <Link to='/ViewVideos'><img src={frame2} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
         </Link>
-      </div>
-      <div className='image'>
         <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
         </Link>
-      </div>
-      <div className='image'>
         <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
         </Link>
-      </div>
-      <div className='image'>
         <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
@@ -67,65 +120,26 @@ function Home() {
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
         </Link>
-      </div>
-      <div className='image'>
         <Link to='/ViewVideos'><img src={frame4} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
         </Link>
-      </div>
-      <div className='image'>
+        <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
+        <Link to='/ViewVideos'><img src={frame4} alt='Bang' />
+        <span>Banging Oga Soldier Wife</span>
+        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+        </Link>
         <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
         <span>Banging Oga Soldier Wife</span>
         <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
         </Link>
       </div>
-      <div className='image'>
-        <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
-        <span>Banging Oga Soldier Wife</span>
-        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-        </Link>
-      </div>
-      <div className='image'>
-        <Link to='/ViewVideos'><img src={frame4} alt='Bang' />
-        <span>Banging Oga Soldier Wife</span>
-        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-        </Link>
-      </div>
-      <div className='image'>
-        <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
-        <span>Banging Oga Soldier Wife</span>
-        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-        </Link>
-      </div>
-      <div className='image'>
-        <Link to='/ViewVideos'><img src={frame2} alt='Bang' />
-        <span>Banging Oga Soldier Wife</span>
-        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-        </Link>
-      </div>
-      <div className='image'>
-        <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
-        <span>Banging Oga Soldier Wife</span>
-        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-        </Link>
-      </div>
-      <div className='image'>
-        <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
-        <span>Banging Oga Soldier Wife</span>
-        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-        </Link>
-      </div>
- <div className='image'>
-        <Link to='/ViewVideos'><img src={frame4} alt='Bang' />
-        <span>Banging Oga Soldier Wife</span>
-        <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-        </Link>
       </div>
 
-
-      
-
+      <div className='page'>
       <ul className='pages'>
         <li>
           <Link to='/'>1</Link>
@@ -167,6 +181,7 @@ function Home() {
           <Link to='/'>Next<img src={arrow} alt='next' /> </Link>
         </li>
       </ul>
+      </div>
 
       <Footer />
       <div className='social'>
@@ -176,7 +191,6 @@ function Home() {
         <Link to=''><img className='t' src={x} alt='Twitter' /></Link>
       </div>
       <Foot />
-    </div>
    
 
     </>

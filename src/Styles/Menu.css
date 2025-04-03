@@ -1,4 +1,6 @@
-
+.desktop-menu {
+  display: none;
+}
   .sidebar {
     background-color: #fff;
     position: fixed;
@@ -30,36 +32,5 @@
   }
 
 
-
-
-/*@media only screen and (min-width: 425px) and (max-width: 767px) {
-  .sidebar {
-    background-color: #fff;
-    position: fixed;
-    top: 35px;
-    left: 0;
-    z-index: 10;
-    width: 270px;
-    max-height: 90vh;
-    transition: all 0.4s ease;
-    overflow: scroll;
-  }
-  .sidebar-nav .nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 0px 20px;
-    transform: translate(15px);
-    transition: 0.4 ease;
-  }
-  .sidebar-nav .nav-item .nav-link {
-    color: #000;
-    display: flex;
-    gap: 12px;
-    text-decoration: none;
-    padding: 5px 35px;
-    border-bottom: 0.5px solid #000;
-    transition: 0.4s ease;
-  }
-}*/
+@media only screen and (min-width: 1440px) {
+}

@@ -44,6 +44,7 @@
   font-size: 13px;
   float: left;
   position: relative;
+  left: 10px;
   bottom: 10px;
 }
 
@@ -134,7 +135,7 @@
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) {
   .new {
     margin: auto;
     width: 100%;
@@ -192,5 +193,38 @@
   .new .pages li img {
     position: relative;
     top: 3px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .new-1 span {
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    left: 290px;
+  }
+  .new-2 {
+    display: flex;
+    margin: auto;
+    width: 100%;
+  }
+  .new-2 .image {
+    width: 200px;
+    padding: 0px 16px;
+    position: relative;
+    left: 19%;
+  }
+  .new-2 .image a span {
+    width: 220px;
+    font-size: 13px;
+    margin-left: -32px;
+  }
+  .new-2 .image a p {
+    width: 220px;
+    font-size: 10px;
+    margin-left: -70px;
+  }
+  .new-2 .image a p .eye {
+    width: 12px;
   }
 }

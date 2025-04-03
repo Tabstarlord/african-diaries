@@ -8,12 +8,12 @@ function Dropdown(props) {
 
       {props.isVisible ? (
         <ul className='droplink'>
-        <li><Link to='/'>Anal</Link></li>
-        <li><Link to='/' >Gay</Link></li>
-        <li><Link to='/'>Straight</Link></li>
-        <li><Link to='/'>Bi</Link></li>
-        <li><Link to='/'>Gangbang</Link> </li>
-        <li><Link to='/'>Big Dick</Link></li>
+        <li><Link to='/Anal'>Anal</Link></li>
+        <li><Link to='/Gay' >Gay</Link></li>
+        <li><Link to='/Straight'>Straight</Link></li>
+        <li><Link to='/Bi'>Bi</Link></li>
+        <li><Link to='/Gangbang'>Gangbang</Link> </li>
+        <li><Link to='/BigDick'>Big Dick</Link></li>
         <li><Link to='/'>BDSM</Link></li>
         <li><Link to='/'>Bond</Link> </li>
         <li><Link to='/'>Milf</Link> </li>

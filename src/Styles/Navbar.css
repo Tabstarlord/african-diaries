@@ -1,4 +1,6 @@
-
+.desktop-navbar {
+  display: none;
+}
   .header {
     top: 1%;
     width: 100%;
@@ -101,5 +103,53 @@
   .account .log {
     border-bottom: 0.5px solid;
     color: #000;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .mobile-navbar {
+    display: none;
+  }
+  .desktop-navbar {
+    top: 0px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    display: flex;
+    z-index: 90;
+    border-bottom: 0.5px solid #000;
+  }
+  .logo {
+    width: 141px;
+    height: 26px;
+    padding-left: 20px;
+    margin-top: -5px;
+    
+  }
+  .searchbar {
+    margin-top: -62px;
+    margin-left: -125px;
+  }
+  .account {
+    display: flex;
+    background: none;
+    margin-top: -30px;
+    gap: 25px;
+  }
+  .account .log {
+    border-bottom: none;
+    color: #008000;
+    background-color: #F4F4F4;
+    padding: 6px 10px;border-radius: 4px;
+    font-size: 13px;
+  }
+  .account .regis {
+    color: #fff;
+    background-color: #008000;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 13px;
   }
 }

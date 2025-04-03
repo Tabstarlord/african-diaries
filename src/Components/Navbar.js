@@ -18,6 +18,7 @@ function Navbar() {
   const [search, setSearch] = useState(false);
   return (
     <>
+    <div className='mobile-navbar'>
     {showMenu && (
       <Menu />
     )}
@@ -52,6 +53,24 @@ function Navbar() {
         </div>
         )
         }
+    </div>
+
+    <div className='desktop-navbar'>
+    <div className='logo'>
+        <Link to='/'><img src={Logo} alt='/' /></Link>
+      </div>
+
+      <div className='searchbar'>
+      <Search />
+      </div>
+
+      <div className='account'>
+          <Link className='log' to='/Login'>Login</Link>
+          <Link className='regis' to='/Register'>Register</Link>
+        </div>
+
+    </div>
+    
 
   
     </>
