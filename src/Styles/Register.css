@@ -101,15 +101,14 @@
   }
   
   .back {
-    position: fixed;
     top: 6vh;
     right: 6vw;
   }
   
 @media only screen and (min-width: 1440px) {
   .reg-1 {
-    margin-top: 11%;
-    margin-bottom: 12%;
+    margin-top: 35%;
+    margin-bottom: 34%;
   }
   .reg-2 {
     margin-left: auto;
@@ -125,12 +124,9 @@
     bottom: 40px;
   }
   .reg .back-4 {
-    border: 1px solid #008000;
-    background-color: #008000;
-    padding: 12px;
-    position: sticky;
-    left: 75%;
-    top: 14%;
+    width: 3%;
+    left: 70%;
+    top: 30%;
 
   }
   .reg-2 label {
@@ -147,5 +143,70 @@
     padding-top: 150px;
     position: relative;
     bottom: 60px;
+  }
+  .register-social {
+    position: relative;
+    top: 35px;
+  }
+  .or-reg .or {
+    position: relative;
+    bottom: 90px
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .register {
+    background-position: center;
+  }
+  .reg-1 {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .reg-2 .back-4 {
+    width: 60px;
+    margin-top: -7%;
+    margin-left: 2%;
+
+  }
+  .reg-2 h1 {
+    font-size: 60px;
+  }
+  .reg-2 .put {
+    position: relative;
+    left: 22px;
+    padding: 40px;
+    width: 90%;
+  }
+  .reg-2 label {
+    font-size: 40px;
+    padding-bottom: 15px;
+    position: relative;
+    left: 20px;
+  }
+  .reg-2 .btn {
+    padding: 20px 19vw;
+    font-size: 50px;
+    margin-left: -70px;
+  }
+  .regor {
+    position: relative;
+    top: -85px;
+  }
+  .regor img {
+    width: 35%;
+    position: relative;
+    bottom: 10px;
+  }
+  .register-social img {
+    width: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    position: relative;
+    top: -35px;
+  }
+  .btn-1 {
+    font-size: 40px;
+    position: relative;
+    top: -15px;
   }
 }

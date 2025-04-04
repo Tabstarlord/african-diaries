@@ -7,6 +7,7 @@ import trans from '../Assets/circle-flags_lgbt-transgender.png'
 
 function DropVersion(props) {
   return (
+    <>
     <div>
 
       {props.isOpen ? (
@@ -17,6 +18,17 @@ function DropVersion(props) {
                </ul>
       ) :null }
     </div>
+
+<div className='deskdrop'>
+  <ul className='dropdown-menu'>
+<li><Link to='/'><img src={version} alt='version' /> Straight</Link> </li>
+<li><Link to='/'><img src={gay} alt='gay' />Gay</Link></li>
+<li><Link to='/'><img src={trans} alt='trans' />Trans</Link></li>
+</ul>
+</div>
+
+
+</>
   );
 }
 

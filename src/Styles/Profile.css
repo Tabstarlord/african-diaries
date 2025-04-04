@@ -1,0 +1,20 @@
+.user-account {
+  display: grid;
+  position: fixed;
+  right: 0;
+  margin-top: 26px;
+  margin-right: 20px;
+  background-color: #F4F4F4;
+  border-radius: 4px;
+  padding: 15px;
+  z-index: 90;
+}
+.user-account a {
+  padding: 2px 5px;
+  color: #008000;
+  text-decoration: none;
+}
+.account .log {
+  border-bottom: 0.5px solid;
+  color: #000;
+}

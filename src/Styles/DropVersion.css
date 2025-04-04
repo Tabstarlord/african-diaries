@@ -1,3 +1,6 @@
+.deskdrop {
+   display: none;
+}
 .dropdown-menu {
     list-style: none;
     display: flex;
@@ -15,6 +18,43 @@
    .dropdown-menu li a {
     color: #000;
     text-decoration: none;
+   }
+
+   @media only screen and (min-width: 1440px) {
+      .deskdrop {
+         display: contents;
+      }
+      .deskdrop .dropdown-menu {
+         margin-left: 5%;
+         text-align: left;
+      }
+      .deskdrop .dropdown-menu li {
+         font-size: 13px;
+         border-bottom: 0.5px solid #0000002a;
+      }
+      .deskdrop .dropdown-menu li img {
+         width: 30px;
+         height: 30px;
+         padding-right: 20px;
+      }
+   }
+
+   @media only screen and (min-width: 2560px) {
+      .deskdrop {
+         display: contents;
+      }
+      .deskdrop .dropdown-menu {
+         margin-left: 5%;
+         text-align: left;
+      }
+      .deskdrop .dropdown-menu li {
+         border-bottom: 0.5px solid #0000002a;
+      }
+      .deskdrop .dropdown-menu li img {
+         width: 50px;
+         height: 50px;
+         padding-right: 20px;
+      }
    }
 
 

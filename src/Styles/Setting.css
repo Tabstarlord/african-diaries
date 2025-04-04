@@ -96,3 +96,66 @@
   background-color: #008000;
   border: #008000;
 }
+
+@media only screen and (min-width: 1440px) {
+  .set1 .cancel {
+    display: none;
+  }
+  .acc {
+    margin-top: 5px;
+  }
+  .acc .set1 h2 {
+    font-weight: 500px;
+    font-size: 25px;
+    position: relative;
+    top: 120px;
+    float: left;
+    left: 60px;
+  }
+  .set2 .set3 .dp {
+    width: 160px;
+    position: relative;
+    left: 90px;
+    top: 40px;
+  }
+  .set2 .set3 .user {
+    font-weight: 500;
+    font-size: 25px;
+    position: relative;
+    left: 350px;
+    top: 45px;
+  }
+  .acc .set4 {
+    position: relative;
+    top: 280px;
+    right: 90px;
+  }
+  .acc .set4 .det {
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .acc .set4 .det1 {
+    font-weight: 600;
+    font-size: 13px;
+    position: relative;
+    top: -109px
+  }
+  .set6 {
+    margin-left: 350px;
+  }
+  .set6 .top {
+    gap: 30px;
+  }
+  .acc2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    float: right;
+  }
+  .acc2 fieldset form label{
+    padding: 15px 0px;
+  }
+  .get2 {
+    margin-left: 900px;
+  }
+}

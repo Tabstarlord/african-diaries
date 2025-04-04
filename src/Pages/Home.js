@@ -17,9 +17,9 @@ import Menu from '../Components/Menu'
 function Home() {
   return (
     <>
-      
+      <Navbar />
     <div className='home'>
-    <Navbar />
+    
 
     <div className='desk-menu'>
       <div className='desktop-side'>
@@ -186,9 +186,7 @@ function Home() {
       <Footer />
       <div className='social'>
         <Link to=''><img className='g' src={google} alt='google' /></Link>
-        <Link to=''><img className='g' src={google} alt='google' /></Link>
-        <Link to=''><img className='g' src={google} alt='google' /></Link>
-        <Link to=''><img className='t' src={x} alt='Twitter' /></Link>
+        <Link to='https://x.com/africandiaries1?s=21'><img className='t' src={x} alt='Twitter' /></Link>
       </div>
       <Foot />
    

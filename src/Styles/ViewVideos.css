@@ -455,3 +455,138 @@
     padding: 0px 10px;
   }
 }
+@media only screen and (min-width: 2560px) {
+  .view {
+    margin-top: 5%;
+    width: 100%;
+  }
+  .view-1 span {
+    font-size: 40px;
+  }
+  .view-1 span h5 {
+    font-size: 33px;
+  }
+  .view-1 .links {
+    margin-left: -52%;
+  }
+  .view-1 .links a {
+    padding-left: 1%;
+    font-size: 30px;
+  }
+  .view-1 .play {
+    width: 100%;
+    height: auto;
+  }
+  .view-1 .react {
+    gap: 2%;
+  }
+  .view-1 .react .react-1 {
+    width: 50px
+  }
+   .react a p {
+    font-size: 35px;
+    position: relative;
+    left: 70px;
+    bottom: 90px;
+  }
+  .view-2 {
+    margin-top: -105px;
+  }
+  .view-2 img {
+    width: 50px;
+  }
+  .view-2 p {
+    font-size: 35px;
+    padding-left: 2%;
+    margin-top: -15px
+  }
+  .comment img {
+    width: 50px;
+    height: 50px;
+  }
+  .comment p {
+    font-size: 40px;
+    padding: 0px 2%;
+  }
+  .comment-1 {
+    margin-top: 2%;
+  }
+  .comment-1 .com {
+    height: 25%;
+    gap: 100%;
+    padding-bottom: 10%;
+  }
+  .comment-1 .com span {
+    font-size: 40px;
+    margin-left: -80px;
+  }
+  .comment-1 .com p {
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 250%;
+  }
+  .com-1 p {
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: -30px;
+    position: relative;
+    bottom: 90px;
+  }
+  .com-2 {
+    margin-left: 235%;
+  }
+  .com-2 p {
+    font-size: 30px;
+  }
+ .com-2 img {
+    height: 40px;
+  }
+  .write {
+    margin-top: 15%;
+  }
+  .write input {
+    width: 90%;
+    height: 150px;
+    font-size: 40px;
+  }
+  .write .send {
+    font-size: 40px;
+    width: 5%;
+    padding: 25px ;
+  }
+  .related {
+    margin-top: -9%;
+  }
+  .related .relate {
+    font-size: 50px;
+    margin-left: -18%;
+  }
+  .rel .image {
+    width: 100%;
+  }
+  .rel .image img {
+    width: 98%;
+    padding-bottom: 5%;
+  }
+  .rel .image a span {
+    font-size: 40px;
+    margin-left: -12%;
+    position: relative;
+    top: -1%
+  }
+  .image a .eye {
+    width: 13%;
+    position: relative;
+    
+  }
+  .image a p {
+    font-size: 30px;
+    margin-top: -2%;
+    margin-left: 15%;
+    margin-bottom: 8%;
+    position: relative;
+  }
+  .back-1 a {
+    font-size: 50px;
+  }
+}

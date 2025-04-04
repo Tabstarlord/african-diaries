@@ -134,9 +134,14 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .his-1 {
+    margin: auto;
+    width: 100%;
+  }
   .his-1 span {
-    margin-left: 225px;
+    margin-left: 270px;
     font-size: 20px;
+    margin-top: 2%;
   }
   .his-1 p {
     position: relative;
@@ -148,23 +153,68 @@
     margin: auto;
     width: 100%;
   }
-  .his-2 .image {
-    width: 220px;
+  .his .his-2 .image {
+    width: 200px;
     padding: 0px 16px;
     position: relative;
-    left: 15%;
+    left: 19%;
   }
-  .his-2 .image a span {
+  .his .his-2 .image a span {
     width: 220px;
+    font-weight: 500;
     font-size: 13px;
-    margin-left: -32px;
+    margin-left: 2px;
   }
-  .his-2 .image a p {
+  .his .his-2 .image a p {
     width: 220px;
     font-size: 10px;
-    margin-left: -70px;
+    margin-left: -10px;
   }
-  .his-2 .image a p .eye {
+  .his .his-2 .image a p .eye {
     width: 12px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .desk-menu {
+    display: contents;
+  }
+  .his .his-1 span {
+    font-size: 40px;
+    font-weight: 500;
+    margin-left: 19%;
+    position: relative;
+    top: 50px;
+    right: 3%;
+  }
+  .his .his-1 p {
+    font-size: 30px;
+    position: relative;
+    top: 150px;
+    right: 9%;
+  }
+  .his {
+    margin-top: 90px;
+    margin-left: 4%;
+  }
+  .his .his-2 .image {
+    width: 15%;
+    padding: 10px 25px;
+  }
+  .his .his-2 .image a span {
+    width: 100%;
+    font-size: 40px;
+    right: 50px;
+  }
+  .his .his-2 .image a p {
+    width: 100%;
+    font-size: 37px;
+    right: 100px;
+    top: 10px;
+    padding-bottom: 10px;
+  }
+  .his .his-2 .image a p .eye {
+    width: 30px;
+    padding-right: 5px;
   }
 }

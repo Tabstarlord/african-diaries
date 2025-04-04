@@ -29,10 +29,9 @@ function Login() {
     <div className='login'>
       <div className='login-2'>
         <div className='login-3'>
-          <div className='login-4'>
-
-          
-       <Link to='/Home'><img className='back-3' src={cancel} alt='back' /></Link>
+        
+          <div className='login-4'>  
+          <Link to='/Home'><img className='back-3' src={cancel} alt='back' /></Link>
       <h1>Log In</h1>
       <fieldset>
         <form action='#' method='get'>
@@ -67,7 +66,7 @@ function Login() {
            onChange={(e) =>
             setCheckBox(e.target.value)
            }
-           /> Remember Me
+           /><p className='remember1'>Remember Me</p>
            <Link to=''><p className='forget'>Forget your password?</p></Link>
           </div>
            
@@ -80,7 +79,7 @@ function Login() {
 
       <div className='or-log'>
       <div className='orlog'>
-        <h1><img src={divider} alt='line' />&nbsp; OR&nbsp; <img src={divider} alt='line' /> </h1>
+        <h1 className='or'><img src={divider} alt='line' />&nbsp; OR&nbsp; <img src={divider} alt='line' /> </h1>
       </div>
       <div className='login-social'>
         <img src={x} alt='twitter' />

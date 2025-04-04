@@ -68,9 +68,6 @@
 .no6 .to .tag1 {
   color: #008000;
 }
-
-
-
 .no7 {
   margin: auto;
   width: 100%;
@@ -83,4 +80,78 @@
 .no7 .tag44 {
   font-weight: 400;
   font-size: 10px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .dot-1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-content: center;
+  }
+  .dot-1 .dot {
+    gap: 20%;
+  }
+  .dot4 {
+    margin-left: 17%;
+  }
+  .dot4 img {
+    width: 60px;
+  }
+  .dot .dot1 img {
+    position: relative;
+    left: 320px;
+  }
+  .dot-1 .dot .dot2 {
+   position: relative;
+   left: 28px;
+   bottom: 3px;
+  }
+  .dot .dot3 span{
+    position: relative;
+    left: -240px;
+  }
+  .dot5 {
+    position: relative;
+    left: -300px;
+  }
+  .not2 .not4 {
+    position: relative;
+    right: 140px;
+    top: 300px;
+  }
+  .not2 .not3 {
+    position: relative;
+    top: 70px;
+    left: 50px;
+  }
+  .not3 .dp {
+    width: 160px;
+  }
+  .not2 .not3 .user {
+    position: relative;
+    left: 250px;
+    bottom: 25px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .not6 {
+    margin-left: 300px;
+    margin-top: -100px;
+  }
+  .not6 .topics1 {
+    gap: 50px;
+  }
+  .not1 .cancel {
+    display: none;
+  }
+  .not .not1 h2 {
+    text-align: left;
+    position: relative;
+    top: 120px;
+    left: 30px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
 }

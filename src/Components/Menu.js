@@ -102,21 +102,12 @@ function Menu() {
             <span className='nav-label'>Newest Videos</span>
             </Link>
             </li>
-
             <li className='nav-item'>
-              <span className='nav-label'>
-                <Categories />
-              </span>
-              <Dropdown />
-            </li>
-            
-        <li className='nav-item'>
           <Link to='/LikedVideos' className='nav-link'><img src={like} alt='like' /> <span className='nav-label'>Liked Videos</span> </Link>
         </li>
         <li className='nav-item'>
           <Link to='/WatchHistory' className='nav-link'><img src={watch} alt='like' /> <span className='nav-label'>Watch History</span> </Link>
         </li>
-
         <li className='nav-item'>
               <span className='nav-label'>
                 <Version />
@@ -125,8 +116,19 @@ function Menu() {
             </li>
         
         <li className='nav-item'>
-          <Link to='/' className='nav-link'><img src={globe} alt='like' /> <span className='nav-label'>Country</span></Link>
+          <Link to='/' className='nav-link'><img src={globe} alt='like' /> <span className='nav-label'>Location: Nigeria</span></Link>
         </li>
+
+            <li className='nav-item'>
+              <span className='nav-label'>
+                <Categories />
+              </span>
+              <Dropdown />
+            </li>
+            
+        
+
+        
 
         </ul>
       </nav>

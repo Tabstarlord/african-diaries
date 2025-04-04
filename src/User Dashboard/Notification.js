@@ -6,46 +6,48 @@ import red from '../Assets/dot.png'
 import frame3 from '../Assets/Ellipse95.png'
 import frame16 from '../Assets/Frame19.png'
 import '../Styles/Notification.css'
+import UserNavbar from './UserNavbar'
 
 function Notification() {
   return (
     <>
+      <UserNavbar />
     <div className='not'>
      <div className='not1'>
-                 <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
-                 <h2>Profile</h2>
-                 </div>
+      <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
+        <h2>Profile Information</h2>
+    </div>
            
-                 <div className='not2'>
-                 <div className='not3'>
-                   <h2 className='user'>Jaybouggie</h2>
-                   <img className='dp' src={dp} alt='User' />
-                 </div>
+    <div className='not2'>
+    <div className='not3'>
+        <h2 className='user'>Jaybouggie</h2>
+        <img className='dp' src={dp} alt='User' />
+    </div>
            
-                 <div className='not4'>
-                   <ul className='deta'>
-                     <li>Joined:</li>
-                     <li>Profile views:</li>
-                     <li>From:</li>
-                     <li>Last Activity:</li>
-                   </ul>
-                   <ul className='deta1'>
-                     <li>23 days on African Diaries</li>
-                     <li>113 times</li>
-                     <li>Earth</li>
-                     <li>Online</li>
-                   </ul>
-                 </div>
-                 </div>
+    <div className='not4'>
+        <ul className='deta'>
+          <li>Joined:</li>
+          <li>Profile views:</li>
+          <li>From:</li>
+          <li>Last Activity:</li>
+        </ul>
+        <ul className='deta1'>
+          <li>23 days on African Diaries</li>
+          <li>113 times</li>
+          <li>Earth</li>
+          <li>Online</li>
+        </ul>
+    </div>
+    </div>
                  
            
-                 <div className='not6'>
-                   <ul className='topics1'>
-                     <Link className='tag' to='/LikedClips'>Liked Videos</Link>
-                     <Link className='tag1' to='/Notification'>Notifications</Link>
-                     <Link className='tag' to='/Settings'>Account Settings</Link>
-                   </ul>
-                 </div>
+    <div className='not6'>
+      <ul className='topics1'>
+        <Link className='tag' to='/LikedClips'>Liked Videos</Link>
+        <Link className='tag1' to='/Notification'>Notifications</Link>
+        <Link className='tag' to='/Setting'>Account Settings</Link>
+      </ul>
+    </div>
 
 
 

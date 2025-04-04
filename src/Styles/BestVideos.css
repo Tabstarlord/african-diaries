@@ -219,14 +219,68 @@
   .best .image a span {
     width: 220px;
     font-size: 13px;
-    margin-left: -32px;
+    margin-left: -4px;
   }
   .best .image a p {
     width: 220px;
     font-size: 10px;
-    margin-left: -70px;
+    margin-left: -14px;
   }
   .best .image a p .eye {
     width: 12px;
   }
+}
+
+@media only screen and (min-width: 2560px) {
+  .best-1 {
+    margin-top: 3%;
+  }
+  .liked span {
+    font-weight: 500;
+    font-size: 50px;
+    right: 27%;
+  }
+  .liked .filter {
+    margin-left: 13%;
+  }
+  .liked .filter button {
+    width: 20%;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .best .image {
+    width: 15%;
+    padding: 10px 25px;
+  }
+  .best .image a span {
+    width: 100%;
+    font-size: 40px;
+    right: 50px;
+  }
+  .best .image a p {
+    width: 100%;
+    font-size: 37px;
+    right: 109px;
+    top: 10px;
+    padding-bottom: 5px;
+  }
+  .best .image a p .eye {
+    width: 30px;
+    padding-right: 5px;
+  }
+  .page .pages {
+    margin: auto;
+    width: 100%;
+    gap: 1%;
+    justify-content: center;
+  }
+  .page .pages li {
+    font-size: 50px;
+  }
+  .page .pages li img {
+    width: 40%;
+    left: 80px;
+    top: -54px;
+  }
+
 }

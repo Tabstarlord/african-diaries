@@ -1,28 +1,19 @@
-
+.deskver {
+  display: none
+}
   .ver {
     display: flex;
   flex-direction: row;
   gap: 12px;
  padding: 5px 35px;
- border-bottom: 0.5px solid #000;
+ border-bottom: 0.5px solid #000000ad;
  transition: 0.4s ease;
   }
   .ver span {
     font-size: 18px;
   }
-
-
-
-/*@media only screen and (min-width: 425px) and (max-width: 767px) {
-  .ver {
-    display: flex;
-  flex-direction: row;
-  gap: 12px;
- padding: 5px 35px;
- border-bottom: 0.5px solid #000;
- transition: 0.4s ease;
-  }
+@media only screen and (min-width: 2560px) {
   .ver span {
-    font-size: 18px;
+    font-size: 65px;
   }
-}*/
+}

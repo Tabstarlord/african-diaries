@@ -5,7 +5,7 @@
     margin: auto;
     width: 100%;
     position: relative;
-    padding-top: 25px;
+    padding-top: 70px;
     font-family: 'DM Sans', sans-serif;
   }
   
@@ -125,10 +125,11 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  
+  .desk-menu {
+    display: contents;
+  }
   .home {
     display: flex;
-    margin: auto;
     width: 100%;
     margin-top: 30px;
   }
@@ -142,12 +143,12 @@
   .home .image a span {
     width: 220px;
     font-size: 13px;
-    margin-left: -32px;
+    margin-left: -2px;
   }
   .home .image a p {
     width: 220px;
     font-size: 10px;
-    margin-left: -70px;
+    margin-left: -10px;
   }
   .home .image a p .eye {
     width: 12px;
@@ -170,5 +171,51 @@
   .page .pages li img {
     position: relative;
     top: 3px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .desk-menu {
+    display: contents;
+  }
+  .home {
+    margin-top: 90px;
+  }
+  .home .image {
+    width: 15%;
+    padding: 10px 25px;
+  }
+  .home .image a span {
+    width: 100%;
+    font-size: 40px;
+    right: 80px;
+  }
+  .home .image a p {
+    width: 100%;
+    font-size: 37px;
+    right: 160px;
+    top: 15px;
+    padding-bottom: 5px;
+  }
+  .home .image a p .eye {
+    width: 30px;
+    padding-right: 5px;
+  }
+
+  .page .pages {
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+  }
+  .page .pages li {
+    font-size: 50px;
+  }
+  .page .pages li img {
+    width: 40%;
+    left: 80px;
+    top: -54px;
+  }
+  .social a img {
+    width: 4%;
   }
 }

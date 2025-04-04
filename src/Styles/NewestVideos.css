@@ -217,14 +217,46 @@
   .new-2 .image a span {
     width: 220px;
     font-size: 13px;
-    margin-left: -32px;
+    margin-left: -2px;
   }
   .new-2 .image a p {
     width: 220px;
     font-size: 10px;
-    margin-left: -70px;
+    margin-left: -80px;
   }
   .new-2 .image a p .eye {
     width: 12px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .new-1 span {
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 3%;
+    margin-left: 13%;
+  }
+  .new {
+    margin-top: 10px;
+  }
+  .new .image {
+    width: 15%;
+    padding: 10px 25px;
+  }
+  .new .image a span {
+    width: 100%;
+    font-size: 40px;
+    right: 50px;
+  }
+  .new .image a p {
+    width: 100%;
+    font-size: 37px;
+    right: 150px; 
+    top: 10px;
+    padding-bottom: 5px;
+  }
+  .new .image a p .eye {
+    width: 30px;
+    padding-right: 5px;
   }
 }

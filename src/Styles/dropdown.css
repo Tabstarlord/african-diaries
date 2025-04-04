@@ -1,4 +1,6 @@
-
+.desk-drop {
+  display: none;
+}
   .droplink {
     list-style: none;
     display: flex;
@@ -18,25 +20,26 @@
     color: #000;
   }
 
+  @media only screen and (min-width: 1440px) {
+    .desk-drop {
+      display: contents;
+    }
+    .desk-drop .droplink {
+      margin-left: 5%;
+    }
+    .desk-drop .droplink li {
+      border-bottom: 0.5px solid #0000002a;
+    }
+  }
 
-
-/*@media only screen and (min-width: 425px) and (max-width: 767px) {
-  .droplink {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 0px 30px;
-    transform: translateY(15px);
-    transition: 0.4s ease;
+@media only screen and (min-width: 2560px) {
+  .desk-drop {
+    display: contents;
   }
-  .droplink li {
-    border-bottom: 0.5px solid #000;
-    display: flex;
-    padding: 15px 15px;
+  .desk-drop .droplink {
+    margin-left: 5%;
   }
-  .droplink li a {
-    text-decoration: none;
-    color: #000;
+  .desk-drop .droplink li {
+    border-bottom: 0.5px solid #0000002a;
   }
-}*/
+}

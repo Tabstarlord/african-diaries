@@ -5,14 +5,20 @@ import back from '../Assets/cancel-01.png'
 import dp from '../Assets/dp.png'
 import frame1 from '../Assets/Frame1.png'
 import eye from '../Assets/eye.png'
+import UserNavbar from './UserNavbar'
 
 function LikedClips() {
   return (
     <>
     <div className='clip'>
+      <div className='usernav'>
+      <UserNavbar />
+      </div>
+      
+      <div className='clip-01'>
       <div className='clip1'>
       <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
-      <h2>Profile</h2>
+      <h2>Profile Information</h2>
       </div>
 
       <div className='clip2'>
@@ -36,13 +42,14 @@ function LikedClips() {
         </ul>
       </div>
       </div>
+      </div>
       
 
       <div className='clip6'>
         <ul className='topic'>
           <Link className='tag1' to='/LikedClips'>Liked Videos</Link>
           <Link className='tag' to='/Notification'>Notifications</Link>
-          <Link className='tag' to='/Settings'>Account Settings</Link>
+          <Link className='tag' to='/Setting'>Account Settings</Link>
         </ul>
       </div>
 
@@ -54,14 +61,106 @@ function LikedClips() {
               <span>Banging Oga Soldier Wife</span>
               <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
               </Link>
-            </div>
-            <div className='image'>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
               <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
               <span>Banging Oga Soldier Wife</span>
               <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
               </Link>
             </div>
             <div className='image'>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+            </div>
+            <div className='image'>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+            </div>
+            <div className='image'>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+            </div>
+            <div className='image'>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
+              <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
+              <span>Banging Oga Soldier Wife</span>
+              <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
+              </Link>
               <Link to='/ViewVideos'><img src={frame1} alt='Bang' />
               <span>Banging Oga Soldier Wife</span>
               <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>

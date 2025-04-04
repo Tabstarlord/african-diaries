@@ -26,3 +26,22 @@
     font-size: 13px;
   }
 }
+
+@media only screen and (min-width: 2560px) {
+  .footer {
+    margin: auto;
+    width: 100%;
+    padding-left: 10%;
+  }
+
+  .footer .foot {
+    width: 75%;
+    text-align: justify;
+    font-size: 35px;
+    margin-left: 10%;
+    margin-bottom: 3%;
+  }
+  .footer .foot img {
+    width: 10%;
+  }
+}

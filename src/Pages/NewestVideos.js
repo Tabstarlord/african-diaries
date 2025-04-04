@@ -10,11 +10,17 @@ import '../Styles/NewestVideos.css'
 import Foot from '../Components/Foot'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
+import Menu from '../Components/Menu'
 
 function NewestVideos() {
   return (
     <>
     <Navbar />
+    <div className='desk-menu'>
+      <div className='desktop-side'>
+      <Menu />
+      </div>
+    </div>
     <div className='new'>
       <div className='new-1'>
             <span>Newest Videos</span>  

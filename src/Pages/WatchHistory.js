@@ -10,11 +10,17 @@ import '../Styles/WatchHistory.css'
 import Foot from '../Components/Foot'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
+import Menu from '../Components/Menu'
 
 function WatchHistory() {
   return (
     <>
     <Navbar />
+    <div className='desk-menu'>
+      <div className='desktop-side'>
+      <Menu />
+      </div>
+    </div>
     <div className='his'>
               <div className='his-1'>
                 <span>Watch History</span> 

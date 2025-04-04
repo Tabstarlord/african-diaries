@@ -1,3 +1,6 @@
+.usernav {
+  display: none;
+}
 .clip {
   margin: auto;
   width: auto;
@@ -68,9 +71,6 @@
 .clip6 .topic .tag1 {
   color: #008000;
 }
-
-
-
 .clip7 {
   margin: auto;
   width: 100%;
@@ -86,4 +86,75 @@
 }
 .clip7 .image a p .eye {
   width: 15%;
+}
+
+@media only screen and (min-width: 1440px) {
+  .usernav {
+    display: contents;
+  }
+  .clip7 {
+    display: flex;
+  }
+  .clip7 .image {
+    margin-top: 5px;
+    width: 210px;
+    padding: 10px 10px;
+    position: relative;
+    left: 20%;
+  }
+  .image a span {
+    width: 220px;
+    font-size: 13px;
+    position: relative;
+    right: 30px;
+  }
+  .image a p {
+    width: 220px;
+    height: 17px;
+    position: relative;
+    right: 55px;
+  }
+  .clip7 .image a p .eye {
+    width: 17px;
+  }
+  .clip6 {
+    margin-top: -55px;
+    position: relative;
+    left: 20%;
+  }
+  .clip6 .topic {
+    font-size: 13px;
+    gap: 60px;
+  }
+  .clip4 .details {
+    position: relative;
+    top: 150%;
+    right: 150px;
+  }
+  .clip4 .details1 {
+    position: relative;
+    top: 103%;
+    margin-left: -80%;
+  }
+  .clip3 .dp {
+    width: 160px;
+    position: relative;
+    left: 45px;
+    top: 120px;
+  }
+  .clip3 .user {
+    width: 100%;
+    position: relative;
+    top: 100px;
+    left: 270px;
+  }
+.clip1 h2 {
+  position: relative;
+  top: 155px;
+  left: -600px;
+}
+  .clip1 .cancel {
+    display: none;
+  }
+
 }

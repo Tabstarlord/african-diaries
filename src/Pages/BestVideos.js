@@ -10,13 +10,19 @@ import '../Styles/BestVideos.css'
 import Foot from '../Components/Foot'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
+import Menu from '../Components/Menu'
 
 function BestVideos() {
   return (
     <>
-    
+     <Navbar />
+     <div className='desk-menu'>
+      <div className='desktop-side'>
+          <Menu />
+      </div>
+     </div>
     <div className='best-1'>
-    <Navbar />
+   
       <div className='liked'>
         <span>Best Videos</span>
         <li className='filter'>

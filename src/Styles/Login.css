@@ -9,7 +9,6 @@
     margin: auto;
     font-family: 'DM sans', sans-serif;
     color: #FEFEFE;
-    overflow: hidden;
   }
   
   .login-2 {
@@ -18,7 +17,6 @@
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
     padding-top: -5px;
   }
   
@@ -102,7 +100,6 @@
     bottom: 6px;
   }
   .login-2 a .back-3 {
-    position: fixed;
     top: 30px;
     right: 30px;
   }
@@ -130,7 +127,7 @@
     .login {
       background: url('../Assets/Frame16.png');
       background-attachment: fixed;
-      height: 100%;
+      height: auto;
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
@@ -140,12 +137,12 @@
       overflow: hidden;
     }
     .back-3 {
-      margin-top: 20%;
-      margin-right: 25%;
+      margin-top: 5%;
+      margin-right: -90%;
     }
     .login-3 {
-      padding-top: 20%;
-      padding-bottom: 20%;
+      padding-top: 40%;
+      padding-bottom: 30%;
     }
     .login-4 {
       margin-left: auto;
@@ -178,6 +175,76 @@
       position: relative;
       left: 22%;
     }
-    
+  }
 
+  @media only screen and (min-width: 2560px) {
+    .login {
+      background: url('../Assets/Frame16.png');
+      background-attachment: fixed;
+      height: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      margin: auto;
+      font-family: 'DM sans', sans-serif;
+      color: #FEFEFE;
+      overflow: hidden;
+    }
+    .login-3 {
+      padding-top: 10%;
+      padding-bottom: 5%;
+    }
+    .back-3 {
+      width: 40px;
+      margin-top: 2%;
+      margin-left: 5%;
+    }
+    .login-4 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -250px;
+      width: 50%;
+    }
+    .login-4 h1 {
+      font-size: 60px;
+    }
+    .login-4 .log-1 {
+      padding: 70px;
+      width: 90%;
+    }
+    .login-4 label {
+      font-size: 50px;
+    }
+    .login-4 .btn-3 {
+      padding: 20px 20vw;
+      font-size: 60px;
+    }
+    .forget {
+      font-size: 30px;
+      position: relative;
+      top: 8px;
+    }
+    .remfor {
+      margin-left: -4%;
+    }
+    .remember {
+      width: 30px;
+    }
+    .remember1 {
+      position: relative;
+      bottom: 17px;
+      font-size: 30px;
+    }
+    .orlog img {
+      width: 40%;
+    }
+    .login-social img {
+      width: 5%;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    .btn-2 {
+      font-size: 40px
+    }
   }

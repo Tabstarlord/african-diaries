@@ -12,6 +12,7 @@ function Warning() {
       <div className='warn'>
       <div className='warn1'>
       <div className='warn2'>
+        <div className='warn-1'>
         <div className='warn3'>
         <h1 className='go'>African diaries</h1>
         <h2 className='go2'>This is an adult only website!</h2>
@@ -52,6 +53,7 @@ function Warning() {
           <Link to=''><button className='go6'>I am under 18 - Exit</button></Link>
         </div>
         
+      </div>
       </div>
       </div>
 

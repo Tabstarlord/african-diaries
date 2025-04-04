@@ -10,11 +10,17 @@ import '../Styles/LikedVideos.css'
 import Foot from '../Components/Foot'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
+import Menu from '../Components/Menu'
 
 function LikedVideos() {
   return (
     <>
     <Navbar />
+    <div className='desk-menu'>
+      <div className='desktop-side'>
+      <Menu />
+      </div>
+    </div>
     <div className='liked'>
               <div className='liked-1'>
                 <span>Liked Videos</span> 

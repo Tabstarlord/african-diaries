@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import dp from '../Assets/dp.png'
 import back from '../Assets/cancel-01.png'
 import '../Styles/Setting.css'
+import UserNavbar from './UserNavbar'
 
 function Setting() {
 
@@ -21,10 +22,11 @@ function Setting() {
 
   return (
     <>
+    < UserNavbar />
     <div className='acc'>
    <div className='set1'>
          <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
-         <h2>Profile</h2>
+         <h2>Profile Information</h2>
          </div>
    
          <div className='set2'>

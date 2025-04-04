@@ -163,14 +163,58 @@
     font-weight: 500;
     font-size: 13px;
     line-height: 100%;
-    margin-left: 340px;
+    margin-left: 2px;
   }
   .liked-2 .image a p {
     width: 220px;
     font-size: 10px;
-    margin-left: -70px;
+    margin-left: -10px;
   }
   .liked-2 .image a p .eye {
     width: 12px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .desk-menu {
+    display: contents;
+  }
+  .liked-1 {
+    margin: auto;
+    width: 100%;
+  }
+  .liked-1 span {
+    margin-left: 47%;
+    font-size: 40px;
+    top: 30px;
+  }
+  .liked-1 p {
+    position: relative;
+    right: 1380px;
+    top: 110px;
+    font-size: 30px;
+  }
+  .liked {
+    margin-top: 90px;
+  }
+  .liked .image {
+    width: 15%;
+    padding: 10px 25px;
+  }
+  .liked .image a span {
+    width: 100%;
+    font-size: 40px;
+    right: 420px;
+  }
+  .liked .image a p {
+    width: 100%;
+    font-size: 37px;
+    right: 100px;
+    top: 10px;
+    padding-bottom: 5px;
+  }
+  .liked .image a p .eye {
+    width: 30px;
+    padding-right: 5px;
   }
 }

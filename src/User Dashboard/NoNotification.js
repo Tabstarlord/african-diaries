@@ -41,7 +41,7 @@ function NoNotification() {
               <ul className='to'>
                 <Link className='tag' to='/LikedClips'>Liked Videos</Link>
                 <Link className='tag1' to='/Notification'>Notifications</Link>
-                <Link className='tag' to='/Settings'>Account Settings</Link>
+                <Link className='tag' to='/Setting'>Account Settings</Link>
               </ul>
             </div>
 

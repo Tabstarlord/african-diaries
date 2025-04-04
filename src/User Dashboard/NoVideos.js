@@ -52,7 +52,7 @@ function NoVideos() {
               <ul className='topics'>
                 <Link className='tag1' to='/LikedClips'>Liked Videos</Link>
                 <Link className='tag' to='/Notification'>Notifications</Link>
-                <Link className='tag' to='/Settings'>Account Settings</Link>
+                <Link className='tag' to='/Setting'>Account Settings</Link>
               </ul>
             </div>
 

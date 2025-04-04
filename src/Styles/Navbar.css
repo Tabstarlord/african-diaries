@@ -30,26 +30,7 @@
     top: 2px;
     left: 9px;
   }
-
-  .account {
-    display: grid;
-    position: absolute;
-    right: 0;
-    margin-top: 10px;
-    margin-right: 20px;
-    background-color: #F4F4F4;
-    border-radius: 4px;
-    padding: 15px;
-  }
-  .account a {
-    padding: 5px;
-    color: #008000;
-    text-decoration: none;
-  }
-  .account .log {
-    border-bottom: 0.5px solid;
-    color: #000;
-  }
+  
 
 
 
@@ -84,26 +65,6 @@
     top: 2px;
     left: 12px;
   }
-
-  .account {
-    display: grid;
-    position: absolute;
-    right: 0;
-    margin-top: 2px;
-    margin-right: 20px;
-    background-color: #F4F4F4;
-    border-radius: 4px;
-    padding: 15px;
-  }
-  .account a {
-    padding: 5px;
-    color: #008000;
-    text-decoration: none;
-  }
-  .account .log {
-    border-bottom: 0.5px solid;
-    color: #000;
-  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -121,6 +82,11 @@
     z-index: 90;
     border-bottom: 0.5px solid #000;
   }
+  .logo button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
   .logo {
     width: 141px;
     height: 26px;
@@ -132,24 +98,61 @@
     margin-top: -62px;
     margin-left: -125px;
   }
-  .account {
+  .desktop-account {
     display: flex;
     background: none;
-    margin-top: -30px;
+    margin-top: -15px;
+    margin-left: 85%;
     gap: 25px;
   }
-  .account .log {
-    border-bottom: none;
+  .desktop-account .log {
     color: #008000;
     background-color: #F4F4F4;
-    padding: 6px 10px;border-radius: 4px;
-    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 15px;
   }
-  .account .regis {
+  .desktop-account .regis {
     color: #fff;
     background-color: #008000;
     padding: 6px 8px;
     border-radius: 4px;
     font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .desktop-navbar {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  .logo img{
+    width: 300px;
+    height: 60px;
+    margin-left: 30px;
+  }
+  .logo button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .searchbar {
+    margin-top: -70px;
+  }
+  .desktop-account {
+    margin-top: -60px;
+    position: relative;
+    top: 40px;
+    margin-right: 70px;
+    gap: 70px;
+  }
+  .desktop-account .log {
+    padding: 20px 22px;
+    font-size: 60px;
+  }
+  .desktop-account .regis {
+    padding: 20px 22px;
+    font-size: 50px;
   }
 }
