@@ -59,7 +59,7 @@
   }
 
 
-@media only screen and (min-width: 425px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .desk-menu {
     display: none;
   }
@@ -124,7 +124,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .desk-menu {
     display: contents;
   }
@@ -175,7 +175,7 @@
   }
 }
 
-@media only screen and (min-width: 2560px) {
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
   .desk-menu {
     display: contents;
   }
