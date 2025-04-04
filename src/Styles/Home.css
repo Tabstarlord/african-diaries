@@ -124,31 +124,31 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .desk-menu {
     display: contents;
   }
   .home {
     display: flex;
-    width: 100%;
-    margin-top: 30px;
+    width: auto;
+    margin-top: -15px;
   }
   .home .image {
-    width: 200px;
+    width: 125px;
     padding: 0px 16px;
     position: relative;
-    left: 19%;
+    left: 25%;
     
   }
   .home .image a span {
-    width: 220px;
-    font-size: 13px;
-    margin-left: -2px;
+    width: 200px;
+    font-size: 10px;
+    margin-left: -40px;
   }
   .home .image a p {
-    width: 220px;
+    width: 200px;
     font-size: 10px;
-    margin-left: -10px;
+    margin-left: -60px;
   }
   .home .image a p .eye {
     width: 12px;
@@ -156,11 +156,11 @@
   
   .page .pages {
     margin: auto;
-    width: 35%;
+    width: 1%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 25px;
+    gap: 15px;
   }
   
   .page .pages li {
@@ -170,7 +170,8 @@
   
   .page .pages li img {
     position: relative;
-    top: 3px;
+    left: 25px;
+    top: -17px;
   }
 }
 

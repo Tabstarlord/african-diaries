@@ -48,6 +48,7 @@
          text-align: left;
       }
       .deskdrop .dropdown-menu li {
+         font-size: 55px;
          border-bottom: 0.5px solid #0000002a;
       }
       .deskdrop .dropdown-menu li img {
