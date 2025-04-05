@@ -59,7 +59,7 @@
   }
 
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .desk-menu {
     display: none;
   }
@@ -124,20 +124,21 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 992px) {
   .desk-menu {
     display: contents;
   }
+  
   .home {
     display: flex;
     width: auto;
     margin-top: -15px;
   }
   .home .image {
-    width: 125px;
+    width: 135px;
     padding: 0px 16px;
     position: relative;
-    left: 25%;
+    left: 20%;
     
   }
   .home .image a span {
@@ -175,7 +176,7 @@
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .desk-menu {
     display: contents;
   }

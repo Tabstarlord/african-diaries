@@ -12,22 +12,22 @@
 
 
 
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 992px) {
   .footer {
     margin: auto;
     width: 100%;
     justify-content: center;
-    padding-left: 50px;
+    padding-left: 205px;
   }
   .footer .foot {
-    width: 1340px;
+    width: 78%;
     height: 59px;
     padding: 4px;
     font-size: 13px;
   }
 }
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 1200px) {
   .footer {
     margin: auto;
     width: 100%;
