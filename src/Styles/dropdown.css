@@ -20,7 +20,7 @@
     color: #000;
   }
 
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 992px) {
     .desk-drop {
       display: contents;
     }
@@ -28,7 +28,10 @@
       margin-left: 5%;
     }
     .desk-drop .droplink li {
-      border-bottom: 0.5px solid #0000002a;
+      border-bottom: 0.5px 
+      solid #0000002a;
+      margin-left: -60px;
+      padding-left: 80px;
     }
   }
 

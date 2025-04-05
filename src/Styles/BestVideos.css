@@ -72,133 +72,23 @@
   top: 3px;
 }
 
-
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-.best {
-  margin: auto;
-  width: 100%;
-  margin-top: 1vh;
-  font-family: 'DM Sans', sans-serif;
-}
-
-.best .image {
-  margin-top: 5vh;
-  width: 100%;
-  align-content: center;
-}
-.best .image img {
-  width: 100%;
-}
-
-.best a {
-  text-decoration: none;
-  color: #000;
-}
-
-.best .image a span {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 100%;
-  float: left;
-}
-
-.best .image a p {
-  font-size: 15px;
-  position: relative;
-  bottom: 10px;
-  float: left;
-}
-
-.best .image a p .eye {
-  position: relative;
-  top: 3px;
-  width: 13%;
-}
-
-.best-1 .pages {
-  margin: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  padding-bottom: 25px;
-}
-
-.best-1 .pages li {
-  list-style: none;
-  text-align: center;
-}
-
-.best-1 .pages li img {
-  position: relative;
-  top: 3px;
-}
-
-}
-
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-  .best-1 {
-    margin: auto;
-    width: 100%;
-    position: relative;
-    font-family: 'DM Sans', sans-serif;
-  }
-  .best-1 .liked span {
-    float: left;
-  }
-  .best-1 .liked li {
-    list-style: none;
-    float: left;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding-bottom: 45px;
-  }
-  .best-1 .liked li button {
-    color: #fff;
-    padding: 5px 10px;
-    background-color: #808080;
-    border: none;
-    position: relative;
-    top: 30px;
-    right: 90px;
-  }
-
-  .best-1 .pages {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    padding-bottom: 25px;
-  }
-  
-  .best-1 .pages li {
-    list-style: none;
-    text-align: center;
-  }
-  
-  .best-1 .pages li img {
-    position: relative;
-    top: 3px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 992px) {
   .liked {
     display: flex;
     flex-direction: column;
+    font-weight: 500;
+    margin-top: -30px;
+    margin-left: -50px;
   }
   .liked span {
     position: relative;
-    right: 370px;
+    left: -170px;
     font-size: 20px;
   }
   .liked .filter {
+    margin-top: -10px;
     position: relative;
-    left: 290px;
+    left: 265px;
     top: 40px;
   }
   .liked .filter button {
@@ -211,76 +101,84 @@
     width: 100%;
   }
   .best .image {
-    width: 200px;
+    width: 135px;
     padding: 0px 16px;
     position: relative;
     left: 19%;
   }
   .best .image a span {
     width: 220px;
-    font-size: 13px;
-    margin-left: -4px;
+    font-size: 10px;
+    margin-left: -45px;
   }
   .best .image a p {
-    width: 220px;
+    width: 200px;
     font-size: 10px;
-    margin-left: -14px;
+    margin-left: -50px;
   }
   .best .image a p .eye {
     width: 12px;
   }
 }
 
-@media only screen and (min-width: 2560px) {
-  .best-1 {
-    margin-top: 3%;
+@media only screen and (min-width: 1200px) {
+  .liked {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: -50px;
   }
   .liked span {
-    font-weight: 500;
-    font-size: 50px;
-    right: 27%;
+    position: relative;
+    left: -290px;
+    font-size: 20px;
   }
   .liked .filter {
-    margin-left: 13%;
+    margin-top: -10px;
+    position: relative;
+    left: 360px;
+    top: 45px;
   }
   .liked .filter button {
-    width: 20%;
-    font-size: 40px;
-    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
   }
+  
+  
   .best .image {
-    width: 15%;
-    padding: 10px 25px;
+    width: 13%;
+    padding: 10px 23px;
+    left: 20%;
   }
   .best .image a span {
     width: 100%;
-    font-size: 40px;
-    right: 50px;
+    font-size: 13px;
+    right: -35px;
   }
   .best .image a p {
     width: 100%;
-    font-size: 37px;
-    right: 109px;
-    top: 10px;
+    font-size: 10px;
+    right: -15px;
+    top: -5px;
     padding-bottom: 5px;
   }
   .best .image a p .eye {
-    width: 30px;
+    width: 15px;
     padding-right: 5px;
   }
   .page .pages {
     margin: auto;
     width: 100%;
-    gap: 1%;
     justify-content: center;
   }
   .page .pages li {
-    font-size: 50px;
+    font-size: 16px;
   }
   .page .pages li img {
-    width: 40%;
-    left: 80px;
-    top: -54px;
+    width: 30%;
+    left: 7px;
+    top: 3px;
   }
 
 }

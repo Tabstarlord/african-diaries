@@ -2,7 +2,7 @@
   .login {
     background: url('../Assets/Frame16.png');
     background-attachment: fixed;
-    height: auto;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     width: auto;
@@ -14,7 +14,7 @@
   .login-2 {
     background-color: rgba(0, 0, 0, 0.788);
     background-attachment: fixed;
-    height: auto;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: -5px;
@@ -112,22 +112,30 @@
   
   .remember {
     margin-bottom: 40px;
+    margin-left: -5px;
+  }
+  .remember1 {
+    position: relative;
+    bottom: 12px;
   }
   
-  
-  
   .forget {
-      margin-left: 23px;
+      margin-left: 55px;
       margin-top: 0px;
       color: #FEFEFE;
      
   }
+  .login-4 .back-3 {
+    margin-left: 90%;
+    position: relative;
+    top: 20%;
+  }
 
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 992px) {
     .login {
       background: url('../Assets/Frame16.png');
       background-attachment: fixed;
-      height: auto;
+      height: 100vh;
       background-repeat: no-repeat;
       background-size: cover;
       width: 100%;
@@ -137,28 +145,28 @@
       overflow: hidden;
     }
     .back-3 {
-      margin-top: 5%;
-      margin-right: -90%;
+      margin-top: -2%;
+      margin-right: -10%;
     }
     .login-3 {
-      padding-top: 40%;
+      padding-top: 20%;
       padding-bottom: 30%;
     }
     .login-4 {
       margin-left: auto;
       margin-right: auto;
-      width: 50%;
+      width: 60%;
       border: 1px solid #fff;
     }
     .login-4 .log-1 {
       padding: 15px;
-      width: 70%;
-      margin-left: 100px;
+      width: 90%;
+      margin-left: 35px;
       position: relative;
       bottom: 20px;
     }
     .login-4 label {
-      margin-left: 90px;
+      margin-left: 30px;
       position: relative;
       bottom: 25px;
     }
@@ -177,11 +185,11 @@
     }
   }
 
-  @media only screen and (min-width: 2560px) {
+  @media only screen and (min-width: 1200px) {
     .login {
       background: url('../Assets/Frame16.png');
       background-attachment: fixed;
-      height: auto;
+      height: 100vh;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -197,54 +205,56 @@
     }
     .back-3 {
       width: 40px;
-      margin-top: 2%;
-      margin-left: 5%;
+      margin-top: -1%;
+      margin-left: 4%;
     }
     .login-4 {
       margin-left: auto;
       margin-right: auto;
-      margin-top: -250px;
+      margin-top: -20px;
       width: 50%;
     }
     .login-4 h1 {
-      font-size: 60px;
+      font-size: 20px;
+      padding-bottom: 40px;
     }
     .login-4 .log-1 {
-      padding: 70px;
+      padding: 30px;
       width: 90%;
+      border-radius: 12px;
     }
     .login-4 label {
-      font-size: 50px;
+      font-size: 20px;
     }
     .login-4 .btn-3 {
-      padding: 20px 20vw;
-      font-size: 60px;
+      padding: 15px 260px;
+      font-size: 20px;
     }
     .forget {
-      font-size: 30px;
+      font-size: 16px;
       position: relative;
-      top: 8px;
+      top: -3px;
     }
     .remfor {
-      margin-left: -4%;
+      margin-left: -22%;
     }
     .remember {
-      width: 30px;
+      width: 20px;
     }
     .remember1 {
       position: relative;
       bottom: 17px;
-      font-size: 30px;
+      font-size: 16px;
     }
     .orlog img {
       width: 40%;
     }
     .login-social img {
-      width: 5%;
+      width: 10%;
       padding-left: 2%;
       padding-right: 2%;
     }
     .btn-2 {
-      font-size: 40px
+      font-size: 20px
     }
   }

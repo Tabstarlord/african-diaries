@@ -16,7 +16,7 @@ function Version(props) {
 
     <div className='deskver'> <img src={Vers} alt='jpg' />
       <span>Versions:</span>
-      <img src={arrow} alt='jpg' />
+      <img className='verarrow' src={arrow} alt='jpg' />
       <DropVersion />
     </div>
     </>
