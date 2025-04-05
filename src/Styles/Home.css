@@ -181,26 +181,26 @@
     display: contents;
   }
   .home {
-    margin-top: 90px;
+    margin-top: 20px;
   }
   .home .image {
-    width: 15%;
+    width: 13%;
     padding: 10px 25px;
   }
   .home .image a span {
     width: 100%;
-    font-size: 40px;
-    right: 80px;
+    font-size: 13px;
+    right: -25px;
   }
   .home .image a p {
     width: 100%;
-    font-size: 37px;
-    right: 160px;
-    top: 15px;
+    font-size: 10px;
+    right: -15px;
+    top: -5px;
     padding-bottom: 5px;
   }
   .home .image a p .eye {
-    width: 30px;
+    width: 15px;
     padding-right: 5px;
   }
 
@@ -210,12 +210,12 @@
     justify-content: center;
   }
   .page .pages li {
-    font-size: 50px;
+    font-size: 16px;
   }
   .page .pages li img {
-    width: 40%;
-    left: 80px;
-    top: -54px;
+    width: 30%;
+    left: 7px;
+    top: 3px;
   }
   .social a img {
     width: 4%;
