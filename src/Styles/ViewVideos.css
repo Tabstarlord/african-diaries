@@ -1,6 +1,9 @@
 
 .view {
   padding-top: 50px;
+  margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
 .view-1{
   font-family: 'DM sans', sans-serif;

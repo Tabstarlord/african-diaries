@@ -11,6 +11,9 @@
   
   .home .image {
     margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
   }
   
   .home a {

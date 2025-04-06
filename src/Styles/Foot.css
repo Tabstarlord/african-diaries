@@ -2,6 +2,9 @@
 .footer {
   margin: auto;
   width: 100%;
+  margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
 
 .foot-1 {

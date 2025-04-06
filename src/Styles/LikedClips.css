@@ -5,6 +5,9 @@
   margin: auto;
   width: auto;
   font-family: 'DM Sans', sans-serif;
+  margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
 .clip .clip1 .cancel {
   float: left;

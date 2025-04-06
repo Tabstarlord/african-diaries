@@ -9,6 +9,8 @@
   z-index: 100;
   width: 100%;
   margin-top: 25px;
+  left: 7px;
+  
 }
 .searchForm form {
   position: relative;

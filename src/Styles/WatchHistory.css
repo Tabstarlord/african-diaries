@@ -5,6 +5,9 @@
   padding-top: 40px;
   position: relative;
   font-family: 'DM Sans', sans-serif;
+  margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
 .his-1 {
   display: flex;

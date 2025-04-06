@@ -41,10 +41,7 @@ function Warning() {
              />
             You voluntarily choose to access this website.
             </p>
-            <p><input type='checkbox' 
-             />
-            You understand that the content may include nudity, sexual themes and explicit material.
-            </p>
+            
           </form>
         </div>
         <div className='warn6'>

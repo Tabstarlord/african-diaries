@@ -10,7 +10,7 @@
 }
 .reg-1 {
   margin-top: -75px;
-  margin-bottom: -200px;
+  padding-bottom: 1%;
 }
 .reg .back-4 {
   margin-top: 20px;
@@ -74,7 +74,7 @@
   font-size: 13px;
   position: relative;
   bottom: 15px;
-  padding-bottom: 50%;
+  padding-bottom: -50%;
 }
 .reg .btn-1 a{
   text-decoration: underline 1px #008000;
