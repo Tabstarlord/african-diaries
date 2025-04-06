@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../Styles/Navbar.css'
 import Logo from '../Assets/logo.png'
+import Desktoplogo from '../Assets/Desktop-logo.png'
 import user from '../Assets/profile.png'
 import searchbar from '../Assets/search.png'
 import Menu from './Menu'
@@ -23,9 +24,6 @@ function Navbar() {
   return (
     <>
     <div className='mobile-navbar'>
-    {/*{showMenu && (
-      <Menu />
-    )}*/}
 
     {search && (
           <Search />
@@ -35,10 +33,6 @@ function Navbar() {
         { click ? Close : Hamburger}
         {click && <Menu />}
       </div>
-
-
-
-     {/* <div className='menu-btn' onClick={() => setShowMenu(showMenu => !showMenu)}><img src={hamburger} alt='hamburger' /></div>*/}
 
       <div className='logo'>
         <Link to='/Home'><img className='logo' src={Logo} alt='/' /></Link>
@@ -54,9 +48,6 @@ function Navbar() {
       </div>
     </div>
 
-    
-        
-
       { open && (
     <div className='account'>
           <Profile />
@@ -66,9 +57,10 @@ function Navbar() {
     </div>
 
 
+
     <div className='desktop-navbar'>
     <div className='logo'>
-    <Link to='/Home'><button><img src={Logo} alt='/' /></button></Link>
+    <Link to='/Home'><img src={Desktoplogo} alt='/' /></Link>
       </div>
 
       <div className='searchbar'>

@@ -78,7 +78,7 @@
   top: 3px;
 }
 
-@media only screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .liked {
     display: flex;
     flex-direction: column;
