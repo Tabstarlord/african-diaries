@@ -1,17 +1,11 @@
 
   .App {
-    box-sizing: border-box;
     text-align: center;
-    padding: 0;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     height: auto;
     font-family: 'DM Sans', sans-serif;
     overflow: hidden;
+    
   }
-@media only screen and (min-width: 1024px) {
-  .App {
-    margin: auto;
-    width: 100%;
-  }
-}

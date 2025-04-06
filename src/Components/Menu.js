@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../Styles/Menu.css'
 import video from '../Assets/video-play.png'
 import newest from '../Assets/Newest.png'
-import globe from '../Assets/globe.png'
+import flag from '../Assets/flag.png'
 import like from '../Assets/like.png' 
 import watch from '../Assets/watch.png'
 import Categories from './Categories'
@@ -72,7 +72,7 @@ function Menu() {
             </li>
         
         <li className='nav-item'>
-          <Link to='/' className='nav-link'><img src={globe} alt='like' /> <span className='nav-label'>Country</span></Link>
+          <Link to='/' className='nav-link'><img src={flag} alt='like' /> <span className='nav-label'>Country:&nbsp; Nigeria</span></Link>
         </li>
 
         </ul>
@@ -116,7 +116,7 @@ function Menu() {
             </li>
         
         <li className='nav-item'>
-          <Link to='/' className='nav-link'><img src={globe} alt='like' /> <span className='nav-label'>Location: Nigeria</span></Link>
+          <Link to='/' className='nav-link'><img src={flag} alt='like' /> <span className='nav-label'>Country:&nbsp; Nigeria</span></Link>
         </li>
 
             <li className='nav-item'>

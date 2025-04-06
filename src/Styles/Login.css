@@ -1,260 +1,267 @@
 
+.login {
+  background-image: url('../Assets//Frame16.png');
+  background-attachment: fixed;
+  color: #fff;
+}
+.login-2 {
+  background-color: rgba(0, 0, 0, 0.801);
+  background-attachment: fixed;
+}
+.login-3 {
+  margin-top: -75px;
+  margin-bottom: -16px;
+}
+.login-2 .back-3 {
+  margin-top: 20px;
+  margin-left: 90%;
+  position: relative;
+}
+.login-2 h1 {
+  padding-top: 70px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.login-2 fieldset {
+  border: none;
+}
+
+.login-2 label {
+  font-size: 16px;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: 500;
+  position: relative;
+  left: 10px;
+}
+
+.login-2 .log-1 {
+  display: block;
+  color: #fff;
+  justify-content: center;
+  width: 93%;
+  margin-bottom: 20px;
+  padding: 8px 2px;
+  background: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 0.5px solid #fefefe56;
+  font-size: 16px;
+  position: relative;
+  left: 7px;
+}
+
+.login-2 .btn-3 {
+  padding: 15px 36vw;
+  border-radius: 4px;
+  background-color: #008000;
+  color: #FEFEFE;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  right: 1vh;
+  top: -4vh;
+}
+
+.login-2 .btn-2 {
+  margin-top: 4vh;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 13px;
+  position: relative;
+  bottom: 15px;
+}
+.login-2 .btn-2 a{
+  text-decoration: underline 1px #008000;
+  color: #008000;
+}
+
+.login-2 .orlog {
+  margin-top: -5px;
+  font-size: 16px;
+  position: relative;
+  bottom: 16px;
+}
+
+.orlog h1 {
+  margin: auto;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  bottom: 60px;
+}
+
+.login-2 .login-social {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: -40px;
+  position: relative;
+  bottom: 15px;
+}
+
+.login-2 .orlog img {
+  position: relative;
+  bottom: 6px;
+  width: 110px;
+}
+.remfor {
+  display: flex;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 13px;
+}
+
+.remember {
+  margin-bottom: 40px;
+  margin-left: -5px;
+  position: relative;
+  left: 10px;
+}
+.remember1 {
+  position: relative;
+  bottom: 12px;
+  left: 10px;
+}
+
+.forget {
+    margin-left: 55px;
+    margin-top: 0px;
+    color: #FEFEFE;
+   
+}
+
+
+@media only screen and (min-width: 992px) {
   .login {
     background: url('../Assets/Frame16.png');
     background-attachment: fixed;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    width: auto;
+    width: 100%;
     margin: auto;
     font-family: 'DM sans', sans-serif;
     color: #FEFEFE;
+    overflow: hidden;
   }
-  
-  .login-2 {
-    background-color: rgba(0, 0, 0, 0.788);
+  .back-3 {
+    margin-top: -2%;
+    margin-right: -10%;
+  }
+  .login-3 {
+    padding-top: 20%;
+    padding-bottom: 30%;
+  }
+  .login-4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border: 1px solid #fff;
+  }
+  .login-4 .log-1 {
+    padding: 15px;
+    width: 90%;
+    margin-left: 35px;
+    position: relative;
+    bottom: 20px;
+  }
+  .login-4 label {
+    margin-left: 30px;
+    position: relative;
+    bottom: 25px;
+  }
+  .login-4 .btn-3 {
+    padding: 15px 15vw;
+    position: relative;
+    top: 10px;
+  }
+  .remfor {
+    gap: 23%;
+    margin-left: -13%;
+  }
+  .remember {
+    position: relative;
+    left: 22%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .login {
+    background: url('../Assets/Frame16.png');
     background-attachment: fixed;
     height: 100vh;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    padding-top: -5px;
-  }
-  
-  .login-2 h1 {
-    padding-top: 70px;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .login-2 fieldset {
-    border: none;
-  }
-  
-  .login-2 label {
-    font-size: 16px;
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 5px;
-    text-align: left;
-    font-weight: 500;
-  }
-  
-  .login-2 .log-1 {
-    display: block;
-    justify-content: center;
     width: 100%;
-    margin-bottom: 20px;
-    padding: 8px 2px;
-    background: none;
-    box-sizing: border-box;
-    border: 0.5px solid #fefefe56;
-    font-size: 16px;
-    position: relative;
-    right: 1vh;
-  }
-  
-  .login-2 .btn-3 {
-    padding: 15px 36vw;
-    border-radius: 4px;
-    background-color: #008000;
-    color: #FEFEFE;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    position: relative;
-    right: 1vh;
-    top: -4vh;
-  }
-  
-  .login-2 .btn-2 {
-    margin-top: 4vh;
-  }
-  .login-2 .btn-2 a{
-    text-decoration: underline 1px #008000;
-    color: #008000;
-  }
-  
-  .login-2 .orlog {
-    padding-top: 1px;
-    font-size: 16px;
-  }
-  
-  .orlog h1 {
     margin: auto;
-    width: 100%;
+    font-family: 'DM sans', sans-serif;
+    color: #FEFEFE;
+    overflow: hidden;
+  }
+  .login-3 {
+    padding-top: 10%;
+    padding-bottom: 5%;
+  }
+  .back-3 {
+    width: 40px;
+    margin-top: -1%;
+    margin-left: 4%;
+  }
+  .login-4 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    width: 50%;
+  }
+  .login-4 h1 {
+    font-size: 20px;
+    padding-bottom: 40px;
+  }
+  .login-4 .log-1 {
+    padding: 30px;
+    width: 90%;
+    border-radius: 12px;
+  }
+  .login-4 label {
+    font-size: 20px;
+  }
+  .login-4 .btn-3 {
+    padding: 15px 260px;
+    font-size: 20px;
+  }
+  .forget {
     font-size: 16px;
-    font-weight: 500;
     position: relative;
-    bottom: 60px;
+    top: -3px;
   }
-  
-  .login-2 .login-social {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    margin-top: -40px;
-  }
-  
-  .login-2 .orlog img {
-    position: relative;
-    bottom: 6px;
-  }
-  .login-2 a .back-3 {
-    top: 30px;
-    right: 30px;
-  }
-  
   .remfor {
-    display: flex;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 13px;
+    margin-left: -22%;
   }
-  
   .remember {
-    margin-bottom: 40px;
-    margin-left: -5px;
+    width: 20px;
   }
   .remember1 {
     position: relative;
-    bottom: 12px;
+    bottom: 17px;
+    font-size: 16px;
   }
-  
-  .forget {
-      margin-left: 55px;
-      margin-top: 0px;
-      color: #FEFEFE;
-     
+  .orlog img {
+    width: 40%;
   }
-  .login-4 .back-3 {
-    margin-left: 90%;
-    position: relative;
-    top: 20%;
+  .login-social img {
+    width: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
   }
+  .btn-2 {
+    font-size: 20px
+  }
+}
 
-  @media only screen and (min-width: 992px) {
-    .login {
-      background: url('../Assets/Frame16.png');
-      background-attachment: fixed;
-      height: 100vh;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      margin: auto;
-      font-family: 'DM sans', sans-serif;
-      color: #FEFEFE;
-      overflow: hidden;
-    }
-    .back-3 {
-      margin-top: -2%;
-      margin-right: -10%;
-    }
-    .login-3 {
-      padding-top: 20%;
-      padding-bottom: 30%;
-    }
-    .login-4 {
-      margin-left: auto;
-      margin-right: auto;
-      width: 60%;
-      border: 1px solid #fff;
-    }
-    .login-4 .log-1 {
-      padding: 15px;
-      width: 90%;
-      margin-left: 35px;
-      position: relative;
-      bottom: 20px;
-    }
-    .login-4 label {
-      margin-left: 30px;
-      position: relative;
-      bottom: 25px;
-    }
-    .login-4 .btn-3 {
-      padding: 15px 15vw;
-      position: relative;
-      top: 10px;
-    }
-    .remfor {
-      gap: 23%;
-      margin-left: -13%;
-    }
-    .remember {
-      position: relative;
-      left: 22%;
-    }
-  }
-
-  @media only screen and (min-width: 1200px) {
-    .login {
-      background: url('../Assets/Frame16.png');
-      background-attachment: fixed;
-      height: 100vh;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      width: 100%;
-      margin: auto;
-      font-family: 'DM sans', sans-serif;
-      color: #FEFEFE;
-      overflow: hidden;
-    }
-    .login-3 {
-      padding-top: 10%;
-      padding-bottom: 5%;
-    }
-    .back-3 {
-      width: 40px;
-      margin-top: -1%;
-      margin-left: 4%;
-    }
-    .login-4 {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: -20px;
-      width: 50%;
-    }
-    .login-4 h1 {
-      font-size: 20px;
-      padding-bottom: 40px;
-    }
-    .login-4 .log-1 {
-      padding: 30px;
-      width: 90%;
-      border-radius: 12px;
-    }
-    .login-4 label {
-      font-size: 20px;
-    }
-    .login-4 .btn-3 {
-      padding: 15px 260px;
-      font-size: 20px;
-    }
-    .forget {
-      font-size: 16px;
-      position: relative;
-      top: -3px;
-    }
-    .remfor {
-      margin-left: -22%;
-    }
-    .remember {
-      width: 20px;
-    }
-    .remember1 {
-      position: relative;
-      bottom: 17px;
-      font-size: 16px;
-    }
-    .orlog img {
-      width: 40%;
-    }
-    .login-social img {
-      width: 10%;
-      padding-left: 2%;
-      padding-right: 2%;
-    }
-    .btn-2 {
-      font-size: 20px
-    }
-  }

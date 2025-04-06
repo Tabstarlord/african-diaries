@@ -1,592 +1,595 @@
 
-  .view {
-    padding-top: 90px;
-  }
-  .view-1{
-    font-family: 'DM sans', sans-serif;
-  }
-  
-  .view-1 span {
-    display: flex;
-    font-weight: 500;
-    font-size: 16px;
-    margin-left: 5px;
-  }
-  
-  .view-1 span h5 {
-    font-size: 13px;
-    font-weight: 500;
-    margin-left: 8px;
-    margin-top: 2px;
-  }
-  
-  .view-1 .links {
-    margin-right:  45px;
-    position: relative;
-    bottom: 10px;
-  }
-  .view-1 .links a {
-    text-decoration: none;
-    color: #000;
-    padding: 0 5px;
-    font-size: 13px;
-  }
-  
-  .view-1 .react {
-    display: flex;
-  }
-  
-  .react a {
-    text-decoration: none;
-    color: #000;
-    padding-right: 45px;
-  }
-  
-  .react a p{
-    position: relative;
-    bottom: 40px;
-    left: 25px;
-  }
-  
-  .view-1 .view-2 {
-   margin-left: 250px;
-   position: relative;
-   bottom: 70px;
-  }
-  
-  .view-1 .view-2 p {
-    margin-left: 50px;
-    position: relative;
-    bottom: 40px;;
-  }
-  
-  .comment {
-    display: flex;
-    width: 350px;
-    height: 17px;
-    gap: 5px;
-    margin-top: -100px;
-  }
-  
-  .comment p {
-    margin-top: -1px;
-  }
-  
-  .comment-1 .com {
-    display: flex;
-    width: 114px;
-    height: 30px;
-    margin-top: 30px;
-    gap: 10px;
-  }
-  
-  .com span {
-    width: 45px;
-    height: 17px;
-    font-weight: 500;
-    font-size: 13px;
-    margin-top: 8px;
-  }
-  
-  .com p {
-    font-weight: 400;
-    font-size: 13px;
-    margin-left: 14vw;
-    margin-top: 9px;
-  }
-  
-  .com-1 {
-    display: flex;
-  }
-  
-  .com-1 p {
-    font-weight: 400;
-    font-size: 12px;
-  }
-  
-  .com-2 {
-    display: flex;
-    width: 146px;
-    height: 18px;
-    gap: 15px;
-    margin-left: 45vw;
-    margin-top: -3vw;
-  }
-  
-  .com-2 p {
-    margin-top: 1px;
-  }
-  
-  .write {
-    margin-top: 5vw;
-    margin-bottom: 10vw;
-  }
-  
-  .write input {
-    width: 276px;
-    height: 33px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  
-  .write button {
-    width: 64px;
-    color: #fff;
-    background-color: #008000;
-    border: none;
-    padding: 5px 8px;
-  }
-  
-  .related span {
-  
-    margin-right: 63vw;
-  }
-  
-   a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .image a span {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    margin-right: 150px;
-  }
-  
-  .image a p {
-    font-size: 13px;
-    margin-right: 240px;
-    position: relative;
-    bottom: 10px;
-  }
-  
-  .image a p .eye {
-    position: relative;
-    top: 3px;
-  }
-  
-  .back-1 a {
-    font-weight: 500;
-    font-size: 10px;
-    color: #008000;
-  }
+.view {
+  padding-top: 50px;
+}
+.view-1{
+  font-family: 'DM sans', sans-serif;
+}
 
+.view-1 span {
+  display: flex;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 8px;
+}
+
+.view-1 span h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-top: 3px;
+}
+
+.view-1 .links {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+  left: -10px;
+}
+.view-1 .links a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 5px;
+  font-size: 14px;
+}
+
+.view-1 .react {
+  display: flex;
+}
+
+.react a {
+  text-decoration: none;
+  color: #000;
+  padding-right: 45px;
+}
+
+.react a p{
+  position: relative;
+  bottom: 40px;
+  left: 25px;
+}
+
+.view-1 .view-2 {
+ margin-left: 250px;
+ position: relative;
+ bottom: 75px;
+}
+
+.view-1 .view-2 p {
+  margin-left: 50px;
+  position: relative;
+  bottom: 40px;;
+}
+
+.comment {
+  display: flex;
+  width: 350px;
+  height: 17px;
+  gap: 5px;
+  margin-top: -100px;
+}
+
+.comment p {
+  margin-top: -1px;
+}
+
+.comment-1 .com {
+  display: flex;
+  width: 114px;
+  height: 30px;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.com span {
+  width: 45px;
+  height: 17px;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.com p {
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 14vw;
+  margin-top: 9px;
+}
+
+.com-1 {
+  display: flex;
+}
+
+.com-1 p {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.com-2 {
+  display: flex;
+  width: 146px;
+  height: 18px;
+  gap: 15px;
+  margin-left: 45vw;
+  margin-top: -3vw;
+}
+
+.com-2 p {
+  margin-top: 1px;
+}
+
+.write {
+  margin-top: 5vw;
+  margin-bottom: 10vw;
+}
+
+.write input {
+  width: 276px;
+  height: 33px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.write button {
+  width: 64px;
+  color: #fff;
+  background-color: #008000;
+  border: none;
+  padding: 5px 8px;
+}
+
+.related span {
+
+  margin-right: 63vw;
+}
+
+ a {
+  text-decoration: none;
+  color: #000;
+}
+
+.image a span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  margin-right: 150px;
+}
+
+.image a p {
+  font-size: 13px;
+  margin-right: 240px;
+  position: relative;
+  bottom: 10px;
+}
+
+.image a p .eye {
+  position: relative;
+  top: 3px;
+}
+
+.back-1 a {
+  font-weight: 500;
+  font-size: 16px;
+  color: #008000;
+}
 
 
 @media only screen and (min-width: 425px) and (max-width: 767px) {
-  .view {
-    padding-top: 85px;
-    padding-bottom: 80px;
-  }
-  .view-1{
-    font-family: 'DM sans', sans-serif;
-  }
-  
-  .view-1 span {
-    display: flex;
-    font-weight: 500;
-    font-size: 16px;
-  }
-  
-  .view-1 span h5 {
-    font-size: 13px;
-    font-weight: 500;
-    margin-left: 8px;
-    margin-top: 2px;
-  }
-  
-  .view-1 .links {
-    margin-right:  45px;
-    position: relative;
-    bottom: 10px;
-    float: left;
-  }
-  .view-1 .links a {
-    text-decoration: none;
-    color: #000;
-    padding: 0 5px;
-    font-size: 13px;
-  }
-  .view-1 .play {
-    width: 100%;
-  }
-  
-  .view-1 .react {
-    display: flex;
-  }
-  
-  .react a {
-    text-decoration: none;
-    color: #000;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-right: 65px;
-  }
-  
-  .react a p{
-    position: relative;
-    bottom: 40px;
-    left: 25px;
-  }
-  
-  .view-1 .view-2 {
-   margin-left: 250px;
-   position: relative;
-   bottom: 87px;
-   left: 100px;
-  }
-  
-  .view-1 .view-2 p {
-    margin-left: 50px;
-    position: relative;
-    bottom: 40px;
-  }
-  .comments {
-    margin: auto;
-    width: 75%;
-  }
-  .comment {
-    display: flex;
-    width: 350px;
-    height: 17px;
-    gap: 10px;
-    margin-top: -100px;
-  }
-  
-  .comment p {
-    margin-top: -1px;
-  }
-  
-  .comment-1 .com {
-    display: flex;
-    width: 114px;
-    height: 30px;
-    margin-top: 30px;
-    gap: 15px;
-  }
-  
-  .com span {
-    width: 45px;
-    height: 17px;
-    font-weight: 500;
-    font-size: 13px;
-    margin-top: 8px;
-  }
-  
-  .com p {
-    font-weight: 400;
-    font-size: 13px;
-    margin-left: 14vw;
-    margin-top: 9px;
-  }
-  
-  .com-1 {
-    display: flex;
-  }
-  
-  .com-1 p {
-    font-weight: 400;
-    font-size: 12px;
-  }
-  
-  .com-2 {
-    display: flex;
-    width: 146px;
-    height: 18px;
-    gap: 15px;
-    margin-left: 45vw;
-    margin-top: -3vw;
-  }
-  
-  .com-2 p {
-    margin-top: 1px;
-  }
-  
-  .write {
-    margin-top: 5vw;
-    margin-bottom: 10vw;
-  }
-  
-  .write input {
-    width: 276px;
-    height: 33px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-  
-  .write button {
-    width: 64px;
-    color: #fff;
-  }
-  
-  .related span {
-    float: left;
-    font-weight: 500;
-  }
-  
-   a {
-    text-decoration: none;
-    color: #000;
-  }
-  .related .image {
-    width: 100%;
-  }
-  .related .image img {
-    width: 100%;
-  }
-  
-  .image a span {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    margin-right: 150px;
-  }
-  
-  .image a p {
-    font-size: 13px;
-    float: left;
-    margin-right: 250px;
-    position: relative;
-    bottom: 10px;
-  }
-  
-  .image a p .eye {
-    width: 15px;
-    position: relative;
-    top: 3px;
-  }
-  
-  .back-1 {
-    position: absolute;
-    top: 40px;
-    right: 0;
-    margin-right: 10px;
-  }
-  .back-1 a {
-    font-weight: 500;
-    font-size: 16px;
-    color: #008000;
-  }
+.view {
+  padding-top: 85px;
+  padding-bottom: 80px;
+}
+.view-1{
+  font-family: 'DM sans', sans-serif;
+}
+
+.view-1 span {
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.view-1 span h5 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.view-1 .links {
+  margin-right:  45px;
+  position: relative;
+  bottom: 10px;
+  float: left;
+}
+.view-1 .links a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 5px;
+  font-size: 13px;
+}
+.view-1 .play {
+  width: 100%;
+}
+
+.view-1 .react {
+  display: flex;
+}
+
+.react a {
+  text-decoration: none;
+  color: #000;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 65px;
+}
+
+.react a p{
+  position: relative;
+  bottom: 40px;
+  left: 25px;
+}
+
+.view-1 .view-2 {
+ margin-left: 250px;
+ position: relative;
+ bottom: 87px;
+ left: 100px;
+}
+
+.view-1 .view-2 p {
+  margin-left: 50px;
+  position: relative;
+  bottom: 40px;
+}
+.comments {
+  margin: auto;
+  width: 75%;
+}
+.comment {
+  display: flex;
+  width: 350px;
+  height: 17px;
+  gap: 10px;
+  margin-top: -100px;
+}
+
+.comment p {
+  margin-top: -1px;
+}
+
+.comment-1 .com {
+  display: flex;
+  width: 114px;
+  height: 30px;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.com span {
+  width: 45px;
+  height: 17px;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.com p {
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 14vw;
+  margin-top: 9px;
+}
+
+.com-1 {
+  display: flex;
+}
+
+.com-1 p {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.com-2 {
+  display: flex;
+  width: 146px;
+  height: 18px;
+  gap: 15px;
+  margin-left: 45vw;
+  margin-top: -3vw;
+}
+
+.com-2 p {
+  margin-top: 1px;
+}
+
+.write {
+  margin-top: 5vw;
+  margin-bottom: 10vw;
+}
+
+.write input {
+  width: 276px;
+  height: 33px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.write button {
+  width: 64px;
+  color: #fff;
+}
+
+.related span {
+  float: left;
+  font-weight: 500;
+}
+
+ a {
+  text-decoration: none;
+  color: #000;
+}
+.related .image {
+  width: 100%;
+}
+.related .image img {
+  width: 100%;
+}
+
+.image a span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  margin-right: 150px;
+}
+
+.image a p {
+  font-size: 13px;
+  float: left;
+  margin-right: 250px;
+  position: relative;
+  bottom: 10px;
+}
+
+.image a p .eye {
+  width: 15px;
+  position: relative;
+  top: 3px;
+}
+
+.back-1 {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-right: 10px;
+}
+.back-1 a {
+  font-weight: 500;
+  font-size: 16px;
+  color: #008000;
+}
 }
 
 @media only screen and (min-width: 1440px) {
-  .view {
-    margin: auto;
-    width: 100%;
-  }
-  .view-1 span {
-    font-weight: 500;
-    font-size: 20px;
-    margin-left: 45px;
-  }
-  .view-1 span h5 {
-    font-size: 18px;
-  }
-  .view-1 .links {
-    font-size: 13px;
-    left: -490px;
-  }
-  .view-1 .play {
-    width: 1340px;
-    height: 439px;
-  }
-  .view-1 .react {
-    margin-left: 50px;
-    margin-top: 20px;
-  }
-  .view-2 {
-    position: relative;
-    right: 500px;
-    margin-top: -4px;
-  }
+.view {
+  margin: auto;
+  width: 100%;
+}
+.view-1 span {
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 45px;
+}
+.view-1 span h5 {
+  font-size: 18px;
+}
+.view-1 .links {
+  font-size: 13px;
+  left: -490px;
+}
+.view-1 .play {
+  width: 1340px;
+  height: 439px;
+}
+.view-1 .react {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.view-2 {
+  position: relative;
+  right: 500px;
+  margin-top: -4px;
+}
 
-  .comments {
-    margin-left: 50px;
-  }
-  .comments .comment {
-    width: 1340px;
-    height: 21px;
-  }
-  .comment-1 {
-    width: 1340px;
-    height: 312px;
-  }
-  .comment-1 .com p {
-    position: relative;
-    right: 160px;
-  }
-  .com span {
-    font-size: 16px;
-    margin-top: 5px;
-  }
-  .com-1 p {
-    font-size: 13px;
-  }
-  .com-2 {
-    width: 146px;
-    height: 18px;
-    position: relative;
-    left: 480px;
-  }
+.comments {
+  margin-left: 50px;
+}
+.comments .comment {
+  width: 1340px;
+  height: 21px;
+}
+.comment-1 {
+  width: 1340px;
+  height: 312px;
+}
+.comment-1 .com p {
+  position: relative;
+  right: 160px;
+}
+.com span {
+  font-size: 16px;
+  margin-top: 5px;
+}
+.com-1 p {
+  font-size: 13px;
+}
+.com-2 {
+  width: 146px;
+  height: 18px;
+  position: relative;
+  left: 480px;
+}
 
-  .write input {
-    width: 1240px;
-  }
-  .write .send {
-    padding: 10px 5px;
-  }
-  .related {
-    margin-top: -120px;
-  }
-  .related .relate {
-    font-weight: 500;
-    font-size: 13px;
-    position: relative;
-    left: -160px;
-  }
-  .rel {
-    margin-top: 20px;
-    display: flex;
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-  .rel .image {
-    padding: 0px 10px;
-  }
+.write input {
+  width: 1240px;
+}
+.write .send {
+  padding: 10px 5px;
+}
+.related {
+  margin-top: -120px;
+}
+.related .relate {
+  font-weight: 500;
+  font-size: 13px;
+  position: relative;
+  left: -160px;
+}
+.rel {
+  margin-top: 20px;
+  display: flex;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.rel .image {
+  padding: 0px 10px;
+}
 }
 @media only screen and (min-width: 2560px) {
-  .view {
-    margin-top: 5%;
-    width: 100%;
-  }
-  .view-1 span {
-    font-size: 40px;
-  }
-  .view-1 span h5 {
-    font-size: 33px;
-  }
-  .view-1 .links {
-    margin-left: -52%;
-  }
-  .view-1 .links a {
-    padding-left: 1%;
-    font-size: 30px;
-  }
-  .view-1 .play {
-    width: 100%;
-    height: auto;
-  }
-  .view-1 .react {
-    gap: 2%;
-  }
-  .view-1 .react .react-1 {
-    width: 50px
-  }
-   .react a p {
-    font-size: 35px;
-    position: relative;
-    left: 70px;
-    bottom: 90px;
-  }
-  .view-2 {
-    margin-top: -105px;
-  }
-  .view-2 img {
-    width: 50px;
-  }
-  .view-2 p {
-    font-size: 35px;
-    padding-left: 2%;
-    margin-top: -15px
-  }
-  .comment img {
-    width: 50px;
-    height: 50px;
-  }
-  .comment p {
-    font-size: 40px;
-    padding: 0px 2%;
-  }
-  .comment-1 {
-    margin-top: 2%;
-  }
-  .comment-1 .com {
-    height: 25%;
-    gap: 100%;
-    padding-bottom: 10%;
-  }
-  .comment-1 .com span {
-    font-size: 40px;
-    margin-left: -80px;
-  }
-  .comment-1 .com p {
-    font-size: 30px;
-    font-weight: 400;
-    margin-left: 250%;
-  }
-  .com-1 p {
-    font-weight: 500;
-    font-size: 30px;
-    margin-top: -30px;
-    position: relative;
-    bottom: 90px;
-  }
-  .com-2 {
-    margin-left: 235%;
-  }
-  .com-2 p {
-    font-size: 30px;
-  }
- .com-2 img {
-    height: 40px;
-  }
-  .write {
-    margin-top: 15%;
-  }
-  .write input {
-    width: 90%;
-    height: 150px;
-    font-size: 40px;
-  }
-  .write .send {
-    font-size: 40px;
-    width: 5%;
-    padding: 25px ;
-  }
-  .related {
-    margin-top: -9%;
-  }
-  .related .relate {
-    font-size: 50px;
-    margin-left: -18%;
-  }
-  .rel .image {
-    width: 100%;
-  }
-  .rel .image img {
-    width: 98%;
-    padding-bottom: 5%;
-  }
-  .rel .image a span {
-    font-size: 40px;
-    margin-left: -12%;
-    position: relative;
-    top: -1%
-  }
-  .image a .eye {
-    width: 13%;
-    position: relative;
-    
-  }
-  .image a p {
-    font-size: 30px;
-    margin-top: -2%;
-    margin-left: 15%;
-    margin-bottom: 8%;
-    position: relative;
-  }
-  .back-1 a {
-    font-size: 50px;
-  }
+.view {
+  margin-top: 5%;
+  width: 100%;
 }
+.view-1 span {
+  font-size: 40px;
+}
+.view-1 span h5 {
+  font-size: 33px;
+}
+.view-1 .links {
+  margin-left: -52%;
+}
+.view-1 .links a {
+  padding-left: 1%;
+  font-size: 30px;
+}
+.view-1 .play {
+  width: 100%;
+  height: auto;
+}
+.view-1 .react {
+  gap: 2%;
+}
+.view-1 .react .react-1 {
+  width: 50px
+}
+ .react a p {
+  font-size: 35px;
+  position: relative;
+  left: 70px;
+  bottom: 90px;
+}
+.view-2 {
+  margin-top: -105px;
+}
+.view-2 img {
+  width: 50px;
+}
+.view-2 p {
+  font-size: 35px;
+  padding-left: 2%;
+  margin-top: -15px
+}
+.comment img {
+  width: 50px;
+  height: 50px;
+}
+.comment p {
+  font-size: 40px;
+  padding: 0px 2%;
+}
+.comment-1 {
+  margin-top: 2%;
+}
+.comment-1 .com {
+  height: 25%;
+  gap: 100%;
+  padding-bottom: 10%;
+}
+.comment-1 .com span {
+  font-size: 40px;
+  margin-left: -80px;
+}
+.comment-1 .com p {
+  font-size: 30px;
+  font-weight: 400;
+  margin-left: 250%;
+}
+.com-1 p {
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: -30px;
+  position: relative;
+  bottom: 90px;
+}
+.com-2 {
+  margin-left: 235%;
+}
+.com-2 p {
+  font-size: 30px;
+}
+.com-2 img {
+  height: 40px;
+}
+.write {
+  margin-top: 15%;
+}
+.write input {
+  width: 90%;
+  height: 150px;
+  font-size: 40px;
+}
+.write .send {
+  font-size: 40px;
+  width: 5%;
+  padding: 25px ;
+}
+.related {
+  margin-top: -9%;
+}
+.related .relate {
+  font-size: 50px;
+  margin-left: -18%;
+}
+.rel .image {
+  width: 100%;
+}
+.rel .image img {
+  width: 98%;
+  padding-bottom: 5%;
+}
+.rel .image a span {
+  font-size: 40px;
+  margin-left: -12%;
+  position: relative;
+  top: -1%
+}
+.image a .eye {
+  width: 13%;
+  position: relative;
+  
+}
+.image a p {
+  font-size: 30px;
+  margin-top: -2%;
+  margin-left: 15%;
+  margin-bottom: 8%;
+  position: relative;
+}
+.back-1 a {
+  font-size: 50px;
+}
+}
+

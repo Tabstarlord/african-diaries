@@ -7,7 +7,7 @@ function Profile() {
     <>
     <div className='user-account'>
     <Link className='log' to='/Login'>Login</Link>
-    <Link to='/Login'>Register</Link>
+    <Link to='/Register'>Register</Link>
     </div>
     </>
   )

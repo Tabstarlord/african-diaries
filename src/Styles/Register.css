@@ -1,237 +1,235 @@
 
-  .register {
-    background: url('../Assets/Frame16.png');
-    background-attachment: fixed;
-    height: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: auto;
-    margin: auto;
-    font-family: 'DM sans', sans-serif;
-    color: #FEFEFE;
-    overflow-x: hidden;
-  }
-  
-  .reg {
-    background-color: rgba(0, 0, 0, 0.788);
-    background-attachment: fixed;
-    height: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: -5px;
-    overflow-x: hidden;
+.register {
+  background: url('../Assets/Frame16.png');
+  background-attachment: fixed;
+  color: #fff;
+}
+.reg {
+  background-color: rgba(0, 0, 0, 0.788);
+  background-attachment: fixed;
+}
+.reg-1 {
+  margin-top: -75px;
+  margin-bottom: -200px;
+}
+.reg .back-4 {
+  margin-top: 20px;
+  margin-left: 90%;
+  position: relative;
+}
 
-  }
-  .reg .back-4 {
-    margin-left: 280px;
-    margin-top: 10px;
-  }
-  
-  .reg h1 {
-    padding-top: 15px;
-    color: #fff;
-    text-align: center;
-    font-weight: 600;
-    font-size: 20px;
-  }
-  
-  .reg fieldset {
-    border: none;
-  }
-  
-  .reg label {
-    font-size: 16px;
-    display: block;
-    margin-top: 1px;
-    margin-bottom: 5px;
-    text-align: left;
-    font-weight: 500;
-    margin-left: 35px;
-  }
-  
-  .reg .put {
-    display: block;
-    justify-content: center;
-    width: 80%;
-    margin-bottom: 13px;
-    margin-left: 32px;
-    padding: 8px 2px;
-    background: none;
-    border-radius: 12px;
-    border: 0.5px solid #fefefe56;
-    font-size: 16px;
-  }
-  
-  .reg .btn {
-    padding: 10px 90px;
-    border-radius: 4px;
-    color: #FEFEFE;
-    border: none;
-    cursor: pointer;
-    font-size: 13px;
-    background-color: #008000;
-  }
-  
-  .reg .btn-1 {
-    margin-top: 4vh;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 13px;
-    padding-bottom: 50%;
-  }
-  .reg .btn-1 a{
-    text-decoration: underline 1px #008000;
-    color: #008000;
-  }
-  
-  .or-reg .or {
-    font-size: 16px;
-    position: relative;
-    bottom: 30px;
-  }
-  
-  .or h1 {
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  .or img {
-    position: relative;
-    bottom: 6px;
-  }
-  
-  .register-social {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    margin-top: -25px;
-    width: 24px;
-    height: 24px;
-    margin-left: 46%;
-  }
-  
-  .back {
-    top: 6vh;
-    right: 6vw;
-  }
+.reg h1 {
+  padding-top: 70px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.reg fieldset {
+  border: none;
+}
+
+.reg label {
+  font-size: 16px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  text-align: left;
+  font-weight: 500;
+  position: relative;
+  left: 10px;
+}
+
+.reg .put {
+  display: block;
+  color: #fff;
+  justify-content: center;
+  width: 93%;
+  margin-bottom: 10px;
+  padding: 8px 2px;
+  background: none;
+  border-radius: 10px;
+  border: 0.5px solid #fefefe56;
+  font-size: 16px;
+  position: relative;
+  left: 7px;
+}
+
+.reg .btn {
+  padding: 15px 36vw;
+  border-radius: 4px;
+  background-color: #008000;
+  color: #FEFEFE;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  position: relative;
+  right: 1vh;
+}
+
+.reg .btn-1 {
+  margin-top: 4vh;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 13px;
+  position: relative;
+  bottom: 15px;
+  padding-bottom: 50%;
+}
+.reg .btn-1 a{
+  text-decoration: underline 1px #008000;
+  color: #008000;
+}
+
+.or-reg .or {
+  margin-top: -40px;
+  font-size: 16px;
+  position: relative;
+  bottom: 30px;
+}
+
+.or h1 {
+  margin: auto;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  bottom: -5px;
+}
+
+.or img {
+  position: relative;
+  bottom: 6px;
+  width: 110px;
+}
+
+.register-social {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+  bottom: 15px;
+}
 
 
-  
 @media only screen and (min-width: 992px) {
-  .register {
-    overflow: hidden;
-  }
-  .reg {
-    overflow: hidden;
-  }
-  .reg-1 {
-    padding-top: 15%;
-    padding-bottom: 30%;
-  }
-  .reg-2 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    border: 1px solid #fff;
-    margin-bottom: -80px;
-  }
-  .back-4 {
-    position: relative;
-    left: 140px;
-    top: 5px;
-  }
-  .reg-2 h1 {
-    position: relative;
-    top: 50px;
-  }
-  .reg-2 label {
-    text-align: left;
-    padding-bottom: 20px;
-    position: relative;
-    top: 80px;
-    left: 20px;
-  }
-  .reg-2 .put {
-    position: relative;
-    top: 60px;
-    left: 20px;
-    padding-bottom: 20px;
-  }
-  .reg-2 .btn {
-    position: relative;
-    top: 80px;
-    padding: 15px 19vw;
-    right: 5px;
-  }
-  .or .regor {
-    position: relative;
-    top: 120px;
-  }
-  .register-social img {
-    position: relative;
-    top: 140px;
-    width: 30px;
-    height: 30px;
-    padding-left: 20px;
-    padding-right: 10px;
-  }
-  .btn-1 {
-    position: relative;
-    top: 150px;
-    margin-bottom: -130px;
-  }
-  
-  }
+.register {
+  overflow: hidden;
+}
+.reg {
+  overflow: hidden;
+}
+.reg-1 {
+  padding-top: 15%;
+  padding-bottom: 30%;
+}
+.reg-2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  border: 1px solid #fff;
+  margin-bottom: -80px;
+}
+.back-4 {
+  position: relative;
+  left: 140px;
+  top: 5px;
+}
+.reg-2 h1 {
+  position: relative;
+  top: 50px;
+}
+.reg-2 label {
+  text-align: left;
+  padding-bottom: 20px;
+  position: relative;
+  top: 80px;
+  left: 20px;
+}
+.reg-2 .put {
+  position: relative;
+  top: 60px;
+  left: 20px;
+  padding-bottom: 20px;
+}
+.reg-2 .btn {
+  position: relative;
+  top: 80px;
+  padding: 15px 19vw;
+  right: 5px;
+}
+.or .regor {
+  position: relative;
+  top: 120px;
+}
+.register-social img {
+  position: relative;
+  top: 140px;
+  width: 30px;
+  height: 30px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+.btn-1 {
+  position: relative;
+  top: 150px;
+  margin-bottom: -130px;
+}
+
+}
 
 @media only screen and (min-width: 1200px) {
-  .register {
-    background-position: center;
-  }
-  .reg-1 {
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-  .reg-2 .back-4 {
-    width: 40px;
-    padding-top: 20px;
-    padding-left: 180px;
-
-  }
-  .reg-2 h1 {
-    font-size: 20px;
-  }
-  .reg-2 .put {
-    position: relative;
-    padding: 20px;
-  }
-  .reg-2 label {
-    font-size: 20px;
-    padding-bottom: 15px;
-    position: relative;
-    left: 20px;
-  }
-  .reg-2 .btn {
-    padding: 20px 22vw;
-    font-size: 20px;
-  }
-  .regor {
-    position: relative;
-  }
-  .regor img {
-    width: 35%;
-    position: relative;
-  }
-  .register-social img {
-    width: 60px;
-    height: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    left: 20px;
-  }
-  .btn-1 {
-    font-size: 20px;
-    position: relative;
-    top: 180px;
-    margin-bottom: -200px;
-  }
+.register {
+  background-position: center;
 }
+.reg-1 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.reg-2 .back-4 {
+  width: 40px;
+  padding-top: 20px;
+  padding-left: 180px;
+
+}
+.reg-2 h1 {
+  font-size: 20px;
+}
+.reg-2 .put {
+  position: relative;
+  padding: 20px;
+}
+.reg-2 label {
+  font-size: 20px;
+  padding-bottom: 15px;
+  position: relative;
+  left: 20px;
+}
+.reg-2 .btn {
+  padding: 20px 22vw;
+  font-size: 20px;
+}
+.regor {
+  position: relative;
+}
+.regor img {
+  width: 35%;
+  position: relative;
+}
+.register-social img {
+  width: 60px;
+  height: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  left: 20px;
+}
+.btn-1 {
+  font-size: 20px;
+  position: relative;
+  top: 180px;
+  margin-bottom: -200px;
+}
+}
+

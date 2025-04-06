@@ -1,7 +1,7 @@
 .new {
   margin: auto;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 65px;
   position: relative;
   font-family: 'DM Sans', sans-serif;
 }
@@ -13,7 +13,7 @@
 .new-1 span {
   float: left;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
 }
 .new-1 p {
   font-weight: 500;
@@ -23,7 +23,7 @@
   right: 95px;
 }
 .new .new-2 .image {
-  margin-top: 9vh;
+  margin-top: 1vh;
 }
 
 .new a {
@@ -71,7 +71,6 @@
   position: relative;
   top: 3px;
 }
-
 
 @media only screen and (min-width: 425px) and (max-width: 767px) {
 .new {
@@ -133,7 +132,6 @@
   top: 3px;
 }
 }
-
 
 @media only screen and (min-width: 768px) {
   .new {
@@ -260,3 +258,4 @@
     padding-right: 5px;
   }
 }
+

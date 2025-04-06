@@ -3,32 +3,42 @@ import { Link } from 'react-router-dom'
 import '../Styles/Navbar.css'
 import Logo from '../Assets/logo.png'
 import user from '../Assets/profile.png'
-import hamburger from '../Assets/hamburger.png'
 import searchbar from '../Assets/search.png'
 import Menu from './Menu'
 import Search from '../Pages/Search'
 import Profile from '../Components/Profile'
+import { IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 
 
 function Navbar() {
 
   const [open, setOpen] = useState (false);
-
-  const [ showMenu, setShowMenu] = useState(false)
-
   const [search, setSearch] = useState(false);
+
+  const Hamburger = <IoMenu className='HamburgerMenu' size='30px' color='black' onClick={() => setClick(!click)} />
+  const Close = <IoClose className='HamburgerMenu' size='30px' color='black' onClick={() => setClick(!click)} />
+  const [click, setClick] =useState(false);
+
   return (
     <>
     <div className='mobile-navbar'>
-    {showMenu && (
+    {/*{showMenu && (
       <Menu />
-    )}
+    )}*/}
 
     {search && (
           <Search />
         )}
     <div  className='header'>
-      <div className='menu-btn' onClick={() => setShowMenu(showMenu => !showMenu)}><img src={hamburger} alt='hamburger' /></div>
+      <div className='menu-btn'>
+        { click ? Close : Hamburger}
+        {click && <Menu />}
+      </div>
+
+
+
+     {/* <div className='menu-btn' onClick={() => setShowMenu(showMenu => !showMenu)}><img src={hamburger} alt='hamburger' /></div>*/}
 
       <div className='logo'>
         <Link to='/Home'><img className='logo' src={Logo} alt='/' /></Link>

@@ -2,10 +2,13 @@
   margin: auto;
   width: 100%;
   position: relative;
+  padding-top: 15px;
   font-family: 'DM Sans', sans-serif;
 }
 .best-1 .liked span {
+  font-size: 20px;
   float: left;
+  margin-bottom: 10px;
 }
 .best-1 .liked li {
   list-style: none;
@@ -182,3 +185,4 @@
   }
 
 }
+

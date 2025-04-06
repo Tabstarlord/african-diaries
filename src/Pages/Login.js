@@ -28,10 +28,10 @@ function Login() {
     <>
     <div className='login'>
       <div className='login-2'>
+      <Link to='/Home'><img className='back-3' src={cancel} alt='back' /></Link>
         <div className='login-3'>
-        
           <div className='login-4'>  
-          <Link to='/Home'><img className='back-3' src={cancel} alt='back' /></Link>
+          
       <h1>Log In</h1>
       <fieldset>
         <form action='#' method='get'>
