@@ -10,7 +10,7 @@
 }
 .reg-1 {
   margin-top: -75px;
-  padding-bottom: 1%;
+ overflow: hidden;
 }
 .reg .back-4 {
   margin-top: 20px;
