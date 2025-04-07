@@ -5,8 +5,8 @@
   background-size: cover;
   background-position-y: -40px;
   font-family: 'DM Sans', sans-serif;
-  
-
+  height: fit-content;
+  width: 100vw;
 }
 .warn1 {
   background-color: rgba(0, 0, 0, 0.815);
@@ -17,6 +17,7 @@
 }
 .warn2 {
   margin-top: -20px;
+  overflow: hidden;
 }
 
 
@@ -78,7 +79,7 @@ color: #fff;
   flex-direction: column;
   gap: 16px;
   padding-top: -30px;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
 }
 
 .warn6 .go5 {
