@@ -5,7 +5,7 @@
     margin: auto;
     width: 100%;
     position: relative;
-    padding-top: 20px;
+    padding-top: 15px;
     font-family: 'DM Sans', sans-serif;
   }
   
@@ -71,7 +71,7 @@
   .home {
     margin: auto;
     width: 100%;
-    margin-top: 1vh;
+    padding-top: 15px;
     font-family: 'DM Sans', sans-serif;
   }
   
@@ -144,6 +144,7 @@
     flex-direction: row;
     margin: auto;
     width: 77%;
+    margin-top: 25px;
   }
   .home .image {
     width: 50px;
@@ -205,6 +206,7 @@
     flex-direction: row;
     margin: auto;
     width: 75%;
+    margin-top: 25px;
   }
   .home .image {
     width: 100px;

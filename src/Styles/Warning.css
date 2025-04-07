@@ -80,6 +80,7 @@ color: #fff;
   gap: 16px;
   padding-top: -30px;
   padding-bottom: 60%;
+  margin-top: 15%;
 }
 
 .warn6 .go5 {
@@ -90,6 +91,7 @@ color: #fff;
   font-weight: 500;
   font-size: 13px;
   border-radius: 4px;
+  margin-bottom: 5%;
 }
 .warn6 .go6 {
   background-color: #808080;

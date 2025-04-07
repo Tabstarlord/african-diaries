@@ -17,7 +17,7 @@ body {
   width: 100vw;
 }
 .login-3 {
-  margin-top: -75px;
+  margin-top: -95px;
   overflow: hidden;
 }
 .login-2 .back-3 {
@@ -51,21 +51,20 @@ body {
 .login-2 .log-1 {
   display: block;
   color: #fff;
-  justify-content: center;
   width: 93%;
-  margin-bottom: 20px;
-  padding: 8px 8px 8px 2px;
+  margin-bottom: 16px;
+  padding: 16px 8px 16px 2px;
   background: none;
   border-radius: 10px;
   box-sizing: border-box;
   border: 0.5px solid #fefefe56;
   font-size: 12px;
   position: relative;
-  left: 7px;
+  left: 10px;
 }
 
 .login-2 .btn-3 {
-  padding: 15px 40vw 15px 36vw;
+  padding: 16px 40%;
   border-radius: 4px;
   background-color: #008000;
   color: #FEFEFE;
@@ -73,8 +72,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   position: relative;
-  right: 1vh;
-  top: -4vh;
+  bottom: 10px;
 }
 
 .login-2 .btn-2 {
@@ -111,7 +109,7 @@ body {
   display: flex;
   gap: 25px;
   justify-content: center;
-  margin-top: -40px;
+  margin-top: -45px;
   position: relative;
   bottom: 15px;
 }
@@ -124,14 +122,15 @@ body {
 .remfor {
   display: flex;
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
+  width: 110%;
 }
 
 .remember {
   margin-bottom: 40px;
   margin-left: -5px;
   position: relative;
-  left: 10px;
+  left: 12px;
 }
 .remember1 {
   position: relative;
@@ -140,7 +139,7 @@ body {
 }
 
 .forget {
-    margin-left: 55px;
+    margin-left: 36px;
     margin-top: 0px;
     color: #FEFEFE;
    

@@ -10,7 +10,6 @@ import eye from '../Assets/eye.png'
 import number from '../Assets/Frame12.png'
 import avatar from '../Assets/Ellipse.png'
 import avatar2 from '../Assets/r.png'
-import reply from '../Assets/link-backward.png'
 import frame1 from '../Assets/Frame1.png'
 import frame2 from '../Assets/Frame2.png'
 import frame3 from '../Assets/Frame3.png'
@@ -62,7 +61,6 @@ function ViewVideos () {
             <p>Damn, such a nice scene</p>
           </div>
           <div className='com-2'>
-            <img src={reply} alt='jpg' />
             <p className='r'>Reply</p>
             <img src={like} alt='jpg' /><p>23k</p>
             <img src={dislike} alt='jpg' />
@@ -77,7 +75,6 @@ function ViewVideos () {
             <p>I wanna be yours</p>
           </div>
           <div className='com-2'>
-            <img src={reply} alt='jpg' />
             <p className='r'>Reply</p>
             <img src={like} alt='jpg' /><p>23k</p>
             <img src={dislike} alt='jpg' />
@@ -92,7 +89,6 @@ function ViewVideos () {
             <p>This is sexy asf</p>
           </div>
           <div className='com-2'>
-            <img src={reply} alt='jpg' />
             <p className='r'>Reply</p>
             <img src={like} alt='jpg' /><p>23k</p>
             <img src={dislike} alt='jpg' />
@@ -107,7 +103,6 @@ function ViewVideos () {
             </p>
           </div>
           <div className='com-2'>
-            <img src={reply} alt='jpg' />
             <p className='r'>Reply</p>
             <img src={like} alt='jpg' /><p>23k</p>
             <img src={dislike} alt='jpg' />

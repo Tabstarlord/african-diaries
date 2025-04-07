@@ -75,68 +75,10 @@
   top: 3px;
 }
 
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-.new {
-  margin: auto;
-  width: 100%;
-  margin-top: 1vh;
-  font-family: 'DM Sans', sans-serif;
-}
-
-.new .image {
-  margin-top: 5vh;
-  width: 100%;
-  align-content: center;
-}
-.new .image img {
-  width: 100%;
-}
-
-.new a {
-  text-decoration: none;
-  color: #000;
-}
-
-.new .image a span {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 100%;
-  float: left;
-}
-
-.new .image a p {
-  font-size: 15px;
-  position: relative;
-  bottom: 10px;
-  float: left;
-}
-
-.new .image a p .eye {
-  position: relative;
-  top: 3px;
-  width: 13%;
-}
-
-.new .pages {
-  margin: auto;
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
-
-.new .pages li {
-  list-style: none;
-  text-align: center;
-}
-
-.new .pages li img {
-  position: relative;
-  top: 3px;
-}
-}
-
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .desk-menu {
+    display: none;
+  }
   .new {
     margin: auto;
     width: 100%;
@@ -148,6 +90,9 @@
     margin-top: 5vh;
     width: 100%;
     align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
   }
   .new .image img {
     width: 100%;
@@ -165,11 +110,10 @@
     float: left;
   }
   
-  .new .image a p {
+  .new-2 .image a p {
     font-size: 15px;
     position: relative;
-    bottom: 10px;
-    float: left;
+    bottom: 15px;
   }
   
   .new .image a p .eye {
@@ -178,87 +122,200 @@
     width: 13%;
   }
   
-  .new .pages {
-    margin: auto;
-    width: auto;
+  .page .pages {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
   }
   
-  .new .pages li {
+  .page .pages li {
     list-style: none;
     text-align: center;
   }
   
-  .new .pages li img {
+  .page .pages li img {
     position: relative;
-    top: 3px;
+    top: 4px;
+    left: 2px;
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  .new-1 span {
-    font-weight: 500;
-    font-size: 20px;
-    position: relative;
-    left: 290px;
-  }
-  .new-2 {
-    display: flex;
-    margin: auto;
-    width: 100%;
-  }
-  .new-2 .image {
-    width: 200px;
-    padding: 0px 16px;
-    position: relative;
-    left: 19%;
-  }
-  .new-2 .image a span {
-    width: 220px;
-    font-size: 13px;
-    margin-left: -2px;
-  }
-  .new-2 .image a p {
-    width: 220px;
-    font-size: 10px;
-    margin-left: -80px;
-  }
-  .new-2 .image a p .eye {
-    width: 12px;
-  }
-}
 
-@media only screen and (min-width: 2560px) {
-  .new-1 span {
-    font-weight: 500;
-    font-size: 40px;
-    margin-top: 3%;
-    margin-left: 13%;
+      /*SMALL SCREEN LAPTOP*/
+
+@media screen and (min-width: 1025px) {
+  .desk-menu {
+    display: contents;
   }
-  .new {
+  .best-1 .liked span {
+    padding-left: 14%;
     margin-top: 10px;
   }
-  .new .image {
-    width: 15%;
-    padding: 10px 25px;
+  .best-1 .liked li {
+    padding-left: 20%;
   }
-  .new .image a span {
-    width: 100%;
-    font-size: 40px;
-    right: 50px;
+  
+  .best {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 77%;
   }
-  .new .image a p {
-    width: 100%;
-    font-size: 37px;
-    right: 150px; 
-    top: 10px;
-    padding-bottom: 5px;
+  .best .image {
+    width: 7%;
+    margin-left: 19%;
   }
-  .new .image a p .eye {
-    width: 30px;
-    padding-right: 5px;
+  .best .image a img {
+    width: 190px;
+    height: 120px;
+    position: relative;
+    left: -70%;
+  }
+  .best .image a span {
+    width: 220px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: -100%;
+  }
+  .best .image a p {
+    width: 220px;
+    font-size: 13px;
+    margin-left: -70%;
+    position: relative;
+    bottom: 8px;
+    left: -55px;
+  }
+  .best .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 2px;
+    left: -3px;
+  }
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .page .pages {
+    font-size: 23px;
+  }
+  .page .pages a img {
+    position: relative;
+    left: 35px;
+    top: -28px;
   }
 }
 
+
+/* BIG SCREEN LAPTOP */
+
+@media screen and (min-width: 1281px) {
+  .best-1 .liked span {
+    left: -29%;
+    margin-top: 10px;
+  }
+  .best-1 .liked li {
+    left: 3%;
+  }
+  .best {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 79%;
+  }
+  .best .image {
+    width: 100px;
+    margin-left: 15%;
+  }
+  .best .image a img {
+    width: 230px;
+    height: 160px;
+    position: relative;
+    left: 5px;
+  }
+  .best .image a span {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    left: 110%;
+  }
+  .best .image a p {
+    width: 220px;
+    font-size: 16px;
+    position: relative;
+    bottom: 10px;
+    left: 35%;
+  }
+  .best .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+  }
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .page .pages {
+    font-size: 23px;
+  }
+  .page .pages a img {
+    position: relative;
+    left: 35px;
+    top: -28px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .best {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+  }
+  .best .image {
+    width: 10%;
+    margin-left: 15%;
+  }
+  .best .image a img {
+    width: 250px;
+    height: 180px;
+  }
+  .best .image a span {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  .best .image a p {
+    width: 220px;
+    font-size: 16px;
+    padding-left: 10px;
+    position: relative;
+    bottom: 10px;
+  }
+  .best .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+  }
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+  .page .pages {
+    font-size: 23px;
+  }
+  .page .pages a img {
+    position: relative;
+    left: 80%;
+    top: -48%;
+  }
+}

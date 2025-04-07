@@ -20,7 +20,7 @@
 .searchForm input {
   padding: 11px 20px 11px 60px;
   position: relative;
-  bottom: 2px;
+  bottom: 1px;
   border: 0.5px solid #0000008a;
   border-radius: 8px 0px 0px 8px;
   border-right: none;
