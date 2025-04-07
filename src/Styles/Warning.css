@@ -79,7 +79,7 @@ color: #fff;
   flex-direction: column;
   gap: 16px;
   padding-top: -30px;
-  padding-bottom: 60px;
+  padding-bottom: 60%;
 }
 
 .warn6 .go5 {
