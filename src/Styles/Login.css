@@ -30,7 +30,7 @@ body {
   color: #fff;
   text-align: center;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .login-2 fieldset {
@@ -38,10 +38,10 @@ body {
 }
 
 .login-2 label {
-  font-size: 16px;
+  font-size: 20px;
   display: block;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 8px;
   text-align: left;
   font-weight: 500;
   position: relative;
@@ -54,18 +54,18 @@ body {
   justify-content: center;
   width: 93%;
   margin-bottom: 20px;
-  padding: 8px 2px;
+  padding: 8px 8px 8px 2px;
   background: none;
   border-radius: 10px;
   box-sizing: border-box;
   border: 0.5px solid #fefefe56;
-  font-size: 16px;
+  font-size: 12px;
   position: relative;
   left: 7px;
 }
 
 .login-2 .btn-3 {
-  padding: 15px 36vw;
+  padding: 15px 40vw 15px 36vw;
   border-radius: 4px;
   background-color: #008000;
   color: #FEFEFE;
@@ -83,7 +83,7 @@ body {
   font-size: 13px;
   position: relative;
   bottom: 15px;
-  padding-bottom: 5%;
+  padding-bottom: 40%;
 
 }
 .login-2 .btn-2 a{
