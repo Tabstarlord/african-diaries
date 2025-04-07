@@ -34,7 +34,7 @@
   }
 
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1025px) {
   .desktop-menu {
     display: contents;
   }
@@ -45,9 +45,9 @@
   .sidebar-nav {
     width: 220%;
     height: 100%;
-    margin-top: 30%;
+    margin-top: 15%;
     justify-content: left;
-    margin-left: -3%;
+    margin-left: 1%;
   } 
   .nav-list .nav-item {
     font-weight: 500;
@@ -65,7 +65,7 @@
 }
 }
 
-@media only screen and (min-width: 1200px) {
+/*@media only screen and (min-width: 1281px) {
   .desktop-menu {
     display: contents;
   }
@@ -92,5 +92,4 @@
   .sidebar-nav .nav-item .nav-link {
     border-bottom: none;
 }
-}
-
+}*/

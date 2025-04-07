@@ -10,38 +10,36 @@
   text-align: justify;
 }
 
+@media screen and (min-width: 1025px) {
+  .footer {
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    left: 220px;
+    bottom: 20px;
+  }
+  .footer .foot {
+    width: 78%;
+    height: 59px;
+    padding: 4px;
+    font-size: 13px;
+  }
+  }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1281px) {
 .footer {
   margin: auto;
   width: 100%;
   justify-content: center;
-  padding-left: 205px;
+  position: relative;
+  bottom: 30px;
+  left: 310px;
 }
 .footer .foot {
-  width: 78%;
+  width: 50%;
   height: 59px;
   padding: 4px;
   font-size: 13px;
 }
 }
-
-@media only screen and (min-width: 1200px) {
-.footer {
-  margin: auto;
-  width: 100%;
-  padding-left: 10%;
-}
-
-.footer .foot {
-  width: 77%;
-  text-align: justify;
-  font-size: 13px;
-  margin-left: 12%;
-  margin-bottom: 3%;
-}
-.footer .foot img {
-  width: 10%;
-}
-}
-

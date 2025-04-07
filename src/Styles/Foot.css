@@ -15,10 +15,10 @@
   text-align: center;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1025px) {
 .foot-1 {
   font-size: 13px;
-  margin-left: 70px;
+  margin-left: 100px;
 }
 }
 

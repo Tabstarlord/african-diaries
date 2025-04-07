@@ -78,114 +78,287 @@
   top: 3px;
 }
 
-@media screen and (min-width: 992px) {
-  .liked {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-    margin-top: -30px;
-    margin-left: -50px;
+@media screen and (min-width: 768px) {
+  .desk-menu {
+    display: none;
   }
-  .liked span {
-    position: relative;
-    left: -170px;
-    font-size: 20px;
-  }
-  .liked .filter {
-    margin-top: -10px;
-    position: relative;
-    left: 265px;
-    top: 40px;
-  }
-  .liked .filter button {
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
-  .best {
-    display: flex;
+  .best-1 {
     margin: auto;
     width: 100%;
+    position: relative;
+    padding-top: 15px;
+    font-family: 'DM Sans', sans-serif;
+    margin-left: auto;
+      margin-right: auto;
+      width: 95%;
+  }
+  .liked {
+    display: grid;
+  }
+  .best-1 .liked span {
+    font-size: 20px;
+    font-weight: 500;
+    float: left;
+    position: relative;
+    left: -290px;
+    padding-bottom: 10px;
+   
+  }
+  .best-1 .liked li {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    left: 18px;
+    margin-bottom: -25px;
+   
+  }
+  .best-1 .liked li button {
+    float: left;
+    color: #fff;
+    padding: 5px 10px;
+    background-color: #808080;
+    border: none;
+  }
+ 
+  .best {
+    margin: auto;
+    width: 100%;
+    margin-top: 1vh;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .best .image {
+    margin-top: 5vh;
+    width: 100%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+  }
+  .best .image img {
+    width: 100%;
+  }
+  
+  .best a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .best .image a span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    float: left;
+  }
+  
+  .best .image a p {
+    font-size: 15px;
+    position: relative;
+    bottom: 15px;
+  }
+  
+  .best .image a p .eye {
+    position: relative;
+    top: 3px;
+    width: 13%;
+  }
+  
+  .page .pages {
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  
+  .page .pages li {
+    list-style: none;
+    text-align: center;
+  }
+  
+  .page .pages li img {
+    position: relative;
+    top: 4px;
+    left: 2px;
+  }
+}
+
+
+      /*SMALL SCREEN LAPTOP*/
+
+@media screen and (min-width: 1025px) {
+  .desk-menu {
+    display: contents;
+  }
+  .best-1 .liked span {
+    padding-left: 14%;
+    margin-top: 10px;
+  }
+  .best-1 .liked li {
+    padding-left: 20%;
+  }
+  
+  .best {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 77%;
   }
   .best .image {
-    width: 135px;
-    padding: 0px 16px;
+    width: 50px;
+    margin-left: 20%;
+  }
+  .best .image a img {
+    width: 190px;
+    height: 120px;
     position: relative;
-    left: 19%;
+    left: -55px;
   }
   .best .image a span {
     width: 220px;
-    font-size: 10px;
-    margin-left: -45px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: -70px;
   }
   .best .image a p {
-    width: 200px;
-    font-size: 10px;
+    width: 220px;
+    font-size: 13px;
     margin-left: -50px;
+    position: relative;
+    bottom: 8px;
+    left: -55px;
   }
   .best .image a p .eye {
     width: 12px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .liked {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-left: -50px;
-  }
-  .liked span {
+    height: 12px;
     position: relative;
-    left: -290px;
-    font-size: 20px;
+    top: 2px;
+    left: -3px;
   }
-  .liked .filter {
-    margin-top: -10px;
-    position: relative;
-    left: 360px;
-    top: 45px;
-  }
-  .liked .filter button {
-    padding: 5px 10px;
-    border-radius: 4px;
-  }
-  
-  
-  .best .image {
-    width: 13%;
-    padding: 10px 23px;
-    left: 20%;
-  }
-  .best .image a span {
-    width: 100%;
-    font-size: 13px;
-    right: -35px;
-  }
-  .best .image a p {
-    width: 100%;
-    font-size: 10px;
-    right: -15px;
-    top: -5px;
-    padding-bottom: 5px;
-  }
-  .best .image a p .eye {
-    width: 15px;
-    padding-right: 5px;
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
   .page .pages {
-    margin: auto;
-    width: 100%;
-    justify-content: center;
+    font-size: 23px;
   }
-  .page .pages li {
-    font-size: 16px;
+  .page .pages a img {
+    position: relative;
+    left: 35px;
+    top: -28px;
   }
-  .page .pages li img {
-    width: 30%;
-    left: 7px;
-    top: 3px;
-  }
-
 }
 
+
+/* BIG SCREEN LAPTOP */
+
+@media screen and (min-width: 1281px) {
+  .best-1 .liked span {
+    left: -29%;
+    margin-top: 10px;
+  }
+  .best-1 .liked li {
+    left: 3%;
+  }
+  .best {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 79%;
+  }
+  .best .image {
+    width: 100px;
+    margin-left: 15%;
+  }
+  .best .image a img {
+    width: 230px;
+    height: 160px;
+    position: relative;
+    left: 5px;
+  }
+  .best .image a span {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    left: 80px;
+  }
+  .best .image a p {
+    width: 220px;
+    font-size: 16px;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+  }
+  .best .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+  }
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .page .pages {
+    font-size: 23px;
+  }
+  .page .pages a img {
+    position: relative;
+    left: 35px;
+    top: -28px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .best {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+  }
+  .best .image {
+    width: 10%;
+    margin-left: 15%;
+  }
+  .best .image a img {
+    width: 250px;
+    height: 180px;
+  }
+  .best .image a span {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+  }
+  .best .image a p {
+    width: 220px;
+    font-size: 16px;
+    padding-left: 10px;
+    position: relative;
+    bottom: 10px;
+  }
+  .best .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+  }
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .page .pages {
+    font-size: 23px;
+  }
+  .page .pages a img {
+    position: relative;
+    left: 30px;
+    top: -23px;
+  }
+}

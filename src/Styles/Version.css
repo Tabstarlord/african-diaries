@@ -12,17 +12,32 @@
   .ver span {
     font-size: 18px;
   }
-@media only screen and (min-width: 992px) {
-  .ver span {
-    font-size: 18px;
+@media screen and (min-width: 1025px) {
+  .ver {
+    display: none;
   }
-  .ver img {
+  .deskver {
+    display: contents;
+  }
+  .deskver span {
+    font-size: 17px;
     position: relative;
-    bottom: 7px;
+    left: -215px;
+    bottom: 30px;
   }
-  .ver .verarrow {
-    width: 30px;
-    height: 30px;
+  .deskver img {
+    width: 8%;
+    height: 8%;
+    padding: 2px 4px;
+    position: relative;
+    left: -222px;
   }
+  .deskver .verarrow{
+    width: 7%;
+    height: 7%;
+    position: relative;
+    bottom: 10px;
+  }
+  
 }
 
