@@ -5,6 +5,8 @@ body {
 .login {
   background-image: url('../Assets//Frame16.png');
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
   height: fit-content;
   width: 100vw;
@@ -49,18 +51,13 @@ body {
 }
 
 .login-2 .log-1 {
-  display: block;
-  color: #fff;
-  width: 93%;
-  margin-bottom: 16px;
-  padding: 16px 8px 16px 2px;
-  background: none;
+  width: 80%;
+  padding: 16px 18px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #fefefe56;
   border-radius: 10px;
-  box-sizing: border-box;
-  border: 0.5px solid #fefefe56;
+  background: none;
   font-size: 12px;
-  position: relative;
-  left: 10px;
 }
 
 .login-2 .btn-3 {
@@ -123,23 +120,23 @@ body {
   display: flex;
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 12px;
-  width: 110%;
+  width: 100%;
 }
 
 .remember {
   margin-bottom: 40px;
   margin-left: -5px;
   position: relative;
-  left: 12px;
+  left: 26px;
 }
 .remember1 {
   position: relative;
-  bottom: 12px;
-  left: 10px;
+  bottom: 10px;
+  left: 27px;
 }
 
 .forget {
-    margin-left: 36px;
+    margin-left: 125px;
     margin-top: 0px;
     color: #FEFEFE;
    
