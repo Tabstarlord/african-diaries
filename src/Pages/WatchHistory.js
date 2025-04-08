@@ -23,8 +23,7 @@ function WatchHistory() {
     </div>
     <div className='his'>
               <div className='his-1'>
-                <span>Watch History</span> 
-                <p>See all your watched videos here!</p> 
+                <span>Watch History</span>
               </div>
               <div className='his-2'>
                             <div className='image'>

@@ -1,22 +1,18 @@
 .new {
-  margin: auto;
-  width: 100%;
-  padding-top: 65px;
+  
+  padding-top: 50px;
   position: relative;
   font-family: 'DM Sans', sans-serif;
   margin-left: auto;
     margin-right: auto;
     width: 95%;
 }
-.new-1 {
-  display: flex;
-  position: relative;
-  bottom: 15px;
-}
+
 .new-1 span {
   float: left;
   font-weight: 500;
   font-size: 20px;
+  padding-bottom: 20px;
 }
 
 .new .new-2 .image {

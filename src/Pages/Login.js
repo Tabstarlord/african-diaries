@@ -68,7 +68,7 @@ function Login() {
             setCheckBox(e.target.value)
            }
            /><p className='remember1'>Remember Me</p>
-           <Link to=''><p className='forget'>Forget your password?</p></Link>
+           <Link to=''><p className='forget'>Forget password?</p></Link>
           </div>
            
            <button className='btn-3'

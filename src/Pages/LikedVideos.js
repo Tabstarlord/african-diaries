@@ -23,8 +23,7 @@ function LikedVideos() {
     </div>
     <div className='liked'>
               <div className='liked-1'>
-                <span>Liked Videos</span> 
-                <p>All your liked videos in one place!</p> 
+                <span>Liked Videos</span>
               </div>
               <div className='liked-2'>
             <div className='image'>

@@ -1,37 +1,20 @@
 .his {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  padding-top: 40px;
+  padding-top: 50px;
   position: relative;
   font-family: 'DM Sans', sans-serif;
   margin-left: auto;
     margin-right: auto;
     width: 95%;
 }
-.his-1 {
-  display: flex;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 150%;
-}
+
 .his-1 span {
-  width: 100%;
   float: left;
   font-weight: 500;
   font-size: 20px;
-}
-.his-1 p {
-  width: 300%;
-  font-weight: 500;
-  font-size: 16px;
-  position: relative;
-  top: 18px;
-  right: 210px;
+  padding-bottom: 20px;
 }
 .his .his-2 .image {
-  margin-top: 4vh;
+  margin-top: 1vh;
 }
 
 .his a {
@@ -87,10 +70,7 @@
     font-size: 20px;
     font-weight: 500;
     position: relative;
-    left: -5%;
-  }
-  .his-1 p {
-    left: -50%;
+    left: 4%;
   }
   .his {
     margin: auto;
