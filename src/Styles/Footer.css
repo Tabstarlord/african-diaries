@@ -34,13 +34,13 @@
   justify-content: center;
   position: relative;
   bottom: 30px;
-  left: 31%;
+  left: 25%;
 }
 .footer .foot {
   width: 70%;
   height: 59px;
   padding: 4px;
-  font-size: 13px;
+  font-size: 15px;
 }
 }
 

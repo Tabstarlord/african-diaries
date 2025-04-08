@@ -79,151 +79,271 @@
   top: 3px;
 }
 
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-.his {
-  margin: auto;
-  width: 100%;
-  margin-top: 1vh;
-  font-family: 'DM Sans', sans-serif;
-}
-
-.his .image {
-  margin-top: 5vh;
-  width: 100%;
-  align-content: center;
-}
-.his .image img {
-  width: 100%;
-}
-
-.his a {
-  text-decoration: none;
-  color: #000;
-}
-
-.his .image a span {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 100%;
-  float: left;
-}
-
-.his .image a p {
-  font-size: 15px;
-  position: relative;
-  bottom: 10px;
-  float: left;
-}
-
-.his .image a p .eye {
-  position: relative;
-  top: 3px;
-  width: 13%;
-}
-
-.his .pages {
-  margin: auto;
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
-
-.his .pages li {
-  list-style: none;
-  text-align: center;
-}
-
-.his .pages li img {
-  position: relative;
-  top: 3px;
-}
-}
-
-@media only screen and (min-width: 1440px) {
-  .his-1 {
-    margin: auto;
-    width: 100%;
+@media screen and (min-width: 768px) {
+  .desk-menu {
+    display: none;
   }
   .his-1 span {
-    margin-left: 270px;
     font-size: 20px;
-    margin-top: 2%;
+    font-weight: 500;
+    position: relative;
+    left: -5%;
   }
   .his-1 p {
-    position: relative;
-    top: 50px;
-    right: 125px;
+    left: -50%;
   }
-  .his-2 {
-    display: flex;
+  .his {
     margin: auto;
     width: 100%;
+    margin-top: 1vh;
+    font-family: 'DM Sans', sans-serif;
   }
-  .his .his-2 .image {
-    width: 200px;
-    padding: 0px 16px;
-    position: relative;
-    left: 19%;
+  
+  .his .image {
+    margin-top: 5vh;
+    width: 100%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
   }
-  .his .his-2 .image a span {
-    width: 220px;
+  .his .image img {
+    width: 100%;
+  }
+  
+  .his a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .his .image a span {
     font-weight: 500;
-    font-size: 13px;
-    margin-left: 2px;
+    font-size: 18px;
+    line-height: 100%;
+    float: left;
   }
-  .his .his-2 .image a p {
-    width: 220px;
-    font-size: 10px;
-    margin-left: -10px;
+  
+  .his-2 .image a p {
+    font-size: 15px;
+    position: relative;
+    bottom: 15px;
   }
-  .his .his-2 .image a p .eye {
-    width: 12px;
+  
+  .his .image a p .eye {
+    position: relative;
+    top: 3px;
+    width: 13%;
+  }
+  
+  .page .pages {
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  
+  .page .pages li {
+    list-style: none;
+    text-align: center;
+  }
+  
+  .page .pages li img {
+    position: relative;
+    top: 4px;
+    left: 2px;
   }
 }
 
-@media only screen and (min-width: 2560px) {
+
+      /*SMALL SCREEN LAPTOP*/
+
+@media screen and (min-width: 1025px) {
   .desk-menu {
     display: contents;
   }
-  .his .his-1 span {
-    font-size: 40px;
-    font-weight: 500;
+  .his-1 {
+    left: 20%;
+    padding-top: 3%;
+  }
+  .his-1 p {
+    left: -52%;
+  }
+  
+  .his-2 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 77%;
+  }
+  .his-2 .image {
+    width: 6%;
     margin-left: 19%;
+  }
+  .his-2 .image a img {
+    width: 190px;
+    height: 120px;
     position: relative;
-    top: 50px;
-    right: 3%;
+    left: -60%;
   }
-  .his .his-1 p {
-    font-size: 30px;
+  .his-2 .image a span {
+    width: 220px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: -100%;
+  }
+  .his-2 .image a p {
+    width: 220px;
+    font-size: 13px;
+    margin-left: -70%;
     position: relative;
-    top: 150px;
-    right: 9%;
+    bottom: 8px;
+    left: -55px;
   }
-  .his {
-    margin-top: 90px;
-    margin-left: 4%;
+  .his-2 .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 2px;
+    left: -3px;
   }
-  .his .his-2 .image {
-    width: 15%;
-    padding: 10px 25px;
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
-  .his .his-2 .image a span {
-    width: 100%;
-    font-size: 40px;
-    right: 50px;
+  .page .pages {
+    font-size: 23px;
   }
-  .his .his-2 .image a p {
-    width: 100%;
-    font-size: 37px;
-    right: 100px;
-    top: 10px;
-    padding-bottom: 10px;
-  }
-  .his .his-2 .image a p .eye {
-    width: 30px;
-    padding-right: 5px;
+  .page .pages a img {
+    position: relative;
+    left: 35px;
+    top: -28px;
   }
 }
 
 
+/* BIG SCREEN LAPTOP */
+
+@media screen and (min-width: 1281px) {
+  
+  .his-2 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 78%;
+  }
+  .his-1 span {
+    font-weight: 600;
+    font-size: 20;
+  }
+  .his-1 p {
+    left: -53%;
+    font-size: 18px;
+  }
+  .his-2 .image {
+    width: 100px;
+    margin-left: 15%;
+    margin-bottom: 19%;
+  }
+  .his-2 .image a img {
+    width: 230%;
+    height: 16%;
+    position: relative;
+    left: 5px;
+  }
+  .his-2 .image a span {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    left: 110%;
+  }
+  .his-2 .image a p {
+    width: 220px;
+    font-size: 16px;
+    position: relative;
+    bottom: 10px;
+    left: 35%;
+  }
+  .his-2 .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+  }
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .page .pages {
+    font-size: 23px;
+  }
+  .page .pages a img {
+    position: relative;
+    left: 35px;
+    top: -28px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .his-2 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 98%;
+    padding-top: 7%;
+  }
+  .his-1 p {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    top: 15px;
+    right: 70px;
+  }
+  .his-2 .image {
+    width: 110px;
+    margin-left: 170px;
+    margin-bottom: 19%;
+  }
+  .his-2 .image a img {
+    width: 230%;
+    height: 17%;
+  }
+  .his-2 .image a span {
+    width: 220px;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 1%;
+  }
+  .his-2 .image a p {
+    width: 220px;
+    font-size: 16px;
+    padding-left: 10px;
+    position: relative;
+    bottom: 10px;
+  }
+  .his-2 .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 1px;
+  }
+  .page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+  .page .pages {
+    font-size: 23px;
+  }
+  .page .pages a img {
+    position: relative;
+    left: 80%;
+    top: -48%;
+  }
+}
