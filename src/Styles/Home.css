@@ -63,13 +63,13 @@
 
                     /*FOR TABLETS*/
 
-  @media screen and (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .desk-menu {
     display: none;
   }
  
   .home {
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
     padding-top: 15px;
     font-family: 'DM Sans', sans-serif;
@@ -77,32 +77,25 @@
   
   .home .image {
     margin-top: 5vh;
-    width: 100%;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
-  }
-  .home .image img {
-    width: 100%;
-  }
   
-  .home a {
-    text-decoration: none;
-    color: #000;
   }
-  
   .home .image a span {
     font-weight: 500;
     font-size: 18px;
     line-height: 100%;
     float: left;
+    padding-left: 10px;
+    padding-top: 5px;
   }
   
   .home .image a p {
     font-size: 15px;
     position: relative;
-    bottom: 15px;
+    bottom: 13px;
   }
   
   .home .image a p .eye {
@@ -131,11 +124,41 @@
     left: 2px;
   }
 }
+/*use em on searchbar*/
 
+@media only screen and (min-width:1025px) {
+  .home {
+    width: 80vw;
+    max-width: fit-content;
+    margin-top: 10vh;
+  }
+  .img-container {
+    display: flex;
+    gap: 14px;
+    width: 15vw;
+    padding-left: 13vw;
+    margin-top: -6vh;
+  }
+  .img-container .image a span {
+    width: 14vw;
+    font-size: 12px;
+  }
+  .img-container .image a p {
+    width: 100%;
+    position: relative;
+    left: -20px;
+
+  }
+  .img-container .image a p .eye {
+    width: 12px;
+    height: 12px;
+  }
+  
+}
 
       /*SMALL SCREEN LAPTOP*/
 
-@media screen and (min-width: 1025px) {
+/*@media screen and (min-width: 1025px) {
   .desk-menu {
     display: contents;
   }
@@ -200,7 +223,7 @@
 
 /* BIG SCREEN LAPTOP */
 
-@media screen and (min-width: 1281px) {
+/*@media screen and (min-width: 1281px) {
   .home {
     display: flex;
     flex-direction: row;
