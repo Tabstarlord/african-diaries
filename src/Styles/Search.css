@@ -8,7 +8,7 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 35px;
   left: 7px;
   
 }
@@ -18,17 +18,19 @@
   left: -10px;
 }
 .searchForm input {
-  padding: 11px 20px 11px 60px;
-  position: relative;
-  bottom: 1px;
-  border: 0.5px solid #0000008a;
+  width: 70%;
+  padding: 14px 2px 9px;
+  margin-bottom: 15px;
+  border: 1px solid #fefefe56;
+  border-radius: 4px;
+  font-size: 12px;
   border-radius: 8px 0px 0px 8px;
-  border-right: none;
+
 }
 .searchForm form button {
   background-color: #008000;
   border: #008000;
-  padding: 9px 18px 11px;
+  padding: 10px 15px 10px;
   border-radius: 0px 8px 8px 0px;
 }
 

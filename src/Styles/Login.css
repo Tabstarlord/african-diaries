@@ -80,7 +80,6 @@ body {
   position: relative;
   bottom: 15px;
   padding-bottom: 50%;
-
 }
 .login-2 .btn-2 a{
   text-decoration: underline 1px #008000;
@@ -142,63 +141,83 @@ body {
     position: relative;
     left: 100px;
     margin-top: 2px;
-    color: #FEFEFE;
-   
+    color: #FEFEFE; 
 }
 
 
-@media only screen and (min-width: 992px) {
-  .login {
-    background: url('../Assets/Frame16.png');
-    background-attachment: fixed;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    margin: auto;
-    font-family: 'DM sans', sans-serif;
-    color: #FEFEFE;
-    overflow: hidden;
-  }
+@media only screen and (min-width: 768px) {
+  
   .back-3 {
-    margin-top: -2%;
-    margin-right: -10%;
+    position: relative;
+    top: 50px;
+    right: 100px;
   }
   .login-3 {
-    padding-top: 20%;
-    padding-bottom: 30%;
+  margin-top: 5px;
   }
   .login-4 {
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 70%;
     border: 1px solid #fff;
+    margin-bottom: 100px;
   }
   .login-4 .log-1 {
-    padding: 15px;
     width: 90%;
-    margin-left: 35px;
-    position: relative;
-    bottom: 20px;
+  padding: 16px 18px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #fefefe56;
+  border-radius: 4px;
+  background: none;
+  font-size: 12px;
   }
   .login-4 label {
-    margin-left: 30px;
-    position: relative;
-    bottom: 25px;
+    font-size: 20px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  text-align: left;
+  font-weight: 500;
+  position: relative;
+  left: 12px;
   }
   .login-4 .btn-3 {
-    padding: 15px 15vw;
+    padding: 16px 44%;
+    border-radius: 4px;
+    background-color: #008000;
+    color: #FEFEFE;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
     position: relative;
-    top: 10px;
+    bottom: 10px;
   }
   .remfor {
-    gap: 23%;
-    margin-left: -13%;
+    font-size: 14px;
+    width: 100%;
   }
   .remember {
     position: relative;
-    left: 22%;
+    left: 3%;
+    top: 3px;
   }
+  .remember1 {
+    width: 30%;
+    position: relative;
+    bottom: 10px;
+    left: -3px;
+  }
+  .forget {
+    width: 100%;
+    position: relative;
+    left: 200px;
+    margin-top: 2px;
+    color: #FEFEFE; 
+}
+.login-2 .btn-2 {
+  font-size: 16px;
+  margin-bottom: -270px;
+}
 }
 
 @media only screen and (min-width: 1200px) {
