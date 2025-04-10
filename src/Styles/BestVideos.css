@@ -138,11 +138,13 @@
           padding-top: 1vh;
         }
         .best .best01 span {
+          width: 100%;
           position: relative;
           left: 13vw;
           top: -2vh;
         }
         .best .best02 li {
+          width: 100%;
           position: relative;
           left: 2vw;
           top: 4vh;
