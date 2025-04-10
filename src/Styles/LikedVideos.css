@@ -100,34 +100,30 @@
   .liked {
     width: 80vw;
     max-width: 100%;
-    padding-top: 10vh;
+    padding-top: 5vh;
   }
   .liked-1 span {
         float: right;
         position: relative;
-        left: -64vh;
-        bottom: 10vh;
+        left: -74vh;
+        bottom: 7vh;
   }
-  .liked .img-container {
+  .liked .liked-container {
     display: flex;
     gap: 14px;
     width: 15vw;
     padding-left: 13vw;
-    padding-top: -6vh;
+    margin-top: -6vh;
     text-align: left;
-    display: none;
   }
-  .img-container .image a span {
+  .liked-container .image a span {
     width: 14vw;
     font-size: 0.75em;
   }
-  .img-container .image a p {
+  .liked-container .image a p {
     width: 100%;
-    position: relative;
-    left: 0em;
-
   }
-  .img-container .image a p .eye {
+  .liked-container .image a p .eye {
     width: 12px;
     height: 12px;
     position: relative;
@@ -148,7 +144,7 @@
     position: relative;
     top: 8vh;
   }
-  .liked .img-container {
+  .liked .liked-container {
     display: flex;
     gap: 14px;
     width: 15vw;
@@ -158,18 +154,18 @@
     top: 1vh;
     text-align: left;
   }
-  .liked .img-container .image a span {
+  .liked-container .image a span {
     width: 14vw;
     font-size: 1em;
     padding-left: 2em;
   }
-  .liked .img-container .image a p {
+  .liked-container .image a p {
     width: 100%;
     position: relative;
     left: 0em;
 
   }
-  .liked .img-container .image a p .eye {
+  .liked-container .image a p .eye {
     width: 12px;
     height: 12px;
     position: relative;

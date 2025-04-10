@@ -118,23 +118,23 @@
     max-width: 100%;
     padding-top: 10vh;
   }
-  .home .img-container {
+  .home .home-container {
     display: flex;
     gap: 14px;
     width: 15vw;
     padding-left: 13vw;
-    padding-top: -6vh;
+    margin-top: -6vh;
     text-align: left;
   }
-  .img-container .image a span {
+  .home-container .image a span {
     width: 14vw;
     font-size: 0.75em;
   }
-  .img-container .image a p {
+  .home-container .image a p {
     width: 100%;
 
   }
-  .img-container .image a p .eye {
+  .home-container .image a p .eye {
     width: 12px;
     height: 12px;
     position: relative;
@@ -152,7 +152,7 @@
     max-width: 100%;
     margin-top: 1vh;
   }
-  .home .img-container {
+  .home .home-container {
     display: flex;
     gap: 14px;
     width: 15vw;
@@ -160,17 +160,17 @@
     margin-top: -6vh;
     text-align: left;
   }
-  .img-container .image a span {
+  .home-container .image a span {
     width: 14vw;
     font-size: 0.75em;
     padding-left: 2.7em;
   }
-  .home .img-container .image a p {
+  .home-container .image a p {
     width: 100%;
     padding-left: 0em;
 
   }
-  .img-container .image a p .eye {
+  .home-container .image a p .eye {
     width: 12px;
     height: 12px;
     position: relative;

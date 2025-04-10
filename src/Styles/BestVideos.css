@@ -135,21 +135,21 @@
         .best {
           width: 80vw;
           max-width: 100%;
-          padding-top: 10vh;
+          padding-top: 1vh;
         }
         .best .best01 span {
           position: relative;
-          left: 14vw;
-          top: -4vh;
+          left: 13vw;
+          top: -2vh;
         }
         .best .best02 li {
           position: relative;
           left: 2vw;
-          top: 2vh;
+          top: 4vh;
         }
         
         
-        .best .img-container {
+        .best .best-container {
           display: flex;
           gap: 14px;
           width: 15vw;
@@ -157,15 +157,15 @@
           margin-top: -6vh;
           text-align: left;
         }
-        .best .img-container .image a span {
+        .best-container .image a span {
           width: 14vw;
           font-size: 0.75em;
         }
-        .best .img-container .image a p {
+        .best-container .image a p {
           width: 100%;
       
         }
-        .img-container .image a p .eye {
+        .best-container .image a p .eye {
           width: 12px;
           height: 12px;
           position: relative;
@@ -193,7 +193,7 @@
           width: 80vw;
           max-width: 100%;
         }
-        .best .img-container {
+        .best .best-container {
           display: flex;
           gap: 14px;
           width: 15vw;
@@ -201,17 +201,17 @@
           margin-top: -6vh;
           text-align: left;
         }
-        .best .img-container .image a span {
+        .best-container .image a span {
           width: 14vw;
           font-size: 1.0em;
           padding-left: 2em;
         }
-        .best .img-container .image a p {
+        .best-container .image a p {
           width: 100%;
           padding-left: 0.2em;
       
         }
-        .img-container .image a p .eye {
+        .best-container .image a p .eye {
           width: 12px;
           height: 12px;
           position: relative;

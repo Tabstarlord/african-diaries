@@ -27,7 +27,7 @@ function WatchHistory() {
                 <span>Watch History</span>
               </div>
 
-              <div className='img-container'>
+              <div className='his-container'>
                               <div className='image'>
                                 <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
                                 <span>Banging Oga Soldier Wife</span>
@@ -64,7 +64,7 @@ function WatchHistory() {
                                 </div>
                               </div>
                         
-                              <div className='img-container'>
+                              <div className='his-container'>
                               <div className='image'>
                                 <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
                                 <span>Banging Oga Soldier Wife</span>
@@ -101,7 +101,7 @@ function WatchHistory() {
                                 </div>
                               </div>
                         
-                              <div className='img-container'>
+                              <div className='his-container'>
                               <div className='image'>
                                 <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
                                 <span>Banging Oga Soldier Wife</span>
@@ -138,7 +138,7 @@ function WatchHistory() {
                                 </div>
                               </div>
                         
-                              <div className='img-container'>
+                              <div className='his-container'>
                               <div className='image'>
                                 <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
                                 <span>Banging Oga Soldier Wife</span>
@@ -175,7 +175,7 @@ function WatchHistory() {
                                 </div>
                               </div>
                         
-                              <div className='img-container'>
+                              <div className='his-container'>
                               <div className='image'>
                                 <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
                                 <span>Banging Oga Soldier Wife</span>
@@ -212,7 +212,7 @@ function WatchHistory() {
                                 </div>
                               </div>
                         
-                              <div className='img-container'>
+                              <div className='his-container'>
                               <div className='image'>
                                 <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
                                 <span>Banging Oga Soldier Wife</span>
