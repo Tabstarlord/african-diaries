@@ -1,11 +1,10 @@
 .new {
   
-  padding-top: 50px;
-  position: relative;
-  font-family: 'DM Sans', sans-serif;
-  margin-left: auto;
-    margin-right: auto;
-    width: 95%;
+margin: auto;
+width: 100%;
+position: relative;
+padding-top: 10px;
+font-family: 'DM Sans', sans-serif;
 }
 
 .new-1 span {
@@ -15,18 +14,21 @@
   padding-bottom: 20px;
 }
 
-.new .new-2 .image {
+.new .image {
   margin-top: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
 }
 
 .new a {
   text-decoration: none;
   color: #000;
 }
-.new-2 .image img {
+.new .image img {
   width: 100%;
 }
-.new-2 .image a span {
+.new .image a span {
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -47,23 +49,7 @@
   top: 3px;
 }
 
-.new .pages {
-  width: 100%;
-  justify-items: center;
-  display: flex;
-  gap: 12px;
-}
 
-.new .pages li {
-  list-style: none;
-  text-align: center;
-  gap: 10px;
-}
-
-.new .pages li img {
-  position: relative;
-  top: 3px;
-}
 
 @media screen and (min-width: 768px) {
   .desk-menu {
@@ -78,7 +64,7 @@
   .new {
     margin: auto;
     width: 100%;
-    margin-top: 1vh;
+    margin-top: 10vh;
     font-family: 'DM Sans', sans-serif;
   }
   
@@ -90,10 +76,6 @@
     margin-right: auto;
     width: 95%;
   }
-  .new .image img {
-    width: 100%;
-  }
-  
   .new a {
     text-decoration: none;
     color: #000;
@@ -106,7 +88,7 @@
     float: left;
   }
   
-  .new-2 .image a p {
+  .new .image a p {
     font-size: 15px;
     position: relative;
     bottom: 15px;
@@ -117,193 +99,89 @@
     top: 3px;
     width: 13%;
   }
-  
-  .page .pages {
-    display: flex;
-    flex-direction: row;
-    gap: 17px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-  }
-  
-  .page .pages li {
-    list-style: none;
-    text-align: center;
-  }
-  
-  .page .pages li img {
-    position: relative;
-    top: 4px;
-    left: 2px;
-  }
 }
 
 
       /*SMALL SCREEN LAPTOP*/
 
-@media screen and (min-width: 1025px) {
-  .desk-menu {
-    display: contents;
-  }
-  .new-1{
-    left: 20%;
-  }
-  
-  .new-2 {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 77%;
-  }
-  .new-2 .image {
-    width: 6%;
-    margin-left: 19%;
-  }
-  .new-2 .image a img {
-    width: 190px;
-    height: 120px;
-    position: relative;
-    left: -60%;
-  }
-  .new-2 .image a span {
-    width: 220px;
-    font-size: 15px;
-    font-weight: 500;
-    margin-left: -100%;
-  }
-  .new-2 .image a p {
-    width: 220px;
-    font-size: 13px;
-    margin-left: -70%;
-    position: relative;
-    bottom: 8px;
-    left: -55px;
-  }
-  .new-2 .image a p .eye {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: 2px;
-    left: -3px;
-  }
-  .page {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  .page .pages {
-    font-size: 23px;
-  }
-  .page .pages a img {
-    position: relative;
-    left: 35px;
-    top: -28px;
-  }
-}
-
-
-/* BIG SCREEN LAPTOP */
-
-@media screen and (min-width: 1281px) {
-  
-  .new-2 {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 78%;
-  }
-  .new-2 .image {
-    width: 100px;
-    margin-left: 15%;
-    margin-bottom: 19%;
-  }
-  .new-2 .image a img {
-    width: 230%;
-    height: 16%;
-    position: relative;
-    left: 5px;
-  }
-  .new-2 .image a span {
-    width: 220px;
-    font-size: 18px;
-    font-weight: 500;
-    position: relative;
-    left: 110%;
-  }
-  .new-2 .image a p {
-    width: 220px;
-    font-size: 16px;
-    position: relative;
-    bottom: 10px;
-    left: 35%;
-  }
-  .new-2 .image a p .eye {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: 1px;
-  }
-  .page {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  .page .pages {
-    font-size: 23px;
-  }
-  .page .pages a img {
-    position: relative;
-    left: 35px;
-    top: -28px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .new-2 {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 77%;
-  }
-  .new-2 .image {
-    width: 10%;
-    margin-left: 15%;
-    margin-bottom: 19%;
-  }
-  .new-2 .image a img {
-    width: 230%;
-    height: 17%;
-  }
-  .new-2 .image a span {
-    width: 220px;
-    font-size: 18px;
-    font-weight: 500;
-    padding-left: 1%;
-  }
-  .new-2 .image a p {
-    width: 220px;
-    font-size: 16px;
-    padding-left: 10px;
-    position: relative;
-    bottom: 10px;
-  }
-  .new-2 .image a p .eye {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: 1px;
-  }
-  .page {
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-  }
-  .page .pages {
-    font-size: 23px;
-  }
-  .page .pages a img {
-    position: relative;
-    left: 80%;
-    top: -48%;
-  }
-}
+      @media only screen and (min-width:1025px) {
+        .desk-menu {
+          display: contents;
+        }
+        .new {
+          width: 80vw;
+          max-width: 100%;
+          margin-top: 0vh;
+        }
+        .new-1 {
+          margin-top: 3vh;
+          margin-bottom: 15vh;
+          margin-left: 10vw;
+          position: relative;
+          top: 45px;
+        }
+        .new .img-container {
+          display: flex;
+          gap: 14px;
+          width: 15vw;
+          padding-left: 13vw;
+          margin-top: -6vh;
+          text-align: left;
+        }
+        .new .img-container .image a span {
+          width: 14vw;
+          font-size: 0.75em;
+        }
+        .new .img-container .image a p {
+          width: 100%;
+          position: relative;
+          left: 0em;
+      
+        }
+        .new .img-container .image a p .eye {
+          width: 12px;
+          height: 12px;
+          position: relative;
+          top: 2px;
+        }
+      }
+      
+      @media only screen and (min-width:1440px) {
+        .new {
+          width: 80vw;
+          max-width: 100%;
+          margin-top: -3vh;
+        }
+        .new-1 {
+          margin-top: 3vh;
+          margin-bottom: 15vh;
+          margin-left: 12vw;
+          position: relative;
+          top: 60px;
+        }
+        .new .img-container {
+          display: flex;
+          gap: 14px;
+          width: 15vw;
+          padding-left: 14vw;
+          margin-top: -6vh;
+          text-align: left;
+        }
+        .new .img-container .image a span {
+          width: 14vw;
+          font-size: 1em;
+          padding-left: 2em;
+        }
+        .new .img-container .image a p {
+          width: 100%;
+          position: relative;
+          left: 0.2em;
+      
+        }
+        .new .img-container .image a p .eye {
+          width: 12px;
+          height: 12px;
+          position: relative;
+          top: 2px;
+        } 
+      }

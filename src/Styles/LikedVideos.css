@@ -1,10 +1,8 @@
 .liked {
-  padding-top: 50px;
+  margin: auto;
+  padding-top: 10vh;
   position: relative;
   font-family: 'DM Sans', sans-serif;
-  margin-left: auto;
-    margin-right: auto;
-    width: 95%;
 }
 
 .liked-1 span {
@@ -12,30 +10,34 @@
   font-weight: 500;
   font-size: 20px;
   padding-bottom: 20px;
+  position: relative;
+  left: 10px;
 }
-.liked .liked-2 .image {
+.liked .image {
   margin-top: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
 }
 
 .liked a {
   text-decoration: none;
   color: #000;
 }
-.liked-2 .image img {
+.liked .image img {
   width: 100%;
 }
-.liked-2 .image a span {
+.liked .image a span {
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   float: left;
 }
 
-.liked-2 .image a p {
+.liked .image a p {
   font-size: 13px;
   float: left;
   position: relative;
-  left: 10px;
   bottom: 10px;
 }
 
@@ -45,69 +47,49 @@
   top: 3px;
 }
 
-.liked .pages {
-  width: 100%;
-  justify-items: center;
-  display: flex;
-  gap: 12px;
-}
 
-.liked .pages li {
-  list-style: none;
-  text-align: center;
-  gap: 10px;
-}
 
-.liked .pages li img {
-  position: relative;
-  top: 3px;
-}
-
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .desk-menu {
     display: none;
   }
-  .liked-1 span {
-    font-size: 20px;
-    font-weight: 500;
-    position: relative;
-    left: 4%;
-  }
+ 
   .liked {
-    margin: auto;
+    margin: 0 auto;
     width: 100%;
-    margin-top: 1vh;
+    padding-top: 10vh;
     font-family: 'DM Sans', sans-serif;
+  }
+  .liked-1 span {
+    float: left;
+    font-weight: 500;
+    font-size: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    left: 23px;
   }
   
   .liked .image {
     margin-top: 5vh;
-    width: 100%;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
-  }
-  .liked .image img {
-    width: 100%;
-  }
   
-  .liked a {
-    text-decoration: none;
-    color: #000;
   }
-  
   .liked .image a span {
     font-weight: 500;
     font-size: 18px;
     line-height: 100%;
     float: left;
+    padding-left: 10px;
+    padding-top: 5px;
   }
   
-  .liked-2 .image a p {
+  .liked .image a p {
     font-size: 15px;
     position: relative;
-    bottom: 15px;
+    bottom: 13px;
   }
   
   .liked .image a p .eye {
@@ -115,252 +97,89 @@
     top: 3px;
     width: 13%;
   }
-  
-  .page .pages {
-    display: flex;
-    flex-direction: row;
-    gap: 17px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-  }
-  
-  .page .pages li {
-    list-style: none;
-    text-align: center;
-  }
-  
-  .page .pages li img {
-    position: relative;
-    top: 4px;
-    left: 2px;
-  }
 }
+/*use em on searchbar*/
 
-
-      /*SMALL SCREEN LAPTOP*/
-
-@media screen and (min-width: 1025px) {
+@media only screen and (min-width:1025px) {
   .desk-menu {
     display: contents;
   }
-  .liked-1 {
-    left: 20%;
-  }
-  .liked-2 {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 800px;
-  }
-  .liked-2 .image {
-    width: 25px;
-    margin-left: 130px;
-  }
-  .liked-2 .image a img {
-    width: 190px;
-    height: 120px;
-    position: relative;
-    left: -60%;
-  }
-  .liked-2 .image a span {
-    width: 220px;
-    font-size: 15px;
-    font-weight: 500;
-    margin-left: -100%;
-  }
-  .liked-2 .image a p {
-    width: 220px;
-    font-size: 13px;
-    margin-left: -70%;
-    position: relative;
-    bottom: 8px;
-    left: -55px;
-  }
-  .liked-2 .image a p .eye {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: 2px;
-    left: -3px;
-  }
-  .page {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  .page .pages {
-    font-size: 23px;
-  }
-  .page .pages a img {
-    position: relative;
-    left: 35px;
-    top: -28px;
-  }
-}
-
-
-@media screen and (min-width: 1184px) {
-  .desk-menu {
-    display: contents;
-  }
-  .liked-1 {
-    left: 20%;
-  }
-  .liked-2 {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 920px;
-  }
-  .liked-2 .image {
-    width: 20px;
-    margin-left: 150px;
-  }
-  .liked-2 .image a img {
-    width: 220px;
-    height: 150px;
-    position: relative;
-    left: -60%;
-  }
-  .liked-2 .image a span {
-    width: 220px;
-    font-size: 15px;
-    font-weight: 500;
-    margin-left: -100%;
-  }
-  .liked-2 .image a p {
-    width: 220px;
-    font-size: 13px;
-    margin-left: -70%;
-    position: relative;
-    bottom: 8px;
-    left: -40px;
-  }
-  .liked-2 .image a p .eye {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: 2px;
-    left: -3px;
-  }
-  .page {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  .page .pages {
-    font-size: 23px;
-  }
-  .page .pages a img {
-    position: relative;
-    left: 35px;
-    top: -28px;
-  }
-}
-
-
-@media screen and (min-width: 1281px) {
-
-  .liked-2 {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 78%;
-  }
-  .liked-2 .image {
-    width: 100px;
-    margin-left: 15%;
-    margin-bottom: 19%;
-  }
-  .liked-2 .image a img {
-    width: 230%;
-    height: 16%;
-    position: relative;
-    left: 5px;
-  }
-  .liked-2 .image a span {
-    width: 220px;
-    font-size: 18px;
-    font-weight: 500;
-    position: relative;
-    left: 110%;
-  }
-  .liked-2 .image a p {
-    width: 220px;
-    font-size: 16px;
-    position: relative;
-    bottom: 10px;
-    left: 35%;
-  }
-  .liked-2 .image a p .eye {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: 1px;
-  }
-  .page {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  .page .pages {
-    font-size: 23px;
-  }
-  .page .pages a img {
-    position: relative;
-    left: 35px;
-    top: -28px;
-  }
-}
-@media screen and (min-width: 1440px) {
   .liked {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 98%;
-    padding-top: 7%;
+    width: 80vw;
+    max-width: 100%;
+    margin-top: -10vh;
   }
-  
-  .liked-2 .image {
-    width: 110px;
-    margin-left: 170px;
-    margin-bottom: 19%;
-  }
-  .liked-2 .image a img {
-    width: 230%;
-    height: 17%;
-  }
-  .liked-2 .image a span {
-    width: 220px;
-    font-size: 18px;
-    font-weight: 500;
-    padding-left: 1%;
-  }
-  .liked-2 .image a p {
-    width: 220px;
-    font-size: 16px;
-    padding-left: 10px;
+  .liked-1 {
+    margin-top: 3vh;
+    margin-bottom: 15vh;
+    margin-left: 12vw;
     position: relative;
-    bottom: 10px;
+    top: 50px;
   }
-  .liked-2 .image a p .eye {
+  .liked .img-container {
+    display: flex;
+    gap: 14px;
+    width: 15vw;
+    padding-left: 13vw;
+    margin-top: -2vh;
+    text-align: left;
+  }
+  .img-container .image a span {
+    width: 14vw;
+    font-size: 0.75em;
+  }
+  .img-container .image a p {
+    width: 100%;
+    position: relative;
+    left: 0em;
+
+  }
+  .img-container .image a p .eye {
     width: 12px;
     height: 12px;
     position: relative;
-    top: 1px;
+    top: 2px;
   }
-  .page {
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
+}
+
+@media only screen and (min-width:1440px) {
+  .liked {
+    width: 80vw;
+    max-width: 100%;
+    margin-top: -13vh;
   }
-  .page .pages {
-    font-size: 23px;
-  }
-  .page .pages a img {
+  .liked-1 {
+    margin-top: 3vh;
+    margin-bottom: 15vh;
+    margin-left: 13vw;
     position: relative;
-    left: 80%;
-    top: -48%;
+    top: 8vh;
+  }
+  .liked .img-container {
+    display: flex;
+    gap: 14px;
+    width: 15vw;
+    padding-left: 14vw;
+    margin-top: -1vh;
+    position: relative;
+    top: 1vh;
+    text-align: left;
+  }
+  .liked .img-container .image a span {
+    width: 14vw;
+    font-size: 1em;
+    padding-left: 2em;
+  }
+  .liked .img-container .image a p {
+    width: 100%;
+    position: relative;
+    left: 0em;
+
+  }
+  .liked .img-container .image a p .eye {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 2px;
   }
 }
