@@ -23,9 +23,6 @@ function LikedVideos() {
       </div>
     </div>
     <div className='liked'>
-              <div className='liked-1'>
-                <span>Liked Videos</span>
-              </div>
              <div className='liked-container'>
                    <div className='image'>
                      <Link to='/ViewVideos'><img src={frame3} alt='Bang' />

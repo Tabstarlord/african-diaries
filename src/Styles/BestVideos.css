@@ -75,31 +75,6 @@
     position: relative;
     padding-top: 10vh;
   }
-  
-  .best .best01 span {
-    font-size: 20px;
-    font-weight: 500;
-    float: left;
-    position: relative;
-    left: 4%;
-    bottom: 7vh;
-   
-  }
-  .best .best02 li {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    position: relative;
-    left: -11%;
-    bottom: 1vh;
-  }
-  .best-1 .best02 li button {
-    float: left;
-    color: #fff;
-    padding: 5px 10px;
-    background-color: #808080;
-    border: none;
-  } 
   .best .image {
     margin-top: 5vh;
     align-content: center;
@@ -113,13 +88,11 @@
     line-height: 100%;
     float: left;
   }
-  
   .best .image a p {
     font-size: 15px;
     position: relative;
     bottom: 13px;
   }
-  
   .best .image a p .eye {
     position: relative;
     top: 3px;
@@ -135,22 +108,8 @@
         .best {
           width: 80vw;
           max-width: 100%;
-          padding-top: 1vh;
-        }
-        .best .best01 span {
-          width: 100%;
-          position: relative;
-          left: 13vw;
-          top: -2vh;
-        }
-        .best .best02 li {
-          width: 100%;
-          position: relative;
-          left: 2vw;
-          top: 4vh;
-        }
-        
-        
+          margin-top: 5vh;
+        }    
         .best .best-container {
           display: flex;
           gap: 14px;
@@ -176,24 +135,10 @@
       }
       
       @media only screen and (min-width:1440px) {
-        .best-1 {
-          padding-top: 10vh;
-        }
-        .best01 {
-          width: 80vw;
-          max-width: 100%;
-          margin-top: -3vh;
-        }
-        .best01 span {
-          text-align: left;
-          margin-left: 42vw;
-        }
-        .best01 .filter {
-          padding-left: 21vw;
-        }
         .best {
           width: 80vw;
           max-width: 100%;
+          margin-top: -10vh;
         }
         .best .best-container {
           display: flex;

@@ -5,17 +5,6 @@
   padding-top: 10vh;
   font-family: 'DM Sans', sans-serif;
 }
-.liked-1 {
-  padding-top: 10vh;
-}
-.liked-1 span {
-  float: left;
-  font-weight: 500;
-  font-size: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  left: 10px;
-}
 .liked .image {
   margin-top: 1vh;
   margin-left: auto;
@@ -57,15 +46,6 @@
     width: 100%;
     padding-top: 5vh;
   }
-  .liked-1 span {
-    float: left;
-    font-weight: 500;
-    font-size: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    left: 23px;
-  }
-  
   .liked .image {
     margin-top: 5vh;
     align-content: center;
@@ -100,13 +80,7 @@
   .liked {
     width: 80vw;
     max-width: 100%;
-    padding-top: 5vh;
-  }
-  .liked-1 span {
-        float: right;
-        position: relative;
-        left: -74vh;
-        bottom: 7vh;
+    padding-top: 15vh;
   }
   .liked .liked-container {
     display: flex;
@@ -136,13 +110,6 @@
     width: 80vw;
     max-width: 100%;
     margin-top: -13vh;
-  }
-  .liked-1 {
-    margin-top: 3vh;
-    margin-bottom: 15vh;
-    margin-left: 13vw;
-    position: relative;
-    top: 8vh;
   }
   .liked .liked-container {
     display: flex;

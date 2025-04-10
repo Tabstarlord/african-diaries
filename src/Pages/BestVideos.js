@@ -23,20 +23,6 @@ function BestVideos() {
       </div>
      </div>
     <div className='best'>
-      <div className='best01'>
-        <span>Best Videos</span>
-        </div>
-        <div className='best02'>
-        <li className='filter'>
-          <button>January 2025</button>
-          <button>February 2025</button>
-          <button>March 2025</button>
-          <button>April 2025</button>
-          <button>May 2025</button>
-          <button>June 2025</button>
-        </li>
-      </div>
-
       <div className='best-container'>
             <div className='image'>
               <Link to='/ViewVideos'><img src={frame3} alt='Bang' />

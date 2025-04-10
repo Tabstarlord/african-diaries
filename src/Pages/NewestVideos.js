@@ -23,9 +23,6 @@ function NewestVideos() {
       </div>
     </div>
     <div className='new'>
-      <div className='new-1'>
-            <span>Newest Videos</span>  
-          </div>
                 <div className='new-container'>
                 <div className='image'>
                   <Link to='/ViewVideos'><img src={frame3} alt='Bang' />

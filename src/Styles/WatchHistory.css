@@ -5,17 +5,6 @@
   padding-top: 10vh;
   font-family: 'DM Sans', sans-serif;
 }
-.his-1 {
-  padding-top: 10vh;
-}
-.his-1 span {
-  float: left;
-  font-weight: 500;
-  font-size: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  left: 10px;
-}
 .his .image {
   margin-top: 1vh;
   margin-left: auto;
@@ -57,12 +46,6 @@
     width: 100%;
     padding-top: 5vh;
   }
-  .his-1 span {
-    font-size: 20px;
-    font-weight: 500;
-    position: relative;
-    left: 4%;
-  }
   .his .image {
     margin-top: 5vh;
     align-content: center;
@@ -98,14 +81,7 @@
         .his {
           width: 80vw;
           max-width: 100%;
-          padding-top: 5vh;
-        }
-        .his-1 span {
-        float: right;
-        position: relative;
-        left: -73vh;
-        bottom: 7vh;
-        
+          padding-top: 15vh;
         }
         .his .his-container {
           display: flex;
@@ -135,13 +111,6 @@
           width: 80vw;
           max-width: 100%;
           margin-top: -10vh;
-        }
-        .his-1 {
-          margin-top: 3vh;
-          margin-bottom: 15vh;
-          margin-left: 12vw;
-          position: relative;
-          top: 60px;
         }
         .his .img-container {
           display: flex;

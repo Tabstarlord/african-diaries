@@ -23,10 +23,6 @@ function WatchHistory() {
       </div>
     </div>
     <div className='his'>
-              <div className='his-1'>
-                <span>Watch History</span>
-              </div>
-
               <div className='his-container'>
                               <div className='image'>
                                 <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
