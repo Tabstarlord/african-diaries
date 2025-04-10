@@ -22,7 +22,7 @@ function BestVideos() {
           <Menu />
       </div>
      </div>
-    <div className='best-1'>
+    <div className='best'>
       <div className='best01'>
         <span>Best Videos</span>
         <li className='filter'>
@@ -34,8 +34,6 @@ function BestVideos() {
           <button>June 2025</button>
         </li>
       </div>
-
-     <div className='best'>
 
       <div className='img-container'>
             <div className='image'>
@@ -258,7 +256,6 @@ function BestVideos() {
               </Link>
               </div>
             </div>
-     </div>
 
      <div className='page'>
      <ul className='pages'>

@@ -1,6 +1,3 @@
-.desk-menu {
-  display: none;
-}
   .home {
     margin: auto;
     width: 100%;
@@ -8,14 +5,12 @@
     padding-top: 10vh;
     font-family: 'DM Sans', sans-serif;
   }
-  
   .home .image {
     margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
   }
-  
   .home a {
     text-decoration: none;
     color: #000;
@@ -29,33 +24,30 @@
     line-height: 100%;
     float: left;
   }
-  
   .home .image a p {
     font-size: 13px;
     float: left;
     position: relative;
     bottom: 10px;
   }
-  
   .home .image a p .eye {
     width: 15%;
     position: relative;
     top: 3px;
   }
   
+
   .page .pages {
     width: 100%;
     justify-items: center;
     display: flex;
     gap: 12px;
   }
-  
   .page .pages li {
     list-style: none;
     text-align: center;
     gap: 10px;
   }
-  
   .page .pages li img {
     position: relative;
     top: 3px;
@@ -63,16 +55,12 @@
 
                     /*FOR TABLETS*/
 
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .desk-menu {
-    display: none;
-  }
- 
+  @media only screen and (min-width: 768px) {
+  
   .home {
     margin: 0 auto;
     width: 100%;
-    padding-top: 15px;
-    font-family: 'DM Sans', sans-serif;
+    padding-top: 10vh;
   }
   
   .home .image {
@@ -81,15 +69,12 @@
     margin-left: auto;
     margin-right: auto;
     width: 95%;
-  
   }
   .home .image a span {
     font-weight: 500;
     font-size: 18px;
     line-height: 100%;
     float: left;
-    padding-left: 10px;
-    padding-top: 5px;
   }
   
   .home .image a p {
@@ -127,10 +112,11 @@
 /*use em on searchbar*/
 
 @media only screen and (min-width:1025px) {
+
   .home {
     width: 80vw;
     max-width: 100%;
-    margin-top: 10vh;
+    padding-top: 10vh;
   }
   .home .img-container {
     display: flex;

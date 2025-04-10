@@ -1,10 +1,13 @@
 .liked {
   margin: auto;
-  padding-top: 10vh;
+  width: 100%;
   position: relative;
+  padding-top: 10vh;
   font-family: 'DM Sans', sans-serif;
 }
-
+.liked-1 {
+  padding-top: 10vh;
+}
 .liked-1 span {
   float: left;
   font-weight: 500;
@@ -19,7 +22,6 @@
   margin-right: auto;
   width: 95%;
 }
-
 .liked a {
   text-decoration: none;
   color: #000;
@@ -33,14 +35,12 @@
   line-height: 100%;
   float: left;
 }
-
 .liked .image a p {
   font-size: 13px;
   float: left;
   position: relative;
   bottom: 10px;
 }
-
 .liked .image a p .eye {
   width: 15%;
   position: relative;
@@ -48,17 +48,14 @@
 }
 
 
+              /*FOR TABLETS*/
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .desk-menu {
-    display: none;
-  }
+@media only screen and (min-width: 768px) {
  
   .liked {
     margin: 0 auto;
     width: 100%;
-    padding-top: 10vh;
-    font-family: 'DM Sans', sans-serif;
+    padding-top: 5vh;
   }
   .liked-1 span {
     float: left;
@@ -82,8 +79,6 @@
     font-size: 18px;
     line-height: 100%;
     float: left;
-    padding-left: 10px;
-    padding-top: 5px;
   }
   
   .liked .image a p {
@@ -101,15 +96,13 @@
 /*use em on searchbar*/
 
 @media only screen and (min-width:1025px) {
-  .desk-menu {
-    display: contents;
-  }
+
   .liked {
     width: 80vw;
     max-width: 100%;
-    margin-top: -10vh;
+    padding-top: 10vh;
   }
-  .liked-1 {
+  .liked-1 span {
     margin-top: 3vh;
     margin-bottom: 15vh;
     margin-left: 12vw;

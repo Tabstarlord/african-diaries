@@ -1,26 +1,27 @@
 .new {
-  
 margin: auto;
 width: 100%;
 position: relative;
-padding-top: 10px;
+padding-top: 10vh;
 font-family: 'DM Sans', sans-serif;
 }
-
+.new-1 {
+  padding-top: 10vh;
+}
 .new-1 span {
   float: left;
   font-weight: 500;
   font-size: 20px;
   padding-bottom: 20px;
+  position: relative;
+  left: 10px;
 }
-
 .new .image {
   margin-top: 1vh;
   margin-left: auto;
   margin-right: auto;
   width: 95%;
 }
-
 .new a {
   text-decoration: none;
   color: #000;
@@ -34,15 +35,12 @@ font-family: 'DM Sans', sans-serif;
   line-height: 100%;
   float: left;
 }
-
 .new .image a p {
   font-size: 13px;
   float: left;
   position: relative;
-  left: 10px;
   bottom: 10px;
 }
-
 .new .image a p .eye {
   width: 15%;
   position: relative;
@@ -50,10 +48,14 @@ font-family: 'DM Sans', sans-serif;
 }
 
 
+              /*FOR TABLETS*/
 
-@media screen and (min-width: 768px) {
-  .desk-menu {
-    display: none;
+@media only screen and (min-width: 768px) {
+  
+  .new {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 5vh;
   }
   .new-1 span {
     font-size: 20px;
@@ -61,26 +63,13 @@ font-family: 'DM Sans', sans-serif;
     position: relative;
     left: 4%;
   }
-  .new {
-    margin: auto;
-    width: 100%;
-    margin-top: 10vh;
-    font-family: 'DM Sans', sans-serif;
-  }
-  
   .new .image {
     margin-top: 5vh;
-    width: 100%;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
   }
-  .new a {
-    text-decoration: none;
-    color: #000;
-  }
-  
   .new .image a span {
     font-weight: 500;
     font-size: 18px;
@@ -91,7 +80,7 @@ font-family: 'DM Sans', sans-serif;
   .new .image a p {
     font-size: 15px;
     position: relative;
-    bottom: 15px;
+    bottom: 13px;
   }
   
   .new .image a p .eye {
@@ -105,22 +94,20 @@ font-family: 'DM Sans', sans-serif;
       /*SMALL SCREEN LAPTOP*/
 
       @media only screen and (min-width:1025px) {
-        .desk-menu {
-          display: contents;
-        }
+       
         .new {
           width: 80vw;
           max-width: 100%;
-          margin-top: 0vh;
+          padding-top: 10vh;
         }
-        .new-1 {
+        .new-1 span {
           margin-top: 3vh;
           margin-bottom: 15vh;
           margin-left: 10vw;
           position: relative;
           top: 45px;
         }
-        .new .img-container {
+        .img-container {
           display: flex;
           gap: 14px;
           width: 15vw;
