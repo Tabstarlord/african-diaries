@@ -105,13 +105,14 @@
         position: relative;
         left: -64vh;
         bottom: 10vh;
+        display: none;
         }
         .his .img-container {
           display: flex;
           gap: 14px;
           width: 15vw;
           padding-left: 13vw;
-          margin-top: -6vh;
+          padding-top: -6vh;
           text-align: left;
         }
         .his .img-container .image a span {

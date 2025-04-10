@@ -25,6 +25,8 @@ function BestVideos() {
     <div className='best'>
       <div className='best01'>
         <span>Best Videos</span>
+        </div>
+        <div className='best02'>
         <li className='filter'>
           <button>January 2025</button>
           <button>February 2025</button>

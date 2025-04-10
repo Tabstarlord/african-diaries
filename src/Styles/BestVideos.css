@@ -15,7 +15,7 @@
   position: relative;
   left: 10px;
 }
-.best .best01 li {
+.best .best02 li {
   list-style: none;
   float: left;
   display: flex;
@@ -25,7 +25,7 @@
   position: relative;
   left: 10px;
 }
-.best .best01 li button {
+.best .best02 li button {
   float: left;
   color: #fff;
   padding: 5px 10px;
@@ -85,7 +85,7 @@
     bottom: 7vh;
    
   }
-  .best .best01 li {
+  .best .best02 li {
     list-style: none;
     display: flex;
     gap: 10px;
@@ -93,7 +93,7 @@
     left: -11%;
     bottom: 1vh;
   }
-  .best-1 .best01 li button {
+  .best-1 .best02 li button {
     float: left;
     color: #fff;
     padding: 5px 10px;
@@ -137,19 +137,18 @@
           max-width: 100%;
           padding-top: 10vh;
         }
-        .best01 span {
-          text-align: left;
-          float: left;
-          padding-left: 49vw;
+        .best .best01 span {
+          position: relative;
+          left: 14vw;
+          top: -4vh;
         }
-        .best01 .filter {
-          padding-left: 19vw;
+        .best .best02 li {
+          position: relative;
+          left: 2vw;
+          top: 2vh;
         }
-        .best {
-          width: 80vw;
-          max-width: 100%;
-          padding-top: 5vh;
-        }
+        
+        
         .best .img-container {
           display: flex;
           gap: 14px;

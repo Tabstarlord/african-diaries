@@ -103,19 +103,19 @@
     padding-top: 10vh;
   }
   .liked-1 span {
-    margin-top: 3vh;
-    margin-bottom: 15vh;
-    margin-left: 12vw;
-    position: relative;
-    top: 50px;
+        float: right;
+        position: relative;
+        left: -64vh;
+        bottom: 10vh;
   }
   .liked .img-container {
     display: flex;
     gap: 14px;
     width: 15vw;
     padding-left: 13vw;
-    margin-top: -2vh;
+    padding-top: -6vh;
     text-align: left;
+    display: none;
   }
   .img-container .image a span {
     width: 14vw;

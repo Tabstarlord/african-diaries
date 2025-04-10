@@ -101,18 +101,18 @@ font-family: 'DM Sans', sans-serif;
           padding-top: 10vh;
         }
         .new-1 span {
-          margin-top: 3vh;
-          margin-bottom: 15vh;
-          margin-left: 10vw;
-          position: relative;
-          top: 45px;
+          float: right;
+        position: relative;
+        left: -64vh;
+        bottom: 10vh;
+        display: none;
         }
-        .img-container {
+        .new .img-container {
           display: flex;
           gap: 14px;
           width: 15vw;
           padding-left: 13vw;
-          margin-top: -6vh;
+          padding-top: -6vh;
           text-align: left;
         }
         .new .img-container .image a span {
