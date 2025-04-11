@@ -230,10 +230,20 @@ body {
   .back-3 {
     position: fixed;
     top: 3em;
-    right: 17em;
+    right: 19em;
   }
   .login-2 .btn-2 {
     font-size: 16px;
     margin-bottom: -250px;
   }
+  .forget {
+    width: 100%;
+    position: relative;
+    left: 20em; 
+}
+.remember {
+  position: relative;
+  left: 3em;
+  top: 0.25em;
+}
 }
