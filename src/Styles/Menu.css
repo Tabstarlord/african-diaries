@@ -51,14 +51,15 @@
   } 
   .nav-list .nav-item {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
     border-bottom: 0.5px solid #0000002a;
   }
   .nav-item img {
-    width: 8%;
-    height: 8%;
+    width: 4%;
+    height: auto;
     position: relative;
-    bottom: 7px;
+    bottom: 2px;
+    left: 3px;
   }
   .sidebar-nav .nav-item .nav-link {
     border-bottom: none;

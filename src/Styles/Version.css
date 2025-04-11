@@ -20,23 +20,24 @@
     display: contents;
   }
   .deskver span {
-    font-size: 17px;
+    font-size: 12px;
     position: relative;
-    left: -215px;
-    bottom: 30px;
+    left: -181px;
+    bottom: 15px;
   }
   .deskver img {
-    width: 8%;
-    height: 8%;
+    width: 4%;
+    height: auto;
     padding: 2px 4px;
     position: relative;
-    left: -222px;
+    left: -184px;
   }
   .deskver .verarrow{
-    width: 7%;
-    height: 7%;
+    width: 4%;
+    height: auto;
     position: relative;
-    bottom: 10px;
+    bottom: 6px;
+    left: -175px;
   }
   
 }

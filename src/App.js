@@ -40,7 +40,7 @@ import Straight from './Categories/Straight'
 import Student from './Categories/Student'
 import Teacher from './Categories/Teacher'
 import Wanking from './Categories/Wanking';
-
+import Trans from './Categories/Trans';
 
 
 
@@ -122,6 +122,8 @@ function App() {
           element={ <Teacher /> } />
           <Route path='/Wanking' 
           element={ <Wanking /> } />
+           <Route path='/Trans' 
+          element={ <Trans /> } />
           
           
 

@@ -12,9 +12,9 @@ function DropVersion(props) {
 
       {props.isOpen ? (
        <ul className='dropdown-menu'>
-                 <li><Link to='/'><img src={version} alt='version' /> Straight</Link> </li>
-                 <li><Link to='/'><img src={gay} alt='gay' />Gay</Link></li>
-                 <li><Link to='/'><img src={trans} alt='trans' />Trans</Link></li>
+                 <li><Link to='/Straight'><img src={version} alt='version' /> Straight</Link> </li>
+                 <li><Link to='/Gay'><img src={gay} alt='gay' />Gay</Link></li>
+                 <li><Link to='/Trans'><img src={trans} alt='trans' />Trans</Link></li>
                </ul>
       ) :null }
     </div>

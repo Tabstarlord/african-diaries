@@ -31,14 +31,14 @@
      }
      .deskdrop .dropdown-menu li {
         font-weight: 500;
-        font-size: 16px;
+        font-size: 12px;
         border-bottom: 0.5px solid #0000002a;
      }
      .deskdrop .dropdown-menu li img {
-        width: 30px;
-        height: 30px;
+        width: 25%;
+        height: auto;
         padding-right: 8px;
         position: relative;
-        top: 5px;
+        top: 4px;
      }
   }

@@ -13,7 +13,7 @@ import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 import Menu from '../Components/Menu'
 
-function BDSM() {
+function Trans() {
   return (
     <>
     <Navbar />
@@ -221,4 +221,4 @@ function BDSM() {
   )
 }
 
-export default BDSM
+export default Trans

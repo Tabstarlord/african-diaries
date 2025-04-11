@@ -13,7 +13,7 @@
     font-size: 18px;
   }
 
-  @media screen and (min-width: 1028px) {
+  @media screen and (min-width: 1025px) {
     .cat {
       display: none;
     }
@@ -21,22 +21,25 @@
       display: contents;
     }
     .deskcat span {
-      font-size: 17px;
+      font-size: 12px;
       position: relative;
-    left: -205px;
-      bottom: 25px;
+    left: -175px;
+      bottom: 10px;
      
     }
     .deskcat img {
-      width: 8%;
-      height: 8%;
+      width: 4%;
+      height: auto;
       padding: 2px 4px;
       position: relative;
-      left: -210px;
+      left: -180px;
     }
     .deskcat .arrow {
-      width: 7%;
-      height: 7%;
+      width: 4%;
+      height: auto;
+      position: relative;
+      left: -175px;
+      top: 1px;
     }
   }
   /*@media only screen and (min-width: 1200px) {
