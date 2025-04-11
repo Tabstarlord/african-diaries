@@ -165,10 +165,17 @@
     margin-bottom: -270px;
   }
 }
-@media screen and (min-width: 1025px) {
-  .back-4 {
-    position: relative;
-    top: 50px;
-    right: 130px;
+@media only screen and (min-width: 1025px) {
+  .reg-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 400px;
   }
+  .back-4 {
+    position: fixed;
+    top: 3em;
+    right: 19em;
+  }
+  
 }

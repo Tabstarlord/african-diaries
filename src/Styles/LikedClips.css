@@ -91,70 +91,69 @@
   width: 15%;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1025px) {
   .usernav {
     display: contents;
   }
-  .clip7 {
+  .clip7 .clip-container {
     display: flex;
-  }
-  .clip7 .image {
-    margin-top: 5px;
-    width: 210px;
-    padding: 10px 10px;
+    gap: 16px;
+    width: 15vw;
+    padding-left: 16em;
     position: relative;
-    left: 20%;
+    bottom: 18em;
   }
-  .image a span {
-    width: 220px;
-    font-size: 13px;
-    position: relative;
-    right: 30px;
+  .clip-container .image {
+    width: 14vw;
   }
-  .image a p {
-    width: 220px;
-    height: 17px;
+  .clip-container .image a span {
+    width: 14vw;
+    font-size: 0.75em;
     position: relative;
-    right: 55px;
+    right: 1em;
+  }
+  .clip-container .image a p {
+    width: 100%;
+    position: relative;
+    right: 2.5em;
   }
   .clip7 .image a p .eye {
-    width: 17px;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 2px;
   }
   .clip6 {
-    margin-top: -55px;
     position: relative;
-    left: 20%;
+    left: 22%;
   }
   .clip6 .topic {
-    font-size: 13px;
-    gap: 60px;
-  }
-  .clip4 .details {
+    font-size: 16px;
+    gap: 6em;
     position: relative;
-    top: 150%;
-    right: 150px;
+    bottom: 18em;
   }
-  .clip4 .details1 {
-    position: relative;
-    top: 103%;
-    margin-left: -80%;
+  .clip4 {
+    font-size: 16px;
+    margin-top: 20em;
+    right: 10em;
   }
   .clip3 .dp {
-    width: 160px;
+    width: 150px;
     position: relative;
-    left: 45px;
-    top: 120px;
+    left: 1em;
+    top: 6em;
   }
   .clip3 .user {
     width: 100%;
     position: relative;
-    top: 100px;
+    top: 4.5em;
     left: 270px;
   }
 .clip1 h2 {
   position: relative;
-  top: 155px;
-  left: -600px;
+  top: 9em;
+  left: -30.5em;
 }
   .clip1 .cancel {
     display: none;

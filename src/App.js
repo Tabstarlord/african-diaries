@@ -15,6 +15,7 @@ import Notification from './User Dashboard/Notification';
 import NoVideos from './User Dashboard/NoVideos';
 import Setting from './User Dashboard/Setting';
 import NoNotification from './User Dashboard/NoNotification';
+import UserNavbar from './User Dashboard/UserNavbar';
 import Amatuer from './Categories/Amatuer'
 import Anal from './Categories/Anal'
 import BDSM from './Categories/BDSM'
@@ -41,6 +42,9 @@ import Student from './Categories/Student'
 import Teacher from './Categories/Teacher'
 import Wanking from './Categories/Wanking';
 import Trans from './Categories/Trans';
+
+
+import Dashboard from './User Dashboard/Dashboard';
 
 
 
@@ -72,6 +76,9 @@ function App() {
           element={ <Setting /> } />
           <Route path='/NoNotification' 
           element={ <NoNotification /> } />
+          <Route path='/UserNavbar' 
+          element={ <UserNavbar /> } />
+
           <Route path='/Amatuer' 
           element={ <Amatuer /> } />
           <Route path='/Anal' 
@@ -124,8 +131,10 @@ function App() {
           element={ <Wanking /> } />
            <Route path='/Trans' 
           element={ <Trans /> } />
+
           
-          
+<Route path='/Dashboard' 
+          element={ <Dashboard /> } />
 
 
 

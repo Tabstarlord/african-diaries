@@ -21,7 +21,7 @@
   width: 70%;
   padding: 14px 2px 9px;
   margin-bottom: 15px;
-  border: 1px solid #fefefe56;
+  border: 0.25px solid #fefefe56;
   border-radius: 4px;
   font-size: 12px;
   border-radius: 8px 0px 0px 8px;
@@ -60,7 +60,7 @@
   border-radius: 4px;
   font-size: 12px;
   border-radius: 8px 0px 0px 8px;
-  border: 1px solid #000;
+  border: 0.25px solid #000;
   }
   .searchForm form button {
     background-color: #008000;
