@@ -16,11 +16,11 @@
     width: 100%;
     justify-content: center;
     position: relative;
-    left: 21%;
+    left: 20vw;
     bottom: 20px;
   }
   .footer .foot {
-    width: 78%;
+    width: 75vw;
     height: 59px;
     padding: 4px;
     font-size: 13px;

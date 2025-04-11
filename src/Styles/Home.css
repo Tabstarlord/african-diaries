@@ -148,6 +148,10 @@
     width: 100%;
     padding-left: 10vw;
   }
+  .home-footer {
+    position: relative;
+    left: -10vw;
+  }
 }
 
 @media only screen and (min-width:1440px) {

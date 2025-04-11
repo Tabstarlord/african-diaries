@@ -17,7 +17,7 @@
     display: none;
   }
   .deskver {
-    display: contents;
+    display: none;
   }
   .deskver span {
     font-size: 12px;

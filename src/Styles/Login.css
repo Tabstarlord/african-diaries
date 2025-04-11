@@ -220,77 +220,20 @@ body {
 }
 }
 
-@media only screen and (min-width: 1200px) {
-  .login {
-    background: url('../Assets/Frame16.png');
-    background-attachment: fixed;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    margin: auto;
-    font-family: 'DM sans', sans-serif;
-    color: #FEFEFE;
-    overflow: hidden;
-  }
-  .login-3 {
-    padding-top: 10%;
-    padding-bottom: 5%;
-  }
-  .back-3 {
-    width: 40px;
-    margin-top: -1%;
-    margin-left: 4%;
-  }
+@media only screen and (min-width: 1025px) {
   .login-4 {
     margin-left: auto;
     margin-right: auto;
-    margin-top: -20px;
     width: 50%;
+    margin-bottom: 400px;
   }
-  .login-4 h1 {
-    font-size: 20px;
-    padding-bottom: 40px;
+  .back-3 {
+    position: fixed;
+    top: 3em;
+    right: 17em;
   }
-  .login-4 .log-1 {
-    padding: 30px;
-    width: 90%;
-    border-radius: 12px;
-  }
-  .login-4 label {
-    font-size: 20px;
-  }
-  .login-4 .btn-3 {
-    padding: 15px 260px;
-    font-size: 20px;
-  }
-  .forget {
+  .login-2 .btn-2 {
     font-size: 16px;
-    position: relative;
-    top: -3px;
-  }
-  .remfor {
-    margin-left: -22%;
-  }
-  .remember {
-    width: 20px;
-  }
-  .remember1 {
-    position: relative;
-    bottom: 17px;
-    font-size: 16px;
-  }
-  .orlog img {
-    width: 40%;
-  }
-  .login-social img {
-    width: 10%;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  .btn-2 {
-    font-size: 20px
+    margin-bottom: -250px;
   }
 }
-

@@ -219,8 +219,10 @@ function Home() {
         </li>
       </ul>
       </div>
-
+      <div className='home-footer'>
       <Footer />
+      </div>
+      
       <div className='social'>
         <Link to=''><img className='g' src={google} alt='google' /></Link>
         <Link to='https://x.com/africandiaries1?s=21'><img className='t' src={x} alt='Twitter' /></Link>

@@ -132,6 +132,9 @@
           position: relative;
           top: 2px;
         }
+        Footer {
+          display: none;
+        }
       }
       
       @media only screen and (min-width:1440px) {

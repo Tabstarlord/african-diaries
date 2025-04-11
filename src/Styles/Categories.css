@@ -18,12 +18,12 @@
       display: none;
     }
     .deskcat {
-      display: contents;
+      display: none;
     }
     .deskcat span {
       font-size: 12px;
       position: relative;
-    left: -175px;
+      left: -180px;
       bottom: 10px;
      
     }
@@ -38,8 +38,7 @@
       width: 4%;
       height: auto;
       position: relative;
-      left: -175px;
-      top: 1px;
+      left: -140px;
     }
   }
   /*@media only screen and (min-width: 1200px) {
