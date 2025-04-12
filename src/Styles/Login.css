@@ -247,3 +247,33 @@ body {
   top: 0.25em;
 }
 }
+
+@media only screen and (min-width: 1440px) {
+  .login-4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 550px;
+    position: relative;
+    top: 15em;
+  }
+  .back-3 {
+    position: fixed;
+    top: 18em;
+    right: 20em;
+  }
+  .login-2 .btn-2 {
+    font-size: 16px;
+    margin-bottom: -250px;
+  }
+  .forget {
+    width: 100%;
+    position: relative;
+    left: 23em; 
+}
+.remember {
+  position: relative;
+  left: 3em;
+  top: 0.25em;
+}
+}

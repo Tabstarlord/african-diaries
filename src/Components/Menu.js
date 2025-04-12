@@ -128,7 +128,7 @@ function Menu() {
         <li className='nav-item'>
             <Link to='/Straight' className='nav-link'>
             <img src={Straight} alt='video' />
-            <span className='nav-label'>Straignt</span>
+            <span className='nav-label'>Straight</span>
             </Link>
           </li>
           <li className='nav-item'>

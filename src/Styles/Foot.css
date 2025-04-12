@@ -19,6 +19,8 @@
 .foot-1 {
   font-size: 13px;
   margin-left: 100px;
+  position: relative;
+  top: 1em;
 }
 }
 

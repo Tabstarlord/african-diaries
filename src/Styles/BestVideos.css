@@ -106,24 +106,25 @@
       @media only screen and (min-width:1025px) {
 
         .best {
-          width: 80vw;
+          width: 95vw;
           max-width: 100%;
-          margin-top: 5vh;
+          padding-top: 8vh;
         }    
         .best .best-container {
           display: flex;
-          gap: 14px;
-          width: 15vw;
-          padding-left: 13vw;
+          gap: 16px;
+          width: 16vw;
+          padding-left: 15vw;
           margin-top: -6vh;
           text-align: left;
         }
         .best-container .image a span {
           width: 14vw;
-          font-size: 0.75em;
+          font-size: 1em;
         }
         .best-container .image a p {
           width: 100%;
+          font-size: 1em;
       
         }
         .best-container .image a p .eye {
@@ -139,32 +140,33 @@
       
       @media only screen and (min-width:1440px) {
         .best {
-          width: 80vw;
+          width: 100vw;
           max-width: 100%;
-          margin-top: -10vh;
+          margin-top: -1vh;
         }
         .best .best-container {
           display: flex;
-          gap: 14px;
-          width: 15vw;
-          padding-left: 14vw;
+          gap: 19px;
+          width: 16vw;
+          padding-left: 17vw;
           margin-top: -6vh;
           text-align: left;
         }
         .best-container .image a span {
-          width: 14vw;
-          font-size: 1.0em;
-          padding-left: 2em;
+          width: 50vw;
+          font-size: 1.1em;
+          padding-left: 0em;
         }
         .best-container .image a p {
           width: 100%;
           padding-left: 0.2em;
-      
+          font-size: 1.1em;
         }
         .best-container .image a p .eye {
           width: 12px;
           height: 12px;
           position: relative;
-          top: 2px;
+          top: 1px;
+          right: 3px;
         }
       }

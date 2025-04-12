@@ -108,6 +108,8 @@ color: #fff;
   width: 70%;
   border: 1px solid #fff;
   margin-bottom: 200px;
+  position: relative;
+  top: 5em;
 }
 .warn3 .go {
   font-size: 30px;
@@ -148,11 +150,48 @@ margin-top: -15px;
 
 @media only screen and (min-width: 1025px) {
   .warn-1 {
+    position: relative;
+    top: 5em;
+    border: 0.1px solid #fff;
+    background-color: #8080800e;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     margin-bottom: 300px;
+    overflow-y: hidden;
+}
+.warn2 {
+  overflow-y: hidden;
+}
+.warn6 .go5 {
+  padding: 20px 50px;
+}
+.warn6 .go6 {
+  padding: 20px 60px;
+}
 }
 
+@media only screen and (min-width: 1440px) {
+  .warn-1 {
+    position: relative;
+    top: 9em;
+    border: 0.1px solid #fff;
+    background-color: #8080800e;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 550px;
+    overflow-y: hidden;
+}
+.warn2 {
+  overflow-y: hidden;
+}
+.warn6 .go5 {
+  padding: 20px 50px;
+}
+.warn6 .go6 {
+  padding: 20px 60px;
+}
 }

@@ -79,24 +79,25 @@ font-family: 'DM Sans', sans-serif;
       @media only screen and (min-width:1025px) {
        
         .new {
-          width: 80vw;
+          width: 95vw;
           max-width: 100%;
-          padding-top: 15vh;
+          padding-top: 8vh;
         }
         .new .new-container {
           display: flex;
-          gap: 14px;
-          width: 15vw;
-          padding-left: 13vw;
+          gap: 18px;
+          width: 16vw;
+          padding-left: 15vw;
           margin-top: -6vh;
           text-align: left;
         }
         .new-container .image a span {
           width: 14vw;
-          font-size: 0.75em;
+          font-size: 1em;
         }
         .new-container .image a p {
           width: 100%;
+          font-size: 1em;
         }
         .new-container .image a p .eye {
           width: 12px;
@@ -108,33 +109,34 @@ font-family: 'DM Sans', sans-serif;
       
       @media only screen and (min-width:1440px) {
         .new {
-          width: 80vw;
+          width: 100vw;
           max-width: 100%;
-          margin-top: -3vh;
+          margin-top: -1vh;
         }
         .new .new-container {
           display: flex;
-          gap: 14px;
-          width: 15vw;
-          padding-left: 14vw;
+          gap: 19px;
+          width: 16vw;
+          padding-left: 17vw;
           margin-top: -6vh;
           text-align: left;
         }
         .new-container .image a span {
-          width: 14vw;
-          font-size: 1em;
-          padding-left: 2em;
+          width: 50vw;
+          font-size: 1.1em;
+          padding-left: 0em;
         }
         .new-container .image a p {
           width: 100%;
           position: relative;
-          left: 0.2em;
-      
+          left: 0em;
+          font-size: 1.1em;
         }
         .new-container .image a p .eye {
           width: 12px;
           height: 12px;
           position: relative;
-          top: 2px;
+          top: 1px;
+          right: 3px;
         } 
       }

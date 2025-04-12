@@ -177,5 +177,20 @@
     top: 3em;
     right: 19em;
   }
-  
+}
+
+@media only screen and (min-width: 1440px) {
+  .reg-2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 550px;
+    position: relative;
+    top: 15em;
+  }
+  .back-4 {
+    position: fixed;
+    top: 18em;
+    right: 20em;
+  }
 }
