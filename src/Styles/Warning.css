@@ -164,11 +164,16 @@ margin-top: -15px;
 .warn2 {
   overflow-y: hidden;
 }
+.warn6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .warn6 .go5 {
-  padding: 20px 50px;
+  padding: 20px 70px;
 }
 .warn6 .go6 {
-  padding: 20px 60px;
+  padding: 20px 80px;
 }
 }
 
@@ -189,9 +194,9 @@ margin-top: -15px;
   overflow-y: hidden;
 }
 .warn6 .go5 {
-  padding: 20px 50px;
+  padding: 20px 70px;
 }
 .warn6 .go6 {
-  padding: 20px 60px;
+  padding: 20px 80px;
 }
 }
