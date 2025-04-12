@@ -157,18 +157,24 @@ margin-top: -15px;
     background-color: #8080800e;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 65%;
     position: relative;
     top: 1em;
 }
 .warn2 {
   overflow-y: hidden;
 }
+.warn5 {
+  position: relative;
+  bottom: 2em;
+}
 .warn6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: -25em;
+  position: relative;
+  bottom: 8em;
+  margin-bottom: -42em;
 }
 .warn6 .go5 {
   padding: 20px 70px;
