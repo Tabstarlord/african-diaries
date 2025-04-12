@@ -5,8 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'DM Sans', sans-serif;
-  height: fit-content;
+  height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 .warn1 {
   background-color: rgba(0, 0, 0, 0.815);
@@ -14,6 +15,8 @@
   height: fit-content;
   background-repeat: no-repeat;
   width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 .warn2 {
   margin-top: -20px;
