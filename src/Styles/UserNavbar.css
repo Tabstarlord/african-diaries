@@ -4,21 +4,25 @@
   position: fixed;
   width: 100%;
   background-color: #fff;
-  margin-top: 50px;
+  margin-top: 10px;
   border-bottom: 0.5px solid #000;
 }
 .dashboard .logo {
 position: relative;
-bottom: 7px;
+left: 20px;
+
 }
 .profile {
   position: relative;
-  left: 87%;
-  bottom: 20px;
+  left: 100%;
+  bottom: 5px;
 }
 .user {
   position: relative;
   bottom: 12px;
   right: 10px;
+}
+.dashboard .searchbar {
+  margin-top: 20px;
 }
 

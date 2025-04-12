@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom'
 import dp from '../Assets/dp.png'
 import back from '../Assets/cancel-01.png'
 import frame20 from '../Assets/Emptybox.png'
+import UserNavbar from './UserNavbar'
 import '../Styles/NoNotification.css'
 
 function NoNotification() {
   return (
     <>
     <div className='no'>
+      <div className='usernav'>
+            <UserNavbar />
+            </div>
       <div className='no1'>
             <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
-            <h2>Profile</h2>
+            <h2>Profile Information</h2>
             </div>
       
             <div className='no2'>

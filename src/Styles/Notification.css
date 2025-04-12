@@ -1,3 +1,6 @@
+.usernav {
+  display: none;
+}
 .not {
   margin: auto;
   width: auto;
@@ -73,57 +76,148 @@
 .dot-1 {
   margin: auto;
   width: 100%;
+  margin-bottom: -6em;
 }
-.dot-1 .dot {
-  display: flex;
-  flex-direction: row;
-}
-.dot-1 .dot li{
-  list-style: none;
-  font-weight: 500;
-  font-size: 13px
-}
-.dot-1 .dot .dot1 {
-  margin-left: -40px;
-}
-.dot-1 .dot .dot2 {
+.dot-1 .dot1 {
   position: relative;
-  left: 6px;
+  right: 11em;
 }
-.dot-1 .dot .dot3 {
+.dot-1 .dot2 {
   position: relative;
-  left: 30px;
+  right: 9em;
+  bottom: 25px;
 }
-.dot-1 .dot .dot4 {
+.dot-1 .dot3 {
+  font-size: 13px;
+  text-align: center;
   position: relative;
-  left: 45px;
-  bottom: 5px;
+  bottom: 60px;
+}
+.dot-1 .dot4 {
+  position: relative;
+  left: 9.4em;
+  bottom: 5.3em;
 }
 .dot-1 .dot5 {
-  font-weight: 500;
   font-size: 10px;
   position: relative;
-  bottom: 50px;
-  right: 85px;
+  bottom: 6em;
+  right: 4.3em;
+ 
 }
 
-@media only screen and (min-width: 425px) and (max-width: 767px) {
-  .not6 .topics1{
-    gap: 35px;
+@media only screen and (min-width:768px) {
+  .not3 .user {
+    position: relative;
+    left: 1em;
   }
-  .dot-1 .dot {
-    margin: auto;
-    width: 75%;
+  .not3 .dp {
+    position: relative;
+    left: 1em;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .dot-1 .dot {
-    margin: auto;
-    width: 100%;
+  .not4 {
+    position: relative;
+    left: 1em;
+  }
+  .dot-1 {
+    max-width: 100%;
+  }
+  .dot-1 .dot1 {
+    position: relative;
+    right: 23em;
+  }
+  .dot-1 .dot2 {
+    right: 21em;
+  }
+  .dot-1 .dot3 {
+    right: 15em;
   }
   .dot-1 .dot5 {
-    margin-right: 380px;
+    right: 14em;
   }
+  .dot-1 .dot4 {
+    left: 21em;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .not .usernav {
+    display: contents;
+  }
+  .not6 {
+    position: relative;
+    left: 22%;
+  }
+  .not6 .topics1 {
+    font-size: 16px;
+    gap: 6em;
+    position: relative;
+    bottom: 18em;
+  }
+  .not4{
+    font-size: 16px;
+    margin-top: 20em;
+    margin-left: -10em;
+    position: relative;
+  }
+  .not3 .dp {
+    width: 150px;
+    position: relative;
+    left: 1em;
+    top: 6em;
+  }
+  .not3 .user {
+    width: 100%;
+    position: relative;
+    top: 4.5em;
+    left: 270px;
+  }
+  .not1 h2 {
+    position: relative;
+    top: 9em;
+    right: 37em;
+  }
+    .not1 .cancel {
+      display: none;
+    }
+    .dot-1 {
+      width: 100vw;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10em;
+      position: relative;
+      bottom: 16.5em;
+      margin-bottom: 2em;
+    }
+    
+    .dot-1 .dot1 {
+      width: 6px;
+      height: 6px;
+      position: relative;
+      left: 9em;
+    }
+    .dot-1 .dot2 {
+      position: relative;
+      top: 0em;
+      left: 0em;
+    }
+    .dot-1 .dot5 {
+      position: relative;
+      top: 1em;
+      right: 36em;
+      font-size: 10px;
+    }
+    .dot-1 .dot3 {
+      position: relative;
+      right: 10em;
+      top: 0em;
+    }
+    .dot-1 .dot4{
+      position: relative;
+      left: 20em;
+      top: -1em;
+    }
+   
 }
 

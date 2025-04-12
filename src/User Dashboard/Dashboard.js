@@ -9,7 +9,7 @@ function Dashboard() {
    <Link to='/NoNotification'>User No Notification</Link>
    <Link to='/Notification'>User Notification</Link>
    <Link to='/NoVideos'>User No Liked Videos</Link>
-   <Link to='/Settings'>User Settings</Link>
+   <Link to='/Setting'>User Settings</Link>
    <Link to='/UserNavbar'>User Navbar</Link>
    <Link to='/Home'>Back to Home</Link>
    </div>

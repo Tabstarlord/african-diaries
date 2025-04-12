@@ -10,7 +10,7 @@ function UserNavbar() {
     <>
     <div className='dashboard'>
     <div className='logo'>
-        <Link to='/'><img src={Logo} alt='/' /></Link>
+        <Link to='/Home'><img src={Logo} alt='/' /></Link>
       </div>
 
       <div className='searchbar'>

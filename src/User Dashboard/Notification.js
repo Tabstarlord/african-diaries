@@ -11,8 +11,10 @@ import UserNavbar from './UserNavbar'
 function Notification() {
   return (
     <>
-      <UserNavbar />
     <div className='not'>
+    <div className='usernav'>
+            <UserNavbar />
+            </div>
      <div className='not1'>
       <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
         <h2>Profile Information</h2>
@@ -50,31 +52,56 @@ function Notification() {
     </div>
 
 
-
       <div className='dot-1'>
-        <ul className='dot'>
-          <li className='dot1'><img src={red} alt='jpg' /></li>
-          <li className='dot2'><img className='dot2' src={frame3} alt='jpg' /></li>
-          <li className='dot3'><span>Jaybougie replied to your comment</span></li>
-          <li className='dot4'><img src={frame16} alt='jpg' /></li>
-        </ul>
-        <p className='dot5'>Just Now</p>
-
-        <ul className='dot'>
-          <li className='dot1'><img src={red} alt='jpg' /></li>
-          <li className='dot2'><img className='dot2' src={frame3} alt='jpg' /></li>
-          <li className='dot3'><span>Busty Princess liked your comment</span></li>
-          <li className='dot4'><img src={frame16} alt='jpg' /></li>
-        </ul>
-        <p className='dot5'>12 mins ago</p>
-
-        <ul className='dot'>
-          <li className='dot1'><img src={red} alt='jpg' /></li>
-          <li className='dot2'><img className='dot2' src={frame3} alt='jpg' /></li>
-          <li className='dot3'><span>Jamial Red replied to your comment</span></li>
-          <li className='dot4'><img src={frame16} alt='jpg' /></li>
-        </ul>
-        <p className='dot5'>2 day ago</p>
+        <div className='dot1'>
+          <img  src={red} alt='jpg' />
+        </div>
+        <div className='dot2'>
+          <img src={frame3} alt='jpg' />
+          </div>
+        <div className='dot3'>
+          <span>Jaybougie replied to your comment</span>
+          </div>
+          <div className='dot4'>
+          <img src={frame16} alt='jpg' />
+          </div>
+          <div className='dot5'>
+          <p className='dot5'>Just Now</p>
+          </div>
+      </div>
+      <div className='dot-1'>
+        <div className='dot1'>
+          <img  src={red} alt='jpg' />
+        </div>
+        <div className='dot2'>
+          <img src={frame3} alt='jpg' />
+          </div>
+        <div className='dot3'>
+          <span>Busty Princess liked your comment</span>
+          </div>
+          <div className='dot4'>
+          <img src={frame16} alt='jpg' />
+          </div>
+          <div className='dot5'>
+          <p className='dot5'>12 mins ago</p>
+          </div>
+      </div>
+      <div className='dot-1'>
+        <div className='dot1'>
+          <img  src={red} alt='jpg' />
+        </div>
+        <div className='dot2'>
+          <img src={frame3} alt='jpg' />
+          </div>
+        <div className='dot3'>
+          <span>Jamial Red replied to your comment</span>
+          </div>
+          <div className='dot4'>
+          <img src={frame16} alt='jpg' />
+          </div>
+          <div className='dot5'>
+          <p className='dot5'>2 day ago</p>
+          </div>
       </div>
       </div>
     </>
