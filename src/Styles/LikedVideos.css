@@ -80,7 +80,7 @@
   .liked {
     width: 95vw;
     max-width: 100%;
-    padding-top: 8vh;
+    padding-top: 10vh;
   }
   .liked .liked-container {
     display: flex;

@@ -81,7 +81,7 @@ font-family: 'DM Sans', sans-serif;
         .new {
           width: 95vw;
           max-width: 100%;
-          padding-top: 8vh;
+          padding-top: 10vh;
         }
         .new .new-container {
           display: flex;

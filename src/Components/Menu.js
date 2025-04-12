@@ -94,11 +94,6 @@ function Menu() {
       <nav className='sidebar-nav'>
         {/*Primary Top Nav*/}
         <ul className='nav-list primary-nav'>
-        <li className='nav-item'>
-            <Link to='/Dashboard' className='nav-link'>
-            <span className='nav-label'>Dashboard</span>
-            </Link>
-          </li>
           <li className='nav-item'>
             <Link to='/BestVideos' className='nav-link'>
             <img src={video} alt='video' />
