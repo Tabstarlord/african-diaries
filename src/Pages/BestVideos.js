@@ -12,6 +12,7 @@ import Foot from '../Components/Foot'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import Menu from '../Components/Menu'
+import video from '../Assets/video-play.png'
 
 function BestVideos() {
   return (
@@ -22,7 +23,9 @@ function BestVideos() {
           <Menu />
       </div>
      </div>
+     
     <div className='best'>
+    <img className='best-icon' src={video} alt='jpg' />
     <div className='best-container'>
             <div className='image'>
               <Link to='/ViewVideos'><img src={frame3} alt='Bang' />
