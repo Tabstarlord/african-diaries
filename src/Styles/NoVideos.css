@@ -29,6 +29,8 @@
 .nov2 .nov3 .user {
   font-weight: 500;
   font-size: 20px;
+  position: relative;
+  left: 10px;
 }
 .nov2 .nov3 .dp {
   position: relative;

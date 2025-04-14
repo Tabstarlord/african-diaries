@@ -110,12 +110,6 @@
           max-width: 100%;
           padding-top: 10vh;
         }    
-        .best-icon {
-          z-index: 99;
-          position: relative;
-          bottom: 9.4em;
-          right: 25em;
-        }
         .best .best-container {
           display: flex;
           gap: 16px;
@@ -126,7 +120,7 @@
         }
         .best-container .image a span {
           width: 14vw;
-          font-size: 1em;
+          font-size: 0.9em;
         }
         .best-container .image a p {
           width: 100%;

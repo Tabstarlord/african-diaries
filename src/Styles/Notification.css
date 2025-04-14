@@ -23,6 +23,8 @@
 .not2 .not3 .user {
   font-weight: 500;
   font-size: 20px;
+  position: relative;
+  left: 10px;
 }
 .not2 .not3 .dp {
   position: relative;
@@ -157,25 +159,25 @@
   .not4{
     font-size: 16px;
     margin-top: 20em;
-    margin-left: -10em;
+    margin-left: -18em;
     position: relative;
   }
   .not3 .dp {
     width: 150px;
     position: relative;
-    left: 1em;
+    margin-right: 5em;
     top: 6em;
   }
   .not3 .user {
     width: 100%;
     position: relative;
+    padding-left: 10em;
     top: 4.5em;
-    left: 270px;
   }
   .not1 h2 {
     position: relative;
     top: 9em;
-    right: 37em;
+    right: 35em;
   }
     .not1 .cancel {
       display: none;

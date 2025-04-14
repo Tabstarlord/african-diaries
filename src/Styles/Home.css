@@ -128,11 +128,11 @@
   }
   .home-container .image a span {
     width: 14vw;
-    font-size: 1em;
+    font-size: 0.9em;
   }
   .home-container .image a p {
     width: 100%;
-    top: -1vh;
+    top: -0.7vh;
     font-size: 1em;
 
   }
@@ -151,9 +151,9 @@
     padding-left: 5vw;
   }
   .home-footer {
-    width: 120vw;
+    width: 100vw;
     position: relative;
-    margin-left: -18vw;
+    left: -2em;
   }
 }
 

@@ -15,6 +15,7 @@ import Categories from './Categories'
 import Dropdown from './Dropdown'
 import Version from './Version'
 import DropVersion from './DropVersion'
+import Dashboard from '../User Dashboard/Dashboard'
 
 
 
@@ -37,6 +38,7 @@ function Menu() {
     <div className='mobile-menu'>
     <aside className='sidebar'>
       {/* Sidebar Header*/}
+    
 
       <nav className='sidebar-nav'>
         {/*Primary Top Nav*/}
@@ -90,6 +92,7 @@ function Menu() {
     <div className='desktop-menu'>
     <aside className='sidebar'>
       {/* Sidebar Header*/}
+      <Dashboard />
 
       <nav className='sidebar-nav'>
         {/*Primary Top Nav*/}

@@ -23,6 +23,8 @@
 .clip2 .clip3 .user {
   font-weight: 500;
   font-size: 20px;
+  position: relative;
+  left: 5px;
 }
 .clip2 .clip3 .dp {
   position: relative;
@@ -96,7 +98,7 @@
     display: flex;
     gap: 16px;
     width: 15vw;
-    padding-left: 16em;
+    padding-left: 19em;
     position: relative;
     bottom: 18em;
   }
@@ -133,24 +135,24 @@
   .clip4 {
     font-size: 16px;
     margin-top: 20em;
-    right: 10em;
+    right: 18em;
   }
   .clip3 .dp {
     width: 150px;
     position: relative;
-    left: 1em;
+    right: 3em;
     top: 6em;
   }
   .clip3 .user {
     width: 100%;
     position: relative;
+    padding-left: 10em;
     top: 4.5em;
-    left: 270px;
   }
 .clip1 h2 {
   position: relative;
   top: 9em;
-  right: 32em;
+  right: 34em;
 }
   .clip1 .cancel {
     display: none;

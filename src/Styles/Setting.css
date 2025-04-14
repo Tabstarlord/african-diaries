@@ -23,6 +23,8 @@
 .set2 .set3 .user {
   font-weight: 500;
   font-size: 20px;
+  position: relative;
+  left: 10px;
 }
 .set2 .set3 .dp {
   position: relative;
@@ -116,24 +118,24 @@
   .set4 {
     font-size: 16px;
     margin-top: 20em;
-    right: 8em;
+    right: 17em;
   }
   .set3 .dp {
     width: 150px;
     position: relative;
-    left: 1em;
+    left: -2em;
     top: 6em;
   }
   .set3 .user {
     width: 100%;
     position: relative;
     top: 4.5em;
-    left: 270px;
+    padding-left: 10em;
   }
   .set1 h2 {
     position: relative;
     top: 9em;
-    right: 37em;
+    right: 35em;
   }
     .set1 .cancel {
       display: none;
