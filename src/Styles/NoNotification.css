@@ -89,6 +89,9 @@
   .no .usernav {
     display: contents;
   }
+  .no-notification {
+    margin-top: -5vh;
+  }
   .no6 {
     position: relative;
     left: 22%;

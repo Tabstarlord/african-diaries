@@ -15,6 +15,9 @@ function NoVideos() {
       <div className='liked-navbar'>
         <UserNavbar />
       </div>
+      <div className='no-videos'>
+
+      
       <div className='nov1'>
             <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
             <h2>Profile Information</h2>
@@ -64,6 +67,7 @@ function NoVideos() {
       <div className='desktop-footer'>
         <Footer />
         <Foot />
+      </div>
       </div>
       </div>
     </>

@@ -105,6 +105,9 @@
   .acc .set-navbar {
     display: contents;
   }
+  .settings {
+    margin-top: -5vh;
+  }
   .set6 {
     position: relative;
     left: 22%;

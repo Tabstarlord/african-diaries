@@ -99,6 +99,9 @@
   .nov .liked-navbar {
     display: contents;
   }
+  .no-videos {
+    margin-top: -5vh;
+  }
   .nov6 {
     position: relative;
     left: 22%;

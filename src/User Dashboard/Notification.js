@@ -15,6 +15,9 @@ function Notification() {
     <div className='usernav'>
             <UserNavbar />
             </div>
+            <div className='notification'>
+
+           
      <div className='not1'>
       <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
         <h2>Profile Information</h2>
@@ -102,6 +105,7 @@ function Notification() {
           <div className='dot5'>
           <p className='dot5'>2 day ago</p>
           </div>
+      </div>
       </div>
       </div>
     </>

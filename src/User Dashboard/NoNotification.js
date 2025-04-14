@@ -13,6 +13,7 @@ function NoNotification() {
       <div className='usernav'>
             <UserNavbar />
             </div>
+      <div className='no-notification'>
       <div className='no1'>
             <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
             <h2>Profile Information</h2>
@@ -58,6 +59,7 @@ function NoNotification() {
           <p className='tag33'>No Notifications</p>
           <p className='tag44'>Al comment replies and likes will be here!</p>
         </div>
+      </div>
       </div>
       </div>
     </>

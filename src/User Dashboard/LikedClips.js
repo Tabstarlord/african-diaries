@@ -14,7 +14,7 @@ function LikedClips() {
       <div className='usernav'>
       <UserNavbar />
       </div>
-      
+      <div className='liked-clips'>
       <div className='clip-01'>
       <div className='clip1'>
       <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
@@ -183,9 +183,8 @@ function LikedClips() {
               <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
               </Link>
               </div>
-        </div>
-             
-
+        </div> 
+      </div>
       </div>
       
       

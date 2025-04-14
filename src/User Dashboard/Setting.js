@@ -27,6 +27,8 @@ function Setting() {
       <div className='set-navbar'>
       < UserNavbar />
       </div>
+      <div className='settings'>
+
    <div className='set1'>
          <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
          <h2>Profile Information</h2>
@@ -109,7 +111,7 @@ function Setting() {
         </fieldset>
       </div>
 
-
+      </div>
     </div>
     
     </>

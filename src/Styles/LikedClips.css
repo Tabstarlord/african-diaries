@@ -94,6 +94,9 @@
   .clip .usernav {
     display: contents;
   }
+  .liked-clips {
+    margin-top: -5vh;
+  }
   .clip7 .clip-container {
     display: flex;
     gap: 16px;

@@ -146,6 +146,9 @@
   .not .usernav {
     display: contents;
   }
+  .notification {
+    margin-top: -5vh;
+  }
   .not6 {
     position: relative;
     left: 22%;
