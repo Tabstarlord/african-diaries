@@ -115,24 +115,24 @@
   .nov4 {
     font-size: 16px;
     margin-top: 20em;
-    right: 8em;
+    right: 17em;
   }
   .nov3 .dp {
     width: 150px;
     position: relative;
-    left: 1em;
+    left: -2em;
     top: 6em;
   }
   .nov3 .user {
     width: 100%;
     position: relative;
     top: 4.5em;
-    left: 270px;
+    padding-left: 10em;
   }
   .nov1 h2 {
     position: relative;
     top: 9em;
-    right: 37em;
+    right: 35em;
   }
     .nov1 .cancel {
       display: none;
