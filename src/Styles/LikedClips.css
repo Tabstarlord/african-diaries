@@ -112,12 +112,13 @@
     width: 14vw;
     font-size: 0.75em;
     position: relative;
-    right: 2.5em;
+    right: 1.8em;
+    top: -0em;
   }
   .clip-container .image a p {
     width: 100%;
     position: relative;
-    right: 4em;
+    right: 3.3em;
   }
   .clip7 .image a p .eye {
     width: 12px;

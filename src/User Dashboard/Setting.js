@@ -7,17 +7,17 @@ import UserNavbar from './UserNavbar'
 
 function Setting() {
 
-  const [email, setEmail] = useState("");
-    const [userName, setUserName] = useState("");
-    const [password, setPassword] = useState("");
+  const [email, setEmail] = useState(localStorage.getItem("email") || "");
+    const [userName, setUserName] = useState(localStorage.getItem("udername") || "");
+    const [password, setPassword] = useState(localStorage.getItem("password")|| "");
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(
-        email,
-        userName,
-        password
-      );
+      localStorage.setItem("username", userName);
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+      alert("Changes saved!")
+      
     };
 
   return (
@@ -68,7 +68,7 @@ function Setting() {
 
       <div className='acc2'>
         <fieldset>
-          <form action='#' method='get'>
+          <form action='#' method='get' onSubmit={handleSubmit}>
           <label htmlFor='username'>Username</label>
           <input 
           className='get1'
@@ -105,8 +105,7 @@ function Setting() {
 
 <button className='get2'
            type='submit'
-           value='Submit'
-           onClick={(e) => handleSubmit(e)}>Save Changes</button>
+           >Save Changes</button>
           </form>
         </fieldset>
       </div>

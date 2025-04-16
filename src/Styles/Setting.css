@@ -149,8 +149,18 @@
       float: right;
       position: relative;
       bottom: 17em;
+      border: none;
     }
     .acc2 .get1 {
       margin-bottom: 3em;
     }
+    .acc2 .get2 {
+      margin-left: auto;
+      margin-right: auto;
+      width: 15%;
+      position: relative;
+      left: 42%;
+      margin-top: -1rem;
+    }
+    
 }

@@ -82,7 +82,7 @@ function Notification() {
         <div className='dot3'>
           <span>Busty Princess liked your comment</span>
           </div>
-          <div className='dot4'>
+          <div className='dot40'>
           <img src={frame16} alt='jpg' />
           </div>
           <div className='dot5'>
