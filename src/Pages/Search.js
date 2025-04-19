@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Styles/Search.css'
-import searchBar from '../Assets/Vector.png'
+import searchBar from '../Assets/search.png'
 class Search extends React.Component {
   state = {
     query: "",
@@ -51,7 +51,7 @@ render() {
     <div className='searchForm'>
       <form>
         <input placeholder='Search for...' value={this.state.query} onChange={this.handleInputChange} />
-        <button onSubmit={this.handleInputChange}><img src={searchBar} alt='search' /></button>
+        <img className='mobile-search-btn' onSubmit={this.handleInputChange} src={searchBar} alt='search' />
       </form>
       <div>{this.state.filteredData.map(i => <p>{i.name} </p>)}</div>
     </div>

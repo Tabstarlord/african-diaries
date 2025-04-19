@@ -11,6 +11,12 @@
   .desk-menu {
     display: none;
   }
+  button {
+    cursor: pointer;
+  }
+  button:hover {
+    color: blueviolet;
+  }
   
 
 

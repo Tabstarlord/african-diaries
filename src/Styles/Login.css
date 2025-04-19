@@ -1,279 +1,161 @@
-body {
+/* Make full page non-scrollable */
+html, body {
   margin: 0;
   padding: 0;
-}
-.login {
-  background-image: url('../Assets//Frame16.png');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  height: fit-content;
-  width: 100vw;
-
-}
-.login-2 {
-  background-color: rgba(0, 0, 0, 0.801);
-  background-attachment: fixed;
-  height: fit-content;
-  width: 100vw;
-}
-.login-3 {
-  margin-top: -95px;
-  align-items: center;
+  height: 100vh;
   overflow: hidden;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
-.login-2 .back-3 {
-  margin-top: 20px;
-  margin-left: 90%;
-  position: relative;
+
+/* Wrapper to center login box */
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background: url('../Assets/Frame16.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.login-2 h1 {
-  padding-top: 70px;
+.login-wrapper-2 {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.712) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login box */
+.login {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
   color: #fff;
-  text-align: center;
-  font-weight: 600;
-  font-size: 24px;
-}
-
-.login-2 fieldset {
-  border: none;
-}
-
-.login-2 label {
-  font-size: 20px;
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 8px;
-  text-align: left;
-  font-weight: 500;
   position: relative;
-  left: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.login-2 .log-1 {
-  width: 80%;
-  padding: 16px 18px 16px;
-  margin-bottom: 15px;
+/* Back button */
+.back-3 {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Login form */
+.log-in {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.log-1 {
+  width: 100%;
+  padding: 0.75rem;
   border: 1px solid #fefefe56;
   border-radius: 4px;
   background: none;
-  font-size: 12px;
+  color: white;
+  font-size: 0.95rem;
+  margin-left: -0.5rem;
 }
 
-.login-2 .btn-3 {
-  padding: 16px 40%;
-  border-radius: 4px;
-  background-color: #008000;
-  color: #FEFEFE;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  position: relative;
-  bottom: 10px;
-}
-
-.login-2 .btn-2 {
-  margin-top: 4vh;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 13px;
-  position: relative;
-  bottom: 15px;
-  padding-bottom: 50%;
-}
-.login-2 .btn-2 a{
-  text-decoration: underline 1px #008000;
-  color: #008000;
-}
-
-.login-2 .orlog {
-  margin-top: -5px;
-  font-size: 16px;
-  position: relative;
-  bottom: 16px;
-}
-
-.orlog h1 {
-  margin: auto;
+/* Button */
+.btn-3 {
   width: 100%;
-  font-size: 16px;
-  font-weight: 500;
-  position: relative;
-  bottom: 60px;
+  padding: 0.75rem;
+  background-color: #008000;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.login-2 .login-social {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  margin-top: -45px;
-  position: relative;
-  bottom: 15px;
+.btn-3:hover {
+  background-color: #006400;
 }
 
-.login-2 .orlog img {
-  position: relative;
-  bottom: 6px;
-  width: 110px;
-}
+/* Checkbox row */
 .remfor {
   display: flex;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 12px;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
 }
 
-.remember {
-  margin-bottom: 40px;
-  margin-left: -5px;
-  position: relative;
-  left: 26px;
-}
-.remember1 {
-  width: 30%;
-  position: relative;
-  bottom: 10px;
-  left: 25px;
+.remember-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .forget {
-    width: 100%;
-    position: relative;
-    left: 100px;
-    margin-top: 2px;
-    color: #FEFEFE; 
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
 }
 
-
-@media only screen and (min-width: 768px) {
-  
-  .back-3 {
-    position: relative;
-    top: 50px;
-    right: 120px;
-  }
-  .login-3 {
-  margin-top: 5px;
-  }
-  .login-4 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    border: 1px solid #fff;
-    margin-bottom: 300px;
-  }
-  .login-4 .log-1 {
-    width: 90%;
-  padding: 16px 18px 16px;
-  margin-bottom: 15px;
-  border: 1px solid #fefefe56;
-  border-radius: 4px;
-  background: none;
-  font-size: 12px;
-  }
-  .login-4 label {
-    font-size: 20px;
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 8px;
-  text-align: left;
-  font-weight: 500;
-  position: relative;
-  left: 12px;
-  }
-  .login-4 .btn-3 {
-    padding: 16px 44%;
-    border-radius: 4px;
-    background-color: #008000;
-    color: #FEFEFE;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    position: relative;
-    bottom: 10px;
-  }
-  .remfor {
-    font-size: 14px;
-    width: 100%;
-  }
-  .remember {
-    position: relative;
-    left: 3%;
-    top: 3px;
-  }
-  .remember1 {
-    width: 30%;
-    position: relative;
-    bottom: 10px;
-    left: -3px;
-  }
-  .forget {
-    width: 100%;
-    position: relative;
-    left: 200px;
-    margin-top: 2px;
-    color: #FEFEFE; 
-}
-.login-2 .btn-2 {
-  font-size: 16px;
-  margin-bottom: -270px;
-}
+/* Divider */
+.or-log {
+  margin-top: 1.5rem;
+  text-align: center;
 }
 
-@media only screen and (min-width: 1025px) {
-  .login-4 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-bottom: 400px;
-  }
-  .back-3 {
-    position: fixed;
-    top: 3em;
-    right: 19em;
-  }
-  .login-2 .btn-2 {
-    font-size: 16px;
-    margin-bottom: -250px;
-  }
-  .forget {
-    width: 100%;
-    position: relative;
-    left: 20em; 
-}
-.remember {
-  position: relative;
-  left: 3em;
-  top: 0.25em;
-}
+.or {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-@media only screen and (min-width: 1440px) {
-  .login-4 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-bottom: 550px;
-    position: relative;
-    top: 15em;
-  }
-  .back-3 {
-    position: fixed;
-    top: 18em;
-    right: 20em;
-  }
-  .login-2 .btn-2 {
-    font-size: 16px;
-    margin-bottom: -250px;
-  }
-  .forget {
-    width: 100%;
-    position: relative;
-    left: 23em; 
+.or img {
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
 }
-.remember {
-  position: relative;
-  left: 3em;
-  top: 0.25em;
+
+/* Social login */
+.login-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
 }
+
+.login-social img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Sign up link */
+.btn-2 {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-2 a {
+  color: #008000;
+  text-decoration: underline;
 }

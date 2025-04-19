@@ -1,4 +1,6 @@
-
+.desktop-search {
+  display: none;
+}
 .mobile-search {
   margin-left: auto;
   margin-right: auto;
@@ -25,16 +27,14 @@
   border-radius: 4px;
   font-size: 12px;
   border-radius: 8px 0px 0px 8px;
- 
   position: relative;
   left: 0em;
 
 }
-.searchForm form button {
-  background-color: #008000;
-  border: #008000;
-  padding: 10px 15px 10px;
-  border-radius: 0px 8px 8px 0px;
+.mobile-search-btn {
+ position: absolute;
+ right: 4rem;
+ top: 0.6em;
 }
 
 
@@ -68,7 +68,6 @@
   bottom: 0.4px;
 }
 .desktop-search-btn {
-  background-color: #008000;
   width: 1.3em;
   position: relative;
   right: 2rem;
@@ -76,7 +75,8 @@
   padding: 8px 5px 7px;
   border-radius: 0px 8px 8px 0px;
   z-index: 1;
-  border: 0.5px solid #008000;
+  cursor: pointer;
+ 
 }
 }
 
