@@ -19,13 +19,11 @@
     width: 100%;
   }
   .home .image a span {
-    font-weight: 500;
-    font-size: 16px;
     line-height: 100%;
     float: left;
   }
   .home .image a p {
-    font-size: 13px;
+    
     float: left;
     position: relative;
     bottom: 10px;
@@ -71,14 +69,13 @@
     width: 95%;
   }
   .home .image a span {
-    font-weight: 500;
-    font-size: 18px;
+    
     line-height: 100%;
     float: left;
   }
   
   .home .image a p {
-    font-size: 15px;
+   
     position: relative;
     bottom: 13px;
   }
@@ -128,11 +125,10 @@
   }
   .home-container .image a span {
     width: 14vw;
-    font-size: 0.9em;
+    
   }
   .home-container .image a p {
     width: 100%;
-    font-size: 1em;
 
   }
   .home-container .image a p .eye {
@@ -172,13 +168,11 @@
   }
   .home-container .image a span {
     width: 50vw;
-    font-size: 1.1em;
     padding-left: 0em;
   }
   .home-container .image a p {
     width: 100%;
     padding-left: 0em;
-    font-size: 1.1em;
 
   }
   .home-container .image a p .eye {

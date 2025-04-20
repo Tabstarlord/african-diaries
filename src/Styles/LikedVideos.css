@@ -19,13 +19,12 @@
   width: 100%;
 }
 .liked .image a span {
-  font-weight: 500;
-  font-size: 16px;
+
   line-height: 100%;
   float: left;
 }
 .liked .image a p {
-  font-size: 13px;
+  
   float: left;
   position: relative;
   bottom: 10px;
@@ -55,14 +54,12 @@
   
   }
   .liked .image a span {
-    font-weight: 500;
-    font-size: 18px;
+    
     line-height: 100%;
     float: left;
   }
   
   .liked .image a p {
-    font-size: 15px;
     position: relative;
     bottom: 13px;
   }
@@ -92,51 +89,47 @@
   }
   .liked-container .image a span {
     width: 14vw;
-    font-size: 0.9em;
   }
   .liked-container .image a p {
     width: 100%;
-    font-size: 1em;
   }
   .liked-container .image a p .eye {
     width: 12px;
     height: 12px;
     position: relative;
-    top: 2px;
+    top: 1px;
+    right: 3px;
   }
 }
 
 @media only screen and (min-width:1440px) {
   .liked {
-    width: 80vw;
+    width: 100vw;
     max-width: 100%;
-    margin-top: -10vh;
+    margin-top: -1vh;
   }
   .liked .liked-container {
     display: flex;
-    gap: 14px;
-    width: 15vw;
-    padding-left: 14vw;
-    margin-top: -5vh;
-    position: relative;
-    top: 1vh;
+    gap: 19px;
+    width: 16vw;
+    padding-left: 17vw;
+    margin-top: -6vh;
     text-align: left;
   }
   .liked-container .image a span {
-    width: 14vw;
-    font-size: 1em;
+    width: 50vw;
     padding-left: 0em;
   }
   .liked-container .image a p {
     width: 100%;
-    position: relative;
-    left: 0em;
+    padding-left: 0em;
 
   }
   .liked-container .image a p .eye {
     width: 12px;
     height: 12px;
     position: relative;
-    top: 2px;
+    top: 1px;
+    right: 3px;
   }
 }
