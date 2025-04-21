@@ -1,73 +1,32 @@
 import React from 'react'
 import '../Styles/Search.css'
 import searchBar from '../Assets/search.png'
-class Search extends React.Component {
-  state = {
-    query: "",
-    data: [],
-    filteredData: []
-  };
 
-  handleInputChange = event => {
-    const query = event.target.value;
 
-    this.setState(prevState => {
-      const filteredData = prevState.data.filter(element => {
-        return element.name.toLowerCase().includes(query.toLowerCase());
-      });
-      return {
-        query,
-        filteredData
-      };
-    });
-  };
 
-  getData = () => {
-    fetch(`http://localhost:3000`)
-    .then(response => { if (!response.ok) {} 
-        return response.json()
-      })
-    .then(data => {
-      console.log("Data before filter:", data);
-      const { query } = this.state;
-      const filteredData = data.filter(element => {
-        return element.name.toLowerCase().includes(query.toLowerCase());
-      });
-      this.setState({
-        data,
-        filteredData
-      });
-    });
-  };
-
-  UNSAFE_componentWillMount() {
-    this.getData();
-  }
-
-render() {
+function Search () {
   return (
     <>
     <div className='mobile-search'>
     <div className='searchForm'>
-      <form>
-        <input placeholder='Search for...' value={this.state.query} onChange={this.handleInputChange} />
-        <img className='mobile-search-btn' onSubmit={this.handleInputChange} src={searchBar} alt='search' />
+      <form className='mobile-navbar-search' role='search'>
+      <img className='mobile-search-btn' src={searchBar} alt='search' />
+        <input className='mobile-navbar-input' type='search' placeholder='Search for...' aria-label='Search' />
+        
       </form>
-      <div>{this.state.filteredData.map(i => <p>{i.name} </p>)}</div>
     </div>
     </div>
 
     <div className='desktop-search'>
     <div className='searchForm'>
-      <form>
-        <input placeholder='Search for...' value={this.state.query} onChange={this.handleInputChange} />
-        <img className='desktop-search-btn' onSubmit={this.handleInputChange} src={searchBar} alt='search' />
+      <form className='desktop-navbar-search' role='search'>
+        <input className='desktop-navbar-input' type='search' placeholder='Search for....' aria-label='Search' />
+        <img className='desktop-search-btn' src={searchBar} alt='search' />
       </form>
-      <div>{this.state.filteredData.map(i => <p>{i.name} </p>)}</div>
     </div>
     </div>
     </>
   )
 }
-}
+
 export default Search
