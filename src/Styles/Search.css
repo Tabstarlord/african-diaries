@@ -92,16 +92,15 @@
 @media (min-width: 1361px) {
   .search-container {
     max-width: 600px;
-    margin-left: 29rem;
-    position: fixed;
-    bottom: 38.8em;
+    margin-left: 26rem;
+    margin-top: 7vh;
   }
 }
 
 @media (min-width: 1440px) {
   .search-container {
     max-width: 700px;
-    bottom: 43.6em
+    bottom: 43.6em;
   }
 }
 
