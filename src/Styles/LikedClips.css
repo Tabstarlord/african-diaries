@@ -1,10 +1,10 @@
+.desktop-profile {
+  display: none;
+}
 .clip {
   margin: auto;
   width: auto;
   font-family: 'DM Sans', sans-serif;
-  margin-left: auto;
-    margin-right: auto;
-    width: 95%;
 }
 .clip .clip1 .cancel {
   float: left;
@@ -94,73 +94,76 @@
   .clip .usernav {
     display: contents;
   }
-  .liked-clips {
-    margin-top: -5vh;
+  .clip-01 {
+    display: none;
+  }
+  .clip6 {
+    display: none;
+  }
+  .clip7 {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 30%;
+    width: 80%;
   }
   .clip7 .clip-container {
-    display: flex;
-    gap: 16px;
-    width: 15vw;
-    padding-left: 19em;
-    position: relative;
-    bottom: 18em;
-  }
-  .clip-container .image {
-    width: 14vw;
+    width: 240px;
   }
   .clip-container .image a span {
-    width: 14vw;
-    font-size: 0.75em;
-    position: relative;
-    right: 1.8em;
-    top: -0em;
+    width: 100%;
+    font-size: 13px;
+    margin-left: -2rem;
   }
   .clip-container .image a p {
     width: 100%;
-    position: relative;
-    right: 3.3em;
+    font-size: 10px;
+    margin-left: -4.3rem;
   }
-  .clip7 .image a p .eye {
+  .clip-container .image a p .eye {
     width: 12px;
     height: 12px;
+  }
+  .desktop-profile {
+    display: contents;
+  }
+  .desktop-profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  .desktop-dp {
+    width: 160px;
+    height: 160px;
+    margin-left: 1rem;
+  }
+  .desktop-user-details {
+    text-align: left;
+    list-style: none;
+  }
+  .desktop-profile-info {
+    text-align: left;
     position: relative;
-    top: 2px;
+    top: 2rem;
+    
   }
-  .clip6 {
+  .desktop-topics {
+    margin-top: -15rem;
+    margin-bottom: 1rem;
+    margin-left: 25.5rem;
+    margin-right: -12rem;
+    border-bottom: 1px solid #000;
+  }
+  .desktop-topics .tag {
+    padding-left: 3rem;
     position: relative;
-    left: 22%;
+    right: 20rem;
   }
-  .clip6 .topic {
-    font-size: 16px;
-    gap: 6em;
+  .desktop-topics .tag1 {
     position: relative;
-    bottom: 18em;
-  }
-  .clip4 {
-    font-size: 16px;
-    margin-top: 20em;
-    right: 18em;
-  }
-  .clip3 .dp {
-    width: 150px;
-    position: relative;
-    right: 3em;
-    top: 6em;
-  }
-  .clip3 .user {
-    width: 100%;
-    position: relative;
-    padding-left: 10em;
-    top: 4.5em;
-  }
-.clip1 h2 {
-  position: relative;
-  top: 9em;
-  right: 34em;
-}
-  .clip1 .cancel {
-    display: none;
+    right: 20rem;
+    color: #008000;
   }
 
 }
-

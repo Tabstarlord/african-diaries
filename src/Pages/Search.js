@@ -8,6 +8,31 @@ function Search () {
   return (
     <>
     <div className='mobile-search'>
+     <div className="search-container">
+      <input
+        type="text"
+        placeholder="Search..."
+        className="search-input"
+      />
+      <button className="search-button">
+        <img src={searchBar} alt='search' />
+      </button>
+    </div>
+    </div>
+
+    <div className='desktop-search'>
+    <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search..."
+          className="search-input"
+        />
+        <button className="search-button"><img src={searchBar} alt='search' /></button>
+      </div>
+    </div>
+
+
+    {/*<div className='mobile-search'>
     <div className='searchForm'>
       <form className='mobile-navbar-search' role='search'>
       <img className='mobile-search-btn' src={searchBar} alt='search' />
@@ -24,7 +49,7 @@ function Search () {
         <img className='desktop-search-btn' src={searchBar} alt='search' />
       </form>
     </div>
-    </div>
+    </div>*/}
     </>
   )
 }

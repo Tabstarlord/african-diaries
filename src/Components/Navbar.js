@@ -24,10 +24,11 @@ function Navbar() {
   return (
     <>
     <div className='mobile-navbar'>
-
+    
     {search && (
           <Search />
         )}
+    
     <div  className='header'>
       <div className='menu-btn'>
         { click ? Close : Hamburger}

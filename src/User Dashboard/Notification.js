@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import dp from '../Assets/dp.png'
 import back from '../Assets/cancel-01.png'
 import red from '../Assets/dot.png'
-import frame3 from '../Assets/Ellipse95.png'
+import avatar from '../Assets/Ellipse95.png'
 import frame16 from '../Assets/Frame19.png'
 import '../Styles/Notification.css'
 import UserNavbar from './UserNavbar'
@@ -11,14 +11,32 @@ import UserNavbar from './UserNavbar'
 function Notification() {
   return (
     <>
+     <div className='desktop-notification-profile'>
+            <div className='desktop-notification-profile-content'>
+                <h2 className='desktop-notification-profile-info'>Profile Information</h2>
+                <img className='desktop-notification-dp' src={dp} alt='User' />
+            <div className='desktop-notification-user-details'>
+                <li>Joined: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>23 days on African Diaries</strong></li>
+                <li>Profile views:  &nbsp; &nbsp;<strong>113 times</strong></li>
+                <li>From: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Earth</strong></li>
+                <li>Last Activity: &nbsp; <strong>Online</strong></li>
+            </div>
+            </div>
+            <div className='desktop-notification-topics'>
+                <Link className='tag1' to='/LikedClips'>Liked Videos</Link>
+                <Link className='tag' to='/Notification'>Notifications</Link>
+                <Link className='tag' to='/Setting'>Account Settings</Link>
+            </div>
+            </div>
+
     <div className='not'>
     <div className='usernav'>
             <UserNavbar />
             </div>
             <div className='notification'>
 
-           
-     <div className='not1'>
+              <div className='mobile-profile'>
+    <div className='not1'>
       <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
         <h2>Profile Information</h2>
     </div>
@@ -53,59 +71,34 @@ function Notification() {
         <Link className='tag' to='/Setting'>Account Settings</Link>
       </ul>
     </div>
+    </div>
 
 
-      <div className='dot-1'>
-        <div className='dot1'>
-          <img  src={red} alt='jpg' />
+     <div className='notification-contaioner'>
+     <div className='notification-content'>
+        <div className='noification-image'>
+        <img className='red'  src={red} alt='jpg' />
+        <img className='avatar' src={avatar} alt='jpg' />
+        <span className='notify'>Jaybougie replied to your comment  <p className='time'>Just Now</p></span>
+        <img className='display' src={frame16} alt='jpg' />
         </div>
-        <div className='dot2'>
-          <img src={frame3} alt='jpg' />
-          </div>
-        <div className='dot3'>
-          <span>Jaybougie replied to your comment</span>
-          </div>
-          <div className='dot4'>
-          <img src={frame16} alt='jpg' />
-          </div>
-          <div className='dot5'>
-          <p className='dot5'>Just Now</p>
-          </div>
-      </div>
-      <div className='dot-1'>
-        <div className='dot1'>
-          <img  src={red} alt='jpg' />
+
+        <div className='noification-image'>
+        <img className='red'  src={red} alt='jpg' />
+        <img className='avatar' src={avatar} alt='jpg' />
+        <span className='notify'>Jaybougie replied to your comment  <p className='time'>Just Now</p></span>
+        <img className='display' src={frame16} alt='jpg' />
         </div>
-        <div className='dot2'>
-          <img src={frame3} alt='jpg' />
-          </div>
-        <div className='dot3'>
-          <span>Busty Princess liked your comment</span>
-          </div>
-          <div className='dot40'>
-          <img src={frame16} alt='jpg' />
-          </div>
-          <div className='dot5'>
-          <p className='dot5'>12 mins ago</p>
-          </div>
-      </div>
-      <div className='dot-1'>
-        <div className='dot1'>
-          <img  src={red} alt='jpg' />
+
+        <div className='noification-image'>
+        <img className='red'  src={red} alt='jpg' />
+        <img className='avatar' src={avatar} alt='jpg' />
+        <span className='notify'>Jaybougie replied to your comment  <p className='time'>Just Now</p></span>
+        <img className='display' src={frame16} alt='jpg' />
         </div>
-        <div className='dot2'>
-          <img src={frame3} alt='jpg' />
-          </div>
-        <div className='dot3'>
-          <span>Jamial Red replied to your comment</span>
-          </div>
-          <div className='dot4'>
-          <img src={frame16} alt='jpg' />
-          </div>
-          <div className='dot5'>
-          <p className='dot5'>2 day ago</p>
-          </div>
+
       </div>
+     </div>
       </div>
       </div>
     </>

@@ -13,6 +13,25 @@ function NoNotification() {
       <div className='usernav'>
             <UserNavbar />
             </div>
+
+            <div className='desktop-notification-profile'>
+            <div className='desktop-notification-profile-content'>
+                <h2 className='desktop-notification-profile-info'>Profile Information</h2>
+                <img className='desktop-notification-dp' src={dp} alt='User' />
+            <div className='desktop-notification-user-details'>
+                <li>Joined: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>23 days on African Diaries</strong></li>
+                <li>Profile views:  &nbsp; &nbsp;<strong>113 times</strong></li>
+                <li>From: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Earth</strong></li>
+                <li>Last Activity: &nbsp; <strong>Online</strong></li>
+            </div>
+            </div>
+            <div className='desktop-notification-topics'>
+                <Link className='tag1' to='/LikedClips'>Liked Videos</Link>
+                <Link className='tag' to='/Notification'>Notifications</Link>
+                <Link className='tag' to='/Setting'>Account Settings</Link>
+            </div>
+            </div>
+
       <div className='no-notification'>
       <div className='no1'>
             <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>

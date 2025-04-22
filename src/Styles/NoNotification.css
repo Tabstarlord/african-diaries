@@ -1,4 +1,6 @@
-
+.desktop-notification-profile {
+  display: none;
+}
 .no {
   margin: auto;
   width: auto;
@@ -89,48 +91,10 @@
   .no .usernav {
     display: contents;
   }
-  .no-notification {
-    margin-top: -5vh;
+  .no1, .no2, .no6 {
+    display: none;
   }
-  .no6 {
-    position: relative;
-    left: 22%;
+  .desktop-notification-profile {
+    display: contents;
   }
-  .no6 .to {
-    font-size: 16px;
-    gap: 6em;
-    position: relative;
-    bottom: 18em;
-  }
-  .no4 {
-    font-size: 16px;
-    margin-top: 20em;
-    right: 17em;
-  }
-  .no3 .dp {
-    width: 150px;
-    position: relative;
-    left: -2em;
-    top: 6em;
-  }
-  .no3 .user {
-    width: 100%;
-    position: relative;
-    top: 4.5em;
-    padding-left: 10em;
-  }
-  .no1 h2 {
-    position: relative;
-    top: 9em;
-    right: 35em;
-  }
-    .no1 .cancel {
-      display: none;
-    }
-    .no7 {
-      position: relative;
-      bottom: 13em;
-      justify-content: center;
-    }
 }
-

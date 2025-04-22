@@ -1,6 +1,9 @@
 .acc .set-navbar {
   display: none;
 }
+.desktop-settings-profile {
+  display: none;
+}
 .acc {
   margin: auto;
   width: auto;
@@ -29,6 +32,8 @@
 .set2 .set3 .dp {
   position: relative;
   bottom: 10px;
+  border-radius: 50%;
+  height: 28%;
 }
 .set2 .set4 {
   display: block;
@@ -100,67 +105,94 @@
   background-color: #008000;
   border: #008000;
 }
+.logout {
+  color: red;
+  font-weight: 600;
+  font-size: 16px;
+}
+.logout img {
+  position: relative;
+  top: 0.4em;
+}
 
 @media only screen and (min-width: 1025px) {
   .acc .set-navbar {
     display: contents;
   }
-  .settings {
-    margin-top: -5vh;
+  .set1, .set2, .set6 {
+    display: none;
   }
-  .set6 {
-    position: relative;
-    left: 22%;
+  .desktop-settings-profile {
+    display: contents;
   }
-  .set6 .top {
-    font-size: 16px;
-    gap: 6em;
-    position: relative;
-    bottom: 18em;
-  }
-  .set4 {
-    font-size: 16px;
-    margin-top: 20em;
-    right: 17em;
-  }
-  .set3 .dp {
-    width: 150px;
-    position: relative;
-    left: -2em;
-    top: 6em;
-  }
-  .set3 .user {
-    width: 100%;
-    position: relative;
-    top: 4.5em;
-    padding-left: 10em;
-  }
-  .set1 h2 {
-    position: relative;
-    top: 9em;
-    right: 35em;
-  }
-    .set1 .cancel {
-      display: none;
-    }
+ 
     .acc2 {
-      width: 75%;
-      padding-right: 2em;
+      margin-left: 30%;
+      width: 70%;
+      padding-right: 1rem;
       float: right;
-      position: relative;
-      bottom: 17em;
       border: none;
+      margin-bottom: 10rem;
     }
     .acc2 .get1 {
-      margin-bottom: 3em;
+      margin-bottom: 2em;
     }
     .acc2 .get2 {
       margin-left: auto;
       margin-right: auto;
-      width: 15%;
       position: relative;
-      left: 42%;
+      left: 43%;
       margin-top: -1rem;
+    }
+
+    .desktop-settings-profile-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+    .desktop-settings-dp {
+      width: 160px;
+      height: 160px;
+      margin-left: 1rem;
+      border-radius: 50%;
+    }
+    .desktop-settings-user-details {
+      text-align: left;
+      list-style: none;
+    }
+    .desktop-settings-profile-info {
+      text-align: left;
+      position: relative;
+      top: 2rem;
+    }
+    .desktop-settings-topics {
+      margin-top: -15rem;
+      margin-bottom: 1rem;
+      margin-left: 25.5rem;
+      margin-right: -12rem;
+      border-bottom: 1px solid #000;
+    }
+    .desktop-settings-topics .tag {
+      padding-left: 3rem;
+      position: relative;
+      right: 20rem;
+    }
+    .desktop-settings-topics .tag1 {
+      position: relative;
+      right: 20rem;
+      color: #008000;
+    }
+
+    .logout {
+      color: red;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .logout img {
+      position: relative;
+      top: 0.4em;
     }
     
 }

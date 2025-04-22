@@ -1,7 +1,7 @@
 .liked-navbar {
   display: none;
 }
-.nov9 {
+.desktop-notification-profile {
   display: none;
 }
 .desktop-footer {
@@ -99,49 +99,10 @@
   .nov .liked-navbar {
     display: contents;
   }
-  .no-videos {
-    margin-top: -5vh;
+  .desktop-notification-profile {
+    display: contents;
   }
-  .nov6 {
-    position: relative;
-    left: 22%;
+  .nov1, .nov2, .nov6 {
+    display: none;
   }
-  .nov6 .topics {
-    font-size: 16px;
-    gap: 6em;
-    position: relative;
-    bottom: 18em;
-  }
-  .nov4 {
-    font-size: 16px;
-    margin-top: 20em;
-    right: 17em;
-  }
-  .nov3 .dp {
-    width: 150px;
-    position: relative;
-    left: -2em;
-    top: 6em;
-  }
-  .nov3 .user {
-    width: 100%;
-    position: relative;
-    top: 4.5em;
-    padding-left: 10em;
-  }
-  .nov1 h2 {
-    position: relative;
-    top: 9em;
-    right: 35em;
-  }
-    .nov1 .cancel {
-      display: none;
-    }
-    .nov7 {
-      position: relative;
-      bottom: 13em;
-      justify-content: center;
-    }
-    
 }
-

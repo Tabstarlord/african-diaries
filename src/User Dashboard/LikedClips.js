@@ -10,11 +10,32 @@ import UserNavbar from './UserNavbar'
 function LikedClips() {
   return (
     <>
+
+<div className='desktop-profile'>
+        <div className='desktop-profile-content'>
+            <h2 className='desktop-profile-info'>Profile Information</h2>
+            <img className='desktop-dp' src={dp} alt='User' />
+        <div className='desktop-user-details'>
+            <li>Joined: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>23 days on African Diaries</strong></li>
+            <li>Profile views:  &nbsp; &nbsp;<strong>113 times</strong></li>
+            <li>From: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Earth</strong></li>
+            <li>Last Activity: &nbsp; <strong>Online</strong></li>
+        </div>
+        </div>
+        <div className='desktop-topics'>
+            <Link className='tag1' to='/LikedClips'>Liked Videos</Link>
+            <Link className='tag' to='/Notification'>Notifications</Link>
+            <Link className='tag' to='/Setting'>Account Settings</Link>
+        </div>
+        </div>
+
     <div className='clip'>
       <div className='usernav'>
       <UserNavbar />
       </div>
-      <div className='liked-clips'>
+
+      
+      <div className='mobile-liked-clips'>
       <div className='clip-01'>
       <div className='clip1'>
       <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
@@ -186,6 +207,8 @@ function LikedClips() {
         </div> 
       </div>
       </div>
+
+      
       
       
     </div>
