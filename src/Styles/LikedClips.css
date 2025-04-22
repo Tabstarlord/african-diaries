@@ -154,15 +154,10 @@
     margin-left: 25.5rem;
     margin-right: -12rem;
     border-bottom: 1px solid #000;
-  }
-  .desktop-topics .tag {
-    padding-left: 3rem;
-    position: relative;
-    right: 20rem;
+    display: flex;
+    gap: 4em;
   }
   .desktop-topics .tag1 {
-    position: relative;
-    right: 20rem;
     color: #008000;
   }
 

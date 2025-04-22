@@ -26,8 +26,8 @@ function NoNotification() {
             </div>
             </div>
             <div className='desktop-notification-topics'>
-                <Link className='tag1' to='/LikedClips'>Liked Videos</Link>
-                <Link className='tag' to='/Notification'>Notifications</Link>
+                <Link className='tag' to='/LikedClips'>Liked Videos</Link>
+                <Link className='tag1' to='/Notification'>Notifications</Link>
                 <Link className='tag' to='/Setting'>Account Settings</Link>
             </div>
             </div>

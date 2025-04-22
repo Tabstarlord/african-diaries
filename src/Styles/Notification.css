@@ -148,15 +148,10 @@
     margin-left: 25.5rem;
     margin-right: -12rem;
     border-bottom: 1px solid #000;
-  }
-  .desktop-notification-topics .tag {
-    padding-left: 3rem;
-    position: relative;
-    right: 20rem;
+    display: flex;
+    gap: 4em;
   }
   .desktop-notification-topics .tag1 {
-    position: relative;
-    right: 20rem;
     color: #008000;
   }
   .notification-content {
@@ -164,7 +159,7 @@
     width: 70%;
   }
   .noification-image span {
-    margin-left: -28em;
+    margin-left: -26.5em;
   }
   .noification-image .display {
     margin-left: 15rem;

@@ -169,19 +169,15 @@
     }
     .desktop-settings-topics {
       margin-top: -15rem;
-      margin-bottom: 1rem;
-      margin-left: 25.5rem;
-      margin-right: -12rem;
-      border-bottom: 1px solid #000;
+    margin-bottom: 1rem;
+    margin-left: 25.5rem;
+    margin-right: -12rem;
+    border-bottom: 1px solid #000;
+    display: flex;
+    gap: 4em;
     }
-    .desktop-settings-topics .tag {
-      padding-left: 3rem;
-      position: relative;
-      right: 20rem;
-    }
+    
     .desktop-settings-topics .tag1 {
-      position: relative;
-      right: 20rem;
       color: #008000;
     }
 
