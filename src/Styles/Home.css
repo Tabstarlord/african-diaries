@@ -2,190 +2,268 @@
     margin: auto;
     width: 100%;
     position: relative;
-    padding-top: 10vh;
+    margin-top: 10vh;
     font-family: 'DM Sans', sans-serif;
   }
   .home .image {
-    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
-  }
-  .home a {
-    text-decoration: none;
-    color: #000;
   }
   .home .image img {
     width: 100%;
   }
-  .home .image a span {
-    line-height: 100%;
-    float: left;
-  }
-  .home .image a p {
-    
-    float: left;
-    position: relative;
-    bottom: 10px;
-  }
-  .home .image a p .eye {
-    width: 15%;
-    position: relative;
-    top: 3px;
-  }
-  
-
-  .page .pages {
+  .home-container span {
+    display: block;
     width: 100%;
-    justify-items: center;
-    display: flex;
-    gap: 12px;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 4px 8px;
+    color: #000;
+    text-align: left;
+    margin-left: -0.5em;
   }
-  .page .pages li {
-    list-style: none;
-    text-align: center;
-    gap: 10px;
-  }
-  .page .pages li img {
-    position: relative;
-    top: 3px;
-  }
-
-                    /*FOR TABLETS*/
-
-  @media only screen and (min-width: 768px) {
-  
-  .home {
-    margin: 0 auto;
+  .image p {
     width: 100%;
-    padding-top: 10vh;
-  }
-  
-  .home .image {
-    margin-top: 5vh;
-    align-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-  }
-  .home .image a span {
-    
-    line-height: 100%;
-    float: left;
-  }
-  
-  .home .image a p {
-   
-    position: relative;
-    bottom: 13px;
-  }
-  
-  .home .image a p .eye {
-    position: relative;
-    top: 3px;
-    width: 13%;
-  }
-  
-  .page .pages {
     display: flex;
-    flex-direction: row;
-    gap: 17px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
+    align-items: start;
+    font-size: 12px;
+    color: #444;
+    padding: 0 2px 3px 7px;
+    text-align: left;
+    margin-left: -0.5em;
+    margin-top: 1%;
   }
-  
-  .page .pages li {
-    list-style: none;
-    text-align: center;
-  }
-  
-  .page .pages li img {
+  .image p .eye {
+    max-width: 10px;
+    max-height: 10px;
+    height: 20px;
+    margin: 1px 2px;
     position: relative;
-    top: 4px;
-    left: 2px;
+    margin-top: 1%;
   }
-}
-/*use em on searchbar*/
+  
 
-@media only screen and (min-width:1025px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+  }
+  
+  .page-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .page-btn:hover {
+    background-color: #ccc;
+  }
+  
+  .page-btn.active {
+    background-color: #000;
+    color: #fff;
+  }
+
+  @media screen and (min-width:1025px) {
+
+    .home {
+      width: 100vw;
+      max-width: 100%;
+      margin-top: 15vh;
+    }
+    .page-wrapper {
+      width: 84%;
+      margin: 0 16%;
+    }
+    .home .home-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px; /* spacing between video cards */
+    }
+    .image {
+      /* placeholder background */
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: -1em;
+    }
+    .image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .home-container span {
+      display: block;
+      width: 100%;
+      font-weight: 500;
+      font-size: 10px;
+      padding: 4px 8px;
+      color: #000;
+      text-align: left;
+      margin-left: -0.5em;
+    }
+   .image p {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      font-size: 12px;
+      color: #444;
+      padding: 0 2px 8px 7px;
+      text-align: left;
+      margin-left: -0.5em;
+      margin-top: 0.5em;
+    }
+    .image p .eye {
+      max-width: 10px;
+      max-height: 10px;
+      height: 20px;
+      margin: 1px 2px;
+      position: relative;
+    
+    }
+    .page .pages {
+      width: 80%;
+      padding-left: 34vw;
+    }
+    .social {
+      width: 100%;
+      padding-left: 5vw;
+    }
+    .home-footer {
+      width: 100vw;
+      position: relative;
+      left: -2em;
+    }
+  }
+
+@media only screen and (min-width:1361px) {
 
   .home {
-    width: 95vw;
+    width: 100vw;
     max-width: 100%;
-    padding-top: 10vh;
+    margin-top: 10vh;
+  }
+  .page-wrapper {
+    width: 83%;
+    margin: 0 16%;
   }
   .home .home-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px; /* spacing between video cards */
+  }
+  .image {
+    /* placeholder background */
+    border-radius: 8px;
+    overflow: hidden;
     display: flex;
-    gap: 18px;
-    width: 16vw;
-    padding-left: 15vw;
-    margin-top: -6vh;
-    text-align: left;
+    flex-direction: column;
+    margin-bottom: -1.5rem;
   }
-  .home-container .image a span {
-    width: 14vw;
-    
-  }
-  .home-container .image a p {
+  .image img {
     width: 100%;
-
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
   }
-  .home-container .image a p .eye {
-    width: 12px;
-    height: 12px;
+  .home-container span {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 4px 8px;
+    color: #000;
+    text-align: left;
+    margin-left: -0.5em;
+  }
+ .image p {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    font-size: 12px;
+    color: #444;
+    padding: 0 2px 8px 7px;
+    text-align: left;
+    margin-left: -0.5em;
+    margin-top: 0.5rem;
+  }
+  .image p .eye {
+    max-width: 10px;
+    max-height: 10px;
+    height: 20px;
+    margin: 1px 2px;
     position: relative;
-    top: 2px;
-  }
-  .page .pages {
-    width: 80%;
-    padding-left: 34vw;
   }
   .social {
     width: 100%;
     padding-left: 5vw;
   }
-  .home-footer {
-    width: 100vw;
-    position: relative;
-    left: -2em;
-  }
+  
 }
 
 @media only screen and (min-width:1440px) {
   .home {
     width: 100vw;
     max-width: 100%;
-    margin-top: -1vh;
+    margin-top: 10vh;
+  }
+  .page-wrapper {
+    width: 83%;
+    margin: 0 16%;
   }
   .home .home-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px; /* spacing between video cards */
+  }
+  .image {
+    /* placeholder background */
+    border-radius: 8px;
+    overflow: hidden;
     display: flex;
-    gap: 19px;
-    width: 16vw;
-    padding-left: 17vw;
-    margin-top: -6vh;
-    text-align: left;
+    flex-direction: column;
+    margin-bottom: -1.5em;
   }
-  .home-container .image a span {
-    width: 50vw;
-    padding-left: 0em;
-  }
-  .home-container .image a p {
+  .image img {
     width: 100%;
-    padding-left: 0em;
-
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
   }
-  .home-container .image a p .eye {
-    width: 12px;
-    height: 12px;
-    position: relative;
-    top: 1px;
-    right: 3px;
+  .home-container span {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 4px 8px;
+    color: #000;
+    text-align: left;
+    margin-left: -0.5em;
+    
   }
-  .home-footer {
-    width: 113vw;
+ .image p {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    font-size: 12px;
+    color: #444;
+    padding: 0 2px 8px 7px;
+    text-align: left;
+    margin-left: -0.5em;
+    margin-top: 0.6rem;
+  }
+  .image p .eye {
+    max-width: 10px;
+    max-height: 10px;
+    height: 20px;
+    margin: 1px 2px;
     position: relative;
-    margin-left: -8vw;
+  
   }
   
 }

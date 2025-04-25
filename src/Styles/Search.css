@@ -1,6 +1,4 @@
-.desktop-search {
-  display: none;
-}
+
 .search-container {
   display: flex;
   align-items: center;
@@ -36,27 +34,24 @@
   align-items: center;
   justify-content: center;
 }
+.search-results {
+  min-height: 100px;
+  margin-top: 1rem;
+}
+
+.loading-placeholder {
+  font-weight: bold;
+  text-align: center;
+  color: green;
+}
+
 
 @media only screen and (min-width: 768px) {
   /* Base styles */
-.mobile-search {
-  display: none;
-}
-.desktop-search {
-  display: contents;
-}
+
 
 .search-container {
-  display: flex;
-  flex: 1;
-  max-width: 500px;
-  margin-top: 2.8rem;
   margin-left: 7rem;
-  background-color: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .search-input {
@@ -69,7 +64,7 @@
 }
 
 .search-button {
-  background-color: #fff; /* The green color from your image */
+ /* The green color from your image */
   padding: 6px 14px;
   border: none;
   cursor: pointer;

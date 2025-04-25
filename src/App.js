@@ -3,48 +3,18 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Home from './Pages/Home'
 import ViewVideos from './Pages/ViewVideos '
-import LikedVideos from './Pages/LikedVideos'
 import WatchHistory from './Pages/WatchHistory'
-import BestVideos from './Pages/BestVideos';
 import Login from './Pages/Login';
 import Register from './Pages/Register'
 import NewestVideos from './Pages/NewestVideos'
 import Warning from './Pages/Warning'
 import LikedClips from './User Dashboard/LikedClips';
 import Notification from './User Dashboard/Notification';
-import NoVideos from './User Dashboard/NoVideos';
 import Setting from './User Dashboard/Setting';
-import NoNotification from './User Dashboard/NoNotification';
-import UserNavbar from './User Dashboard/UserNavbar';
-import Amatuer from './Categories/Amatuer'
-import Anal from './Categories/Anal'
-import BDSM from './Categories/BDSM'
-import Bi from './Categories/Bi'
-import BigAss from './Categories/BigAss'
-import BigDick from './Categories/BigDick'
-import BigTits from './Categories/BigTits'
-import Blonde from './Categories/Blonde'
-import BlowJob from './Categories/BlowJob'
-import Bond from './Categories/Bond'
-import Cougar from './Categories/Cougar'
-import Creampie from './Categories/Creampie'
-import Cumshot from './Categories/Cumshot'
-import Gangbang from './Categories/Gangbang'
-import Gay from './Categories/Gay'
-import Hardcore from './Categories/Hardcore'
-import Lesbian from './Categories/Lesbian'
-import Milf from './Categories/Milf'
-import Orgy from './Categories/Orgy'
-import Solo from './Categories/Solo'
-import Squirting from './Categories/Squirting'
-import Straight from './Categories/Straight'
-import Student from './Categories/Student'
-import Teacher from './Categories/Teacher'
-import Wanking from './Categories/Wanking';
-import Trans from './Categories/Trans';
-
-
+import ProtectedRoute from './Components/ProtectedRoute';
 import Dashboard from './User Dashboard/Dashboard';
+import { UserProvider } from './Components/UserContext';
+import CategoryPage from './Components/CategoryPage';
 
 
 
@@ -54,14 +24,14 @@ function App() {
     <>
       <div className="App">
 
-
+        <UserProvider>
         <Routes>
           <Route path='/' element={ <Warning /> } />
           <Route path='/Home' element={ <Home />} />
-          <Route path='/ViewVideos' element={ <ViewVideos /> } />
-          <Route path='/LikedVideos' element={ <LikedVideos /> } />
+          <Route path='/ViewVideos/:id' element={ <ViewVideos /> } />
+          <Route path='/LikedVideos' element={ <CategoryPage category='Liked Videos' /> } />
           <Route path='/WatchHistory' element={ <WatchHistory /> } />
-          <Route path='/BestVideos' element={ <BestVideos /> } />
+          <Route path='/BestVideos' element={ <CategoryPage category='Best Videos' /> } />
           <Route path='/Login' element={ <Login /> } />
           <Route path='/Register' element={ <Register /> } />
           <Route path='/NewestVideos' 
@@ -70,75 +40,73 @@ function App() {
           element={ <LikedClips /> } />
           <Route path='/Notification' 
           element={ <Notification /> } />
-          <Route path='/Novideos' 
-          element={ <NoVideos /> } />
           <Route path='/Setting' 
           element={ <Setting /> } />
-          <Route path='/NoNotification' 
-          element={ <NoNotification /> } />
-          <Route path='/UserNavbar' 
-          element={ <UserNavbar /> } />
+ 
+
 
           <Route path='/Amatuer' 
-          element={ <Amatuer /> } />
+          element={ <CategoryPage category='Amatuer' /> } />
           <Route path='/Anal' 
-          element={ <Anal /> } />
+          element={ <CategoryPage category='Anal' /> } />
           <Route path='/BDSM' 
-          element={ <BDSM /> } />
+          element={ <CategoryPage category='BDSM' /> } />
           <Route path='/Bi' 
-          element={ <Bi /> } />
+          element={ <CategoryPage category='Bi' /> } />
           <Route path='/BigAss' 
-          element={ <BigAss /> } />
+          element={ <CategoryPage category='BigAss' /> } />
           <Route path='/BigDick' 
-          element={ <BigDick /> } />
+          element={ <CategoryPage category='BigDick' /> } />
           <Route path='/BigTits' 
-          element={ <BigTits /> } />
+          element={ <CategoryPage category='BigTits' /> } />
           <Route path='/Blonde' 
-          element={ <Blonde /> } />
+          element={ <CategoryPage category='Blonde' /> } />
           <Route path='/BlowJob' 
-          element={ <BlowJob /> } />
+          element={ <CategoryPage category='BlowJob' /> } />
           <Route path='/Bond' 
-          element={ <Bond /> } />
+          element={ <CategoryPage category='Bond' /> } />
           <Route path='/Cougar' 
-          element={ <Cougar /> } />
+          element={ <CategoryPage category='Cougar' /> } />
           <Route path='/Creampie' 
-          element={ <Creampie /> } />
+          element={ <CategoryPage category='Creampie' /> } />
           <Route path='/Cumshot' 
-          element={ <Cumshot /> } />
+          element={ <CategoryPage category='Cumshot' /> } />
           <Route path='/Gangbang' 
-          element={ <Gangbang /> } />
+          element={ <CategoryPage category='Gangbang' /> } />
           <Route path='/Gay' 
-          element={ <Gay /> } />
+          element={ <CategoryPage category='Gay' /> } />
           <Route path='/Hardcore' 
-          element={ <Hardcore /> } />
+          element={ <CategoryPage category='Hardcore' /> } />
           <Route path='/Lesbian' 
-          element={ <Lesbian /> } />
+          element={ <CategoryPage category='Lesbian' /> } />
           <Route path='/Milf' 
-          element={ <Milf /> } />
+          element={ <CategoryPage category='Milf' /> } />
           <Route path='/Orgy' 
-          element={ <Orgy /> } />
+          element={ <CategoryPage category='Orgy' /> } />
           <Route path='/Solo' 
-          element={ <Solo /> } />
+          element={ <CategoryPage category='Solo' /> } />
           <Route path='/Squirting' 
-          element={ <Squirting /> } />
+          element={ <CategoryPage category='Squirting' /> } />
           <Route path='/Straight' 
-          element={ <Straight /> } />
+          element={ <CategoryPage category='Straight' /> } />
           <Route path='/Student' 
-          element={ <Student /> } />
+          element={ <CategoryPage category='Student' /> } />
           <Route path='/Teacher' 
-          element={ <Teacher /> } />
+          element={ <CategoryPage category='Teacher' /> } />
           <Route path='/Wanking' 
-          element={ <Wanking /> } />
+          element={ <CategoryPage category='Wanking' /> } />
            <Route path='/Trans' 
-          element={ <Trans /> } />
+          element={ <CategoryPage category='Trans' /> } />
 
-          
-<Route path='/Dashboard' 
-          element={ <Dashboard /> } />
-
-
+        <Route path='/Dashboard' element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+        />
 
         </Routes>
+        </UserProvider>
       
       
     </div>

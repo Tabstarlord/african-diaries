@@ -1,57 +1,80 @@
-import React from 'react'
-import '../Styles/Search.css'
-import searchBar from '../Assets/search.png'
+import React, { useState, useEffect, useCallback } from 'react';
+import '../Styles/Search.css';
+import searchBar from '../Assets/search.png';
+import supabase from '../supabaseClient';
+
+function Search() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
 
 
+// Then wrap the function:
+const handleSearch = useCallback(async () => {
+  if (searchTerm.trim() === '') {
+    setResults([]);
+    return;
+  }
 
-function Search () {
+  setLoading(true);
+  const { data, error } = await supabase
+    .from('videos')
+    .select('*')
+    .ilike('title', `%${searchTerm}%`);
+
+  if (error) {
+    console.error('Search error:', error);
+  } else {
+    setResults(data);
+  }
+  setLoading(false);
+}, [searchTerm]); // 👈 now it's stable and useEffect is happy
+
+useEffect(() => {
+  const delayDebounce = setTimeout(() => {
+    handleSearch();
+  }, 500);
+
+  return () => clearTimeout(delayDebounce);
+}, [handleSearch]); // ✅ clean!
+
+
   return (
     <>
-    <div className='mobile-search'>
-     <div className="search-container">
-      <input
-        type="text"
-        placeholder="Search..."
-        className="search-input"
-      />
-      <button className="search-button">
-        <img src={searchBar} alt='search' />
-      </button>
-    </div>
-    </div>
-
-    <div className='desktop-search'>
-    <div className="search-container">
+      <div className="search-container">
         <input
           type="text"
           placeholder="Search..."
           className="search-input"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          aria-label="Search"
         />
-        <button className="search-button"><img src={searchBar} alt='search' /></button>
+        <button
+          type="button"
+          className="search-button"
+          onClick={handleSearch} // 👉 Button now triggers the search
+        >
+          <img src={searchBar} alt="search" />
+        </button>
       </div>
-    </div>
 
+      <div className="search-results">
+  {loading ? (
+    <div className="loading-placeholder">Loading...</div>
+  ) : results.length > 0 ? (
+    results.map((video) => (
+      <div key={video.id} className="search-result-item">
+        {video.title}
+      </div>
+    ))
+  ) : (
+    <p>No results</p>
+  )}
+</div>
 
-    {/*<div className='mobile-search'>
-    <div className='searchForm'>
-      <form className='mobile-navbar-search' role='search'>
-      <img className='mobile-search-btn' src={searchBar} alt='search' />
-        <input className='mobile-navbar-input' type='search' placeholder='Search for...' aria-label='Search' />
-        
-      </form>
-    </div>
-    </div>
-
-    <div className='desktop-search'>
-    <div className='searchForm'>
-      <form className='desktop-navbar-search' role='search'>
-        <input className='desktop-navbar-input' type='search' placeholder='Search for....' aria-label='Search' />
-        <img className='desktop-search-btn' src={searchBar} alt='search' />
-      </form>
-    </div>
-    </div>*/}
     </>
-  )
+  );
 }
 
-export default Search
+export default Search;

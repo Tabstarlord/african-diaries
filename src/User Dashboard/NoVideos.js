@@ -4,7 +4,7 @@ import dp from '../Assets/dp.png'
 import back from '../Assets/cancel-01.png'
 import frame20 from '../Assets/EmptyState.png'
 import '../Styles/NoVideos.css'
-import UserNavbar from './UserNavbar'
+import UserNavbar from '../Components/UserNavbar'
 import Foot from '../Components/Foot'
 import Footer from '../Components/Footer'
 

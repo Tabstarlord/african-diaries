@@ -17,10 +17,10 @@
   button:hover {
     color: blueviolet;
   }
- .image a span {
-  font-weight: 500;
-  font-size: 16px;
- }
+  .image a span {
+    font-weight: 500;
+    font-size: 16px;
+   }
  .image a p {
   color: #808080;
   font-weight: 300;
@@ -28,7 +28,12 @@
   margin-right: 5rem;
   position: relative;
   top: -5px;
- }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
 
 
 

@@ -1,238 +1,296 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../Styles/ViewVideos.css'
-import frame211 from '../Assets/Frame211.png'
-import like from '../Assets/Like2.png'
-import dislike from '../Assets/dislike.png'
-import chat from '../Assets/bubble-chat.png'
-import share from '../Assets/share.png'
-import eye from '../Assets/eye.png'
-import number from '../Assets/Frame12.png'
-import avatar from '../Assets/Ellipse.png'
-import avatar2 from '../Assets/r.png'
-import frame1 from '../Assets/Frame1.png'
-import frame2 from '../Assets/Frame2.png'
-import frame3 from '../Assets/Frame3.png'
-import Foot from '../Components/Foot'
-import Navbar from '../Components/Navbar'
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import '../Styles/ViewVideos.css';
+import { useUser } from '../Components/UserContext';
+import supabase from '../supabaseClient';
+import frame211 from '../Assets/Frame211.png';
+import like from '../Assets/Like2.png';
+import dislike from '../Assets/dislike.png';
+import chat from '../Assets/bubble-chat.png';
+import share from '../Assets/share.png';
+import eye from '../Assets/eye.png';
+import number from '../Assets/Frame12.png';
+import avatar from '../Assets/Ellipse.png';
+import Foot from '../Components/Foot';
+import Navbar from '../Components/Navbar';
+import UserNavbar from '../Components/UserNavbar';
 
+function ViewVideos() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [videos, setVideos] = useState([]);
+  const [comments, setComments] = useState([]);
+  const [currentVideo, setCurrentVideo] = useState(null);
+  const [userId, setUserId] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [reactionCounts, setReactionCounts] = useState({
+    likes: 0,
+    dislikes: 0,
+    comments: 0,
+    shares: 0,
+  });
 
-function ViewVideos () {
+  const { id } = useParams();
+  const { user } = useUser();
+
+  useEffect(() => {
+    const authStatus = localStorage.getItem('isLoggedIn');
+    setIsLoggedIn(authStatus === 'true');
+  }, []);
+
+  const togglePlayPause = () => {
+    const video = document.getElementById('videoPlayer');
+    if (isPlaying) {
+      video.pause();
+    } else {
+      video.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  useEffect(() => {
+    const logWatchHistory = async () => {
+      if (!user || !currentVideo) return;
+      const { error } = await supabase.from('watched_videos').insert({
+        user_id: user.id,
+        video_id: currentVideo.id,
+      });
+      if (error) console.error('Error logging watch history:', error);
+    };
+  
+    if (currentVideo) {
+      logWatchHistory();
+    }
+  }, [currentVideo, user]);
+  
+
+  useEffect(() => {
+    const fetchVideo = async () => {
+      const { data, error } = await supabase
+        .from('videos')
+        .select('*')
+        .eq('id', id)
+        .single();
+
+      if (error) console.error('Error fetching video:', error);
+      else setCurrentVideo(data);
+    };
+
+    fetchVideo();
+  }, [id]);
+
+  useEffect(() => {
+    const fetchRelatedVideos = async () => {
+      const { data, error } = await supabase
+        .from('videos')
+        .select('*')
+        .neq('id', id)
+        .limit(5);
+
+      if (error) console.error('Error fetching related videos:', error);
+      else setVideos(data);
+    };
+
+    fetchRelatedVideos();
+  }, [id]);
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      const { data, error } = await supabase
+        .from('comments')
+        .select('*')
+        .eq('video_id', id)
+        .order('created_at', { ascending: false });
+
+      if (error) console.error('Error fetching comments:', error);
+      else setComments(data);
+    };
+
+    fetchComments();
+  }, [id]);
+
+  const handleCommentSubmit = async (e) => {
+    e.preventDefault();
+    const content = e.target.elements.comment.value;
+    if (!user) return;
+
+    const { data, error } = await supabase.from('comments').insert([
+      {
+        video_id: id,
+        user_id: user.id,
+        username: user.user_metadata.username || 'Anonymous',
+        avatar_url: user.user_metadata.avatar_url || '',
+        content,
+      },
+    ]);
+
+    if (error) {
+      console.error('Insert error:', error);
+    } else {
+      setComments((prev) => [data[0], ...prev]);
+      e.target.reset();
+    }
+  };
+
+  const fetchReactions = async () => {
+    if (!id) return;
+    const { data, error } = await supabase
+      .from('reactions')
+      .select('type, count:count(*)')
+      .eq('video_id', id)
+      .group('type');
+
+    if (error) return console.error('Reaction fetch error:', error);
+
+    const counts = {
+      likes: 0,
+      dislikes: 0,
+      comments: 0,
+      shares: 0,
+    };
+
+    data.forEach((reaction) => {
+      counts[reaction.type + 's'] = reaction.count;
+    });
+
+    setReactionCounts(counts);
+  };
+
+  const handleReaction = async (type) => {
+    if (!userId || !id) return;
+
+    const { error } = await supabase.from('reactions').insert([
+      {
+        video_id: id,
+        user_id: userId,
+        type,
+      },
+    ]);
+
+    if (!error) fetchReactions();
+    else console.error('Reaction error:', error);
+  };
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) setUserId(user.id);
+    };
+    fetchUser();
+  }, []);
+
   return (
     <>
-    <Navbar />
-    <div className='view'>
-      <div className='view-1' >
-      <span>Banging Oga Soldier Wife&nbsp;<h5>-&nbsp;12mins</h5></span>
-      
-      <div className='links'><Link to='/'>BDSM</Link>
-      <Link to='/'>Big Dick</Link>
-      <Link to='/'>Couger</Link>
-      <Link to='/'>Big Tits</Link>
-      <Link to='/'>GangBang</Link>
-      <Link to='/'>Milf</Link>
-      </div>
-      <img className='play' src={frame211} alt='play' />
-      <div className='react'>
-      <Link to='/'><img className='react-1' src={like} alt='like' /><p>23k</p></Link>
-      <Link to='/'><img className='react-1' src={dislike} alt='dislike' /><p>22k</p></Link>
-      <Link to='/'><img className='react-1' src={chat} alt='comment' /><p>14k</p></Link>
-      <Link to='/'><img className='react-1' src={share} alt='share' /></Link>
-      </div>
-      <div className='view-2'>
-        <img src={eye} alt='views' /><p>12k</p>
-      </div>
-      </div>
+      {isLoggedIn ? <UserNavbar /> : <Navbar />}
+      <div className='view'>
+        <div className='view-1'>
+          <span>{currentVideo?.title} <h5>- {currentVideo?.duration}</h5></span>
 
-      <div className='comments'>
-        <div className='comment'>
-          <img src={chat} alt='comments' />
-          <p>Comments</p>
-          <img src={number} alt='numbers' />
+          <div className='links'>
+            {['BDSM', 'Big Dick', 'Couger', 'Big Tits', 'GangBang', 'Milf'].map((tag, i) => (
+              <Link key={i} to={`/tags/${tag}`}>{tag}</Link>
+            ))}
+          </div>
+
+          <video
+            id='videoPlayer'
+            className='video-player'
+            width='100%'
+            height='auto'
+            controls
+            poster={frame211}
+            onClick={togglePlayPause}
+          >
+            <source src={currentVideo?.video_url} type='video/mp4' />
+            Your browser does not support the video tag
+          </video>
+
+          <div className='react'>
+            <Link to='#' onClick={() => handleReaction('like')}>
+              <img className='react-1' src={like} alt='like' />
+              <p>{reactionCounts.likes}</p>
+            </Link>
+            <Link to='#' onClick={() => handleReaction('dislike')}>
+              <img className='react-1' src={dislike} alt='dislike' />
+              <p>{reactionCounts.dislikes}</p>
+            </Link>
+            <Link to='#' onClick={() => handleReaction('comment')}>
+              <img className='react-1' src={chat} alt='comment' />
+              <p>{reactionCounts.comments}</p>
+            </Link>
+            <Link to='#' onClick={() => handleReaction('share')}>
+              <img className='react-1' src={share} alt='share' />
+            </Link>
+          </div>
+
+          <div className='view-2'>
+            <img src={eye} alt='views' />
+            <p>{currentVideo?.views || '12k'}</p>
+          </div>
         </div>
 
-        <div className='comment-1'>
-          <div className='com'>
-            <img src={avatar} alt='avatar' />
-            <span>Gaybts</span>
-            <p>6hrs</p>
+        <div className='comments'>
+          <div className='comment'>
+            <img src={chat} alt='comments' />
+            <p>Comments</p>
+            <img src={number} alt='numbers' />
           </div>
-          <div className='com-1'>
-            <p>Damn, such a nice scene</p>
-          </div>
-          <div className='com-2'>
-            <p className='r'>Reply</p>
-            <img src={like} alt='jpg' /><p>23k</p>
-            <img src={dislike} alt='jpg' />
-            </div>
 
-          <div className='com'>
-            <img src={avatar2} alt='avatar' />
-            <span>Bigcock</span>
-            <p>6hrs</p>
+          <div className='comment-1'>
+            {comments.map((comment) => (
+              <div key={comment.id}>
+                <div className='com'>
+                  <img src={comment.avatar_url || avatar} alt='avatar' />
+                  <span>{comment.username}</span>
+                  <p>{new Date(comment.created_at).toLocaleString()}</p>
+                </div>
+                <div className='com-1'>
+                  <p>{comment.content}</p>
+                </div>
+                <div className='com-2'>
+                  <p className='r'>Reply</p>
+                  <img src={like} alt='like' /><p>0</p>
+                  <img src={dislike} alt='dislike' />
+                </div>
+              </div>
+            ))}
           </div>
-          <div className='com-1'>
-            <p>I wanna be yours</p>
-          </div>
-          <div className='com-2'>
-            <p className='r'>Reply</p>
-            <img src={like} alt='jpg' /><p>23k</p>
-            <img src={dislike} alt='jpg' />
-            </div>
+        </div>
 
-          <div className='com'>
-            <img src={avatar} alt='avatar' />
-            <span>Janespussio</span>
-            <p>6hrs</p>
-          </div>
-          <div className='com-1'>
-            <p>This is sexy asf</p>
-          </div>
-          <div className='com-2'>
-            <p className='r'>Reply</p>
-            <img src={like} alt='jpg' /><p>23k</p>
-            <img src={dislike} alt='jpg' />
+        <div className='write'>
+          <form onSubmit={handleCommentSubmit}>
+            <input type='text' name='comment' placeholder='Add a comment' required />
+            <button className='send'>Send</button>
+          </form>
+        </div>
+
+        <div className='related'>
+          <span className='relate'>Related Videos</span>
+          <div className='view-page-wrapper'>
+            <div className='view-container'>
+              {videos.map((video) => (
+                <div className='view-image' key={video.id}>
+                  <Link to={`/ViewVideos/${video.id}`}>
+                    <img src={video.thumbnail_url} alt={video.title} />
+                    <span>{video.title}</span>
+                    <p>
+                      {video.duration} &nbsp; - &nbsp;
+                      <img className='view-eye' src={eye} alt='view count' />
+                      {video.views}
+                    </p>
+                  </Link>
+                </div>
+              ))}
             </div>
-            <div className='com'>
-            <img src={avatar} alt='avatar' />
-            <span>Lesby</span>
-            <p>6hrs</p>
           </div>
-          <div className='com-1'>
-            <p>Wanna link up?? text me
-            </p>
-          </div>
-          <div className='com-2'>
-            <p className='r'>Reply</p>
-            <img src={like} alt='jpg' /><p>23k</p>
-            <img src={dislike} alt='jpg' />
-            </div>
         </div>
       </div>
-      <div className='write'>
-        <form>
-          <input type='text' placeholder='Add a comment' /> <button className='send'>Send</button>
-        </form>
-      </div>
 
-      <div className='related'>
-        <span className='relate'>Related Videos</span>
-        
-        <div className='rel'>
-        <div className='image'>
-                <Link to='/'><img src={frame1} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame2} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame3} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame1} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame2} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame3} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-              </div>
-              <div className='image'>
-                <Link to='/'><img src={frame1} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame2} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame3} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame1} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame2} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame3} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-              </div>
-              <div className='image'>
-                <Link to='/'><img src={frame1} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame2} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame3} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame1} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame2} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame3} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-              </div>
-              <div className='image'>
-                <Link to='/'><img src={frame1} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame2} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame3} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame1} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame2} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-                <Link to='/'><img src={frame3} alt='Bang' />
-                <span>Banging Oga Soldier Wife</span>
-                <p>12mins &nbsp; - &nbsp; <img className='eye' src={eye} alt='view' />12k </p>
-                </Link>
-              </div>
-        </div>
+      <div className='back-1'>
+        <Link to='/Home'>Back To Home</Link>
       </div>
-    </div>
-    <div className='back-1'>
-      <Link to='/Home'>Back To Home</Link>
-    </div>
-    <Foot />
+      <Foot />
     </>
-    
-  )
+  );
 }
 
-export default ViewVideos 
+export default ViewVideos;

@@ -1,13 +1,44 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import supabase from '../supabaseClient'
 import { Link } from 'react-router-dom'
 import dp from '../Assets/dp.png'
 import back from '../Assets/cancel-01.png'
 import frame20 from '../Assets/Emptybox.png'
-import UserNavbar from './UserNavbar'
+import UserNavbar from '../Components/UserNavbar'
 import '../Styles/NoNotification.css'
 
 function NoNotification() {
+  const [user, setUser] = useState(null);
+const [loading, setLoading] = useState(true);
+const [hasNotifications, setHasNotifications] = useState(false);
+
+useEffect(() => {
+  const fetchUserAndNotifications = async () => {
+    const { data: { user } } = await supabase.auth.getUser();
+    setUser(user);
+
+    if (user) {
+      const { data: notifications } = await supabase
+        .from('notifications')
+        .select('*')
+        .eq('user_id', user.id);
+
+      setHasNotifications(notifications && notifications.length > 0);
+    }
+
+    setLoading(false);
+  };
+
+  fetchUserAndNotifications();
+}, []);
+
+if (loading) return <p>Loading...</p>;
+if (!user) return <p>Please log in to view your notifications.</p>;
+if (hasNotifications) return null; // or redirect to Notification page
+
+
   return (
+    
     <>
     <div className='no'>
       <div className='usernav'>

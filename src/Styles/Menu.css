@@ -85,32 +85,3 @@
   margin-bottom: 2%;
 }
 }
-
-/*@media only screen and (min-width: 1281px) {
-  .desktop-menu {
-    display: contents;
-  }
-  .sidebar {
-    width: 25%;
-    height: 200%;
-  }
-  .sidebar-nav {
-    width: 220%;
-    height: 100%;
-    margin-top: 40%;
-    justify-content: left;
-    margin-left: 2%;
-  } 
-  .nav-list .nav-item {
-    font-weight: 500;
-    font-size: 16px;
-    border-bottom: 0.5px solid #0000002a;
-  }
-  .nav-item img {
-    width: 40px;
-    height: 40px;
-  }
-  .sidebar-nav .nav-item .nav-link {
-    border-bottom: none;
-}
-}*/

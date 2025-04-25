@@ -3,20 +3,14 @@ import Category from '../Assets/categories.png'
 import arrow from '../Assets/arrow-down.png'
 import '../Styles/Categories.css'
 
-function Categories(props) {
+function Categories({ onClick }) {
   return (
     <>
-    <div className='cat' onClick={props.onClick}> <img src={Category} alt='jpg' />
+      <div className='categories-wrapper' onClick={onClick}>
+      <img src={Category} alt='categories' />
       <span>Categories</span>
-      <img src={arrow} alt='jpg' />
+      <img src={arrow} alt='arrow' />
     </div>
-
-
-    <div className='deskcat'><img src={Category} alt='jpg' />
-      <span>Categories</span>
-      <img className='arrow' src={arrow} alt='jpg' />
-    </div>
-    
     </>
     
   );

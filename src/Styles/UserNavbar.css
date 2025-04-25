@@ -4,7 +4,7 @@
   position: fixed;
   width: 100%;
   background-color: hsl(0, 0%, 100%);
-  padding-top: 0.5rem;
+  padding-top: 0.5rem 1.5rem;
   border-bottom: 0.5px solid #000;
   
   z-index: 100;
@@ -14,9 +14,7 @@ position: relative;
 left: 20px;
 }
 .profile {
-  position: relative;
-  left: 100%;
-  bottom: 5px;
+ padding-left: 80rem;
 }
 .user {
   position: relative;
@@ -24,7 +22,8 @@ left: 20px;
   right: 10px;
 }
 .dashboard .searchbar {
-  position: relative;
-  left: 7em;
+padding-left: 7rem;
+position: relative;
+bottom: 0.2rem;
 }
 

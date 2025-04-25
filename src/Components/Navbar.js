@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../Styles/Navbar.css'
 import Logo from '../Assets/logo.png'
@@ -17,17 +17,51 @@ function Navbar() {
   const [open, setOpen] = useState (false);
   const [search, setSearch] = useState(false);
 
+  const profileRef = useRef(null); // ref for the profile dropdown
+  const searchRef = useRef(null);
+
   const Hamburger = <IoMenu className='HamburgerMenu' size='30px' color='black' onClick={() => setClick(!click)} />
   const Close = <IoClose className='HamburgerMenu' size='30px' color='black' onClick={() => setClick(!click)} />
   const [click, setClick] =useState(false);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (searchRef.current && !searchRef.current.contains(event.target)) {
+      setSearch(false);  // Close search
+    }
+  };
+
+  if (search) {
+    document.addEventListener('mousedown', handleClickOutside);
+  }
+
+  return () => {
+    document.removeEventListener('mousedown', handleClickOutside);
+  };
+}, [search]);
+
 
   return (
     <>
     <div className='mobile-navbar'>
     
     {search && (
-          <Search />
-        )}
+      <div ref={searchRef}>
+      <Search />
+      </div>
+    ) }
     
     <div  className='header'>
       <div className='menu-btn'>
@@ -39,18 +73,18 @@ function Navbar() {
         <Link to='/Home'><img className='logo' src={Logo} alt='/' /></Link>
       </div>
 
-        <div className='search-bar' onClick={() => setSearch(search => !search)}>
+        <div className='search-bar' onClick={() => setSearch(!search)}>
         <img src={searchbar} alt='search' />
         </div> 
       
 
-      <div className='user' onClick={() => setOpen(open => !open)}>
+      <div className='user' onClick={() => setOpen(!open)}>
         <img src={user} alt='user' />
       </div>
     </div>
 
       { open && (
-    <div className='account'>
+    <div className='account' ref={profileRef} >
           <Profile />
         </div>
         )

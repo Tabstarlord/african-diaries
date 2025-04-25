@@ -1,9 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../Styles/Warning.css';
 
 function Warning() {
+  const [checkboxes, setCheckboxes] = useState({
+    age: false,
+    noMinors: false,
+    voluntarily: false,
+  });
+
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, checked } = e.target;
+    setCheckboxes({ ...checkboxes, [name]: checked });
+    setError('');
+  };
+
+  const handleEnter = (e) => {
+    e.preventDefault();
+
+    const allChecked = Object.values(checkboxes).every(Boolean);
+
+    if (allChecked) {
+      navigate('/Home');
+    } else {
+      setError('⚠️ Please check all the boxes before entering.');
+    }
+  };
+
   return (
     <div className="warn">
       <div className="warn-content">
@@ -23,24 +49,43 @@ function Warning() {
           <div className="warn5">
             <form>
               <p>
-                <input type="checkbox" /> You are at least 18 years old (or the legal age in your area).
+                <input
+                  type="checkbox"
+                  name="age"
+                  checked={checkboxes.age}
+                  onChange={handleChange}
+                />{' '}
+                You are at least 18 years old (or the legal age in your area).
               </p>
               <p>
-                <input type="checkbox" /> You will not share or distribute this content to minors.
+                <input
+                  type="checkbox"
+                  name="noMinors"
+                  checked={checkboxes.noMinors}
+                  onChange={handleChange}
+                />{' '}
+                You will not share or distribute this content to minors.
               </p>
               <p>
-                <input type="checkbox" /> You voluntarily choose to access this website.
+                <input
+                  type="checkbox"
+                  name="voluntarily"
+                  checked={checkboxes.voluntarily}
+                  onChange={handleChange}
+                />{' '}
+                You voluntarily choose to access this website.
               </p>
             </form>
           </div>
 
+          {error && <div className="warn-error" style={{color: 'red'}} >{error}</div>}
+
           <div className="warn6">
-            <Link to="/Home">
-              <button className="go5">I am 18 or older - Enter</button>
-            </Link>
-            <Link to="">
+            <button className="go5" onClick={handleEnter}>
+              I am 18 or older - Enter
+            </button>
               <button className="go6">I am under 18 - Exit</button>
-            </Link>
+            
           </div>
         </div>
       </div>

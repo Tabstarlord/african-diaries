@@ -1,8 +1,11 @@
 import React, { useState, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import supabase from '../supabaseClient'
+import { v4 as uuidv4 } from 'uuid'; 
+import { useUser } from '../Components/UserContext'
 import back from '../Assets/cancel-01.png'
 import '../Styles/Setting.css'
-import UserNavbar from './UserNavbar'
+import UserNavbar from '../Components/UserNavbar'
 import logout from '../Assets/Login.png'
 
 function Setting() {
@@ -19,21 +22,94 @@ function Setting() {
      fileInputRef.current.click();
    };
  
-   const handleImageChange = (e) => {
-     const file = e.target.files[0];
-     if (file && file.type.startsWith('image/')) {
-       const reader = new FileReader();
-       reader.onloadend = () => {
-         setProfileImage(reader.result);
-       };
-       reader.readAsDataURL(file);
-     }
-   };
+   const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${uuidv4()}.${fileExt}`;
+      const filePath = `${fileName}`;
+  
+      const { error } = await supabase
+  .storage
+  .from('avatars')
+  .upload(filePath, file);
+
+  
+      if (error) {
+        console.error('Error uploading image:', error);
+        return;
+      }
+  
+      // Get the public URL
+      const { data: publicUrlData } = supabase
+        .storage
+        .from('avatars')
+        .getPublicUrl(filePath);
+  
+      const publicUrl = publicUrlData.publicUrl;
+  
+      setProfileImage(publicUrl);
+  
+      // Save to user's profile in Supabase
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+  
+      if (user) {
+        await supabase
+          .from('profiles')
+          .update({ avatar_url: publicUrl })
+          .eq('id', user.id);
+      }
+    }
+  };
+  
  
-   const handleSave = () => {
-     setAlert(true);
-     setTimeout(() => setAlert(false), 3000); // Alert disappears after 3 seconds
-   };
+   const { user } = useUser();
+
+const handleSave = async (e) => {
+  e.preventDefault();
+
+  if (!user) return;
+
+  try {
+    // Update Auth info (email & password)
+    if (email || password) {
+      const { error: authError } = await supabase.auth.updateUser({
+        email: email || undefined,
+        password: password || undefined
+      });
+
+      if (authError) {
+        console.error('Auth update error:', authError);
+        return alert('Failed to update email or password.');
+      }
+    }
+
+    // Update user profile info (username)
+    const updates = {
+      id: user.id,
+      username: name || user.user_metadata?.username || '',
+    };
+
+    const { error: profileError } = await supabase
+      .from('profiles')
+      .update(updates)
+      .eq('id', user.id);
+
+    if (profileError) {
+      console.error('Profile update error:', profileError);
+      return alert('Failed to update username.');
+    }
+
+    setAlert(true);
+    setTimeout(() => setAlert(false), 3000);
+  } catch (error) {
+    console.error('Unexpected error:', error.message);
+    alert('Something went wrong.');
+  }
+};
+
 
    const navigate = useNavigate();
 

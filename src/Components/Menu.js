@@ -15,26 +15,23 @@ import Categories from './Categories'
 import Dropdown from './Dropdown'
 import Version from './Version'
 import DropVersion from './DropVersion'
-import Dashboard from '../User Dashboard/Dashboard'
+
 
 
 
 function Menu() {
   const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-  };
-
-
   const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true); // Track mobile menu state
 
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleVisibility = () => setIsVisible(!isVisible);
+  const toggleOpen = () => setIsOpen(!isOpen);
+  const handleLinkClick = () => setMenuOpen(false); // Close mobile menu on link
 
   return (
     <>  
+    { /*Mobile Menu */ }
+    {menuOpen && (
     <div className='mobile-menu'>
     <aside className='sidebar'>
       {/* Sidebar Header*/}
@@ -44,14 +41,14 @@ function Menu() {
         {/*Primary Top Nav*/}
         <ul className='nav-list primary-nav'>
           <li className='nav-item'>
-            <Link to='/BestVideos' className='nav-link'>
+            <Link to='/BestVideos' className='nav-link' onClick={handleLinkClick}>
             <img src={video} alt='video' />
             <span className='nav-label'>Best Videos</span>
             </Link>
           </li>
 
           <li className='nav-item'>
-            <Link to='/NewestVideos' className='nav-link'>
+            <Link to='/NewestVideos' className='nav-link' onClick={handleLinkClick}>
             <img src={newest} alt='video' />
             <span className='nav-label'>Newest Videos</span>
             </Link>
@@ -65,10 +62,10 @@ function Menu() {
             </li>
             
         <li className='nav-item'>
-          <Link to='/LikedVideos' className='nav-link'><img src={like} alt='like' /> <span className='nav-label'>Liked Videos</span> </Link>
+          <Link to='/LikedVideos' className='nav-link' onClick={handleLinkClick}><img src={like} alt='like' /> <span className='nav-label'>Liked Videos</span> </Link>
         </li>
         <li className='nav-item'>
-          <Link to='/WatchHistory' className='nav-link'><img src={watch} alt='like' /> <span className='nav-label'>Watch History</span> </Link>
+          <Link to='/WatchHistory' className='nav-link' onClick={handleLinkClick}><img src={watch} alt='like' /> <span className='nav-label'>Watch History</span> </Link>
         </li>
 
         <li className='nav-item'>
@@ -86,13 +83,14 @@ function Menu() {
       </nav>
     </aside>
     </div>
+     )}
 
 
         {/*For Desktop*/}
     <div className='desktop-menu'>
     <aside className='sidebar'>
       {/* Sidebar Header*/}
-      <Dashboard />
+    
 
       <nav className='sidebar-nav'>
         {/*Primary Top Nav*/}

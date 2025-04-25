@@ -154,3 +154,18 @@ label {
   color: #008000;
   text-decoration: underline;
 }
+
+.reset-password-form {
+  position: absolute;
+  z-index: 99;
+  margin-top: 1rem;
+  background: #f6f6f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.reset-message {
+  margin-top: 0.5rem;
+  color: #e63946; /* or green if success */
+  font-weight: bold;
+}
