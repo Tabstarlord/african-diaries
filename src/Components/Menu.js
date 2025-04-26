@@ -19,19 +19,18 @@ import DropVersion from './DropVersion'
 
 
 
-function Menu() {
+function Menu({setClick}) {
   const [isVisible, setIsVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(true); // Track mobile menu state
 
   const toggleVisibility = () => setIsVisible(!isVisible);
   const toggleOpen = () => setIsOpen(!isOpen);
-  const handleLinkClick = () => setMenuOpen(false); // Close mobile menu on link
+  const handleLinkClick = () => setClick(false); // Close mobile menu on link
 
   return (
     <>  
     { /*Mobile Menu */ }
-    {menuOpen && (
+    
     <div className='mobile-menu'>
     <aside className='sidebar'>
       {/* Sidebar Header*/}
@@ -58,7 +57,7 @@ function Menu() {
               <span className='nav-label'>
                 <Categories onClick={toggleVisibility} />
               </span>
-              <Dropdown isVisible={isVisible} />
+              <Dropdown isVisible={isVisible} onLinkClick={handleLinkClick} />
             </li>
             
         <li className='nav-item'>
@@ -72,7 +71,7 @@ function Menu() {
               <span className='nav-label'>
                 <Version onClick={toggleOpen} />
               </span>
-              <DropVersion isOpen={isOpen} />
+              <DropVersion isOpen={isOpen} onLinkClick={handleLinkClick} />
             </li>
         
         <li className='nav-item'>
@@ -83,7 +82,6 @@ function Menu() {
       </nav>
     </aside>
     </div>
-     )}
 
 
         {/*For Desktop*/}

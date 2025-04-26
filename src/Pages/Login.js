@@ -12,7 +12,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
-  const [showResetForm, setShowResetForm] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 const [resetEmail, setResetEmail] = useState('');
 const [resetMessage, setResetMessage] = useState('');
 
@@ -61,6 +61,7 @@ const handleLogin = async (e) => {
   
 
   return (
+    
     <div className='login-wrapper'>
       <div className='login-wrapper-2'>
         <div className='login'>
@@ -104,9 +105,14 @@ const handleLogin = async (e) => {
                 <span className='remember1'>Remember Me</span>
               </label>
               <Link to=''>
-              <p className='forget' onClick={() => setShowResetForm(!showResetForm)} style={{ cursor: 'pointer' }}>
+              <p
+  className='forget'
+  onClick={() => setShowModal(true)}
+  style={{ cursor: 'pointer' }}
+>
   Forget password?
 </p>
+
               </Link>
             </div>
 
@@ -115,24 +121,28 @@ const handleLogin = async (e) => {
             </button>
           </form>
 
-          {showResetForm && (
-  <div className="reset-password-form">
-    <form onSubmit={handlePasswordReset}>
-      <label htmlFor='reset-email'>Enter your email to reset password</label>
-      <input
-        className='log-1'
-        type='email'
-        id='reset-email'
-        value={resetEmail}
-        onChange={(e) => setResetEmail(e.target.value)}
-        placeholder='Enter your email'
-        required
-      />
-      <button className='btn-3' type='submit'>Send Reset Email</button>
-    </form>
-    {resetMessage && <p className='reset-message'>{resetMessage}</p>}
+          {showModal && (
+  <div className='modal-overlay'>
+    <div className='modal-content'>
+      <span className='close-modal' onClick={() => setShowModal(false)}>
+        &times;
+      </span>
+      <h2>Reset Password</h2>
+      <form onSubmit={handlePasswordReset}>
+        <input
+          type='email'
+          placeholder='Enter your email'
+          value={resetEmail}
+          onChange={(e) => setResetEmail(e.target.value)}
+          required
+        />
+        <button className='btn-3' type='submit'>Send Reset Link</button>
+      </form>
+      {resetMessage && <p className='reset-message'>{resetMessage}</p>}
+    </div>
   </div>
 )}
+
 
 
           <div className='or-log'>

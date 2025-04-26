@@ -13,6 +13,7 @@
     gap: 15vw;
     z-index: 90;
   }
+  
   .header .logo {
     position: relative;
     top: 6px;
@@ -21,6 +22,7 @@
   .header .menu-btn {
     position: relative;
     top: 8px;
+    animation: slideInLeft 0.3s forwards;
   }
   .header .user {
     position: relative;
@@ -30,6 +32,14 @@
     position: relative;
     top: 8px;
     left: 30px;
+  }
+  .slide-search {
+    animation: slideDown 0.3s forwards;
+    position: absolute;
+    z-index: 1000;
+  }
+  .slide-profile {
+    animation: slideInRight 0.3s forwards;
   }
   
 

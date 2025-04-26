@@ -36,7 +36,8 @@
 }
 .search-results {
   min-height: 100px;
-  margin-top: 1rem;
+  position: relative;
+  top: 6rem;
 }
 
 .loading-placeholder {

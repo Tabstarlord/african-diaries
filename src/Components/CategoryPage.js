@@ -66,9 +66,10 @@ function CategoryPage({ category }) {
 
   return (
     <>
+       {isLoggedIn ? <UserNavbar /> : <Navbar />}
 
-{isLoggedIn ? <UserNavbar /> : <Navbar />}
       <div className='home'>
+     
         <div className='desk-menu'>
           <div className='desktop-side'>
             <Menu />
@@ -126,18 +127,6 @@ function CategoryPage({ category }) {
         <Footer />
       <Foot />
       </div>
-
-
-
-
-
-
-    {isLoggedIn ? <UserNavbar /> : <Navbar />}
-        <div className='desk-menu'>
-          <div className='desktop-side'>
-            <Menu />
-          </div>
-        </div>
     </>
   )
 }

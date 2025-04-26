@@ -69,7 +69,7 @@ useEffect(() => {
       </div>
     ))
   ) : (
-    <p>No results</p>
+    <p></p>
   )}
 </div>
 

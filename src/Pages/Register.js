@@ -13,7 +13,19 @@ function Register() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
  
-  const handleSignup = async (email, password) => {
+  
+  const handleOAuthLogin = async (provider) => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider });
+    if (error) {
+      console.error(`${provider} login error:`, error.message);
+    }
+  };
+  
+  
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -25,36 +37,15 @@ function Register() {
     });
   
     if (error) {
-      console.error('Signup error:', error);
-    } else {
-      console.log('User signed up:', data);
+      console.error('Signup error:', error.message);
+      alert(error.message);
+      return;
     }
+  
+    console.log('User signed up:', data);
+    alert('Account created! Please check your email to confirm.');
   };
   
-  const handleOAuthLogin = async (provider) => {
-    const { error } = await supabase.auth.signInWithOAuth({ provider });
-    if (error) {
-      console.error(`${provider} login error:`, error.message);
-    }
-  };
-  
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log(
-      email,
-      userName,
-      password
-    );
-    await handleSignup(email, password, userName);
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/dashboard`, // or wherever
-      },
-    });
-    
-  };
   
 
   return (
