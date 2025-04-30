@@ -15,6 +15,8 @@ import ProtectedRoute from './Components/ProtectedRoute';
 import Dashboard from './User Dashboard/Dashboard';
 import { UserProvider } from './Components/UserContext';
 import CategoryPage from './Components/CategoryPage';
+import TrackUserLocation from './Components/TrackUserLocation';
+import TrackUserDevice from './Components/TrackUserDevice';
 
 
 
@@ -22,6 +24,8 @@ function App() {
   return (
 
     <>
+    <TrackUserLocation />
+    <TrackUserDevice />
       <div className="App">
 
         <UserProvider>

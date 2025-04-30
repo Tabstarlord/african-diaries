@@ -15,7 +15,8 @@ import Foot from '../Components/Foot';
 import Navbar from '../Components/Navbar';
 import UserNavbar from '../Components/UserNavbar';
 
-function ViewVideos() {
+
+function ViewVideos({ videoId }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [videos, setVideos] = useState([]);
   const [comments, setComments] = useState([]);
@@ -47,6 +48,25 @@ function ViewVideos() {
     setIsPlaying(!isPlaying);
   };
 
+  // Call this function to increment the view count for the category
+  const incrementCategoryView = async (category) => {
+    try {
+      // Increment the category view count in the 'category_views' table
+      const { error } = await supabase
+        .from('category_views')
+        .upsert(
+          { category_name: category, view_count: supabase.raw('view_count + 1') },
+          { onConflict: ['category_name'] }
+        );
+
+      if (error) {
+        console.error('Error incrementing category view count:', error);
+      }
+    } catch (error) {
+      console.error('Error incrementing category view:', error);
+    }
+  };
+
   useEffect(() => {
     const logWatchHistory = async () => {
       if (!user || !currentVideo) return;
@@ -59,9 +79,10 @@ function ViewVideos() {
   
     if (currentVideo) {
       logWatchHistory();
+      // Increment category view count when a video is viewed
+      incrementCategoryView(currentVideo.category); // Pass the category of the video here
     }
   }, [currentVideo, user]);
-  
 
   useEffect(() => {
     const fetchVideo = async () => {
@@ -113,15 +134,13 @@ function ViewVideos() {
     const content = e.target.elements.comment.value;
     if (!user) return;
 
-    const { data, error } = await supabase.from('comments').insert([
-      {
-        video_id: id,
-        user_id: user.id,
-        username: user.user_metadata.username || 'Anonymous',
-        avatar_url: user.user_metadata.avatar_url || '',
-        content,
-      },
-    ]);
+    const { data, error } = await supabase.from('comments').insert([{
+      video_id: id,
+      user_id: user.id,
+      username: user.user_metadata.username || 'Anonymous',
+      avatar_url: user.user_metadata.avatar_url || '',
+      content,
+    }]);
 
     if (error) {
       console.error('Insert error:', error);
@@ -158,13 +177,11 @@ function ViewVideos() {
   const handleReaction = async (type) => {
     if (!userId || !id) return;
 
-    const { error } = await supabase.from('reactions').insert([
-      {
-        video_id: id,
-        user_id: userId,
-        type,
-      },
-    ]);
+    const { error } = await supabase.from('reactions').insert([{
+      video_id: id,
+      user_id: userId,
+      type,
+    }]);
 
     if (!error) fetchReactions();
     else console.error('Reaction error:', error);
@@ -177,6 +194,34 @@ function ViewVideos() {
     };
     fetchUser();
   }, []);
+  
+  useEffect(() => {
+    const trackView = async () => {
+      // Step 1: Insert into video_views (for today's view count)
+      const { error: insertError } = await supabase.from('video_views').insert([
+        {
+          video_id: videoId,
+          user_id: userId || null, // optional, can be anonymous
+          viewed_at: new Date(), // optional; Supabase default works
+        },
+      ]);
+
+      if (insertError) {
+        console.error('Error inserting view record:', insertError);
+      }
+
+      // Step 2: Increment view_count in videos table
+      const { error: updateError } = await supabase.rpc('increment_view_count', {
+        vid: videoId,
+      });
+
+      if (updateError) {
+        console.error('Error incrementing view count:', updateError);
+      }
+    };
+
+    trackView();
+  }, [videoId, userId]);
 
   return (
     <>
@@ -270,23 +315,17 @@ function ViewVideos() {
               {videos.map((video) => (
                 <div className='view-image' key={video.id}>
                   <Link to={`/ViewVideos/${video.id}`}>
-                    <img src={video.thumbnail_url} alt={video.title} />
-                    <span>{video.title}</span>
-                    <p>
-                      {video.duration} &nbsp; - &nbsp;
-                      <img className='view-eye' src={eye} alt='view count' />
-                      {video.views}
-                    </p>
+                    <video width='100%' height='100%' className='video-thumb'>
+                      <source src={video.video_url} type='video/mp4' />
+                    </video>
+                    <h2>{video.title}</h2>
                   </Link>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </div>
 
-      <div className='back-1'>
-        <Link to='/Home'>Back To Home</Link>
       </div>
       <Foot />
     </>

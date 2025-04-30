@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import supabase  from '../supabaseClient';
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../Styles/Register.css'
 import x from '../Assets/x.png'
 import google from '../Assets/google.png'
@@ -12,6 +12,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); 
  
   
   const handleOAuthLogin = async (provider) => {
@@ -25,7 +26,7 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -35,15 +36,18 @@ function Register() {
         },
       },
     });
-  
+
     if (error) {
       console.error('Signup error:', error.message);
       alert(error.message);
       return;
     }
-  
+
     console.log('User signed up:', data);
     alert('Account created! Please check your email to confirm.');
+
+    // Redirect to homepage after successful signup
+    navigate('/Home');
   };
   
   

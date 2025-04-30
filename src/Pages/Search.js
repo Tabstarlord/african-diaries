@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import '../Styles/Search.css';
-import searchBar from '../Assets/search.png';
+import searchBar from '../Assets/Vector.png';
 import supabase from '../supabaseClient';
 
 function Search() {
