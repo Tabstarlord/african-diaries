@@ -49,17 +49,17 @@
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 680px) and (max-width: 1024px) {
   /* Base styles */
 
 
 .search-container {
-  margin-left: 7rem;
+  margin-left: 11rem;
 }
 
 .search-input {
   flex: 1;
-  padding: 6px 12px;
+  padding: 6px 20px;
   border: none;
   outline: none;
   font-size: 14px;
@@ -89,9 +89,15 @@
 
 @media (min-width: 1361px) {
   .search-container {
-    max-width: 600px;
-    margin-left: 26rem;
+    max-width: 500px;
+    margin-left: 28rem;
     margin-top: 7vh;
+  }
+  .search-input {
+  padding: 4px 20px;
+  }
+  .search-button {
+    padding: 4px 14px;
   }
 }
 

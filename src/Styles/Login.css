@@ -24,7 +24,7 @@ html, body {
 
 /* Login box */
 .login {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 12px;
   width: 90%;

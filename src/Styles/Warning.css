@@ -36,7 +36,6 @@
 }
 
 .warn-1 {
-  background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
@@ -130,6 +129,7 @@
 
 @media only screen and (min-width: 1025px) {
   .warn-1 {
+    background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid #fff;
   }
 }

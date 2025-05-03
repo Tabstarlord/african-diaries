@@ -22,7 +22,7 @@
 
 /* Register Container */
 .register-container {
-  background-color: rgba(0, 0, 0, 0.788);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   max-width: 450px;
   padding: 2rem;
@@ -154,7 +154,7 @@
   
   /* Register Container */
   .register-container {
-    background-color: rgba(0, 0, 0, 0.788);
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     max-width: 450px;
     padding: 2rem;

@@ -31,7 +31,7 @@ function Home() {
       const { data, error } = await supabase
         .from('videos')
         .select('*')
-        .order('created_at', { ascending: false }); // Order newest first
+        .order('uploaded_at', { ascending: false }); // Order newest first
 
       if (error) {
         console.error('Error fetching videos:', error.message);
@@ -67,15 +67,15 @@ function Home() {
 
         <div className='page-wrapper'>
           <div className='home-container'>
-            {currentVideos.map((video, index) => (
+            {currentVideos.map((videos, index) => (
               <div className='image' key={index}>
-                <Link to={`/ViewVideos/${video.id}`}>
-                  <img src={video.thumbnail_url} alt={video.title} />
-                  <span>{video.title}</span>
+                <Link to={`/ViewVideos/${videos.id}`}>
+                  <img src={videos.thumbnail_url} alt={videos.title} />
+                  <span>{videos.title}</span>
                   <p>
-                    {video.duration} &nbsp; - &nbsp;
+                    {videos.duration} &nbsp; - &nbsp;
                     <img className='eye' src={eye} alt='view count' />
-                    {video.views}
+                    {videos.views}
                   </p>
                 </Link>
               </div>
