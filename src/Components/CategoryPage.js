@@ -8,8 +8,8 @@ import Menu from '../Components/Menu'
 import Footer from '../Components/Footer'
 import Foot from '../Components/Foot'
 
-function CategoryPage({ category }) {
-  const { tag } = useParams();
+function CategoryPage() {
+  const { category, tag } = useParams();
   const [videos, setVideos] = useState([]);
      const [isLoggedIn, setIsLoggedIn] = useState(false);
       const [currentPage, setCurrentPage] = useState(1);
@@ -21,36 +21,40 @@ function CategoryPage({ category }) {
                setIsLoggedIn(authStatus === 'true');
              }, []);
 
-  useEffect(() => {
-    const fetchCategoryVideos = async () => {
-      const { data, error } = await supabase
-        .from('videos')
-        .select('*')
-        .eq('category', category)
-        .order('created_at', { ascending: false });
 
-      if (!error) setVideos(data);
-    };
-
-    fetchCategoryVideos();
-  }, [category]);
-
-  useEffect(() => {
-    const fetchTaggedVideos = async () => {
-      const { data, error } = await supabase
-        .from('videos')
-        .select('*')
-        .contains('tags', [tag]); // Works if `tags` is an array column
-
-      if (error) {
-        console.error('Error fetching videos by tag:', error);
-      } else {
-        setVideos(data);
-      }
-    };
-
-    fetchTaggedVideos();
-  }, [tag]);
+             useEffect(() => {
+              const fetchVideos = async () => {
+                let data, error;
+            
+                if (tag) {
+                  ({ data, error } = await supabase
+                    .from('videos')
+                    .select('*')
+                    .contains('tags', [tag]));
+                } else if (category) {
+                  ({ data, error } = await supabase
+                    .from('videos')
+                    .select('*')
+                    .eq('category', category)
+                    .order('created_at', { ascending: false }));
+                } else {
+                  ({ data, error } = await supabase
+                    .from('videos')
+                    .select('*')
+                    .order('uploaded_at', { ascending: false }));
+                }
+            
+                if (error) {
+                  console.error('Error fetching videos:', error.message);
+                  setVideos([]); // prevent null
+                } else {
+                  setVideos(data || []);
+                }
+              };
+            
+              fetchVideos();
+            }, [tag, category]);
+            
 
   const totalPages = Math.ceil(videos.length / videosPerPage);
   // Calculate current page videos
@@ -78,38 +82,56 @@ function CategoryPage({ category }) {
 
         <div className='page-wrapper'>
           <div className='home-container'>
-          <h2 style={{textAlign: 'left', paddingLeft: '1rem'}}>{category}</h2>
-        {currentVideos.map((video, index) => (
-          <div className='image' key={index}>
-            <Link to={`/ViewVideos/${video.id}`}>
-              <img src={video.thumbnail_url} alt={video.title} />
-              <span>{video.title}</span>
-              <p>
-                {video.duration} &nbsp; - &nbsp;
-                <img className='eye' src={eye} alt='view count' />
-                {video.views}
-              </p>
-            </Link>
-          </div>
-           ))}
+
+        {currentVideos.map((videos, index) => (
+         <div className='image' key={index}>
+           <Link to={`/ViewVideos/${videos.id}`}>
+             <video
+               src={videos.video_url}
+               muted
+               playsInline
+               preload="metadata"
+               className="video-thumb"
+               onMouseOver={e => e.target.play()}
+               onMouseOut={e => e.target.pause()}
+             ></video>
+             <span>{videos.title}</span>
+             <p>
+               {videos.duration} &nbsp; - &nbsp;
+               <img className='eye' src={eye} alt='view count' />
+               {videos.views}
+             </p>
+           </Link>
+         </div>
+       ))}
+       
           </div>
 
-          <div className='home-container'>
+          {/*<div className='home-container'>
           <h2>{tag}</h2>
-        {currentVideos.map((video, index) => (
+         {currentVideos.map((videos, index) => (
           <div className='image' key={index}>
-            <Link to={`/ViewVideos/${video.id}`}>
-              <img src={video.thumbnail_url} alt={video.title} />
-              <span>{video.title}</span>
+            <Link to={`/ViewVideos/${videos.id}`}>
+              <video
+                src={videos.thumbnail_url}
+                muted
+                playsInline
+                preload="metadata"
+                className="video-thumb"
+                onMouseOver={e => e.target.play()}
+                onMouseOut={e => e.target.pause()}
+              ></video>
+              <span>{videos.title}</span>
               <p>
-                {video.duration} &nbsp; - &nbsp;
+                {videos.duration} &nbsp; - &nbsp;
                 <img className='eye' src={eye} alt='view count' />
-                {video.views}
+                {videos.views}
               </p>
             </Link>
           </div>
-           ))}
-          </div>
+        ))}
+        
+          </div>*/}
 
           {/* Pagination Buttons */}
           <div className='pagination'>

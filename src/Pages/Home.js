@@ -43,6 +43,24 @@ function Home() {
     fetchVideos();
   }, []);
 
+  
+  useEffect(() => {
+    const fetchThumbnails = async () => {
+      const { data, error } = await supabase
+        .from('videos')
+        .select('*')
+        .order('uploaded_at', { ascending: false }); // Order newest first
+
+      if (error) {
+        console.error('Error fetching thumbnails:', error.message);
+      } else {
+        setVideos(data);
+      }
+    };
+
+    fetchThumbnails();
+  }, []);
+
 
   const totalPages = Math.ceil(videos.length / videosPerPage);
   // Calculate current page videos
@@ -67,19 +85,28 @@ function Home() {
 
         <div className='page-wrapper'>
           <div className='home-container'>
-            {currentVideos.map((videos, index) => (
-              <div className='image' key={index}>
-                <Link to={`/ViewVideos/${videos.id}`}>
-                  <img src={videos.thumbnail_url} alt={videos.title} />
-                  <span>{videos.title}</span>
-                  <p>
-                    {videos.duration} &nbsp; - &nbsp;
-                    <img className='eye' src={eye} alt='view count' />
-                    {videos.views}
-                  </p>
-                </Link>
-              </div>
-            ))}
+          {currentVideos.map((videos, index) => (
+  <div className='image' key={index}>
+    <Link to={`/ViewVideos/${videos.id}`}>
+      <video
+        src={videos.video_url}
+        muted
+        playsInline
+        preload="metadata"
+        className="video-thumb"
+        onMouseOver={e => e.target.play()}
+        onMouseOut={e => e.target.pause()}
+      ></video>
+      <span>{videos.title}</span>
+      <p>
+        {videos.duration} &nbsp; - &nbsp;
+        <img className='eye' src={eye} alt='view count' />
+        {videos.views}
+      </p>
+    </Link>
+  </div>
+))}
+
           </div>
 
           {/* Pagination Buttons */}

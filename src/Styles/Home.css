@@ -34,6 +34,14 @@
     margin-left: -0.5em;
     margin-top: 1%;
   }
+  .video-thumb {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
   .image p .eye {
     max-width: 10px;
     max-height: 10px;

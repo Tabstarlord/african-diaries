@@ -31,7 +31,7 @@ function BestVideos() {
       const { data, error } = await supabase
         .from('videos')
         .select('*')
-        .order('created_at', { ascending: false }); // Order newest first
+        .order('uploaded_at', { ascending: false }); // Order newest first
 
       if (error) {
         console.error('Error fetching videos:', error.message);
@@ -42,6 +42,7 @@ function BestVideos() {
 
     fetchVideos();
   }, []);
+
 
 
   const totalPages = Math.ceil(videos.length / videosPerPage);
@@ -67,19 +68,29 @@ function BestVideos() {
 
         <div className='page-wrapper'>
           <div className='home-container'>
-            {currentVideos.map((video, index) => (
-              <div className='image' key={index}>
-                <Link to={`/ViewVideos/${video.id}`}>
-                  <img src={video.thumbnail_url} alt={video.title} />
-                  <span>{video.title}</span>
-                  <p>
-                    {video.duration} &nbsp; - &nbsp;
-                    <img className='eye' src={eye} alt='view count' />
-                    {video.views}
-                  </p>
-                </Link>
-              </div>
-            ))}
+         
+          {currentVideos.map((videos, index) => (
+  <div className='image' key={index}>
+    <Link to={`/ViewVideos/${videos.id}`}>
+      <video
+        src={videos.video_url}
+        muted
+        playsInline
+        preload="metadata"
+        className="video-thumb"
+        onMouseOver={e => e.target.play()}
+        onMouseOut={e => e.target.pause()}
+      ></video>
+      <span>{videos.title}</span>
+      <p>
+        {videos.duration} &nbsp; - &nbsp;
+        <img className='eye' src={eye} alt='view count' />
+        {videos.views}
+      </p>
+    </Link>
+  </div>
+))}
+
           </div>
 
           {/* Pagination Buttons */}

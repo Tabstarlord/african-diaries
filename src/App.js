@@ -33,9 +33,9 @@ function App() {
           <Route path='/' element={ <Warning /> } />
           <Route path='/Home' element={ <Home />} />
           <Route path='/ViewVideos/:id' element={ <ViewVideos /> } />
-          <Route path='/LikedVideos' element={ <CategoryPage category='Liked Videos' /> } />
+          <Route path='/category/LikedVideos' element={ <CategoryPage  /> } />
           <Route path='/WatchHistory' element={ <WatchHistory /> } />
-          <Route path='/BestVideos' element={ <CategoryPage category='Best Videos' /> } />
+          <Route path='/BestVideos' element={ <CategoryPage /> } />
           <Route path='/Login' element={ <Login /> } />
           <Route path='/Register' element={ <Register /> } />
           <Route path='/NewestVideos' 
@@ -50,7 +50,7 @@ function App() {
 
 
           <Route path='/Amatuer' 
-          element={ <CategoryPage category='Amatuer' /> } />
+          element={ <CategoryPage /> } />
           <Route path='/Anal' 
           element={ <CategoryPage category='Anal' /> } />
           <Route path='/BDSM' 
