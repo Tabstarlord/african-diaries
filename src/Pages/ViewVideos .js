@@ -19,6 +19,7 @@ import UserNavbar from '../Components/UserNavbar';
 function ViewVideos() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [videos, setVideos] = useState([]);
+  const [videoData, setVideoData] = useState(null);
   const [videoUrl, setVideoUrl] = useState('');
   const [comments, setComments] = useState([]);
   const [currentVideo] = useState(null);
@@ -34,24 +35,34 @@ function ViewVideos() {
   const { user } = useUser();
 
 
-useEffect (() => {
-  const fetchVideoUrl = async () => {
+useEffect(() => {
+  const fetchVideo = async () => {
     const { data, error } = await supabase
     .from('videos')
-    .select('video_url')
+    .select('*')
     .eq('id', id)
-    .single();
+    .single(); //get a single video row
 
-    if (error)
-      console.error(error);
-    else {
-      const videoUrlData = supabase.storage
-      .from('videos')
-      .getPublicUrl(data.video_url).data.publicUrl;
-      setVideoUrl(videoUrlData);
+    if (error) {
+      console.error('Error fetching video data:', error);
+      return;
+    }
+
+    setVideoData(data);
+
+    const { data: urlData, error: urlError } = supabase
+    .storage
+    .from('video') //your bucket name
+    .getPublicUrl(data.video_url);
+
+    if (urlError) {
+      console.error('Error generating public URL:', urlError);
+    } else {
+      setVideoUrl(urlData.publicUrl);
     }
   };
-  fetchVideoUrl();
+
+  if (id) fetchVideo();
 }, [id]);
 
  
@@ -245,7 +256,7 @@ useEffect (() => {
     trackView();
   }, [id, userId, isLoggedIn]);
 
-  console.log("Video URL:", currentVideo?.video_url);
+  console.log("Video URL:", currentVideo?.video_file_name);
 
   
   return (
@@ -253,25 +264,32 @@ useEffect (() => {
       {isLoggedIn ? <UserNavbar /> : <Navbar />}
       <div className='view'>
         <div className='view-1'>
-          <span>{videos.title} <h5>- {videos.duration}</h5></span>
+          <div>
+            {videoData && videoUrl ? (
+              <div>
+<span>{videoData.title} <h5>- {videoData.duration}</h5></span>
 
-          <div className='links'>
-          {currentVideo?.tags?.map((tag, i) => (
-  <Link key={i} to={`/tags/${tag}`}>{tag}</Link>
+<div className='links'>
+{currentVideo?.tags?.map((tag, i) => (
+<Link key={i} to={`/tags/${tag}`}>{tag}</Link>
 ))}
+</div>
+
+    <video
+    controls
+    width='95%'
+    height='auto'
+    autoPlay
+    onClick={togglePlayPause} >
+      <source src={videoUrl} type='video/mp4' />
+    </video>
+              </div>
+            ) : (
+              <p>Loading video...</p>
+            )}
           </div>
-             <video 
-             id='videoPlayer'
-             className='video-player'
-             width='95%'
-             height='auto'
-             controls
-             autoPlay
-             onClick={togglePlayPause}
-             >
-            <source src={videoUrl} type='video/mp4' />
-            Your browser doest not cupport the video tag
-             </video>
+          
+            
                 
           
 
