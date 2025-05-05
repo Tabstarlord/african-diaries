@@ -139,10 +139,13 @@
 .write {
   margin-top: 5vw;
   margin-bottom: 10vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .write input {
-  width: 210px;
+  width: 17rem;
   height: 31px;
   margin-bottom: 5px;
   margin-top: 5px;

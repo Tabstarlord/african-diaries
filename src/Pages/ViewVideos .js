@@ -167,15 +167,14 @@ useEffect(() => {
     if (!userId || !id) return;
     const { error } = await supabase.from('reactions').insert([{ video_id: id, user_id: userId, type }]);
     if (!error) fetchReactions();
+    if (id) fetchReactions();
   };
+  
 
   useEffect(() => {
-    const fetchUser = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) setUserId(user.id);
-    };
-    fetchUser();
-  }, []);
+    if (user) setUserId(user.id);
+  }, [user]);
+  
   
   useEffect(() => {
     if (!id || (!userId && isLoggedIn)) return;
@@ -229,19 +228,20 @@ useEffect(() => {
             </div>
 
             <div className='react'>
-                <Link to='#' onClick={() => handleReaction('like')}>
+            <Link href='#' onClick={(e) => { e.preventDefault(); handleReaction('like'); }}>
+
                   <img className='react-1' src={like} alt='like' />
                   <p>{reactionCounts.likes}</p>
                 </Link>
-                <Link to='#' onClick={() => handleReaction('dislike')}>
+                <Link href='#' onClick={(e) => { e.preventDefault(); handleReaction('dislike'); }}>
                   <img className='react-1' src={dislike} alt='dislike' />
                   <p>{reactionCounts.dislikes}</p>
                 </Link>
-                <Link to='#' onClick={() => handleReaction('comment')}>
+                <Link  href='#comments' onClick={(e) => { e.preventDefault(); document.querySelector('.comments').scrollIntoView({ behavior: 'smooth' }); }}>
                   <img className='react-1' src={chat} alt='comment' />
                   <p>{reactionCounts.comments}</p>
                 </Link>
-                <Link to='#' onClick={() => handleReaction('share')}>
+                <Link href='#' onClick={(e) => { e.preventDefault(); handleReaction('share'); }}>
                   <img className='react-1' src={share} alt='share' />
                 </Link>
               </div>
