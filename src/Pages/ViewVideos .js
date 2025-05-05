@@ -217,6 +217,7 @@ useEffect(() => {
                 ))}
               </div>
                 <video
+                className='video-player'
                 ref={videoRef}
                 controls
                 width='95%'

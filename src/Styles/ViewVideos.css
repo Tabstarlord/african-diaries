@@ -40,35 +40,34 @@
 
 .video-player {
   width: 95%;
-  height: auto;
   cursor: pointer;
 }
 
 .view-1 .react {
   display: flex;
-  gap: -2rem;
 }
 
 .react a {
   text-decoration: none;
   color: #000;
-  padding-right: 45px;
+  padding-right: 1.5rem;
+  padding-left: 0.5rem;
 }
 
 .react a p{
   position: relative;
   bottom: 40px;
-  left: 25px;
+  left: 17px;
 }
 
 .view-1 .view-2 {
- margin-left: 200px;
+ margin-left: 1.5rem;
  position: relative;
- bottom: 75px;
+ bottom: 74px;
 }
 
 .view-1 .view-2 p {
-  margin-left: 50px;
+  margin-left: 2.6rem;
   position: relative;
   bottom: 40px;;
 }
@@ -79,6 +78,7 @@
   height: 17px;
   gap: 5px;
   margin-top: -100px;
+  margin-left: 0.3rem;
 }
 
 .comment p {
@@ -142,8 +142,8 @@
 }
 
 .write input {
-  width: 276px;
-  height: 33px;
+  width: 210px;
+  height: 31px;
   margin-bottom: 5px;
   margin-top: 5px;
 }
@@ -154,6 +154,7 @@
   background-color: #008000;
   border: none;
   padding: 11px 8px;
+  margin-left: 0.2rem;
 }
 .related span {
   font-weight: 500;
