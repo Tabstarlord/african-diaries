@@ -32,8 +32,8 @@ function App() {
         <Routes>
           <Route path='/' element={ <Warning /> } />
           <Route path='/Home' element={ <Home />} />
-          <Route path='/ViewVideos/:id' element={ <ViewVideos /> } />
-          <Route path='/category/LikedVideos' element={ <CategoryPage  /> } />
+          <Route path='/ViewVideos/:videoId' element={ <ViewVideos /> } />
+          <Route path='/LikedVideos' element={ <CategoryPage  /> } />
           <Route path='/WatchHistory' element={ <WatchHistory /> } />
           <Route path='/BestVideos' element={ <CategoryPage /> } />
           <Route path='/Login' element={ <Login /> } />

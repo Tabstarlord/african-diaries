@@ -87,15 +87,23 @@ function Home() {
           <div className='home-container'>
           {currentVideos.map((videos, index) => (
   <div className='image' key={index}>
-    <Link to={`/ViewVideos/${videos.id}`}>
+    <Link to={`/ViewVideos/${videos.id}`} key={videos.id}>
       <video
         src={videos.video_url}
         muted
         playsInline
         preload="metadata"
         className="video-thumb"
-        onMouseOver={e => e.target.play()}
-        onMouseOut={e => e.target.pause()}
+        onMouseOver={async e => {
+          try {
+            await e.target.play();
+          } catch (err) {
+            console.error('Play interrupted:', err);
+          }
+        }}
+        onMouseOut={e => {
+          e.target.pause();
+        }}
       ></video>
       <span>{videos.title}</span>
       <p>

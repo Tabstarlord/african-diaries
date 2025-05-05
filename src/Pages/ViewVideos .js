@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import '../Styles/ViewVideos.css';
+import { formatDistanceToNow } from 'date-fns';
 import { useUser } from '../Components/UserContext';
 import supabase from '../supabaseClient';
-import frame211 from '../Assets/Frame211.png';
 import like from '../Assets/Like2.png';
 import dislike from '../Assets/dislike.png';
 import chat from '../Assets/bubble-chat.png';
@@ -16,13 +16,13 @@ import Navbar from '../Components/Navbar';
 import UserNavbar from '../Components/UserNavbar';
 
 
-function ViewVideos({ videoId }) {
+function ViewVideos() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [videos, setVideos] = useState([]);
+  const [videoUrl, setVideoUrl] = useState('');
   const [comments, setComments] = useState([]);
-  const [currentVideo, setCurrentVideo] = useState(null);
+  const [currentVideo] = useState(null);
   const [userId, setUserId] = useState(null);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [reactionCounts, setReactionCounts] = useState({
     likes: 0,
     dislikes: 0,
@@ -33,19 +33,46 @@ function ViewVideos({ videoId }) {
   const { id } = useParams();
   const { user } = useUser();
 
+
+useEffect (() => {
+  const fetchVideoUrl = async () => {
+    const { data, error } = await supabase
+    .from('videos')
+    .select('video_url')
+    .eq('id', id)
+    .single();
+
+    if (error)
+      console.error(error);
+    else {
+      const videoUrlData = supabase.storage
+      .from('videos')
+      .getPublicUrl(data.video_url).data.publicUrl;
+      setVideoUrl(videoUrlData);
+    }
+  };
+  fetchVideoUrl();
+}, [id]);
+
+ 
+
   useEffect(() => {
     const authStatus = localStorage.getItem('isLoggedIn');
     setIsLoggedIn(authStatus === 'true');
   }, []);
 
+  const videoRef = useRef(null);
+
   const togglePlayPause = () => {
-    const video = document.getElementById('videoPlayer');
-    if (isPlaying) {
-      video.pause();
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
     } else {
-      video.play();
+      console.warn('Video element not found.');
     }
-    setIsPlaying(!isPlaying);
   };
 
   // Call this function to increment the view count for the category
@@ -84,23 +111,11 @@ function ViewVideos({ videoId }) {
     }
   }, [currentVideo, user]);
 
-  useEffect(() => {
-    const fetchVideo = async () => {
-      const { data, error } = await supabase
-        .from('videos')
-        .select('*')
-        .eq('id', id)
-        .single();
 
-      if (error) console.error('Error fetching video:', error);
-      else setCurrentVideo(data);
-    };
-
-    fetchVideo();
-  }, [id]);
-
+  //*Related Videos*//
   useEffect(() => {
     const fetchRelatedVideos = async () => {
+      if (!currentVideo) return;
       const { data, error } = await supabase
         .from('videos')
         .select('*')
@@ -112,8 +127,11 @@ function ViewVideos({ videoId }) {
     };
 
     fetchRelatedVideos();
-  }, [id]);
+  }, );
 
+
+
+      //*Comments*//
   useEffect(() => {
     const fetchComments = async () => {
       const { data, error } = await supabase
@@ -133,6 +151,7 @@ function ViewVideos({ videoId }) {
     e.preventDefault();
     const content = e.target.elements.comment.value;
     if (!user) return;
+    if (!content.trim()) return;
 
     const { data, error } = await supabase.from('comments').insert([{
       video_id: id,
@@ -150,6 +169,8 @@ function ViewVideos({ videoId }) {
     }
   };
 
+
+  //*Reactions*//
   const fetchReactions = async () => {
     if (!id) return;
     const { data, error } = await supabase
@@ -196,11 +217,12 @@ function ViewVideos({ videoId }) {
   }, []);
   
   useEffect(() => {
+    if (!id || (!userId && isLoggedIn)) return;
     const trackView = async () => {
       // Step 1: Insert into video_views (for today's view count)
       const { error: insertError } = await supabase.from('video_views').insert([
         {
-          video_id: videoId,
+          video_id: id,
           user_id: userId || null, // optional, can be anonymous
           viewed_at: new Date(), // optional; Supabase default works
         },
@@ -212,7 +234,7 @@ function ViewVideos({ videoId }) {
 
       // Step 2: Increment view_count in videos table
       const { error: updateError } = await supabase.rpc('increment_view_count', {
-        vid: videoId,
+        vid: id,
       });
 
       if (updateError) {
@@ -221,33 +243,37 @@ function ViewVideos({ videoId }) {
     };
 
     trackView();
-  }, [videoId, userId]);
+  }, [id, userId, isLoggedIn]);
 
+  console.log("Video URL:", currentVideo?.video_url);
+
+  
   return (
     <>
       {isLoggedIn ? <UserNavbar /> : <Navbar />}
       <div className='view'>
         <div className='view-1'>
-          <span>{currentVideo?.title} <h5>- {currentVideo?.duration}</h5></span>
+          <span>{videos.title} <h5>- {videos.duration}</h5></span>
 
           <div className='links'>
-            {['BDSM', 'Big Dick', 'Couger', 'Big Tits', 'GangBang', 'Milf'].map((tag, i) => (
-              <Link key={i} to={`/tags/${tag}`}>{tag}</Link>
-            ))}
+          {currentVideo?.tags?.map((tag, i) => (
+  <Link key={i} to={`/tags/${tag}`}>{tag}</Link>
+))}
           </div>
-
-          <video
-            id='videoPlayer'
-            className='video-player'
-            width='100%'
-            height='auto'
-            controls
-            poster={frame211}
-            onClick={togglePlayPause}
-          >
-            <source src={currentVideo?.video_url} type='video/mp4' />
-            Your browser does not support the video tag
-          </video>
+             <video 
+             id='videoPlayer'
+             className='video-player'
+             width='95%'
+             height='auto'
+             controls
+             autoPlay
+             onClick={togglePlayPause}
+             >
+            <source src={videoUrl} type='video/mp4' />
+            Your browser doest not cupport the video tag
+             </video>
+                
+          
 
           <div className='react'>
             <Link to='#' onClick={() => handleReaction('like')}>
@@ -286,7 +312,7 @@ function ViewVideos({ videoId }) {
                 <div className='com'>
                   <img src={comment.avatar_url || avatar} alt='avatar' />
                   <span>{comment.username}</span>
-                  <p>{new Date(comment.created_at).toLocaleString()}</p>
+                  <p>{formatDistanceToNow(new Date(comment.created_at), { addSuffix: true })}</p>
                 </div>
                 <div className='com-1'>
                   <p>{comment.content}</p>
@@ -303,6 +329,7 @@ function ViewVideos({ videoId }) {
 
         <div className='write'>
           <form onSubmit={handleCommentSubmit}>
+         
             <input type='text' name='comment' placeholder='Add a comment' required />
             <button className='send'>Send</button>
           </form>
