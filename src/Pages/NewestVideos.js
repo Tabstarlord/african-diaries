@@ -3,6 +3,7 @@ import supabase from '../supabaseClient';
 import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar'
 import UserNavbar from '../Components/UserNavbar'
+import { useAuth } from '../Components/AuthContext';
 import eye from '../Assets/eye.png'
 import Menu from '../Components/Menu'
 import Footer from '../Components/Footer'
@@ -10,15 +11,11 @@ import Foot from '../Components/Foot'
 
 function NewestVideos() {
   const [videos, setVideos] = useState([]);
-      const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { user } = useAuth();
         const [currentPage, setCurrentPage] = useState(1);
             // Pagination config
            const videosPerPage = 50;
   
-            useEffect(() => {
-                 const authStatus = localStorage.getItem('isLoggedIn');
-                 setIsLoggedIn(authStatus === 'true');
-               }, []);
 
   useEffect(() => {
     const fetchNewestVideos = async () => {
@@ -51,7 +48,8 @@ function NewestVideos() {
 
   return (
    <>
-   {isLoggedIn ? <UserNavbar /> : <Navbar />}
+   {user ? <UserNavbar /> : <Navbar />}
+
       <div className='home'>
         <div className='desk-menu'>
           <div className='desktop-side'>

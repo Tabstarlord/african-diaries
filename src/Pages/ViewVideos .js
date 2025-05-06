@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import '../Styles/ViewVideos.css';
 import { formatDistanceToNow } from 'date-fns';
-import { useUser } from '../Components/UserContext';
+import { useAuth } from '../Components/AuthContext';
 import supabase from '../supabaseClient';
 import like from '../Assets/Like2.png';
 import dislike from '../Assets/dislike.png';
@@ -30,7 +30,7 @@ function ViewVideos() {
   });
 
   const { id } = useParams();
-  const { user } = useUser();
+  const { user } = useAuth();
   const videoRef = useRef(null);
 
 
@@ -202,7 +202,8 @@ useEffect(() => {
   
   return (
     <>
-      {isLoggedIn ? <UserNavbar /> : <Navbar />}
+    {/* Conditionally render navbar based on login status */}
+    {user ? <UserNavbar /> : <Navbar />}
       <div className='view'>
         <div className='view-1'>
           {currentVideo ? (

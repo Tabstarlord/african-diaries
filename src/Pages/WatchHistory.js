@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../Styles/Home.css'
 import supabase  from '../supabaseClient'
-import { useUser } from '../Components/UserContext'
+import { useAuth } from '../Components/AuthContext'
 import eye from '../Assets/eye.png'
 import Navbar from '../Components/Navbar'
 import UserNavbar from '../Components/UserNavbar'
+
 import Menu from '../Components/Menu'
 import Footer from '../Components/Footer'
 import Foot from '../Components/Foot'
@@ -15,17 +16,12 @@ import Foot from '../Components/Foot'
 
 
 function WatchHistory() {
-   const [isLoggedIn, setIsLoggedIn] = useState(false);
    const [currentPage, setCurrentPage] = useState(1);
    const [history, setHistory] = useState([]);
-   const { user } = useUser();
+   const { user } = useAuth();
      // Pagination config
     const videosPerPage = 50;
   
-    useEffect(() => {
-      const authStatus = localStorage.getItem('isLoggedIn');
-      setIsLoggedIn(authStatus === 'true');
-    }, []);
 
       // Fetch videos from Supabase
       useEffect(() => {
@@ -66,7 +62,8 @@ function WatchHistory() {
 
   return (
     <>
-      {isLoggedIn ? <UserNavbar /> : <Navbar />}
+     {user ? <UserNavbar /> : <Navbar />}
+
       <div className='home'>
         <div className='desk-menu'>
           <div className='desktop-side'>

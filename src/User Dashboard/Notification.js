@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import supabase from '../supabaseClient'
-import { useUser } from '../Components/UserContext'
+import { useAuth } from '../Components/AuthContext'
 import { Link } from 'react-router-dom'
 import dp from '../Assets/dp.png'
 import back from '../Assets/cancel-01.png'
@@ -14,7 +14,7 @@ import UserNavbar from '../Components/UserNavbar'
 
 function Notification() {
   const [notifications, setNotifications] = useState([]);
-  const { user } = useUser();
+  const { user } = useAuth();
    const [username, setUsername] = useState('');
     const [userData, setUserData] = useState(null)
 

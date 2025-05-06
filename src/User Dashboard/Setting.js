@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import supabase from '../supabaseClient'
 import { v4 as uuidv4 } from 'uuid'; 
-import { useUser } from '../Components/UserContext'
+import { useAuth } from '../Components/AuthContext';
 import back from '../Assets/cancel-01.png'
 import '../Styles/Setting.css'
 import UserNavbar from '../Components/UserNavbar'
@@ -15,7 +15,7 @@ function Setting() {
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
    const [alert, setAlert] = useState(false);
- 
+   const { user } = useAuth();
    const fileInputRef = useRef(null);
  
    const handleImageClick = () => {
@@ -65,7 +65,7 @@ function Setting() {
   };
   
  
-   const { user } = useUser();
+  
 
 const handleSave = async (e) => {
   e.preventDefault();

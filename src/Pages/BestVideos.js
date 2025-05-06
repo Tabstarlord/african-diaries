@@ -5,6 +5,7 @@ import supabase  from '../supabaseClient'
 import eye from '../Assets/eye.png'
 import Navbar from '../Components/Navbar'
 import UserNavbar from '../Components/UserNavbar'
+import { useAuth } from '../Components/AuthContext'
 import Menu from '../Components/Menu'
 import Footer from '../Components/Footer'
 import Foot from '../Components/Foot'
@@ -14,16 +15,11 @@ import Foot from '../Components/Foot'
 
 
 function BestVideos() {
-   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { user } = useAuth();
    const [videos, setVideos] = useState([]);
    const [currentPage, setCurrentPage] = useState(1);
      // Pagination config
     const videosPerPage = 50;
-  
-    useEffect(() => {
-      const authStatus = localStorage.getItem('isLoggedIn');
-      setIsLoggedIn(authStatus === 'true');
-    }, []);
 
       // Fetch videos from Supabase
   useEffect(() => {
@@ -58,7 +54,8 @@ function BestVideos() {
 
   return (
     <>
-      {isLoggedIn ? <UserNavbar /> : <Navbar />}
+      {/* Conditionally render navbar based on login status */}
+      {user ? <UserNavbar /> : <Navbar />}
       <div className='home'>
         <div className='desk-menu'>
           <div className='desktop-side'>

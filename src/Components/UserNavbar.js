@@ -1,5 +1,5 @@
 import React from 'react'
-import { useUser } from './UserContext'
+import { useAuth } from './AuthContext'
 import { Link } from 'react-router-dom'
 import Logo from '../Assets/logo.png'
 import Search from '../Pages/Search'
@@ -7,7 +7,7 @@ import dp from '../Assets/ProfileImage.png'
 import '../Styles/UserNavbar.css'
 
 function UserNavbar() {
-  const { user } = useUser();
+  const { user } = useAuth();
   return (
     <>
     <div className='dashboard'>

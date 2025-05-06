@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
-import { useUser } from '../Components/UserContext'
+import { useAuth } from '../Components/AuthContext'
 import supabase from '../supabaseClient'
 import '../Styles/LikedClips.css'
 import back from '../Assets/cancel-01.png'
@@ -16,7 +16,7 @@ const defaultAvatar = dp;
 
 function LikedClips() {
   const [videos, setVideos] = useState([]);
-  const { user } = useUser();
+  const { user } = useAuth();
   const [username, setUsername] = useState('');
   const [userData, setUserData] = useState(null)
 
@@ -115,6 +115,9 @@ if (!error) setUserData(data);
     <>
 
 <div className='desktop-profile'>
+      <div className='usernav'>
+      <UserNavbar />
+      </div>
         <div className='desktop-profile-content'>
         <h2 className='desktop-profile-info'>{username}</h2>
             <img className='desktop-dp' src={userData?.avatar_url || defaultAvatar} alt='User' />
@@ -132,9 +135,7 @@ if (!error) setUserData(data);
         </div>
 
     <div className='clip'>
-      <div className='usernav'>
-      <UserNavbar />
-      </div>
+     
 
       
       <div className='mobile-liked-clips'>
