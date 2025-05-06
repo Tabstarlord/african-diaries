@@ -444,11 +444,15 @@
   margin-left: 2em;
   margin-top: 20px;
 }
-.view-2 {
-  position: relative;
-  margin-top: 0.1em;
-  margin-right: 60em;
+.react a {
+  padding-right: 2rem;
 }
+.view-1 .view-2 {
+  margin-left: -25rem;
+  position: relative;
+  bottom: 5.2rem;
+}
+
 
 .comments {
   margin-left: 50px;
