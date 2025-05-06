@@ -13,7 +13,7 @@ import Notification from './User Dashboard/Notification';
 import Setting from './User Dashboard/Setting';
 import ProtectedRoute from './Components/ProtectedRoute';
 import Dashboard from './User Dashboard/Dashboard';
-import { UserProvider } from './Components/UserContext';
+import { AuthProvider } from './Components/AuthContext';
 import CategoryPage from './Components/CategoryPage';
 import TrackUserLocation from './Components/TrackUserLocation';
 import TrackUserDevice from './Components/TrackUserDevice';
@@ -28,7 +28,7 @@ function App() {
     <TrackUserDevice />
       <div className="App">
 
-        <UserProvider>
+        <AuthProvider>
         <Routes>
           <Route path='/' element={ <Warning /> } />
           <Route path='/Home' element={ <Home />} />
@@ -110,7 +110,7 @@ function App() {
         />
 
         </Routes>
-        </UserProvider>
+        </AuthProvider>
       
       
     </div>
