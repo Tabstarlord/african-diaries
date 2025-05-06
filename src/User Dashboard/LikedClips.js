@@ -115,9 +115,6 @@ if (!error) setUserData(data);
     <>
 
 <div className='desktop-profile'>
-      <div className='usernav'>
-      <UserNavbar />
-      </div>
         <div className='desktop-profile-content'>
         <h2 className='desktop-profile-info'>{username}</h2>
             <img className='desktop-dp' src={userData?.avatar_url || defaultAvatar} alt='User' />
@@ -135,7 +132,9 @@ if (!error) setUserData(data);
         </div>
 
     <div className='clip'>
-     
+    <div className='usernav'>
+      <UserNavbar />
+      </div>
 
       
       <div className='mobile-liked-clips'>

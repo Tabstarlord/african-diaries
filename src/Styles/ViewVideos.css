@@ -1,4 +1,10 @@
-
+.back-to-home {
+  float: right;
+  position: relative;
+  bottom: 2rem;
+  font-size: 12px;
+  color: #008000;
+}
 .view {
   padding-top: 50px;
   margin-left: auto;
@@ -203,7 +209,7 @@
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 680px) {
 .view {
   padding-top: 85px;
   padding-bottom: 80px;
@@ -241,6 +247,10 @@
   width: 100%;
 }
 
+.video-player {
+  width: 98%;
+}
+
 .view-1 .react {
   display: flex;
 }
@@ -250,20 +260,20 @@
   color: #000;
   padding-bottom: 10px;
   padding-top: 10px;
-  padding-right: 65px;
+  padding-right: 2rem;
 }
 
 .react a p{
   position: relative;
   bottom: 40px;
-  left: 25px;
+  left: 18px;
 }
 
 .view-1 .view-2 {
  margin-left: 250px;
  position: relative;
- bottom: 87px;
- left: 100px;
+ bottom: 83px;
+ left: -13rem;
 }
 
 .view-1 .view-2 p {
@@ -335,10 +345,13 @@
 .write {
   margin-top: 3vw;
   margin-bottom: 10vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .write input {
-  width: 276px;
+  width: 15rem;
   height: 33px;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -403,6 +416,9 @@
 }
 
 @media only screen and (min-width: 1025px) {
+  .back-to-home {
+    display: none;
+  }
 .view {
   margin: auto;
   width: 100%;

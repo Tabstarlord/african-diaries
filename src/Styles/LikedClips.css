@@ -95,6 +95,9 @@
   .clip .usernav {
     display: contents;
   }
+  .desktop-profile {
+    display: block;
+  }
   .clip-01 {
     display: none;
   }

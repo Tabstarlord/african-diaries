@@ -97,7 +97,7 @@
 
 @media only screen and (min-width: 1025px) {
   .nov .liked-navbar {
-    display: contents;
+    display: block;
   }
   .desktop-notification-profile {
     display: contents;

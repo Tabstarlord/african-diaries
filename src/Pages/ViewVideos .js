@@ -205,6 +205,7 @@ useEffect(() => {
     {/* Conditionally render navbar based on login status */}
     {user ? <UserNavbar /> : <Navbar />}
       <div className='view'>
+      <Link to='/Home' className='back-to-home'>Back To Home</Link>
         <div className='view-1'>
           {currentVideo ? (
             <>
@@ -326,6 +327,7 @@ useEffect(() => {
           </div>
           
         </div>
+      
       </div>
       <Foot />
     </>

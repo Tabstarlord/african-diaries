@@ -1,244 +1,292 @@
-import React, { useState, useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import supabase from '../supabaseClient'
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import supabase from '../supabaseClient';
 import { v4 as uuidv4 } from 'uuid'; 
 import { useAuth } from '../Components/AuthContext';
-import back from '../Assets/cancel-01.png'
-import '../Styles/Setting.css'
-import UserNavbar from '../Components/UserNavbar'
-import logout from '../Assets/Login.png'
+import back from '../Assets/cancel-01.png';
+import '../Styles/Setting.css';
+import UserNavbar from '../Components/UserNavbar';
+import logoutIcon from '../Assets/Login.png';
 
 function Setting() {
+  const { user } = useAuth();
+  const [profileImage, setProfileImage] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [joinedDays, setJoinedDays] = useState('');
+  const [profileViews, setProfileViews] = useState(0);
+  const [location, setLocation] = useState('');
+  const [lastSeen, setLastSeen] = useState('');
+  const [password, setPassword] = useState('');
+  const [alert, setAlert] = useState(false);
+  const fileInputRef = useRef(null);
+  const navigate = useNavigate();
 
-  const [profileImage, setProfileImage] = useState('https://randomuser.me/api/portraits/men/75.jpg');
-   const [name, setName] = useState('');
-   const [email, setEmail] = useState('');
-   const [password, setPassword] = useState('');
-   const [alert, setAlert] = useState(false);
-   const { user } = useAuth();
-   const fileInputRef = useRef(null);
- 
-   const handleImageClick = () => {
-     fileInputRef.current.click();
-   };
- 
-   const handleImageChange = async (e) => {
-    const file = e.target.files[0];
-    if (file && file.type.startsWith('image/')) {
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${uuidv4()}.${fileExt}`;
-      const filePath = `${fileName}`;
-  
-      const { error } = await supabase
-  .storage
-  .from('avatars')
-  .upload(filePath, file);
+  useEffect(() => {
+    const fetchProfile = async () => {
+      if (!user) return;
 
-  
+      const { data, error } = await supabase
+        .from('profile')
+        .select('*')
+        .eq('id', user.id)
+        .single();
+
       if (error) {
-        console.error('Error uploading image:', error);
+        console.error('Failed to load profile:', error.message);
+      } else {
+        setName(data.username);
+        setProfileImage(data.avatar_url || 'https://randomuser.me/api/portraits/men/75.jpg');
+        setProfileViews(data.profile_views || 0);
+        setLocation(data.location || 'Unknown');
+        setLastSeen(data.last_seen === 'online' ? 'Online' : 'Offline');
+        setEmail(user.email);
+
+        if (user.created_at) {
+          const createdDate = new Date(user.created_at);
+          const now = new Date();
+          const diffTime = Math.abs(now - createdDate);
+          const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+          setJoinedDays(diffDays);
+        }
+      }
+    };
+
+    fetchProfile();
+  }, [user]);
+
+  const handleImageClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+  
+    if (!file || !file.type.startsWith('image/')) {
+      window.alert('Please select a valid image file.');
+      return;
+    }
+  
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${user.id}/${uuidv4()}.${fileExt}`;
+    const filePath = fileName;
+  
+    try {
+      // Upload to the avatars bucket
+      const { error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(filePath, file, { upsert: true });
+  
+      if (uploadError) {
+        console.error('Image upload failed:', uploadError);
+        window.alert('Image upload failed.');
         return;
       }
   
-      // Get the public URL
-      const { data: publicUrlData } = supabase
+      // Get public URL of the uploaded file
+      const { data: publicUrlData, error: urlError } = supabase
         .storage
         .from('avatars')
         .getPublicUrl(filePath);
   
+      if (urlError) {
+        console.error('Error getting public URL:', urlError);
+        window.alert('Failed to get image URL.');
+        return;
+      }
+  
       const publicUrl = publicUrlData.publicUrl;
   
-      setProfileImage(publicUrl);
+      // Update avatar_url in the correct profile table
+      const { error: updateError } = await supabase
+        .from('profile') // Ensure this matches your actual table name
+        .update({ avatar_url: publicUrl })
+        .eq('id', user.id);
   
-      // Save to user's profile in Supabase
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
-  
-      if (user) {
-        await supabase
-          .from('profiles')
-          .update({ avatar_url: publicUrl })
-          .eq('id', user.id);
+      if (updateError) {
+        console.error('Error updating profile:', updateError);
+        window.alert('Failed to update profile image.');
+        return;
       }
+  
+      setProfileImage(publicUrl);
+      window.alert('Profile image updated successfully!');
+    } catch (err) {
+      console.error('Unexpected error during image upload:', err);
+      window.alert('Something went wrong. Please try again later.');
     }
   };
   
- 
   
 
-const handleSave = async (e) => {
-  e.preventDefault();
+  const handleSave = async (e) => {
+    e.preventDefault();
+    if (!user) return;
 
-  if (!user) return;
+    try {
+      if (email || password) {
+        const { error: authError } = await supabase.auth.updateUser({
+          email: email || undefined,
+          password: password || undefined,
+        });
 
-  try {
-    // Update Auth info (email & password)
-    if (email || password) {
-      const { error: authError } = await supabase.auth.updateUser({
-        email: email || undefined,
-        password: password || undefined
-      });
-
-      if (authError) {
-        console.error('Auth update error:', authError);
-        return alert('Failed to update email or password.');
+        if (authError) {
+          console.error('Auth update error:', authError);
+          return alert('Failed to update email or password.');
+        }
       }
+
+      const updates = {
+        username: name,
+        location: location,
+        last_seen: 'online',
+      };
+
+      const { error: profileError } = await supabase
+        .from('profile')
+        .update(updates)
+        .eq('id', user.id);
+
+      if (profileError) {
+        console.error('Profile update error:', profileError);
+        return alert('Failed to update profile.');
+      }
+
+      setAlert(true);
+      setTimeout(() => setAlert(false), 3000);
+    } catch (error) {
+      console.error('Unexpected error:', error.message);
+      alert('Something went wrong.');
     }
+  };
 
-    // Update user profile info (username)
-    const updates = {
-      id: user.id,
-      username: name || user.user_metadata?.username || '',
-    };
-
-    const { error: profileError } = await supabase
-      .from('profiles')
-      .update(updates)
-      .eq('id', user.id);
-
-    if (profileError) {
-      console.error('Profile update error:', profileError);
-      return alert('Failed to update username.');
-    }
-
-    setAlert(true);
-    setTimeout(() => setAlert(false), 3000);
-  } catch (error) {
-    console.error('Unexpected error:', error.message);
-    alert('Something went wrong.');
-  }
-};
-
-
-   const navigate = useNavigate();
-
-   const handleLogout = () => {
-     // Optional: Clear authentication info from localStorage/sessionStorage
-     localStorage.removeItem('isLoggedIn'); // if you're using this flag
-     // Navigate to login page
-     navigate('/Home');
-   };
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/Home');
+  };
 
   return (
-    <>
-    
     <div className='acc'>
       <div className='set-navbar'>
-      < UserNavbar />
+        <UserNavbar />
       </div>
+
       <div className='settings'>
-
         <div className='desktop-settings-profile'>
-                <div className='desktop-settings-profile-content'>
-                    <h2 className='desktop-settings-profile-info'>Profile Information</h2>
-                    <img className='desktop-settings-dp' src={profileImage} alt='User' />
-                <div className='desktop-settings-user-details'>
-                    <li>Joined: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>23 days on African Diaries</strong></li>
-                    <li>Profile views:  &nbsp; &nbsp;<strong>113 times</strong></li>
-                    <li>From: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Earth</strong></li>
-                    <li>Last Activity: &nbsp; <strong>Online</strong></li>
-                </div>
-                </div>
-                <div className='desktop-settings-topics'>
-                    <Link className='tag' to='/LikedClips'>Liked Videos</Link>
-                    <Link className='tag' to='/Notification'>Notifications</Link>
-                    <Link className='tag1' to='/Setting'>Account Settings</Link>
-                </div>
-                </div>
-
-   <div className='set1'>
-         <Link to='/Home'><img className='cancel' src={back} alt='jpg' /></Link>
-         <h2>Profile Information</h2>
-         </div>
-   
-         <div className='set2'>
-         <div className='set3' >
-           <h2 className='user'>Jaybouggie</h2>
-           <img onClick={handleImageClick} className='dp' src={profileImage} alt='User dp' />
-           <input
+          <div className='desktop-settings-profile-content'>
+            <h2 className='desktop-settings-profile-info'>{name}</h2>
+            <div className="desktop-settings-dp" onClick={handleImageClick}>
+          <img src={profileImage} className='desktop-settings-dp' alt="Profile" />
+          <div className="camera-icon">📷</div>
+          <input
             type="file"
             accept="image/*"
             ref={fileInputRef}
             onChange={handleImageChange}
             style={{ display: 'none' }}
           />
-         </div>
-   
-         <div className='set4'>
-           <ul className='det'>
-             <li>Joined:</li>
-             <li>Profile views:</li>
-             <li>From:</li>
-             <li>Last Activity:</li>
-           </ul>
-           <ul className='det1'>
-             <li>23 days on African Diaries</li>
-             <li>113 times</li>
-             <li>Earth</li>
-             <li>Online</li>
-           </ul>
-         </div>
-         </div>
-         
-   
-         <div className='set6'>
-           <ul className='top'>
-             <Link className='tag' to='/LikedClips'>Liked Videos</Link>
-             <Link className='tag' to='/Notification'>Notifications</Link>
-             <Link className='tag1' to='/Settings'>Account Settings</Link>
-           </ul>
-         </div>
+        </div>
+            <div className='desktop-settings-user-details'>
+              <li>Joined: <strong>{joinedDays} days on African Diaries</strong></li>
+              <li>Profile views: <strong>{profileViews} times</strong></li>
+              <li>From: <strong>{location}</strong></li>
+              <li>Last Activity: <strong>{lastSeen}</strong></li>
+            </div>
+          </div>
+          <div className='desktop-settings-topics'>
+            <Link className='tag' to='/LikedClips'>Liked Videos</Link>
+            <Link className='tag' to='/Notification'>Notifications</Link>
+            <Link className='tag1' to='/Setting'>Account Settings</Link>
+          </div>
+        </div>
 
+        <div className='set1'>
+          <Link to='/Home'><img className='cancel' src={back} alt='back' /></Link>
+          <h2>{name}</h2>
+        </div>
 
-      <div className='acc2'>
-        <fieldset>
-          <form action='#' method='get'>
-          <label htmlFor='username'>Username</label>
-          <input
-          className='get1'
-          type="text"
-          placeholder="Change Username"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <div className='set2'>
+          <div className='set3'>
+            <h2 className='user'>{name}</h2>
+            <img onClick={handleImageClick} className='dp' src={profileImage} alt='User dp' />
+            <input
+              type="file"
+              accept="image/*"
+              ref={fileInputRef}
+              onChange={handleImageChange}
+              style={{ display: 'none' }}
+            />
+          </div>
 
-<label htmlFor='email'>
-            Email address
-          </label>
-          <input
-          className='get1'
-          type="email"
-          placeholder="Update Email Address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          <div className='set4'>
+            <ul className='det'>
+              <li>Joined:</li>
+              <li>Profile views:</li>
+              <li>From:</li>
+              <li>Last Activity:</li>
+            </ul>
+            <ul className='det1'>
+              <li>{joinedDays} days on African Diaries</li>
+              <li>{profileViews} times</li>
+              <li>{location}</li>
+              <li>{lastSeen}</li>
+            </ul>
+          </div>
+        </div>
 
-<label htmlFor='password'>Password</label>
-      <input
-      className='get1'
-          type="password"
-          placeholder="Change Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <div className='set6'>
+          <ul className='top'>
+            <Link className='tag' to='/LikedClips'>Liked Videos</Link>
+            <Link className='tag' to='/Notification'>Notifications</Link>
+            <Link className='tag1' to='/Setting'>Account Settings</Link>
+          </ul>
+        </div>
 
-        <button className="get2" onClick={handleSave}>
-          Save changes
-        </button>
+        <div className='acc2'>
+          <fieldset>
+            <form onSubmit={handleSave}>
+              <label htmlFor='username'>Username</label>
+              <input
+                className='get1'
+                type="text"
+                placeholder="Change Username"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
 
-        {alert && <div className="alert-success">Changes saved successfully!</div>}
-          </form>
-        </fieldset>
+              <label htmlFor='email'>Email address</label>
+              <input
+                className='get1'
+                type="email"
+                placeholder="Update Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <label htmlFor='password'>Password</label>
+              <input
+                className='get1'
+                type="password"
+                placeholder="Change Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+
+              <button className="get2" type="submit">
+                Save changes
+              </button>
+
+              {alert && <div className="alert-success">Changes saved successfully!</div>}
+            </form>
+          </fieldset>
+        </div>
       </div>
 
-      </div>
-      <span className='logout' onClick={handleLogout}>Logout<img src={logout} alt='logout' style={{cursor: "pointer"}} title='logout' /></span>
+      <span className='logout' onClick={handleLogout}>
+        Logout <img src={logoutIcon} alt='logout' style={{ cursor: "pointer" }} title='logout' />
+      </span>
     </div>
-    
-    
-    </>
-  )
+  );
 }
 
-export default Setting
+export default Setting;
