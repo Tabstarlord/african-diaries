@@ -7,10 +7,11 @@ import back from '../Assets/cancel-01.png';
 import '../Styles/Setting.css';
 import UserNavbar from '../Components/UserNavbar';
 import logoutIcon from '../Assets/Login.png';
+import defaultAvatar from '../Assets/ProfileImage.png';
 
 function Setting() {
   const { user } = useAuth();
-  const [profileImage, setProfileImage] = useState('');
+  const [profileImage, setProfileImage] = useState(defaultAvatar);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [joinedDays, setJoinedDays] = useState('');
@@ -27,7 +28,7 @@ function Setting() {
       if (!user) return;
 
       const { data, error } = await supabase
-        .from('profile')
+        .from('profiles')
         .select('*')
         .eq('id', user.id)
         .single();
@@ -36,11 +37,18 @@ function Setting() {
         console.error('Failed to load profile:', error.message);
       } else {
         setName(data.username);
-        setProfileImage(data.avatar_url || 'https://randomuser.me/api/portraits/men/75.jpg');
         setProfileViews(data.profile_views || 0);
         setLocation(data.location || 'Unknown');
         setLastSeen(data.last_seen === 'online' ? 'Online' : 'Offline');
         setEmail(user.email);
+
+        if (data.avatar_url) {
+          const { data: avatar } = supabase
+            .storage
+            .from('avatars')
+            .getPublicUrl(data.avatar_url);
+          setProfileImage(avatar?.publicUrl || defaultAvatar);
+        }
 
         if (user.created_at) {
           const createdDate = new Date(user.created_at);
@@ -59,65 +67,45 @@ function Setting() {
     fileInputRef.current.click();
   };
 
-  const handleImageChange = async (e) => {
+  const handleAvatarUpload = async (e) => {
     const file = e.target.files[0];
-  
-    if (!file || !file.type.startsWith('image/')) {
-      window.alert('Please select a valid image file.');
+    if (!file) return;
+
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${uuidv4()}.${fileExt}`;
+    const filePath = `${user.id}/${fileName}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from('avatars')
+      .upload(filePath, file, {
+        cacheControl: '3600',
+        upsert: true,
+      });
+
+    if (uploadError) {
+      console.error('Avatar upload error:', uploadError.message);
+      alert('Upload failed.');
       return;
     }
-  
-    const fileExt = file.name.split('.').pop();
-    const fileName = `${user.id}/${uuidv4()}.${fileExt}`;
-    const filePath = fileName;
-  
-    try {
-      // Upload to the avatars bucket
-      const { error: uploadError } = await supabase.storage
-        .from('avatars')
-        .upload(filePath, file, { upsert: true });
-  
-      if (uploadError) {
-        console.error('Image upload failed:', uploadError);
-        window.alert('Image upload failed.');
-        return;
-      }
-  
-      // Get public URL of the uploaded file
-      const { data: publicUrlData, error: urlError } = supabase
-        .storage
-        .from('avatars')
-        .getPublicUrl(filePath);
-  
-      if (urlError) {
-        console.error('Error getting public URL:', urlError);
-        window.alert('Failed to get image URL.');
-        return;
-      }
-  
-      const publicUrl = publicUrlData.publicUrl;
-  
-      // Update avatar_url in the correct profile table
-      const { error: updateError } = await supabase
-        .from('profile') // Ensure this matches your actual table name
-        .update({ avatar_url: publicUrl })
-        .eq('id', user.id);
-  
-      if (updateError) {
-        console.error('Error updating profile:', updateError);
-        window.alert('Failed to update profile image.');
-        return;
-      }
-  
-      setProfileImage(publicUrl);
-      window.alert('Profile image updated successfully!');
-    } catch (err) {
-      console.error('Unexpected error during image upload:', err);
-      window.alert('Something went wrong. Please try again later.');
+
+    const { error: dbError } = await supabase
+      .from('profiles')
+      .update({ avatar_url: filePath })
+      .eq('id', user.id);
+
+    if (dbError) {
+      console.error('Avatar DB update error:', dbError.message);
+      alert('Failed to save avatar to profile.');
+      return;
     }
+
+    const { data: avatar } = supabase
+      .storage
+      .from('avatars')
+      .getPublicUrl(filePath);
+    setProfileImage(avatar?.publicUrl || defaultAvatar);
+    alert('Avatar uploaded successfully!');
   };
-  
-  
 
   const handleSave = async (e) => {
     e.preventDefault();
@@ -138,12 +126,12 @@ function Setting() {
 
       const updates = {
         username: name,
-        location: location,
+        location,
         last_seen: 'online',
       };
 
       const { error: profileError } = await supabase
-        .from('profile')
+        .from('profiles')
         .update(updates)
         .eq('id', user.id);
 
@@ -176,16 +164,16 @@ function Setting() {
           <div className='desktop-settings-profile-content'>
             <h2 className='desktop-settings-profile-info'>{name}</h2>
             <div className="desktop-settings-dp" onClick={handleImageClick}>
-          <img src={profileImage} className='desktop-settings-dp' alt="Profile" />
-          <div className="camera-icon">📷</div>
-          <input
-            type="file"
-            accept="image/*"
-            ref={fileInputRef}
-            onChange={handleImageChange}
-            style={{ display: 'none' }}
-          />
-        </div>
+              <img src={profileImage} className='desktop-settings-dp' alt="Profile" />
+              <div className="camera-icon">📷</div>
+              <input
+                type="file"
+                accept="image/*"
+                ref={fileInputRef}
+                onChange={handleAvatarUpload}
+                style={{ display: 'none' }}
+              />
+            </div>
             <div className='desktop-settings-user-details'>
               <li>Joined: <strong>{joinedDays} days on African Diaries</strong></li>
               <li>Profile views: <strong>{profileViews} times</strong></li>
@@ -213,7 +201,7 @@ function Setting() {
               type="file"
               accept="image/*"
               ref={fileInputRef}
-              onChange={handleImageChange}
+              onChange={handleAvatarUpload}
               style={{ display: 'none' }}
             />
           </div>
