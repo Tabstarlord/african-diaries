@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin-top: -2rem;
 }
 .not2 .not3 .user {
   font-weight: 500;
@@ -32,12 +33,15 @@
 .not2 .not3 .dp {
   position: relative;
   bottom: 10px;
+  border-radius: 50%;
+  height: 28%;
 }
 .not2 .not4 {
   display: block;
   text-align: left;
   position: relative;
-  top: 21px;
+  top: 0rem;
+  left: 2rem;
 }
 .not2 .not4 .deta {
   padding: 5px 15px;
@@ -46,23 +50,12 @@
   list-style: none;
   font-weight: 500;
   font-size: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
-.not2 .not4 .deta1 {
- position: relative;
- bottom: 113px;
- left: 60px;
-}
-.not2 .not4 .deta1 li {
-  list-style: none;
-  font-weight: 600;
-  font-size: 10px;
-  padding-bottom: 10px;
-}
-
 .not6 {
-  margin-top: -100px;
+  margin-top: 1rem;
   width: 100%;
+
 }
 .not6 .topics1 {
   display: flex;

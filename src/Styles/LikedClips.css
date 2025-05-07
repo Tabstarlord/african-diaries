@@ -20,6 +20,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: -2rem;
 }
 .clip2 .clip3 .user {
   font-weight: 500;
@@ -35,7 +36,8 @@
   display: block;
   text-align: left;
   position: relative;
-  top: 21px;
+  top: 0rem;
+  left: 2rem;
 }
 .clip2 .clip4 .details {
   padding: 5px 15px;
@@ -44,7 +46,7 @@
   list-style: none;
   font-weight: 500;
   font-size: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 .clip2 .clip4 .details1 {
  position: relative;
@@ -59,7 +61,7 @@
 }
 
 .clip6 {
-  margin-top: -100px;
+  margin-top: 1rem;
   width: 100%;
 }
 .clip6 .topic {

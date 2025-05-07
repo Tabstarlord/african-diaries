@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import supabase from '../supabaseClient';
-import { v4 as uuidv4 } from 'uuid'; 
+import { v4 as uuidv4 } from 'uuid';
 import { useAuth } from '../Components/AuthContext';
 import back from '../Assets/cancel-01.png';
 import '../Styles/Setting.css';
@@ -43,11 +43,12 @@ function Setting() {
         setEmail(user.email);
 
         if (data.avatar_url) {
-          const { data: avatar } = supabase
+          const { data: avatarData } = supabase
             .storage
             .from('avatars')
             .getPublicUrl(data.avatar_url);
-          setProfileImage(avatar?.publicUrl || defaultAvatar);
+
+          setProfileImage(avatarData?.publicUrl || defaultAvatar);
         }
 
         if (user.created_at) {
@@ -69,7 +70,7 @@ function Setting() {
 
   const handleAvatarUpload = async (e) => {
     const file = e.target.files[0];
-    if (!file) return;
+    if (!file || !user) return;
 
     const fileExt = file.name.split('.').pop();
     const fileName = `${uuidv4()}.${fileExt}`;
@@ -88,9 +89,16 @@ function Setting() {
       return;
     }
 
+    const { data: publicData } = supabase
+      .storage
+      .from('avatars')
+      .getPublicUrl(filePath);
+
+    const publicUrl = publicData?.publicUrl;
+
     const { error: dbError } = await supabase
       .from('profiles')
-      .update({ avatar_url: filePath })
+      .update({ avatar_url: filePath }) // Store path, not full URL
       .eq('id', user.id);
 
     if (dbError) {
@@ -99,11 +107,7 @@ function Setting() {
       return;
     }
 
-    const { data: avatar } = supabase
-      .storage
-      .from('avatars')
-      .getPublicUrl(filePath);
-    setProfileImage(avatar?.publicUrl || defaultAvatar);
+    setProfileImage(publicUrl || defaultAvatar);
     alert('Avatar uploaded successfully!');
   };
 
@@ -155,9 +159,7 @@ function Setting() {
 
   return (
     <div className='acc'>
-      <div className='set-navbar'>
-        <UserNavbar />
-      </div>
+      <div className='set-navbar'><UserNavbar /></div>
 
       <div className='settings'>
         <div className='desktop-settings-profile'>
@@ -165,7 +167,6 @@ function Setting() {
             <h2 className='desktop-settings-profile-info'>{name}</h2>
             <div className="desktop-settings-dp" onClick={handleImageClick}>
               <img src={profileImage} className='desktop-settings-dp' alt="Profile" />
-              <div className="camera-icon">📷</div>
               <input
                 type="file"
                 accept="image/*"
@@ -190,7 +191,7 @@ function Setting() {
 
         <div className='set1'>
           <Link to='/Home'><img className='cancel' src={back} alt='back' /></Link>
-          <h2>{name}</h2>
+          <h2>Profile Information</h2>
         </div>
 
         <div className='set2'>
@@ -208,16 +209,10 @@ function Setting() {
 
           <div className='set4'>
             <ul className='det'>
-              <li>Joined:</li>
-              <li>Profile views:</li>
-              <li>From:</li>
-              <li>Last Activity:</li>
-            </ul>
-            <ul className='det1'>
-              <li>{joinedDays} days on African Diaries</li>
-              <li>{profileViews} times</li>
-              <li>{location}</li>
-              <li>{lastSeen}</li>
+              <li>Joined: <strong>{joinedDays} days on African Diaries</strong></li>
+              <li>Profile views: <strong>{profileViews} times</strong></li>
+              <li>From: <strong>{location}</strong></li>
+              <li>Last Activity: <strong>{lastSeen}</strong></li>
             </ul>
           </div>
         </div>
