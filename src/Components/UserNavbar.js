@@ -21,7 +21,7 @@ function UserNavbar() {
 
       <div className='profile'>
         <Link to='/Notification' className='profile-link'>
-        <span className='user'>{user.email}</span>
+        <span className='user'>{user.username}</span>
         <img className='dp' src={dp} alt='profile' />
         </Link>
       </div>
