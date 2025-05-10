@@ -49,33 +49,42 @@
   cursor: pointer;
 }
 
-.view-1 .react {
+.react {
   display: flex;
+  gap: 16px;
 }
 
-.react a {
-  text-decoration: none;
-  color: #000;
-  padding-right: 1.5rem;
-  padding-left: 0.5rem;
+.react-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  outline: none;
 }
 
-.react a p{
-  position: relative;
-  bottom: 40px;
-  left: 17px;
+.react-btn:hover,
+.react-btn:focus {
+ /* subtle hover background */
+  transform: scale(1.05); /* slight pop effect */
 }
 
-.view-1 .view-2 {
- margin-left: 1.5rem;
- position: relative;
- bottom: 74px;
+.react-btn:focus {
+  box-shadow: 0 0 0 2px #007bff; /* blue focus ring */
 }
 
-.view-1 .view-2 p {
-  margin-left: 2.6rem;
-  position: relative;
-  bottom: 40px;;
+.react-1 {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+}
+
+.react-btn p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
 }
 
 .comment {
@@ -83,7 +92,7 @@
   width: 350px;
   height: 17px;
   gap: 5px;
-  margin-top: -100px;
+  padding-top: 1rem;
   margin-left: 0.3rem;
 }
 
@@ -95,8 +104,9 @@
   display: flex;
   width: 114px;
   height: 30px;
-  margin-top: 30px;
+  margin-top: 1.5rem;
   gap: 10px;
+  margin-left: 0rem;
 }
 
 .com span {
@@ -115,9 +125,7 @@
   font-size: 13px;
   margin-left: 14vw;
   margin-top: 9px;
-  position: relative;
-  bottom: 2px;
-  left: -3px;
+  text-wrap: nowrap;
 }
 
 .com-1 {
@@ -127,20 +135,10 @@
 .com-1 p {
   font-weight: 400;
   font-size: 12px;
+  margin-left: 2.3rem;
+  margin-top: 0rem;
 }
 
-.com-2 {
-  display: flex;
-  width: 146px;
-  height: 18px;
-  gap: 15px;
-  margin-left: 45vw;
-  margin-top: -3vw;
-}
-
-.com-2 p {
-  margin-top: 1px;
-}
 
 .write {
   margin-top: 5vw;
@@ -251,24 +249,6 @@
   width: 98%;
 }
 
-.view-1 .react {
-  display: flex;
-}
-
-.react a {
-  text-decoration: none;
-  color: #000;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-right: 2rem;
-}
-
-.react a p{
-  position: relative;
-  bottom: 40px;
-  left: 18px;
-}
-
 .view-1 .view-2 {
  margin-left: 250px;
  position: relative;
@@ -284,13 +264,6 @@
 .comments {
   margin: auto;
   width: 100%;
-}
-.comment {
-  display: flex;
-  width: 350px;
-  height: 17px;
-  gap: 10px;
-  margin-top: -100px;
 }
 
 .comment p {
@@ -317,7 +290,7 @@
   font-weight: 400;
   font-size: 13px;
   margin-left: 5vw;
-  margin-top: 9px;
+  margin-top: 0.4em;
 }
 
 .com-1 {
@@ -327,19 +300,7 @@
 .com-1 p {
   font-weight: 400;
   font-size: 12px;
-}
-
-.com-2 {
-  display: flex;
-  width: 146px;
-  height: 18px;
-  gap: 15px;
-  margin-left: 73vw;
-  margin-top: -3vw;
-}
-
-.com-2 p {
-  margin-top: 1px;
+  margin-left: 2.5rem;
 }
 
 .write {
@@ -441,54 +402,20 @@
   
 }
 .view-1 .react {
-  margin-left: 2em;
-  margin-top: 20px;
+  margin-left: 0.5em;
+  margin-top: 0rem;
 }
-.react a {
-  padding-right: 2rem;
-}
-.view-1 .view-2 {
-  margin-left: -25rem;
-  position: relative;
-  bottom: 5.2rem;
-}
-
 
 .comments {
-  margin-left: 50px;
+  margin-left: 0.5rem;
 }
-.comments .comment {
-  width: 1340px;
-  height: 21px;
-}
-.comment-1 {
-  width: 1340px;
-  height: 312px;
-}
-.comment-1 .com p {
-  position: relative;
-  right: 160px;
-}
-.com span {
-  font-size: 16px;
-  margin-top: 5px;
+.com p{
+  text-wrap: nowrap;
+  margin-top: 0.5rem;
 }
 .com-1 p {
-  font-size: 13px;
-}
-.com-2 {
-  width: 146px;
-  height: 18px;
-  position: relative;
-  left: 480px;
-}
-
-.write input {
-  width: 40em;
-}
-.write .send {
-  padding: 10px 5px;
-  margin-left: 1em;
+  margin-left: 2.7rem;
+  margin-top: 0rem;
 }
 .related {
   margin-top: -5em;
