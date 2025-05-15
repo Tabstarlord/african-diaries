@@ -10,7 +10,7 @@ import frame1 from '../Assets/Frame1.png';
 import empty from '../Assets/Emptybox.png';
 import eye from '../Assets/eye.png';
 import UserNavbar from '../Components/UserNavbar';
-import defaultAvatar from '../Assets/dp.png';
+import defaultAvatar from '../Assets/User-favicon.png';
 
 function LikedClips() {
   const { user } = useAuth();

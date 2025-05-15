@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import supabase from '../supabaseClient';
 import { useAuth } from '../Components/AuthContext';
-import defaultAvatar from '../Assets/ProfileImage.png';
+import defaultAvatar from '../Assets/User-favicon.png';
 import back from '../Assets/cancel-01.png';
 import red from '../Assets/dot.png';
 import avatarFallback from '../Assets/Ellipse95.png';

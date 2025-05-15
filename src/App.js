@@ -1,5 +1,6 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, {useEffect} from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import supabase from './supabaseClient';
 import './App.css';
 import Home from './Pages/Home'
 import ViewVideos from './Pages/ViewVideos '
@@ -21,6 +22,26 @@ import TrackUserDevice from './Components/TrackUserDevice';
 
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const updateLastSeen = async () => {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      if (user) {
+        await supabase
+          .from('profiles')
+          .update({ last_seen_at: new Date().toISOString() })
+          .eq('id', user.id);
+      }
+    };
+
+    updateLastSeen();
+  }, [location.pathname]);
+
+
   return (
 
     <>

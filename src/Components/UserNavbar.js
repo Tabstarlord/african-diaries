@@ -5,7 +5,7 @@ import supabase from '../supabaseClient';
 import Logo from '../Assets/logo.png';
 import Search from '../Pages/Search';
 import '../Styles/UserNavbar.css';
-import defaultAvatar from '../Assets/ProfileImage.png';
+import defaultAvatar from '../Assets/User-favicon.png';
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import searchbar from '../Assets/search.png'

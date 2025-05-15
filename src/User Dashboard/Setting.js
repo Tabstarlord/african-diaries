@@ -7,7 +7,7 @@ import back from '../Assets/cancel-01.png';
 import '../Styles/Setting.css';
 import UserNavbar from '../Components/UserNavbar';
 import logoutIcon from '../Assets/Login.png';
-import defaultAvatar from '../Assets/ProfileImage.png';
+import defaultAvatar from '../Assets/User-favicon.png';
 
 function Setting() {
   const { user } = useAuth();

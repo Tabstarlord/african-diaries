@@ -29,6 +29,81 @@ function ViewVideos() {
   const [reactionCounts, setReactionCounts] = useState({ likes: 0, dislikes: 0, comments: 0, shares: 0 });
   const [userReactions, setUserReactions] = useState(new Set());
 
+  const formatViews = (num) => {
+    if (num >= 1_000_000) return (num / 1_000_000).toFixed(1).replace('.0', '') + 'M';
+    if (num >= 1_000) return (num / 1_000).toFixed(1).replace('.0', '') + 'K';
+    return num;
+  };
+
+  const getUserCountry = async () => {
+    try {
+      const res = await fetch('https://ipapi.co/json');
+      const data = await res.json();
+      return data.country_code || 'XX'; // Default to 'XX' if not found
+    } catch (error) {
+      console.error('Geolocation fetch failed:', error);
+      return 'XX';
+    }
+  };
+  
+  const recordCountryView = async (countryCode) => {
+    const { data } = await supabase
+      .from('traffic_by_country')
+      .select('views')
+      .eq('country', countryCode)
+      .single();
+  
+    if (data) {
+      // Country exists, increment views
+      await supabase
+        .from('traffic_by_country')
+        .update({ views: data.views + 1 })
+        .eq('country', countryCode);
+    } else {
+      // New country, insert
+      await supabase.from('traffic_by_country').insert({ country: countryCode, views: 1 });
+    }
+  };
+
+  useEffect(() => {
+    const handleViewTracking = async () => {
+      const country = await getUserCountry();
+      await recordCountryView(country);
+    };
+  
+    handleViewTracking();
+  }, []);
+  
+  
+
+
+
+  useEffect(() => {
+    if (!id) return;
+  
+    const logAndIncrementView = async () => {
+      try {
+        // Insert a view log
+        await supabase.from('video_views').insert([{
+          video_id: id,
+          user_id: user?.id || null,
+          viewed_at: new Date().toISOString(),
+        }]);
+  
+        // Call increment function (make sure this function exists in Supabase)
+        const { error } = await supabase.rpc('increment_view_count', { vid: id });
+        if (error) console.error('Failed to increment view_count:', error.message);
+      } catch (err) {
+        console.error('Error logging view:', err.message);
+      }
+    };
+  
+    logAndIncrementView();
+  }, [id, user?.id]);
+  
+
+  
+
   // Fetch video data
   useEffect(() => {
     const fetchVideo = async () => {
@@ -206,6 +281,7 @@ function ViewVideos() {
     }
   };
 
+
  
 
   console.log("User:", user);
@@ -221,7 +297,15 @@ function ViewVideos() {
           {currentVideo ? (
             <>
               <div>
-                <span>{currentVideo.title} <h5>- {currentVideo.duration}</h5></span>
+              <span>
+  {currentVideo.title}
+  <h5>
+    - {currentVideo.duration} &nbsp;•&nbsp;
+    <img src={eyeIcon} alt="views" style={{ width: '15px', verticalAlign: 'middle' }} />
+    &nbsp;{formatViews(currentVideo.view_count)}
+  </h5>
+</span>
+
                 <div className='links'>
                   {Array.isArray(currentVideo.tags) && currentVideo.tags.map((tag, i) => (
                     <Link key={i} to={`/tags/${tag}`}>{tag}</Link>
@@ -305,9 +389,9 @@ function ViewVideos() {
                       onMouseOut={e => e.target.pause()} />
                     <span>{vid.title}</span>
                     <p>
-                      {vid.duration} &nbsp;-&nbsp;
-                      <img className='eye' src={eyeIcon} alt='view count' /> {vid.views}
-                    </p>
+{vid.duration} &nbsp;-&nbsp;
+  <img className='eye' src={eyeIcon} alt='view count' /> {vid.view_count || 0}
+</p>
                   </Link>
                 </div>
               ))}
