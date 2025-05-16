@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/african-diaries/static/css/main.199147e6.css",
-    "main.js": "/african-diaries/static/js/main.6e52bdde.js",
-    "static/js/952.5190586c.chunk.js": "/african-diaries/static/js/952.5190586c.chunk.js",
-    "static/media/frame.png": "/african-diaries/static/media/frame.3c9eda75ff678e5775fe.png",
-    "static/media/Frame16.png": "/african-diaries/static/media/Frame16.98aa598df3f88700fe9f.png",
-    "static/media/Frame1.png": "/african-diaries/static/media/Frame1.bc232e8552fa7179091a.png",
-    "index.html": "/african-diaries/index.html",
-    "main.199147e6.css.map": "/african-diaries/static/css/main.199147e6.css.map",
-    "main.6e52bdde.js.map": "/african-diaries/static/js/main.6e52bdde.js.map",
-    "952.5190586c.chunk.js.map": "/african-diaries/static/js/952.5190586c.chunk.js.map"
+    "main.css": "/static/css/main.f74b3b5b.css",
+    "main.js": "/static/js/main.be51bb1d.js",
+    "static/js/952.5190586c.chunk.js": "/static/js/952.5190586c.chunk.js",
+    "static/media/frame.png": "/static/media/frame.3c9eda75ff678e5775fe.png",
+    "static/media/Frame16.png": "/static/media/Frame16.98aa598df3f88700fe9f.png",
+    "static/media/Frame1.png": "/static/media/Frame1.bc232e8552fa7179091a.png",
+    "index.html": "/index.html",
+    "main.f74b3b5b.css.map": "/static/css/main.f74b3b5b.css.map",
+    "main.be51bb1d.js.map": "/static/js/main.be51bb1d.js.map",
+    "952.5190586c.chunk.js.map": "/static/js/952.5190586c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.199147e6.css",
-    "static/js/main.6e52bdde.js"
+    "static/css/main.f74b3b5b.css",
+    "static/js/main.be51bb1d.js"
   ]
 }
