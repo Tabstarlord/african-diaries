@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from "react-helmet"
 import { Link } from 'react-router-dom';
 import '../Styles/Home.css';
 import supabase from '../supabaseClient';
@@ -47,6 +48,19 @@ function Home() {
 
   return (
     <>
+
+    <Helmet>
+        <title>African Diaries – Discover Stories and Culture</title>
+        <meta name="description" content="Explore African culture, stories, and heritage through videos and articles." />
+        <meta name="keywords" content="Africa, culture, stories, adult, pornography, heritage, videos" />
+        <meta property="og:title" content="African Diaries" />
+        <meta property="og:description" content="Explore African culture, stories, and heritage." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://african-diaries.com/" />
+        <meta property="og:image" content="https://african-diaries.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+
       {/* Conditionally render navbar based on login status */}
       {user ? <UserNavbar /> : <Navbar />}
 

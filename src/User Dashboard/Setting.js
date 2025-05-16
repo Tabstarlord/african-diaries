@@ -68,48 +68,71 @@ function Setting() {
     fileInputRef.current.click();
   };
 
-  const handleAvatarUpload = async (e) => {
-    const file = e.target.files[0];
-    if (!file || !user) return;
+const handleAvatarUpload = async (e) => {
+  const file = e.target.files[0];
+  if (!file || !user) return;
 
-    const fileExt = file.name.split('.').pop();
-    const fileName = `${uuidv4()}.${fileExt}`;
-    const filePath = `${user.id}/${fileName}`;
-
-    const { error: uploadError } = await supabase.storage
-      .from('avatars')
-      .upload(filePath, file, {
-        cacheControl: '3600',
-        upsert: true,
-      });
-
-    if (uploadError) {
-      console.error('Avatar upload error:', uploadError.message);
-      alert('Upload failed.');
-      return;
-    }
-
-    const { data: publicData } = supabase
-      .storage
-      .from('avatars')
-      .getPublicUrl(filePath);
-
-    const publicUrl = publicData?.publicUrl;
-
-    const { error: dbError } = await supabase
-      .from('profiles')
-      .update({ avatar_url: filePath }) // Store path, not full URL
-      .eq('id', user.id);
-
-    if (dbError) {
-      console.error('Avatar DB update error:', dbError.message);
-      alert('Failed to save avatar to profile.');
-      return;
-    }
-
-    setProfileImage(publicUrl || defaultAvatar);
-    alert('Avatar uploaded successfully!');
+  const resizeImage = (file, width, height) => {
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, width, height);
+          canvas.toBlob((blob) => {
+            resolve(blob);
+          }, 'image/png');
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
   };
+
+  const resizedBlob = await resizeImage(file, 46, 49);
+  const fileName = `${uuidv4()}.png`;
+  const filePath = `${user.id}/${fileName}`;
+
+  const { error: uploadError } = await supabase.storage
+    .from('avatars')
+    .upload(filePath, resizedBlob, {
+      cacheControl: '3600',
+      upsert: true,
+    });
+
+  if (uploadError) {
+    console.error('Avatar upload error:', uploadError.message);
+    alert('Upload failed.');
+    return;
+  }
+
+  const { data: publicData } = supabase
+    .storage
+    .from('avatars')
+    .getPublicUrl(filePath);
+
+  const publicUrl = publicData?.publicUrl;
+
+  const { error: dbError } = await supabase
+    .from('profiles')
+    .update({ avatar_url: filePath })
+    .eq('id', user.id);
+
+  if (dbError) {
+    console.error('Avatar DB update error:', dbError.message);
+    alert('Failed to save avatar to profile.');
+    return;
+  }
+
+  setProfileImage(publicUrl || defaultAvatar);
+  alert('Avatar uploaded successfully!');
+};
+
+
 
   const handleSave = async (e) => {
     e.preventDefault();
