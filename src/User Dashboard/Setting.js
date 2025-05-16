@@ -220,7 +220,14 @@ const handleAvatarUpload = async (e) => {
         <div className='set2'>
           <div className='set3'>
             <h2 className='user'>{name}</h2>
-            <img onClick={handleImageClick} className='dp' src={profileImage} alt='User dp' />
+            <img onClick={handleImageClick} className='dp' src={profileImage} alt='User dp' 
+            style={{
+              width: '48px',
+              height: '48px',
+              borderRadius: '50%',
+              objectFit: 'cover',
+            }}
+            />
             <input
               type="file"
               accept="image/*"
