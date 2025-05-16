@@ -34,7 +34,9 @@
   position: relative;
   bottom: 10px;
   border-radius: 50%;
-  height: 28%;
+  height: 48px;
+  width: 48px;
+  object-fit: cover;
 }
 .not2 .not4 {
   display: block;
@@ -129,6 +131,8 @@
     width: 160px;
     height: 160px;
     margin-left: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
   }
   .desktop-notification-user-details {
     text-align: left;

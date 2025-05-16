@@ -32,6 +32,9 @@
   }
   .user-header .dp {
     width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
     position: relative;
     top: 0.5rem;
     left: 0.5rem;
@@ -105,6 +108,9 @@
 
   .dashboard .dp {
     width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
     position: relative;
     top: 0.3rem;
   }

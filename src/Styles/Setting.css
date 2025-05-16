@@ -34,7 +34,10 @@
   position: relative;
   bottom: 10px;
   border-radius: 50%;
-  height: 28%;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .set2 .set4 {
   display: block;
@@ -147,6 +150,7 @@
       height: 160px;
       margin-left: 1rem;
       border-radius: 50%;
+      object-fit: cover;
     }
     .desktop-settings-user-details {
       text-align: left;
